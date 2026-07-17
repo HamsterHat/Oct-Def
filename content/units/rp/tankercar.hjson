@@ -1,0 +1,187 @@
+name: Бензовоз
+type: tank
+hitSize: 48
+omniMovement: false
+health: 1200
+armor: 6
+speed: 3.3
+rotateSpeed: 2.9
+alwaysUnlocked: true
+range: 8
+outlines: false
+crushDamage: 55
+accel: 0.02
+drag: 0.01
+itemCapacity: 3645
+drawCell: false
+
+weapons: [
+	{
+    reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	ignoreRotation: true
+	aiControllable: false
+	shootCone: 360
+	shootStatus: slow
+	shootStatusDuration: 60
+	shootSound: none
+	bullet: {
+		type: BasicBulletType
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		collides: false
+		hittable: false
+		reflectable: false
+		absorbable: false
+		width: 0
+		height: 0
+		instantDisappear: true
+		damage: 0
+		splashDamage: 0
+		shrinkX: 0
+		shrinkY: 0
+		lightRadius: 0
+		lightOpacity: 0
+		lightColor: ffffff
+		hitShake: 0
+		despawnShake: 0
+	}
+	}
+   {
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	aiControllable: false
+	controllable: false
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 6840
+		splashDamageRadius: 180
+    despawnUnit: tankercar-wreck
+		speed: 0
+		despawnHit: true
+		hitEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 2100
+      sizeFrom: 0
+      sizeTo: 1400
+      strokeFrom: 45
+      strokeTo: 45
+      interp: circleOut
+      colorFrom: 3a3a3aBB
+      colorTo: 1a1a1a00
+      layer: 5
+      clip: 9000
+    }
+    {
+      type: WaveEffect
+      lifetime: 60
+      sizeFrom: 0
+      sizeTo: 320
+      strokeFrom: 25
+      strokeTo: 0
+      colorFrom: ffffffFF
+      colorTo: ff5100FF
+      layer: 110
+    }
+    {
+      type: ParticleEffect
+      particles: 60
+      lifetime: 300
+      length: 280
+      baseLength: 20
+      cone: 360
+      interp: pow3Out
+      sizeFrom: 12
+      sizeTo: 0
+      colorFrom: ffa600FF
+      colorTo: ff3c0000
+      layer: 110
+    }
+    {
+      type: ParticleEffect
+      startDelay: 300
+      particles: 50
+      lifetime: 1800
+      length: 350
+      baseLength: 100
+      cone: 360
+      interp: pow10Out
+      sizeFrom: 45
+      sizeTo: 95
+      colorFrom: 2c2c2cDD
+      colorTo: 11111100
+      layer: 90
+    }
+  ]
+}
+
+		hitSound: thermoBoom
+		hitSoundVolume: 12
+		killShooter: true
+		status: blowedup
+		statusDuration: 260
+		fragBullet: fireball
+		fragBullets: 90
+
+		puddleLiquid: os
+		puddleAmount: 1980
+		puddleRange: 30
+		puddles: 8
+		despawnHit: true
+		
+		incendAmount: 45
+		incendSpread: 32
+		incendChance: 1
+		spawnBullets: [
+			{
+				type: BulletType
+				damage: 0
+				speed: 0
+				splashDamage: 120
+				splashDamageRadius: 20
+				status: melting
+				statusDuration: 240
+				absorbable: true
+				lifetime: 0
+				pierce: false
+				hitEffect: none
+				shootEffect: none
+				smokeEffect: none
+				despawnEffect: none
+				puddleLiquid: krs
+				puddleAmount: 1980
+				puddleRange: 18
+				puddles: 8
+			}
+		]
+	}
+}
+
+]
+
+
+
+
+
+
+immunities: [blowedup]

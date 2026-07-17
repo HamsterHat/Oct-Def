@@ -1,0 +1,8 @@
+name: Железо
+description: Очень важный ресурс - используется для многих построек.
+cost: 1
+color: cococo
+hardness: 1
+research: {
+	parent: coper
+}

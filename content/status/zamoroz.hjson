@@ -1,0 +1,22 @@
+name: Заморозка
+speedMultiplier: 0.5
+healthMultiplier: 0.7
+effect: {
+    type: MultiEffect
+    effects: [
+        freezing,
+        {
+                type: ParticleEffect
+                particles: 2
+                lifetime: 600
+                length: 1
+                sizeFrom: 0.2
+                sizeTo: 0
+                colorFrom: 00ffff
+                colorTo: 00ffff
+                spin: 1
+                layer: 5
+        }
+        ]
+}
+ 

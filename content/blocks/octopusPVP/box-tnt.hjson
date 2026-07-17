@@ -1,0 +1,49 @@
+type: Wall
+name: Ящик с динамитом
+health: 15
+requirements: [
+	wood/15
+	dinamit/15
+]
+createRubble: false
+destroyBullet: {
+	type: BasicBulletType
+	lifetime: 1
+	speed: 0
+	height: 1
+	width: 1
+	damage: 0
+	splashDamage: 230
+	splashDamageRadius: 64
+	status: blowedup
+	hitShake: 15
+	statusDuration: 335
+	hitColor: ffb75e
+	hitEffect: {
+		type: MultiEffect
+		effects: [massiveExplosion, scatheExplosion, scatheLight, scatheSlash]
+	}
+	hitSound: largeExplosion
+	hitSoundVolume: 7
+	fragBullets: 10
+	fragBullet: {
+		type: BasicBulletType
+		lifetime: 15
+		speed: 5
+		width: 1
+		height: 1
+		damage: 0
+		splashDamage: 0
+		despawnHit: true
+		hitEffect: scatheSlash
+		hitColor: 754945
+		pierce: true
+		hitSound: blastBoom
+		hitSoundVolume: 4
+		pierceBuilding: true
+	}
+}
+variants: 3
+destroySound: box-destroy
+category: defense
+buildVisibility: sandboxOnly

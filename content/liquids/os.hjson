@@ -1,0 +1,9 @@
+name: Огнесмесь
+color: ff8c00
+lightColor: ff7f50
+flammability: 2.60
+temperature: 4.3
+heatCapacity: 0
+viscosity: 0.9
+explosiveness: 2.35
+effect: gorenie

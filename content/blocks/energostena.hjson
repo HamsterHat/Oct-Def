@@ -1,0 +1,22 @@
+name: Энергостена
+description: СТЕНА!
+type: Wall
+health: 1000
+absorbLasers: true
+size: 1
+lightningChance: 0.12
+lightningDamage: 10
+lightningLength: 4
+flashHit: false
+chanceDeflect: 13
+deflectSound: rkst
+requirements: [
+  energosteklo/5
+]
+category: defense
+research: {
+	parent: titan-wall-big
+	requirements: [
+  		energosteklo/10
+	]
+}

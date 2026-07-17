@@ -1,0 +1,77 @@
+name: Горение
+damage: 0.25
+speedMultiplier: 0.9
+effect: {
+    type: MultiEffect
+    effects: [
+        burning,
+        {
+        type: ParticleEffect
+        particles: 1
+        lifetime: 15
+        region: mod-flash
+        length: 1
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: ffffff
+        colorTo: ffe600
+        spin: 0
+        layer: 200
+        },
+        {
+        type: ParticleEffect
+        particles: 1
+        lifetime: 15
+        region: mod-flash
+        length: 1
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: ffffff
+        colorTo: ce8f1a
+        spin: 0
+        layer: 200
+        },
+        {
+        type: ParticleEffect
+        particles: 5
+        lifetime: 340
+        length: 16
+        sizeFrom: 3
+        sizeTo: 12
+        colorFrom: 746859ff
+        colorTo: 201d1c00
+        spin: 0
+        layer: 118
+        cone: 90
+        interp: circleOut
+        },
+        {
+        type: ParticleEffect
+        particles: 4
+        lifetime: 900
+        length: 4
+        sizeFrom: 1
+        sizeTo: 0
+        colorFrom: "867763"
+        colorTo: 2e2c23
+        spin: 0
+        layer: 5
+        cone: 360
+        },
+        {
+        type: ParticleEffect
+        particles: 2
+        lifetime: 900
+        length: 4
+        sizeFrom: 1
+        sizeTo: 0
+        colorFrom: "867763"
+        colorTo: 2e2c23
+        spin: 0
+        layer: 5
+        cone: 360
+        }
+    ]
+}
+
+opposites: [wetted]

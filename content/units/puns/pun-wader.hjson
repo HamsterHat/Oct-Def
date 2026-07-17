@@ -1,0 +1,617 @@
+type: mech
+name: "[royal]Пунь Вейдер"
+alwaysUnlocked: true
+armor: 270
+outlines: false
+health: 479560
+range: 400
+rotateMoveFirst: false
+rotateSpeed: 6
+loopSound: none
+loopSoundVolume: 1.5
+canDrown: false
+engineOffset: 0
+deathExplosionEffect: none
+drawCell: false
+deathShake: 16
+engineSize: 0
+hitSize: 8
+buildSpeed: 120000
+stepShake: 0
+weapons: [
+{
+reload: 200
+x: 6
+y: 6
+mirror: false
+rotate: false
+shootSound: throw
+continuous: false
+alternate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BasicBulletType
+		scaleLife: true
+		damage: 2500
+		splashDamage: 8200
+		splashDamageRadius: 45.6
+		width: 8
+		height: 8
+		speed: 4
+		absorbable: true
+		lifetime: 100
+		frontColor: 80c7ebff
+		backColor: 00b3ffff
+		hitColor: 80c7ebff
+		hitEffect: {
+			type: MultiEffect
+			effects: [massiveExplosion, scatheExplosion, scatheLight, scatheSlash, instBomb, titanSmoke]
+		}
+		shootEffect: none
+		pierce: false
+		despawnHit: true
+		status: atom-colapse
+		statusDuration: 200
+		makeFire: true
+		incendAmount: 4
+		incendSpread: 8
+		hitSound: magic-boom
+		spin: 4
+		reflectable: false
+		hitSoundVolume: 6
+		incendChance: 1
+		sprite: circle-bullet
+		fragBullet: {
+			type: BasicBulletType
+			speed: 5.6
+			lifetime: 10
+			pierce: true
+			pierceBuilding: true
+			pierceCap: 3
+			damage: 3570
+			width: 4
+			height: 5
+			spin: 4
+			shrinkX: 0.3
+			shrinkY: 0.3
+			frontColor: 0000ff
+			backColor: 0000ff
+			despawnEffect: mine
+			hitEffect: mine
+			despawnHit: true
+			hitSound: lightSwShoot
+			hitColor: 0000ff
+		}
+		fragBullets: 11
+}
+}
+{
+x: 0
+y: 0
+reload: 0
+shootCone: 360
+controllable: false
+aiControllable: false
+shootOnDeath: true
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	lifetime: 0
+	speed: 0
+	instantDisappear: true
+	killShooter: true
+	collides: false
+	splashDamage: 0
+	splashDamageRadius: 0
+	hitEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 0
+      lifetime: 45
+      sizeFrom: 56
+      sizeTo: 0
+      colorFrom: ffffff
+      colorTo: ffd37f
+      region: mod-flash
+    }
+    {
+      type: WaveEffect
+      lifetime: 30
+      sizeFrom: 0
+      sizeTo: 80
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ffffff88
+    }
+  ]
+}
+
+	despawnUnit: pun-wader-death
+	despawnHit: true
+	shootEffect: none
+}
+}
+
+
+{
+reload: 1800
+x: 0
+y: 0
+mirror: false
+rotate: false
+shootSound: magic-boom
+shootCone: 360
+continuous: false
+alternate: false
+inaccuracy: 0
+shoot: {
+  type: ShootSpread
+  shots: 16
+  spread: 22.5
+  firstShotDelay: 0
+}
+useAmmo: false
+bullet: {
+		type: LaserBulletType
+        hitEffect: instHit
+        lifetime: 15
+        damage: 2700
+        collidesAir: true
+        length: 400
+        ammoMultiplier: 1
+        pierceCap: 4
+        makeFire: true
+		status: atom-colapse
+		statusDuration: 400
+}
+}
+{
+reload: 3600
+x: 0
+y: 0
+mirror: false
+rotate: false
+shootSound: wader-boom
+chargeSound: stAtkCharge
+shootCone: 360
+continuous: false
+alternate: false
+inaccuracy: 0
+shoot: {
+  shots: 1
+  firstShotDelay: 300
+}
+useAmmo: false
+bullet: {
+		type: BasicBulletType
+        hitEffect: {
+            type: multiEffect
+            effects: [
+			{
+				  particles: 45
+				  length: 1600
+				  lifetime: 100
+				  interp: pow3Out
+				  sizeInterp: pow2In
+				  sizeFrom: 110
+				  sizeTo: 0
+				  startDelay: 0
+				  clip: 8192
+				}
+				{
+				  particles: 40
+				  line: true
+				  length: 2000
+				  lifetime: 100
+				  interp: pow3Out
+				  sizeInterp: pow2In
+				  lenFrom: 150
+				  lenTo: 0
+				  strokeFrom: 35
+				  strokeTo: 20
+				  cap: false
+				  startDelay: 0
+				  clip: 8192
+				}
+				{
+				  particles: 1
+				  length: 0
+				  region: circle-shadow
+				  lifetime: 70
+				  sizeFrom: 3000
+				  sizeTo: 0
+				  startDelay: 0
+				  layer: 135
+				  clip: 8192
+				}
+				{
+				  particles: 1
+				  length: 0
+				  region: circle-shadow
+				  lifetime: 17.5
+				  sizeFrom: 8192
+				  sizeTo: 8192
+				  startDelay: 0
+				  layer: 135
+				  colorTo: ffffff00
+				  clip: 8192
+				}
+              {
+                type: ParticleEffect
+                line: true
+                particles: 15
+                lifetime: 55
+                offset: 50
+                length: 540
+                cone: 360
+                baseLength: 250
+                interp: circleOut
+                sizeInterp: pow5Out
+                strokeFrom: 1.6
+                strokeTo: 0
+                lenFrom: 24
+                lenTo: 24
+                colorFrom: A9D8FFFF
+                colorTo: 66B1FFFF
+              }
+              {
+                type: ParticleEffect
+                line: true
+                particles: 25
+                lifetime: 65
+                offset: 50
+                length: 500
+                baseLength: 250
+                cone: 360
+                interp: circleOut
+                sizeInterp: pow5Out
+                strokeFrom: 1.6
+                strokeTo: 0
+                lenFrom: 17
+                lenTo: 17
+                colorFrom: A9D8FFFF
+                colorTo: 66B1FFFF
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 43
+                sizeTo: 1
+                length: 280
+                lifetime: 285
+                lightOpacity: 0
+                interp: circleOut
+                sizeInterp: pow5In
+                colorFrom: 66B1FFAa
+                colorTo: 66B1FFAA
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 43
+                sizeTo: 1
+                length: 290
+                lifetime: 275
+                lightOpacity: 0
+                interp: circleOut
+                sizeInterp: pow5In
+                colorFrom: 66B1FFAa
+                colorTo: 66B1FFAA
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 59
+                sizeTo: 1
+                length: 290
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: A9D8FFFF
+                colorFrom: A9D8FFFF
+                colorTo: 66B1FFFF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 59
+                sizeTo: 1
+                length: 270
+                lifetime: 265
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: A9D8FFFF
+                colorFrom: A9D8FFFF
+                colorTo: 66B1FFFF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 35
+                offset: 50
+                sizeFrom: 27
+                sizeTo: 1
+                length: 300
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: A9D8FFFF
+                colorFrom: 66B1FFFF
+                colorTo: 66B1FFFF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 45
+                offset: 50
+                sizeFrom: 19
+                sizeTo: 1
+                length: 320
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: A9D8FFFF
+                colorFrom: 66B1FFFF
+                colorTo: 66B1FFFF
+                cone: 360
+              }
+              {
+                type: WaveEffect
+                lifetime: 245
+                sizeFrom: 0
+                sizeTo: 350
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 19
+                strokeTo: 0
+                colorFrom: 66B1FFFF
+                colorTo: 66B1FFFF
+              }
+              {
+                type: WaveEffect
+                lifetime: 55
+                sizeFrom: 0
+                sizeTo: 450
+                lightColor: 66B1FFFFF
+                interp: circleOut
+                strokeFrom: 25
+                strokeTo: 0
+                colorFrom: 66B1FFFF
+                colorTo: 66B1FFaa
+              }
+              {
+                type: WaveEffect
+                lifetime: 45
+                sizeFrom: 0
+                sizeTo: 550
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 19
+                strokeTo: 0
+                colorFrom: 66B1FFFF
+                colorTo: 66B1FFFF
+              }
+              {
+                type: WaveEffect
+                lifetime: 45
+                sizeFrom: 0
+                sizeTo: 650
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 11
+                strokeTo: 0
+                colorFrom: 66B1FFFF
+                colorTo: 66B1FFFF
+              }
+            ]
+          }
+        lifetime: 0
+		instantDisappear: true
+        damage: 0
+        collidesAir: true
+        makeFire: true
+		status: atom-colapse
+		statusDuration: 400
+		splashDamage: 28750
+		splashDamageRadius: 101.6
+		despawnHit: true
+		chargeEffect: {
+			type: MultiEffect
+			effects: [
+					{
+					type: ParticleEffect
+					lifetime: 300
+					particles: 1
+					cone: 360
+
+					baseLength: 0
+					length: 0
+
+					sizeFrom: 0
+					sizeTo: 15
+
+					strokeFrom: 0.8
+					strokeTo: 0
+
+					colorFrom: ffffff
+					colorTo: 1E90FF55
+					}
+					{
+					type: WaveEffect
+					lifetime: 300
+					sizeFrom: 70
+					sizeTo: 7
+					strokeFrom: 0
+					strokeTo: 7
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: WaveEffect
+					startDelay: 120
+					lifetime: 160
+					sizeFrom: 0
+					sizeTo: 15
+					strokeFrom: 0
+					strokeTo: 7
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: WaveEffect
+					startDelay: 290
+					lifetime: 15
+					sizeFrom: 150
+					sizeTo: 15
+					strokeFrom: 0
+					strokeTo: 5
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: WaveEffect
+					startDelay: 300
+					lifetime: 30
+					sizeFrom: 0
+					sizeTo: 120
+					strokeFrom: 0
+					strokeTo: 9
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					followParent: true
+					rotWithParent: true
+					}
+
+					{
+					type: ParticleEffect
+					baseLength: 60
+					length: -60
+					cone: 360
+					particles: 15
+					lifetime: 300
+					sizeFrom: 2.5
+					sizeTo: 0
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					strokeFrom: 0.8
+					strokeTo: 0.6 
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: ParticleEffect
+					baseLength: 50
+					length: -50
+					cone: 360
+					particles: 5
+					lifetime: 300
+					sizeFrom: 5
+					sizeTo: 0
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					strokeFrom: 0.8
+					strokeTo: 0.6 
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: ParticleEffect
+					baseLength: 40
+					length: -40
+					cone: 360
+					particles: 3
+					lifetime: 300
+					sizeFrom: 9
+					sizeTo: 0
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					strokeFrom: 0.8
+					strokeTo: 0.6 
+					followParent: true
+					rotWithParent: true
+					}
+				]
+		}
+}
+}
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: ForceFieldAbility
+radius: 32
+regen: 450
+max: 45000
+cooldown: 900
+sides: 360
+rotation: 0
+}
+{
+type: ShieldRegenFieldAbility
+amount: 45000
+max: 45000
+reload: 120	
+range: 80
+}
+{
+type: RegenAbility
+percentAmount: 0.25
+}
+{
+type: StatusFieldAbility
+effect: boss
+duration: 600
+reload: 60
+range: 1
+applyEffect: none
+activeEffect: none
+}
+{
+type: StatusFieldAbility
+effect: fast
+duration: 600
+reload: 60
+range: 80
+applyEffect: none
+activeEffect: none
+}
+{
+type: EnergyFieldAbility
+damage: 47956
+reload: 35
+range: 32
+healEffect: none
+status: atom-colapse
+statusDuration: 240
+maxTargets: 250
+healPercent: 0.3
+sameTypeHealMult: 5
+color: 00b3ffff
+useAmmo: false
+layer: 0
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0	
+sectors: 0
+}
+]
+drag: 0.1
+speed: 3
+immunities: [gorenie, melt, wetted, charged, radiated, nuked, blowedup, atom-colapse, disarmed, emi, unmoving, burning, wet, slow, sapped, shocked, freezing, corroded, tarred, muddy, spore-slowed, blasted, disarmed, electrified, melting, slow]

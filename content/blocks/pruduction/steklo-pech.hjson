@@ -1,0 +1,46 @@
+name: Печь
+description: Сплавляет кучу ресурсов для получения энергостекла
+type: genericCrafter
+outputItem: energosteklo/5
+size: 3
+health: 900
+itemCapacity: 50	
+hasPower: true
+craftTime: 15
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawArcSmelt
+		}
+	]
+}
+consumes: {
+   power: 1.25
+    items:[
+    pesok/1
+    stal/1
+    titan/1
+    coper/1
+    svinec/1
+]
+}
+category: crafting	
+requirements: [
+	coper/115
+	stal/80
+	titan/5
+	cremn/5
+]
+research: {
+	parent: crp
+	requirements: [
+  		coper/230
+  		stal/160
+  		titan/10
+  		cremn/10
+	]
+}

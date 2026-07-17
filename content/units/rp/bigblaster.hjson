@@ -1,0 +1,110 @@
+name: "[purple]ГрандБластер"
+type: flying
+flying: true
+alwaysUnlocked: true
+outlines: false
+armor: 99
+faceTarget: true
+squareShape: false
+hitSize: 16
+health: 9999
+speed: 1.2
+range: 0
+rotateSpeed: 0.7
+drawCell: false
+fallSpeed: 0.006666666666666667
+engineSize: 0
+engineOffset: 0
+itemCapacity: 0
+crashDamageMultiplier: 0
+
+
+weapons: [
+{
+	reload: 642
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	continuous: true
+	cooldownTime: 120
+	activeSound: blaster-loop
+	shootSound: blaster-loop
+	chargeSound: blaster-charge
+	shoot: {
+		firstShotDelay: 42
+		shots: 1
+	}
+	useAmmo: false
+	bullet: {
+		type: ContinuousLaserBulletType
+        length: 800
+        hitEffect: none
+        damage: 0.08333333333333333
+        laserAbsorb: false
+        makeFire: false
+        status: KR
+        statusDuration: 60
+        pierce: true
+        pierceBuilding: true
+        pierceArmor: true
+        width: 5
+        lifetime: 300
+        ammoMultiplier: 1
+        colors: ["67168d5e",  "4a24d496", "7bf6ffad", "9ef9fc","ffffff"]
+        fadeTime: 15	
+		strokeFrom: 1.05	
+		strokeTo: 0.95	
+		backLength: 4
+		frontLength: 48
+		divisions: 80
+		chargeEffect: [
+			{
+				type: MultiEffect
+				effects: [
+					{
+						type: ParticleEffect
+						lifetime: 12
+						particles: 1
+						length: 0
+						sizeFrom: 0
+						sizeTo: 16
+						colorFrom: "ffffff"
+						colorTo: "7bf6ff"
+					}
+					{
+						type: WaveEffect
+						startDelay: 12
+						lifetime: 30
+						sizeFrom: 80
+						sizeTo: 0
+						strokeFrom: 1
+						strokeTo: 8
+						colorFrom: "64168d"
+						colorTo: "7bf6ff"
+					}
+					{
+						type: ParticleEffect
+						startDelay: 12
+						lifetime: 30
+						particles: 15
+						length: -60
+						sizeFrom: 3
+						sizeTo: 0
+						colorFrom: "64168d"
+						colorTo: "7bf6ff"
+					}
+				]
+			}
+		]
+	}
+}
+]
+
+
+
+heatColor: b2ffffff
+immunities: [blowedup, disarmed]
+
+
+

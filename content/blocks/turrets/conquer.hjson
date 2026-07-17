@@ -1,0 +1,58 @@
+type: ItemTurret
+name: Завоеватель
+description: "[red]☢️☢️☢️ПРИМЕНЯТЬ ТОЛЬКО В КРАЙНИХ СЛУЧАЯХ☢️☢️☢️[]"
+size: 7
+outlineIcon: false
+health: 1400
+hasShadow: false
+rotateSpeed: 0
+targetAir: true
+targetGround: true
+shootY: 0
+shootX: 0
+maxAmmo: 5800
+ammoPerShot: 5800
+shake: 15
+recoil: 0
+range: 4400
+reload: 3300
+shootCone: 360
+shootSound: yrkt
+inaccuracy: 1
+hasShadow: false
+consumes: {
+   power: 1300
+}
+
+ammoTypes: {
+uran: {
+	type: BasicBulletType
+	lifetime: 0
+	spawnUnit: conquer-missile
+	shootEffect: reactorExplosion
+	ammoMultiplier: 1
+}
+}
+requirements: [
+	coper/7500
+	svinec/8000
+	stal/7000
+	cremn/1500
+	energosteklo/5500
+]
+category: turret
+research: {
+	parent: nuke
+	requirements: [
+  		coper/15000
+  		svinec/16000
+  		stal/14000
+  		cremn/3000
+  		energosteklo/11000
+	]
+}
+
+
+
+
+

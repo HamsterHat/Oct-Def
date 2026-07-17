@@ -1,0 +1,23 @@
+name: Туньпуниевая Буровая Установка
+description: Добывает ресурсы. Сильнее чем Пуниомовая Буровая Установка. Может добывать уран и кремний.
+type: Drill
+health: 400
+size: 2
+tier: 3
+drillTime: 280
+warmupSpeed: 0.009
+rotateSpeed: 3
+requirements: [
+	coper/30
+	stal/15
+	titan/5
+]
+category: production
+research: {
+	parent: coper-drill
+	requirements: [
+  		coper/60
+  		stal/30
+  		titan/10
+	]
+}

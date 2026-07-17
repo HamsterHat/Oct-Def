@@ -1,0 +1,120 @@
+name: Печь
+type: GenericCrafter
+outputItem: stal/1
+size: 2
+health: 460
+itemCapacity: 50
+hasPower: false
+craftTime: 340
+
+ambientSound: loopFire
+ambientSoundVolume: 1.25
+
+updateEffectSpread: 0.4
+updateEffectChance: 0.2
+
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 3
+      lifetime: 90
+      length: 40
+      baseRotation: 45
+      cone: 8
+      colorFrom: 2b2b2b8c
+      colorTo: 4a4a4a00
+      sizeFrom: 4.5
+      sizeTo: 1
+      interp: pow2Out
+      sizeInterp: linear
+    }
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 4
+      lifetime: 60
+      length: 65
+      baseRotation: 45
+      cone: 15
+      colorFrom: 3a3a3a8c
+      colorTo: 5a5a5a00
+      sizeFrom: 3
+      sizeTo: 0.5
+      interp: pow2Out
+      sizeInterp: linear
+    }
+  ]
+}
+
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 15
+      lifetime: 100
+      length: 60
+      baseRotation: 45
+      cone: 15
+      colorFrom: 2222228c
+      colorTo: 44444400
+      sizeFrom: 5
+      sizeTo: 1.5
+      interp: pow3Out
+      sizeInterp: linear
+    }
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 10
+      lifetime: 70
+      length: 80
+      baseRotation: 45
+      cone: 25
+      colorFrom: 3333338c
+      colorTo: 55555500
+      sizeFrom: 3.5
+      sizeTo: 0.5
+      interp: pow2Out
+      sizeInterp: linear
+    }
+  ]
+}
+
+
+
+consumes: {
+    items:[
+		wood/6
+		raw-iron/1
+	]
+}
+
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawGlowRegion
+		alpha: 0.8
+		color: e77e37
+		}
+	]
+}
+
+category: crafting
+requirements: [
+	stone/20
+]
+
+buildVisibility: sandboxOnly

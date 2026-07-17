@@ -1,0 +1,68 @@
+type: TreeBlock
+shadowOffset: -8
+update: true
+customShadow: true
+drawTeamOverlay: false
+allowDerelictRepair: false
+alwaysReplace: false
+buildVisibility: editorOnly
+solid: true
+destructible: true
+health: 2400
+buildTime: 900
+instantDeconstruct: false
+clipSize: 110
+breakSound: plantBreak
+destroySound: plantBreak
+drawCracks: false
+createRubble: false
+breakEffect: [
+  {
+    type: ParticleEffect
+    region: mod-fern-leaf
+    particles: 12
+    length: 30
+    lifetime: 20
+    interp: pow3Out
+    spin: 10
+    randRotation: true
+    sizeFrom: 4
+    sizeTo: 4
+    layer: 85
+    colorFrom: 294d1f
+    colorTo: 294d1f00
+  }
+]
+destroyEffect: [
+  {
+    type: ParticleEffect
+    region: mod-fern-frond
+    particles: 4
+    length: 35
+    lifetime: 900
+    interp: pow2Out
+    sizeInterp: linear
+    sizeFrom: 12
+    sizeTo: 12
+    spin: 0
+    randRotation: true
+    layer: 25
+    colorFrom: 294d1f
+    colorTo: 294d1f00
+  }
+  {
+    type: ParticleEffect
+    region: mod-fern-leaf
+    particles: 15
+    length: 50
+    lifetime: 180
+    interp: circleOut
+    spin: 4
+    randRotation: true
+    sizeFrom: 4
+    sizeTo: 4
+    layer: 110
+    colorFrom: 294d1f
+    colorTo: 294d1f00
+  }
+]

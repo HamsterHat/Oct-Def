@@ -1,0 +1,21 @@
+localizedName: Глушь
+description: "Враги не отдадут этот сектор даром, используйте электричество чтобы отбить атаку врага."
+captureWave:16
+difficulty: 3
+alwaysUnlocked: false
+addStartingItems: true
+startWaveTimeMultiplier: 3
+showSectorLandInfo: true
+planet: pun
+name: glush
+sector: 10
+research: {
+	parent: boloto
+		objectives: [
+			{
+				type: SectorComplete
+				preset: boloto
+			}
+			grad
+		]
+}

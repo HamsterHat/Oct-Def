@@ -1,0 +1,263 @@
+name: ППЛ-1
+type: naval
+alwaysUnlocked: true
+armor: 16
+outlines: false
+faceTarget: true
+health: 5975
+range: 1600
+rotateMoveFirst: false
+hitSize: 24
+rotateSpeed: 1.7
+drawCell: false
+ammoType: {
+	type: ItemAmmoType
+	item: missileCruise
+	range: 80
+	ammoPerItem: 1
+}
+ammoCapacity: 16
+weapons: [
+{
+reload: 600
+x: 0
+y: 0
+mirror: false
+rotate: false
+shootSound: splash
+recoil: 0
+continuous: false
+shake: 2
+  shoot: {
+  type: ShootBarrel
+  shots: 3
+  shotDelay: 15
+  barrels: [
+    -8, 40, 0
+    0, 40, 0
+    8, 40, 0
+  ]
+}
+bullet: {
+type: BasicBulletType
+lifetime: 0
+spawnUnit: pts-1
+}
+}
+
+{
+reload: 2400
+x: 0
+y: 0
+mirror: false
+rotate: false
+shootSound: missileLaunch
+recoil: 0
+continuous: false
+shake: 2
+  shoot: {
+  type: ShootBarrel
+  shots: 4
+  shotDelay: 15
+  barrels: [
+    -8, 16, 270
+    -8, 24, 270
+    8, 16, 90
+    8, 24, 90
+  ]
+}
+bullet: {
+type: BasicBulletType
+lifetime: 0
+spawnUnit: ppr-1
+}
+}
+
+
+
+
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	aiControllable: false
+	controllable: false
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 560
+		splashDamageRadius: 35
+		speed: 0
+		despawnHit: true
+    despawnUnit: ppl-wreck
+hitEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 40
+      sizeFrom: 0
+      sizeTo: 120
+      strokeFrom: 10
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: 66a3ff
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 15
+      lifetime: 60
+      length: 180
+      lenFrom: 20
+      lenTo: 5
+      strokeFrom: 3
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: 3385ff
+    }
+    {
+      type: ParticleEffect
+      particles: 20
+      lifetime: 150
+      length: 140
+      sizeFrom: 12
+      sizeTo: 0
+      colorFrom: b3d1ffaa
+      colorTo: 1a339900
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      lifetime: 90
+      length: 100
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: 80b3ff
+      colorTo: 1a53ff
+      baseRotation: 0
+      cone: 360
+    }
+    {
+      type: WaveEffect
+      lifetime: 80
+      sizeFrom: 20
+      sizeTo: 150
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: 3366ff
+      colorTo: 1c1c1c
+    }
+    {
+      type: ParticleEffect
+      lifetime: 10
+      particles: 1
+      length: 0
+      colorFrom: ffffff
+      colorTo: 99c2ff
+      sizeFrom: 45
+      sizeTo: 0
+      interp: exp5Out
+    }
+    {
+      type: WaveEffect
+      lifetime: 30
+      colorFrom: 4da6ff
+      colorTo: 1a3399
+      sizeFrom: 0
+      sizeTo: 64
+      strokeFrom: 10
+      strokeTo: 0
+      interp: pow3Out
+    }
+    {
+      type: ParticleEffect
+      lifetime: 20
+      particles: 24
+      length: 64
+      line: true
+      strokeFrom: 4
+      strokeTo: 0
+      lenFrom: 16
+      lenTo: 0
+      colorFrom: e6f0ff
+      colorTo: 3366cc
+      interp: pow2Out
+    }
+    {
+      type: WaveEffect
+      lifetime: 50
+      colorFrom: 0066ff
+      colorTo: 0a143d
+      sizeFrom: 20
+      sizeTo: 55
+      strokeFrom: 4
+      strokeTo: 0
+      interp: pow2In
+    }
+    {
+      type: ParticleEffect
+      lifetime: 160
+      particles: 25
+      length: 110
+      colorFrom: d9e6ff
+      colorTo: 4d94ff
+      sizeFrom: 22
+      sizeTo: 0
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      lifetime: 110
+      particles: 20
+      length: 72
+      colorFrom: b3d1ff
+      colorTo: 1a53ff
+      sizeFrom: 12
+      sizeTo: 0
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      lifetime: 45
+      particles: 8
+      length: 50
+      colorFrom: 66a3ff
+      colorTo: 1a3399
+      sizeFrom: 6
+      sizeTo: 2
+      spin: 4
+      interp: pow2Out
+    }
+  ]
+}
+
+		hitSound: droneBoom
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 75
+	}
+}
+]
+isEnemy: true
+speed: 0.8
+accel: 0.2
+drag: 0.1
+hittable: true
+targetable: false
+groundLayer: 1.0
+
+immunities: [wetted, wet, blowedup]
+

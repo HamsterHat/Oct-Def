@@ -1,0 +1,49 @@
+type: PowerTurret
+name: Разработка 192
+description: Стреляет лазером высокой мощности
+size: 5
+outlineIcon: false
+health: 2500
+shootY: 16
+rotateSpeed: 2.3
+targetAir: true
+targetGround: true
+maxAmmo: 1
+range: 1040
+reload: 300
+shootSound: laser
+recoil: 0
+consumes: {
+	power: 15.833333333
+}
+shootType: {
+	type: LaserBulletType
+        hitEffect: hitLancer
+        lifetime: 15
+        damage: 1380
+        collidesAir: true
+        length: 1040
+        ammoMultiplier: 1
+        pierceCap: 16
+        makeFire: true
+}
+
+
+requirements: [
+	coper/2500
+	titan/2500
+	stal/2500
+	energosteklo/530
+]
+category: turret
+research: {
+	parent: lazp
+	requirements: [
+		coper/5000
+		titan/5000
+		stal/5000
+		energosteklo/1060
+	]
+}
+
+

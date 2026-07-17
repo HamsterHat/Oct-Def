@@ -1,0 +1,36 @@
+name: Завод Крылатых Ракет
+description: Производит крылатые ракеты
+type: genericCrafter
+outputItem: missileCruise/1
+size: 3
+health: 900	
+itemCapacity: 64	
+hasPower: true
+craftEffect: smeltsmoke
+craftTime: 600
+consumes: {
+   power: 4
+    items:[
+		bomb/8
+		stal/32
+		coper/8
+		svinec/4
+		titan/14
+]
+}
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawFlame
+		flameColor: 6d4832
+		}
+	]
+}
+category: crafting	
+requirements: [
+	coper/400
+]

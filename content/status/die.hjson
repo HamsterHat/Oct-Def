@@ -1,0 +1,9 @@
+name: ???
+speedMultiplier: 0
+healthMultiplier: 0
+dragMultiplier: 9999999999999999999999999999999
+damageMultiplier: 0
+disarm: true
+damage: 99999999999999999999999999999999
+hidden: true
+

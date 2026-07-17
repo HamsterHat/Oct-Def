@@ -1,0 +1,301 @@
+type: mech
+name: "[lime]Пуня[]-[gold]Верховный Старейшина"
+alwaysUnlocked: true
+armor: 18
+outlines: false
+health: 395
+range: 160
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+
+
+
+weapons: [
+{
+reload: 120
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: throw
+bullet: {
+		type: BulletType
+		damage: 9
+		splashDamage: 99
+		splashDamageRadius: 18
+		width: 1
+		height: 1
+		speed: 0
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: ParticleEffect
+					colorFrom: ffffffff
+					colorTo: d8a20e00
+					particles: 1
+					region: mod-rombe
+					sizeFrom: 0
+					sizeTo: 8
+					lifetime: 30
+				}
+				{
+					type: ParticleEffect
+					colorFrom: ffffffff
+					colorTo: ffa92800
+					particles: 9
+					region: mod-rombe
+					sizeFrom: 3
+					sizeTo: 0
+					lifetime: 90
+					length: 8
+				}
+			]
+		}
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 4.7
+		impact: true
+		hitSound: coolplasmaboom
+		status: none
+		statusDuration: 0
+		recoil: -1
+		status: stun
+		statusDuration: 111
+		spawnBullets: [
+			{
+				type: BulletType
+				lifetime: 1
+				hittable: false
+				instantDisappear: true
+				damage: 0
+				collides: false
+				reflectable: false
+				splashDamage: 0
+				splashDamageRadius: 18
+				speed: 0
+				hitSound: none
+				status: KR
+				statusDuration: 333
+				hitEffect: none
+				shootEffect: none
+				despawnEffect: none
+				smokeEffect: none
+			}
+			{
+				type: BulletType
+				lifetime: 1
+				hittable: false
+				instantDisappear: true
+				damage: 0
+				collides: false
+				reflectable: false
+				splashDamage: 0
+				splashDamageRadius: 18
+				speed: 0
+				hitSound: none
+				status: heaven-smite
+				statusDuration: 99
+				hitEffect: none
+				shootEffect: none
+				despawnEffect: none
+				smokeEffect: none
+			}
+			{
+				type: BulletType
+				lifetime: 1
+				hittable: false
+				instantDisappear: true
+				damage: 0
+				collides: false
+				reflectable: false
+				splashDamage: 0
+				splashDamageRadius: 18
+				speed: 0
+				hitSound: none
+				status: slow
+				statusDuration: 999
+				hitEffect: none
+				shootEffect: none
+				despawnEffect: none
+				smokeEffect: none
+			}
+		]
+}
+}
+
+{
+reload: 2100
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: shootSmite
+bullet: {
+		type: BasicBulletType
+		damage: 999
+		speed: 5
+		absorbable: false
+		lifetime: 32
+		pierce: false
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: ParticleEffect
+					colorFrom: ffffffff
+					colorTo: d8a20e00
+					particles: 1
+					region: mod-rombe
+					sizeFrom: 0
+					sizeTo: 16
+					lifetime: 40
+				}
+				{
+					type: ParticleEffect
+					colorFrom: ffffffff
+					colorTo: ffa92800
+					particles: 9
+					region: mod-rombe
+					sizeFrom: 4
+					sizeTo: 0
+					lifetime: 110
+					length: 8
+				}
+			]
+		}
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		trailEffect: {
+			type: ParticleEffect
+			colorFrom: ffffffff
+			colorTo: d8a20e00
+			particles: 1
+			region: mod-over-wave-white
+			sizeFrom: 8
+			sizeTo: 0
+			lifetime: 20
+			rotWithParent: true
+		}
+		trailInterval: 2
+		knockback: 4.7
+		width: 0
+		height: 0
+		impact: true
+		hitSound: coolboom
+		status: none
+		statusDuration: 0
+		recoil: -2.5
+		status: stun
+		statusDuration: 480
+		splashDamage: 375
+		splashDamageRadius: 99
+		scaleLife: true
+		spawnBullets: [
+			{
+				type: BulletType
+				lifetime: 1
+				hittable: false
+				instantDisappear: true
+				damage: 0
+				collides: false
+				reflectable: false
+				splashDamage: 0
+				splashDamageRadius: 99
+				speed: 0
+				hitSound: none
+				status: KR
+				statusDuration: 999
+				hitEffect: none
+				shootEffect: none
+				despawnEffect: none
+				smokeEffect: none
+			}
+			{
+				type: BulletType
+				lifetime: 1
+				hittable: false
+				instantDisappear: true
+				damage: 0
+				collides: false
+				reflectable: false
+				splashDamage: 0
+				splashDamageRadius: 99
+				speed: 0
+				hitSound: none
+				status: slow
+				statusDuration: 999
+				hitEffect: none
+				shootEffect: none
+				despawnEffect: none
+				smokeEffect: none
+			}
+			{
+				type: BulletType
+				lifetime: 1
+				hittable: false
+				instantDisappear: true
+				damage: 0
+				collides: false
+				reflectable: false
+				splashDamage: 0
+				splashDamageRadius: 99
+				speed: 0
+				hitSound: none
+				status: heaven-smite
+				statusDuration: 99
+				hitEffect: none
+				shootEffect: none
+				despawnEffect: none
+				smokeEffect: none
+			}
+		]
+		parts: [
+			{
+				type: RegionPart
+				name: mod-over-wave
+				outline: false
+				layer: 120
+			}
+		]
+}
+}
+]
+
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 0.94
+drawCell: false
+
+
+
+abilities: [
+{
+type: StatusFieldAbility
+effect: holy-inspire
+duration: 7200
+reload: 30
+range: 160	
+applyEffect: none
+activeEffect: none
+}
+]
+
+
+
+
+
+

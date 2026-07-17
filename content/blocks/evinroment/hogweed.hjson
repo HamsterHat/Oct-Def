@@ -1,0 +1,6 @@
+type: Prop
+name: "hogweed"
+variants: 1
+hasShadow: true
+customShadow: false
+solid: false

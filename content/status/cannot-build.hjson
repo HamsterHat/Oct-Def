@@ -1,0 +1,6 @@
+name: "[scarlet]Нельзя Строить"
+damage: 0
+disarm: true
+reloadMultiplier: 0
+buildSpeedMultiplier: 0
+

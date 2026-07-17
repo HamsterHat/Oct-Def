@@ -1,0 +1,44 @@
+name: ЭМИ
+speedMultiplier: 0
+reloadMultiplier: 0
+disarm: true
+damage: 1
+show: true
+effect: {
+    type: MultiEffect
+    effects: [
+        lightning, chainLightning,
+        {
+        type: ParticleEffect
+        particles: 5
+        lifetime: 15
+        region: mod-flash
+        length: 1
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: ffffff
+        colorTo: ffe600
+        spin: 0
+        layer: 200
+        },
+        {
+        type: ParticleEffect
+        particles: 5
+        lifetime: 15
+        region: mod-flash
+        length: 1
+        sizeFrom: 4
+        sizeTo: 0
+        colorFrom: ffffff
+        colorTo: ffe600
+        spin: 0
+        layer: 200
+        },
+        {
+        type: SoundEffect
+        effect: none
+        sound: shockBullet
+        }
+    ]
+}
+

@@ -1,0 +1,144 @@
+type: flying
+name: "[yellow]Сырник"
+description: "Тестировщик [green]Octopus Defence"
+details: "Сырники - это круто!"
+alwaysUnlocked: true
+armor: 120
+buildSpeed: 120000
+outlines: false
+health: 550751
+range: 444.4
+rotateMoveFirst: false
+rotateSpeed: 8
+loopSound: none
+flying: true
+loopSoundVolume: 1.5
+engineOffset: 0
+deathExplosionEffect: none
+engineSize: 0
+hitSize: 24
+createWreck: false
+weapons: [
+{
+reload: 300
+x: 8
+y: 0
+mirror: false
+rotate: false
+shootSound: railgun
+recoil: 0
+continuous: false
+shake: 15
+useAmmo: false
+shoot: {
+	type: ShootPattern
+	shots: 10
+	firstShotDelay: 0
+	shotDelay: 10
+}
+bullet: {
+type: BasicBulletType
+lifetime: 0
+inaccuracy: 10
+spawnUnit: sgs-missile
+shootEffect: instShoot
+}
+}
+{
+reload: 900
+x: 0
+y: 8
+mirror: false
+rotate: false
+shootSound: megaStrongLaser
+alternate: false
+continuous: true
+inaccuracy: 0
+useAmmo: false
+bullet: {
+	type: ContinuousLaserBulletType
+        length: 444.4
+        hitEffect: none
+        damage: 12532.25
+        laserAbsorb: false
+        makeFire: true
+        status: disarmed
+        statusDuration: 120
+        pierce: true
+        pierceBuilding: true
+        pierceArmor: true
+        width: 90
+        lifetime: 600
+        ammoMultiplier: 1
+        colors: ["ffff00","ffffff"]
+        fadeTime: 60	
+	strokeFrom: 1.25	
+	strokeTo: 0.75	
+	backLength: 24
+}
+}
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: StatusFieldAbility
+effect: boss
+duration: 600
+reload: 60
+range: 1
+applyEffect: none
+activeEffect: none
+}
+{
+type: RegenAbility
+percentAmount: 0.25
+}
+{
+type: EnergyFieldAbility
+damage: 55600
+reload: 15
+range: 80
+healEffect: none
+status: emi
+statusDuration: 60
+maxTargets: 1000
+healPercent: 0.3
+sameTypeHealMult: 5
+color: ffe030
+useAmmo: false
+layer: 0
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0	
+sectors: 0
+}
+{
+type: ForceFieldAbility
+radius: 80
+regen: 416.66666666666666666666666666667
+max: 250000
+cooldown: 600
+sides: 360
+rotation: 0
+}
+{
+type: ShieldRegenFieldAbility
+amount: 25000
+max: 250000
+reload: 120	
+range: 80
+}
+{
+type: SpawnDeathAbility
+unit: sgs-missile	
+amount: 250
+spread: 5
+}
+]
+drag: 0.1
+speed: 5
+drawCell: false
+immunities: [gorenie, burning, melting, melt, wetted, charged, radiated, nuked, blowedup, atom-colapse]

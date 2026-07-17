@@ -1,0 +1,10 @@
+type: Wall
+name: Бронестекло
+health: 25
+requirements: [
+    stal/5
+]
+destroySound: glassBreak
+category: defense
+buildVisibility: sandboxOnly
+createRubble: false

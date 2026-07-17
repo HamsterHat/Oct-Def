@@ -1,0 +1,7 @@
+name: Бетон
+cost: 1
+color: 303030
+hardness: 1
+research: {
+	parent: clay
+}

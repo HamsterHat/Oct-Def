@@ -1,0 +1,11 @@
+type: "Floor"
+name: "Нефть"
+variants: 1
+isLiquid: true
+liquidDrop: neft
+status: slow
+cacheLayer: tar
+statusDuration: 300
+speedMultiplier: 0.2
+drownTime: 480
+walkSound: splash

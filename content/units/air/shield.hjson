@@ -1,0 +1,92 @@
+name: Щит
+type: payload
+flying: true
+alwaysUnlocked: true
+armor: 0
+faceTarget: true
+outlines: false
+health: 95
+range: 10
+hitSize: 8
+engineOffset: 6
+engineSize: 2
+rotateMoveFirst: false
+rotateSpeed: 1
+ammoType: {
+	type: ItemAmmoType
+	item: coper
+	range: 80
+	ammoPerItem: 3
+}
+ammoCapacity: 200
+fallEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 4
+      lifetime: 35
+      length: 12
+      baseLength: 4
+      sizeFrom: 3.5
+      sizeTo: 0
+      colorFrom: 454545
+      colorTo: 1a1a1a
+      layer: 118
+    }
+  ]
+}
+fallEngineEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 5
+      lifetime: 20
+      length: 18
+      cone: 30
+      sizeFrom: 2.2
+      sizeTo: 0
+      colorFrom: ff850a
+      colorTo: ff2f0a
+      layer: 118
+    }
+  ]
+}
+weapons: [
+{
+reload: 15
+x: 3.25
+y: 7.5
+mirror: true
+rotate: false
+		bullet: {
+			type: BasicBulletType
+			damage: 15
+			speed: 4
+			lifetime: 42
+		}
+}
+]
+controller: BuilderAI
+isEnemy: true
+mineWalls: true
+mineFloor: true
+buildSpeed: 1
+itemCapacity: 50
+speed: 2.6
+accel: 0.2
+drag: 0.1
+mineSpeed: 5
+mineTier: 1
+rotateSpeed: 10
+crashDamageMultiplier: 1
+hittable: true
+targetable: true
+fogRadius: 0
+coreUnitDock: true
+outlineColor: 000000
+payloadCapacity: 100
+pickupUnits: true
+#vulnerableWithPayloads: true
+immunities: [blowedup]

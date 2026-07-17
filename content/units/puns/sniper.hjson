@@ -1,0 +1,52 @@
+type: mech
+name: "[lime]Пунь со [#212121]снайперкой"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 100
+range: 8
+canDrown: false
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+	range: 4
+	ammoPerItem: 5
+}
+ammoCapacity: 25
+rotateMoveFirst: false
+rotateSpeed: 1.2
+hitSize: 8
+stepShake: 0
+weapons: [
+{
+reload: 60
+x: 6
+y: 8
+inaccuracy: 0
+aiControllable: true
+mirror: false
+rotate: false
+shootStatus: blowedup
+shootStatusDuration: 55
+shootSound: sniperGun
+bullet: {
+		type: BasicBulletType
+		damage: 48.3
+		width: 2
+		height: 2
+		speed: 8
+		absorbable: true
+		lifetime: 100
+		pierce: true
+		pierceBuilding: true
+		pierceCap: 2
+		buildingDamageMultiplier: 0.3
+		collideTerrain: true
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.3
+drawCell: false

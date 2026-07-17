@@ -1,0 +1,53 @@
+type: mech
+name: "[lime]Пуня[]-[scarlet]Палач"
+alwaysUnlocked: true
+armor: 8
+outlines: false
+health: 135
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 360
+x: 4
+y: 6
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: throw
+shootStatus: slow
+shootStatusDuration: 120
+bullet: {
+		type: BulletType
+		damage: 0
+		speed: 0
+		splashDamage: 195
+		splashDamageRadius: 10
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 4.7
+		impact: true
+		hitSound: slash
+		status: stun
+		statusDuration: 300
+		despawnHit: true
+		recoil: -2
+		despawnUnit: damage195
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 0.7
+drawCell: false

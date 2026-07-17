@@ -1,0 +1,18 @@
+name: "[acid]Отравление"
+damage: 0.08333333333333333
+damageMultiplier: 0.4
+healthMultiplier: 0.9
+effect: {
+        type: ParticleEffect
+        particles: 2
+        lifetime: 900
+        length: 2
+        sizeFrom: 2
+        sizeTo: 0
+        colorFrom: 00ff00
+        colorTo: 001100
+        spin: 0
+        layer: 5
+        cone: 360
+        }
+

@@ -1,0 +1,12 @@
+name: Труба
+type: conduit
+category: liquid
+requirements: [
+	stal/1
+]
+research: {
+	parent: condens
+	requirements: [
+  		stal/2
+	]
+}

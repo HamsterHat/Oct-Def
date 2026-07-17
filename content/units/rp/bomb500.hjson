@@ -1,0 +1,151 @@
+type: missile
+controller: missileAI
+name: ПФБ-500
+speed: -0.4
+hitSize: 10
+hidden: false
+health: 190
+loopSound: bombFall
+loopSoundVolume: 1
+outlines: false
+lifetime: 0
+range: 8
+flying: true
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: ffbe45
+engineSize: 0
+engineOffset: 0
+rotateSpeed: 0
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: true
+createScorch: false
+targetAir: false
+targetGround: false
+deathShake: 35
+fallSpeed: 0.00667
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          autoTarget: true
+          shootOnDeath: true
+          x: 0
+          shake: 15
+          y: 0
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 4985
+		splashDamageRadius: 124.8
+    speed: 0
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 1
+				length: 0
+				colorFrom: ffffff
+				colorTo: ffa64d
+				sizeFrom: 45
+				sizeTo: 0
+				interp: exp5Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				colorFrom: ffaa55
+				colorTo: ff4500
+				sizeFrom: 0
+				sizeTo: 64
+				strokeFrom: 10
+				strokeTo: 0
+				interp: pow3Out
+				}
+				{
+				type: ParticleEffect
+				lifetime: 20
+				particles: 24
+				length: 64
+				line: true
+				strokeFrom: 4
+				strokeTo: 0
+				lenFrom: 16
+				lenTo: 0
+				colorFrom: fffff5
+				colorTo: ff9d00
+				interp: pow2Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 50
+				colorFrom: ff5b14
+				colorTo: 801000
+				sizeFrom: 20
+				sizeTo: 55
+				strokeFrom: 4
+				strokeTo: 0
+				interp: pow2In
+				}
+				{
+				type: ParticleEffect
+				lifetime: 160
+				particles: 25
+				length: 110
+				colorFrom: 4a4a4a
+				colorTo: 1c1c1c
+				sizeFrom: 22
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 110
+				particles: 20
+				length: 72
+				colorFrom: 6b6b6b
+				colorTo: 1f1f1f
+				sizeFrom: 12
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 8
+				length: 50
+				colorFrom: ff6f00
+				colorTo: 3c3c3c
+				sizeFrom: 6
+				sizeTo: 2
+				spin: 4
+				interp: pow2Out
+				}
+			]
+		}
+		hitSound: droneBoom
+		hitSoundVolume: 10
+		killShooter: true
+		status: blowedup
+		statusDuration: 560
+	}
+	}
+]
+
+
+

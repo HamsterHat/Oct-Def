@@ -1,0 +1,37 @@
+name: Атомный коллапс
+speedMultiplier: 0.75
+healthMultiplier: 0.6
+reloadMultiplier: 3
+damage: 9.833333333
+effect: { 
+        type: MultiEffect
+        effects: [
+                {
+                type: ParticleEffect
+                particles: 20
+                region: mod-triangle
+                lifetime: 14
+                length: 1
+                sizeFrom: 2
+                sizeTo: 4
+                colorFrom: ffffff
+                colorTo: ffffff
+                spin: 10
+                }
+                {
+                type: ParticleEffect
+                particles: 3
+                region: mod-triangle
+                lifetime: 600
+                length: 1
+                sizeFrom: 4
+                sizeTo: 0
+                colorFrom: 00ffff
+                colorTo: ffffff
+                spin: 5
+                layer: 5
+                }
+                
+        ]
+}
+opposites: [atom-boost]

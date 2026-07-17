@@ -1,0 +1,27 @@
+type: ForceProjector
+name: Силовое поле
+size: 2
+health: 400
+category: effect
+phaseRadiusBoost: 0
+phaseShieldBoost: 0
+phaseUseTime: 0
+radius: 80
+sides: 360
+shieldHealth: 1280
+cooldownNormal: 0.3
+cooldownLiquid: 0.15
+consumes: {
+	power: 50
+}
+requirements: [
+    energosteklo/50
+    titan/50
+]
+research: {
+    parent: rv
+    requirements: [
+        energosteklo/100
+    	titan/100
+    ]
+}

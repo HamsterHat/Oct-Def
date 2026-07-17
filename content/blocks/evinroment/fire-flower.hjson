@@ -1,0 +1,5 @@
+type: Prop
+name: "fire-flower"
+lightRadius: 40
+lightColor: ff5500
+

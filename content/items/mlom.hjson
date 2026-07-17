@@ -1,0 +1,9 @@
+name: Металлолом
+description: Остатки построек
+details: Может быть раздёлённым на некотрые ресурсы
+cost: 0.1
+color: 000000
+hardness: 1
+research: {
+	parent: coper
+}

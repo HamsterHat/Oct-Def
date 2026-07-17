@@ -1,0 +1,201 @@
+type: Wall
+size: 1
+breakable: true
+destructible: true
+targetable: false
+underBullets: true
+drawTeamOverlay: false
+allowDerelictRepair: false
+instantDeconstruct: false
+health: 280
+armor: 16
+buildTime: 200
+itemDrop: energosteklo
+buildVisibility: editorOnly
+drawCracks: false
+createRubble: false
+requirements: [
+  energosteklo/20
+  stone/40
+]
+destroyBullet: {
+          type: BulletType
+          damage: 0
+          speed: 0
+          splashDamage: 999
+          splashDamageRadius: 24.975
+          absorbable: false
+          lifetime: 0
+          pierce: false
+          hitEffect: none
+          shootEffect: none
+          smokeEffect: none
+          despawnEffect: none
+          hitSound: shockBullet
+          hitEffect: {
+            type: MultiEffect
+            effects: [
+              {
+                type: ParticleEffect
+                lifetime: 8
+                particles: 1
+                length: 0
+                colorFrom: ffffff
+                colorTo: ccff16
+                sizeFrom: 12
+                sizeTo: 0
+                interp: exp5Out
+              }
+              {
+                type: WaveEffect
+                lifetime: 15
+                colorFrom: ccff16
+                colorTo: fbff00
+                sizeFrom: 0
+                sizeTo: 14
+                strokeFrom: 3
+                strokeTo: 0
+                interp: pow3Out
+              }
+              {
+                type: ParticleEffect
+                lifetime: 18
+                particles: 6
+                length: 16
+                line: true
+                strokeFrom: 2
+                strokeTo: 0
+                lenFrom: 6
+                lenTo: 0
+                colorFrom: ffffff
+                colorTo: ccff16
+                interp: pow2Out
+              }
+              {
+                type: ParticleEffect
+                lifetime: 30
+                particles: 3
+                length: 8
+                colorFrom: ccff16
+                colorTo: 3c3c3c
+                sizeFrom: 4
+                sizeTo: 0
+                interp: circleOut
+              }
+            ]
+          }
+
+
+          despawnHit: true
+          status: charged
+          statusDuration: 999
+          suppressionRange: 99.9
+          suppressionDuration: 999
+          suppressionEffectChance: 9999999
+          lightningColor: f2ff35
+          lightning: 16
+          lightningLength: 6
+          lightningLengthRand: 4
+          lightningDamage: 9
+          lightningType: {
+            type: BulletType
+            damage: 0
+            speed: 0
+            splashDamage: 12
+            splashDamageRadius: 4
+            absorbable: false
+            lifetime: 0
+            pierce: false
+            hitEffect: none
+            shootEffect: none
+            smokeEffect: none
+            despawnEffect: none
+            hitSound: shockBullet
+            despawnHit: true
+            status: charged
+            statusDuration: 120
+            suppressionRange: 8
+            suppressionDuration: 240
+            suppressionEffectChance: 999
+          }
+        }
+breakSound: rockBreak
+breakEffect: [
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 4
+    length: 25
+    lifetime: 18
+    interp: pow3Out
+    spin: 3
+    randRotation: true
+    sizeFrom: 6
+    sizeTo: 6
+    layer: 85
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-pinium-energy
+    particles: 3
+    length: 35
+    lifetime: 22
+    interp: pow2Out
+    spin: -12
+    randRotation: true
+    sizeFrom: 4
+    sizeTo: 4
+    layer: 95
+    colorFrom: d6e41a
+    colorTo: ffbb0000
+  }
+]
+destroyEffect: [
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 2
+    length: 30
+    lifetime: 1200
+    interp: pow2Out
+    sizeInterp: linear
+    sizeFrom: 6
+    sizeTo: 6
+    spin: 0
+    randRotation: true
+    layer: 25
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 6
+    length: 50
+    lifetime: 160
+    spin: 6
+    randRotation: true
+    sizeFrom: 6
+    sizeTo: 6
+    layer: 25
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-pinium-energy
+    particles: 12
+    length: 75
+    lifetime: 200
+    interp: circleOut
+    spin: 5
+    randRotation: true
+    sizeFrom: 4
+    sizeTo: 4
+    layer: 110
+    colorFrom: d6e41a
+    colorTo: ffbb0000
+  }
+]

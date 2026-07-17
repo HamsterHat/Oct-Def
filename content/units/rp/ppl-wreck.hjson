@@ -1,0 +1,247 @@
+type: mech
+name: Разбитый ППЛ-1
+
+
+loopSound: splash
+loopSoundVolume: 0.6
+hitSize: 32
+
+
+speed: 0
+rotateSpeed: 0
+accel: 0
+drag: 9999999999999999999999999
+
+
+health: 4995
+armor: 6
+itemCapacity: 0
+
+
+targetable: false
+isEnemy: false
+hidden: true
+playerControllable: false
+logicControllable: false
+outlines: false
+drawCell: false
+
+
+weapons: [
+
+
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	aiControllable: false
+	controllable: false
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 9560
+		splashDamageRadius: 85
+		speed: 0
+		despawnHit: true
+hitEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 40
+      sizeFrom: 0
+      sizeTo: 120
+      strokeFrom: 10
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: 66a3ff
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 15
+      lifetime: 60
+      length: 180
+      lenFrom: 20
+      lenTo: 5
+      strokeFrom: 3
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: 3385ff
+    }
+    {
+      type: ParticleEffect
+      particles: 20
+      lifetime: 150
+      length: 140
+      sizeFrom: 12
+      sizeTo: 0
+      colorFrom: b3d1ffaa
+      colorTo: 1a339900
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      lifetime: 90
+      length: 100
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: 80b3ff
+      colorTo: 1a53ff
+      baseRotation: 0
+      cone: 360
+    }
+    {
+      type: WaveEffect
+      lifetime: 80
+      sizeFrom: 20
+      sizeTo: 150
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: 3366ff
+      colorTo: 1c1c1c
+    }
+    {
+      type: ParticleEffect
+      lifetime: 10
+      particles: 1
+      length: 0
+      colorFrom: ffffff
+      colorTo: 99c2ff
+      sizeFrom: 45
+      sizeTo: 0
+      interp: exp5Out
+    }
+    {
+      type: WaveEffect
+      lifetime: 30
+      colorFrom: 4da6ff
+      colorTo: 1a3399
+      sizeFrom: 0
+      sizeTo: 64
+      strokeFrom: 10
+      strokeTo: 0
+      interp: pow3Out
+    }
+    {
+      type: ParticleEffect
+      lifetime: 20
+      particles: 24
+      length: 64
+      line: true
+      strokeFrom: 4
+      strokeTo: 0
+      lenFrom: 16
+      lenTo: 0
+      colorFrom: e6f0ff
+      colorTo: 3366cc
+      interp: pow2Out
+    }
+    {
+      type: WaveEffect
+      lifetime: 50
+      colorFrom: 0066ff
+      colorTo: 0a143d
+      sizeFrom: 20
+      sizeTo: 55
+      strokeFrom: 4
+      strokeTo: 0
+      interp: pow2In
+    }
+    {
+      type: ParticleEffect
+      lifetime: 160
+      particles: 25
+      length: 110
+      colorFrom: d9e6ff
+      colorTo: 4d94ff
+      sizeFrom: 22
+      sizeTo: 0
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      lifetime: 110
+      particles: 20
+      length: 72
+      colorFrom: b3d1ff
+      colorTo: 1a53ff
+      sizeFrom: 12
+      sizeTo: 0
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      lifetime: 45
+      particles: 8
+      length: 50
+      colorFrom: 66a3ff
+      colorTo: 1a3399
+      sizeFrom: 6
+      sizeTo: 2
+      spin: 4
+      interp: pow2Out
+    }
+  ]
+}
+
+		hitSound: droneBoom
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 75
+	}
+}
+]
+
+drownTimeMultiplier: 10
+abilities: [
+  {
+    type: StatusFieldAbility
+    effect: slow
+    duration: 600
+    reload: 60
+    range: 1
+    applyEffect: none
+    activeEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: ParticleEffect
+          particles: 6
+          length: 30
+          lifetime: 120
+          sizeFrom: 4
+          sizeTo: 8
+          colorFrom: 151515ff
+          colorTo: 3a3a3aaa
+          interp: pow2Out
+          sizeInterp: linear
+        }
+        {
+          type: ParticleEffect
+          particles: 4
+          length: 50
+          lifetime: 50
+          sizeFrom: 3
+          sizeTo: 0
+          colorFrom: ffffff22
+          colorTo: ffaa55ff
+          baseRotation: 90
+          cone: 45
+        }
+      ]
+    }
+  }
+]

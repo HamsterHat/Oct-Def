@@ -1,0 +1,59 @@
+type: ItemTurret
+name: Ракетчик
+description: Стреляет медленной самонаводящейся ракетой
+size: 3
+outlineIcon: false
+health: 900
+rotateSpeed: 1.3
+targetAir: true
+targetGround: true
+range: 300
+shootCone: 1
+reload: 120
+shootSound: missileLaunch
+inaccuracy: 3.5
+
+ammoTypes: {
+dinamit: {
+        type: MissileBulletType
+        hitSize: 35
+        lifetime: 300
+        width: 2
+        height: 20
+        despawnEffect: massiveExplosion
+        hitEffect: massiveExplosion
+        shootEffect: shootBig2
+        smokeEffect: shootSmokeMissile
+        reflectable: false
+        sprite: mod-rkt
+        ammoMultiplier: 1
+        collidesAir: true
+        statusDuration: 240
+        status: blowedup
+        hitSoundVolume: 3
+        hitSound: largeExplosion
+        hittable: false
+        speed: 1
+        damage: 125
+	trailColor: ffffff
+	splashDamage: 125
+        splashDamageRadius: 30
+        frontColor: b81111
+  }
+    }
+requirements: [
+  coper/75
+  svinec/30
+]
+category: turret
+research: {
+	parent: grad
+	requirements: [
+  		coper/150
+  		svinec/60
+	]
+}
+
+
+
+

@@ -1,0 +1,31 @@
+name: Мешалка пиросмеси
+description: Смешивает топий и песок в пиросмесь
+type: genericCrafter
+outputItem: pirosmes/10
+size: 3
+health: 900
+itemCapacity: 50
+hasPower: true
+craftTime: 70
+craftEffect: formsmoke
+consumes: {
+   power: 0.83
+    items:[
+    topi/5
+    pesok/5
+]
+}
+category: crafting	
+requirements: [
+	coper/85
+	titan/5
+	stal/50
+]
+research: {
+	parent: crp
+	requirements: [
+  		coper/170
+  		titan/10
+  		stal/100
+	]
+}

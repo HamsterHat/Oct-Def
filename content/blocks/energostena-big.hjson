@@ -1,0 +1,22 @@
+name: Большая энергостена
+description: СТЕНА!
+type: Wall
+absorbLasers: true
+health: 4000
+size: 2
+lightningChance: 0.23
+lightningDamage: 15
+lightningLength: 4
+flashHit: false
+chanceDeflect: 18
+deflectSound: rkst
+requirements: [
+  energosteklo/10
+]
+category: defense
+research: {
+	parent: energostena
+	requirements: [
+  		energosteklo/20
+	]
+}

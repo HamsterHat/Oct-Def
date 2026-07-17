@@ -1,0 +1,9 @@
+name: Динамит
+description: "[red]Очень взрывоопасный ресурс.[white]Иcпользуется в турелях."
+cost: 1
+color: b22222
+explosiveness: 1
+flammability: 0.3
+research: {
+	parent: pirosmes
+}

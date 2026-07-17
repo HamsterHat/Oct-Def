@@ -1,0 +1,11 @@
+type: "Floor"
+name: "Вода"
+variants: 1
+isLiquid: true
+liquidDrop: voda
+status: wetted
+cacheLayer: water
+statusDuration: 300
+speedMultiplier: 0.3
+drownTime: 120
+walkSound: splash

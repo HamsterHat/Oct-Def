@@ -1,0 +1,106 @@
+name: "Наземный Сборщик"
+alwaysUnlocked: false
+type: UnitFactory
+health: 1800
+size: 3
+configurable: true
+plans: [
+  {
+    unit: AAbigGun
+    requirements: [
+      stal/180
+      coper/90
+      svinec/110
+    ]
+    time: 9000
+  },
+  {
+    unit: AAlauncher
+    requirements: [
+      stal/220
+      coper/120
+      cremn/140
+    ]
+    time: 10800
+  },
+  {
+    unit: launcher
+    requirements: [
+      stal/400
+      titan/150
+      cremn/180
+    ]
+    time: 14400
+  },
+  {
+    unit: launcherN
+    requirements: [
+      stal/450
+      titan/180
+      cremn/200
+      energosteklo/50
+    ]
+    time: 16200
+  },
+  {
+    unit: launcherZ
+    requirements: [
+      stal/450
+      titan/180
+      cremn/200
+      energosteklo/50
+    ]
+    time: 16200
+  },
+  {
+    unit: pm-1
+    requirements: [
+      stal/45
+      coper/30
+      svinec/20
+    ]
+    time: 3600
+  },
+  {
+    unit: prszo-1
+    requirements: [
+      stal/280
+      titan/90
+      cremn/110
+    ]
+    time: 12600
+  },
+  {
+    unit: prszo-1-f
+    requirements: [
+      stal/310
+      titan/100
+      cremn/120
+    ]
+    time: 12600
+  },
+  {
+    unit: pt-1
+    requirements: [
+      stal/550
+      titan/220
+      svinec/160
+    ]
+    time: 18000
+  },
+  {
+    unit: tankercar
+    requirements: [
+      stal/90
+      coper/80
+      svinec/40
+    ]
+    time: 5400
+  }
+]
+
+category: units
+requirements: [
+  coper/1200
+  stal/1200
+]

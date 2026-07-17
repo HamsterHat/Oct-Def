@@ -1,0 +1,7 @@
+name: "[gold]Гений"
+effect: none
+healthMultiplier: 1.5
+damageMultiplier: 1.5
+speedMultiplier: 1.2
+permanent: true
+

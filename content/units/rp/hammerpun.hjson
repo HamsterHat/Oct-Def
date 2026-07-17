@@ -1,0 +1,54 @@
+type: mech
+name: "[lime]Пуня[] с [#c0c0c0]молотом"
+alwaysUnlocked: true
+armor: 11
+outlines: false
+health: 130
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 480
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: throw
+shootStatus: slow
+shootStatusDuration: 400
+bullet: {
+		type: BulletType
+		damage: 0
+		speed: 0
+		splashDamage: 360
+		splashDamageRadius: 16
+		buildingDamageMultiplier: 3.75
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 18.7
+		impact: true
+		hitSound: hammerhit
+		despawnHit: true
+		recoil: -4.25
+		status: stun
+		statusDuration: 360
+		hitShake: 15
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.1
+drawCell: false

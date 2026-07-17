@@ -1,0 +1,60 @@
+name: Щука
+type: naval
+alwaysUnlocked: false
+armor: 0
+outlines: false
+faceTarget: true
+#squareShape: true
+health: 200
+range: 40
+rotateMoveFirst: false
+hitSize: 16
+rotateSpeed: 1
+ammoType: {
+	type: ItemAmmoType
+	item: titan
+	range: 40
+	ammoPerItem: 2
+}
+ammoCapacity: 100
+weapons: [
+	{
+	name: sigp
+	reload: 30
+	x: 0
+	y: 0
+	mirror: false
+	rotate: true
+	rotateSpeed: 5
+		bullet: {
+			damage: 100
+			speed: 4
+			lifetime: 100
+		}
+	}
+	{
+	name: sigp
+	reload: 30
+	x: 0
+	y: -8
+	mirror: false
+	rotate: true
+	rotateSpeed: 5
+		bullet: {
+			damage: 100
+			speed: 4
+			lifetime: 100
+		}
+	}
+]
+isEnemy: true
+speed: 0.5
+accel: 0.2
+drag: 0.1
+rotateSpeed: 5
+hittable: true
+targetable: true
+coreUnitDock: true
+outlineColor: 000000
+immunities: [wetted, wet]
+immunities: [blowedup]

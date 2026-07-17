@@ -1,0 +1,265 @@
+type: mech
+name: Разбитый ПМ-1
+
+
+loopSound: fire
+loopSoundVolume: 0.6
+hitSize: 32
+
+
+speed: 0
+rotateSpeed: 0
+accel: 0
+drag: 0
+
+
+health: 300
+armor: 4
+itemCapacity: 0
+
+
+targetable: false
+isEnemy: false
+hidden: true
+playerControllable: false
+logicControllable: false
+outlines: false
+drawCell: false
+
+
+weapons: [
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	aiControllable: false
+	controllable: false
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 895
+		splashDamageRadius: 125
+		speed: 0
+		despawnHit: true
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+
+{
+      type: WaveEffect
+      lifetime: 40
+      sizeFrom: 0
+      sizeTo: 120
+      strokeFrom: 10
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ffaa55
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 15
+      lifetime: 60
+      length: 180
+      lenFrom: 20
+      lenTo: 5
+      strokeFrom: 3
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ff4500
+    }
+    {
+      type: ParticleEffect
+      particles: 20
+      lifetime: 150
+      length: 140
+      sizeFrom: 12
+      sizeTo: 0
+      colorFrom: 444444aa
+      colorTo: 11111100
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      lifetime: 90
+      length: 100
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: ffa64d
+      colorTo: ff4500
+      baseRotation: 0
+      cone: 360
+    }
+    {
+      type: WaveEffect
+      lifetime: 80
+      sizeFrom: 20
+      sizeTo: 150
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: ff4500
+      colorTo: 555555
+    }
+
+				{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 1
+				length: 0
+				colorFrom: ffffff
+				colorTo: ffa64d
+				sizeFrom: 45
+				sizeTo: 0
+				interp: exp5Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				colorFrom: ffaa55
+				colorTo: ff4500
+				sizeFrom: 0
+				sizeTo: 64
+				strokeFrom: 10
+				strokeTo: 0
+				interp: pow3Out
+				}
+				{
+				type: ParticleEffect
+				lifetime: 20
+				particles: 24
+				length: 64
+				line: true
+				strokeFrom: 4
+				strokeTo: 0
+				lenFrom: 16
+				lenTo: 0
+				colorFrom: fffff5
+				colorTo: ff9d00
+				interp: pow2Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 50
+				colorFrom: ff5b14
+				colorTo: 801000
+				sizeFrom: 20
+				sizeTo: 55
+				strokeFrom: 4
+				strokeTo: 0
+				interp: pow2In
+				}
+				{
+				type: ParticleEffect
+				lifetime: 160
+				particles: 25
+				length: 110
+				colorFrom: 4a4a4a
+				colorTo: 1c1c1c
+				sizeFrom: 22
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 110
+				particles: 20
+				length: 72
+				colorFrom: 6b6b6b
+				colorTo: 1f1f1f
+				sizeFrom: 12
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 8
+				length: 50
+				colorFrom: ff6f00
+				colorTo: 3c3c3c
+				sizeFrom: 6
+				sizeTo: 2
+				spin: 4
+				interp: pow2Out
+				}
+			]
+		}
+		hitSound: droneBoom
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 75
+		fragBullet: fireball
+		fragBullets: 64
+
+		puddleLiquid: os
+		puddleAmount: 950
+		puddleRange: 16
+		puddles: 8
+		despawnHit: true
+		
+		incendAmount: 600
+		incendSpread: 32
+		incendChance: 1
+	}
+}
+]
+
+
+
+abilities: [
+{
+type: StatusFieldAbility
+effect: burning
+duration: 600
+reload: 60
+range: 1
+applyEffect: none
+
+activeEffect: {
+		type: MultiEffect
+        effects: [
+			{
+			type: ParticleEffect
+			particles: 5
+			length: 25
+			lifetime: 90
+			sizeFrom: 3
+			sizeTo: 6
+			colorFrom: 2b2b2bff
+			colorTo: 5a5a5aff
+			interp: pow2Out
+			sizeInterp: linear
+			}
+			{
+			type: ParticleEffect
+			particles: 3
+			length: 40
+			lifetime: 45
+			sizeFrom: 2
+			sizeTo: 0
+			colorFrom: ffa64dff
+			colorTo: ff3300ff
+			baseRotation: 90
+			cone: 30
+			}
+        ]
+}
+
+
+}
+
+]
+
+

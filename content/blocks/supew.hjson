@@ -1,0 +1,24 @@
+name: Усиленная энергостена
+description: СТЕНА!
+type: Wall
+health: 1500
+absorbLasers: true
+size: 1
+lightningChance: 0.25
+lightningDamage: 20
+lightningLength: 8
+flashHit: false
+chanceDeflect: 19
+deflectSound: rkst
+requirements: [
+  energosteklo/5
+  titan/5
+]
+category: defense
+research: {
+	parent: energostena-big
+	requirements: [
+  		energosteklo/10
+  		titan/10
+	]
+}

@@ -1,0 +1,51 @@
+name: Вихрь
+type: tank
+hitSize: 4
+omniMovement: false
+health: 50
+alwaysUnlocked: false
+armor: 0
+speed: 0.3
+rotateSpeed: 1.8
+range: 150
+outlines: false
+ammoType: {
+	type: ItemAmmoType
+	item: coper
+	range: 80
+	ammoPerItem: 3
+}
+ammoCapacity: 200
+weapons: [
+ {
+ name: ps
+ x: 0
+ y: 0
+    rotateSpeed: 3
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 15
+    recoil: 0.5
+    shootSound: shoot
+ bullet: {
+    type: BasicBulletType
+    width: 5
+    height: 5
+    status: none
+    hitSize: 1
+    shootEffect: shootSmall
+    damage: 10
+    speed: 5
+    lifetime: 30
+    }
+   }
+]
+research: {
+	parent: tankfabric
+	requirements: [
+		stal/45
+	]
+}
+immunities: [blowedup]

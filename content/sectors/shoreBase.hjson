@@ -1,0 +1,28 @@
+localizedName: Береговая база
+description: "Здесь можно найти уран. Уничтожте вражеские базы. Не стоит недооценивать противника."
+captureWave: 0
+difficulty: 3
+alwaysUnlocked: false
+addStartingItems: true
+showSectorLandInfo: true
+planet: pun
+name: shoreBase
+sector: 24
+research: {
+	parent: glush
+		objectives: [
+			{
+				type: SectorComplete
+				preset: glush
+			}
+			{
+				type: SectorComplete
+				preset: bunker
+			}
+			{
+				type: SectorComplete
+				preset: snowIsland
+			}
+			airfb
+		]
+}

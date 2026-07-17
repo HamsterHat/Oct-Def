@@ -1,0 +1,18 @@
+type: Unloader
+name: Разгрузчик
+category: "effect"
+requirements: [
+	coper/10
+	stal/5
+	svinec/15
+	titan/5
+]
+research: {
+	parent: prk
+	requirements: [
+  		coper/20
+  		stal/10
+  		svinec/30
+  		titan/10
+	]
+}

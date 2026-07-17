@@ -1,0 +1,24 @@
+name: Большая усиленная энергостена
+description: СТЕНА!
+type: Wall
+absorbLasers: true
+health: 6000
+size: 2
+lightningChance: 0.5
+lightningDamage: 25
+lightningLength: 8
+flashHit: false
+chanceDeflect: 24
+deflectSound: rkst
+requirements: [
+  energosteklo/10
+  titan/20
+]
+category: defense
+research: {
+	parent: supew
+	requirements: [
+  		energosteklo/20
+  		titan/40
+	]
+}

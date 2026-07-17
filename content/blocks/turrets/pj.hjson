@@ -1,0 +1,53 @@
+type: ItemTurret
+name: Поджигатель
+description: Сжигает врагов на небольшом растоянии
+size: 1
+outlineIcon: false
+health: 100
+rotateSpeed: 4
+maxAmmo: 360
+targetAir: false
+targetGround: true
+range: 60
+reload: 6
+shootCone: 50
+shootSound: fire
+
+ammoTypes: {
+ pirosmes: {
+        type: BasicBulletType
+        lifetime: 15
+        pierce: true
+        width: 1
+        height: 1
+        despawnHit: false
+        despawnEffect: none
+        hitEffect: hitFlameSmall
+        shootEffect: shootSmallFlame
+        ammoMultiplier: 60
+        reflectable: false
+        smokeEffect: shootSmallSmoke
+        collidesAir: false
+        statusDuration: 300
+        status: gorenie
+        hittable: false
+        speed: 4
+        damage: 10
+        splashDamage: 10
+        splashDamageRadius: 4
+		knockback: 0.3
+
+  }
+    }
+requirements: [
+  coper/70
+]
+category: turret
+research: {
+	parent: turret
+	requirements: [
+  		coper/140
+	]
+}
+
+

@@ -1,0 +1,5 @@
+type: Wall
+health: 1
+variants: 1
+buildVisibility: hidden
+size: 2

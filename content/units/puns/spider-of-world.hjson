@@ -1,0 +1,137 @@
+type: legs
+name: "[gray]Паук Мира"
+description: "[crimson]О нет!"
+details: "sus"
+alwaysUnlocked: true
+drag: 0.1
+speed: 0.97
+hitSize: 32
+health: 409351
+armor: 0
+drawCell: false
+outlines: false
+range: 400
+buildSpeed: 120000000
+
+rotateSpeed: 4.54
+canDrown: false
+
+legCount: 8
+legMoveSpace: 0.8
+legPairOffset: 3
+legLength: 16
+legExtension: -20
+legBaseOffset: 8
+stepShake: 1
+legLengthScl: 0.93
+rippleScale: 3
+legSpeed: 0.994
+
+legSplashDamage: 35800
+legSplashRange: 25.754
+
+hovering: true
+shadowElevation: 0.95
+weapons: [
+{
+reload: 1
+x: 0
+y: 12
+mirror: false
+rotate: false
+shootSound: none
+inaccuracy: 0
+useAttackRange: false
+shootCone: 360
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	lifetime: 1
+	speed: 0.00001
+	height: 1
+	width: 1
+	damage: 10000000
+	shootEffect: none
+	smokeEffect: none
+	hitEffect: none
+	despawnEffect: none
+	despawnHit: true
+	splashDamage: 1000000
+	splashDamageRadius: 4
+	status: emi
+	statusDuration: 480
+	hitEffect: none
+	shootEffect: none
+	smokeEffect: none
+	hitEffect: none
+}
+}
+{
+reload: 1
+x: 0
+y: 14
+mirror: false
+rotate: true
+rotateSpeed: 99999
+shootSound: none
+inaccuracy: 0
+shootCone: 45
+useAmmo: false
+bullet: {
+	type: PointLaserBulletType
+	color: ffffff
+	length: 400
+	width: 2
+	damage: 12
+	buildingDamageMultiplier: 0.1
+	knockback: -6.453
+}
+}
+{
+reload: 1
+x: 8
+y: 8
+mirror: true
+rotate: true
+alternate: false
+rotateSpeed: 99999
+shootSound: none
+inaccuracy: 0
+shootCone: 45
+useAmmo: false
+bullet: {
+	type: PointLaserBulletType
+	color: ffffff
+	length: 400
+	width: 2
+	damage: 12
+	buildingDamageMultiplier: 0.1
+	knockback: -6.453
+}
+}
+]
+immunities: [gorenie, burning, melting, melt, wetted, charged, radiated, nuked, blowedup, atom-colapse, emi, unmoving, burning, wet, slow, sapped, shocked, freezing, corroded, tarred, muddy, spore-slowed, blasted, disarmed, electrified, melting, slow]
+abilities: [
+{
+type: StatusFieldAbility
+effect: boss
+duration: 600
+reload: 60
+range: 1
+applyEffect: none
+activeEffect: none
+}
+{
+type: EnergyFieldAbility
+damage: 4560
+reload: 10
+range: 400
+healEffect: none
+status: emi
+statusDuration: 550
+maxTargets: 1000
+healPercent: 100
+color: ffffffff
+useAmmo: false
+}
+]

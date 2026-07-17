@@ -1,0 +1,52 @@
+type: mech
+name: "[lime]Пуня [royal]Телохранитель"
+alwaysUnlocked: true
+armor: 4
+outlines: false
+health: 165
+range: 8
+canDrown: false
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+	range: 4
+	ammoPerItem: 5
+}
+ammoCapacity: 18
+rotateMoveFirst: false
+rotateSpeed: 4
+hitSize: 8
+stepShake: 0
+drawCell: false
+weapons: [
+{
+reload: 15
+x: 6
+y: 6
+aiControllable: true
+inaccuracy: 0
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+}
+maxAmmo: 18
+mirror: false
+rotate: false
+shootSound: pistol
+bullet: {
+		type: BasicBulletType
+		damage: 96.12
+		width: 2
+		height: 2
+		speed: 4
+		absorbable: true
+		lifetime: 84
+		pierce: false
+		buildingDamageMultiplier: 0.1
+		collideTerrain: true
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1

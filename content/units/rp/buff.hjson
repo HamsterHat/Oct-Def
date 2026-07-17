@@ -1,0 +1,115 @@
+type: missile
+controller: MinerAI
+defaultController: MinerAI
+playerControllable: false
+health: 1
+hitSize: 1
+drag: 10000
+physics: false
+drawBody: false
+drawCell: false
+outlines: false
+hoverable: false
+groundLayer: 0
+deathShake: 0
+lifetime: 1
+speed: 0
+hittable: false
+targetable: false
+hidden: true
+
+abilities: [
+  {
+    type: RegenAbility
+    percentAmount: 1
+  }
+  {
+type: EnergyFieldAbility
+damage: 15.6
+reload: 0
+range: 64
+healEffect: heal
+hitEffect: none	
+damageEffect: heal	
+status: slow
+shootSound: heal
+statusDuration: 0
+maxTargets: 999999
+healPercent: 15
+sameTypeHealMult: 999
+displayHeal: true
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0
+sectors: 0	
+color: #ffffff00
+useAmmo: false
+}
+{
+type: StatusFieldAbility
+effect: atom-boost	
+duration: 600	
+reload: 0
+range: 32	
+applyEffect: heal
+activeEffect: none	
+color: 0ecc37
+}
+{
+type: StatusFieldAbility
+effect: fast
+duration: 600	
+reload: 0
+range: 32	
+applyEffect: heal
+activeEffect: none	
+color: 0ecc37
+}
+{
+type: StatusFieldAbility
+effect: invincible
+duration: 300	
+reload: 0
+range: 32	
+applyEffect: heal
+activeEffect: none	
+color: 0ecc37
+}
+{
+type: StatusFieldAbility
+effect: slow
+duration: 1200	
+reload: 0
+range: 32	
+applyEffect: heal
+activeEffect: none	
+color: 0ecc37
+}
+{
+type: StatusFieldAbility
+effect: boss
+duration: 1200	
+reload: 0
+range: 32	
+applyEffect: heal
+activeEffect: none	
+color: 0ecc37
+}
+]
+
+deathSound: none
+createScorch: false
+
+deathExplosionEffect: {
+  type: WaveEffect
+  lifetime: 60
+  sizeFrom: 0
+  sizeTo: 32
+  sides: 360
+  colorFrom: 48ff00
+  colorTo: 00ff95
+  strokeFrom: 3
+  strokeTo: 0
+}

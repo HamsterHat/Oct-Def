@@ -1,0 +1,43 @@
+type: mech
+name: "[sky]Полицейский с [#5f2e1a]верёвками"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 135
+range: 160
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 1
+x: 4
+y: 4
+mirror: false
+rotate: false
+shootSound: none
+inaccuracy: 0
+shootCone: 45
+bullet: {
+type: PointLaserBulletType
+color: ffffff
+damage: 0
+buildingDamageMultiplier: 0.01
+knockback: -1.453
+status: disarmed
+statusDuration: 120
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.11
+drawCell: false
+
+
+
+
+

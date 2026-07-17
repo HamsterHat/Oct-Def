@@ -1,0 +1,9 @@
+name: Масло
+color: ff8c00
+lightColor: ffd700
+flammability: 0.65
+temperature: 0
+heatCapacity: 0.6
+viscosity: 0.65
+explosiveness: 0
+effect: none

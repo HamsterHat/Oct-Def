@@ -1,0 +1,34 @@
+name: Завод TNT
+description: Производит тротил
+type: genericCrafter
+outputItem: bomb/2
+size: 3
+health: 900	
+itemCapacity: 32	
+hasPower: true
+craftEffect: smeltsmoke
+craftTime: 480
+consumes: {
+   power: 1
+    items:[
+		ugol/2
+		dinamit/3
+		topi/1
+]
+}
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawFlame
+		flameColor: e4b73b
+		}
+	]
+}
+category: crafting	
+requirements: [
+	coper/200
+]

@@ -1,0 +1,114 @@
+type: mech
+name: "[lime]Пунь с [#212121]базукой"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+drawCell: false
+health: 100
+range: 8
+canDrown: false
+ammoType: {
+	type: ItemAmmoType
+	item: missile
+	range: 4
+	ammoPerItem: 1
+}
+ammoCapacity: 6
+rotateMoveFirst: false
+rotateSpeed: 2
+hitSize: 8
+stepShake: 0
+weapons: [
+{
+reload: 300
+shootStatus: blowedup
+shootStatusDuration: 95
+x: 8
+y: 4
+inaccuracy: 0
+mirror: false
+aiControllable: true
+rotate: false
+shootSound: yrkt
+bullet: {
+		type: MissileBulletType
+		damage: 11.3
+		width: 8
+		height: 8
+		speed: 4
+		sprite: mod-yrkt
+		frontColor: a07b3f
+        	backColor: ff9e00
+		absorbable: true
+		lifetime: 120
+		despawnHit: true
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+				type: WaveEffect
+				lifetime: 25
+				sizeFrom: 0
+				sizeTo: 60
+				strokeFrom: 8
+				strokeTo: 0
+				colorFrom: ffa600ff
+				colorTo: ff3c0000
+				}
+				{
+				type: WaveEffect
+				lifetime: 15
+				sizeFrom: 0
+				sizeTo: 35
+				strokeFrom: 4
+				strokeTo: 0
+				colorFrom: ffffffff
+				colorTo: ff990000
+				}
+				{
+				type: ParticleEffect
+				particles: 15
+				lifetime: 40
+				length: 55
+				baseLength: 10
+				line: true
+				strokeFrom: 3
+				strokeTo: 0
+				lenFrom: 8
+				lenTo: 0
+				colorFrom: ffd000ff
+				colorTo: ff450000
+				cone: 360
+				}
+				{
+				type: ParticleEffect
+				particles: 8
+				lifetime: 60
+				length: 40
+				sizeFrom: 6
+				sizeTo: 0
+				colorFrom: 4a4a4aff
+				colorTo: 1f1f1f00
+				interp: circleOut
+				}
+			]
+		}
+
+		splashDamage: 184.53
+		splashDamageRadius: 54.4
+		status: blowedup
+		statusDuration: 330
+		hitSound: largeExplosion
+		hitSoundVolume: 5
+		makeFire: true
+		splashDamagePierce: false
+		fragBullets: 7
+		fragBullet: fireball
+		collideTerrain: true
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.3

@@ -1,0 +1,53 @@
+name: Ядерный реактор
+description: "Вырабатывает много энергии, [red]взрывается[] при недостатке [blue]охлаждающей жидкости[]"
+type: NuclearReactor
+itemDuration: 1800
+size: 4
+health: 1600
+itemCapacity: 10
+powerProduction: 416.66
+fuelItem: uran
+consumes: {
+	items: {
+		items: [
+			uran/1
+		]
+	}
+	liquids: {
+		liquids: [
+			voda/0.5
+		]
+	}
+}
+heating: 0.005
+coolantPower: 0.5
+explosionRadius: 30
+explosionDamage: 1560
+explodeSound: nukeBoom
+category: power
+research:{
+parent: provoda
+	requirements:[
+		stal/2000
+		titan/2000
+		energosteklo/2000
+		coper/2000
+		svinec/1000
+	]
+}
+requirements: [
+	stal/1000
+	titan/1000
+	energosteklo/1000
+	coper/1000
+	svinec/500
+]
+drawer: [
+		{
+			type: DrawRegion
+			suffix:-top
+		}
+		{
+			type: DrawDefault
+		}
+]

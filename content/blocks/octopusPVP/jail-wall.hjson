@@ -1,0 +1,11 @@
+type: Wall
+name: Тюремная решётка
+health: 360
+requirements: [
+	titan/45
+	stal/45
+]
+createRubble: false
+destroySound: stal-box-destroy
+category: defense
+buildVisibility: sandboxOnly

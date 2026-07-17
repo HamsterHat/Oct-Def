@@ -1,0 +1,193 @@
+type: mech
+name: "[lime]Пунь[]-[#444444]Спецназовец"
+alwaysUnlocked: true
+armor: 20
+outlines: false
+health: 170
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+	range: 4
+	ammoPerItem: 5
+}
+ammoCapacity: 120
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+drawCell: false
+weapons: [
+{
+	reload: 5
+	x: 4
+	y: 4
+	mirror: false
+	rotate: false
+	shootSound: ak
+	inaccuracy: 0
+	aiControllable: true
+
+	bullet: {
+			type: BasicBulletType
+			damage: 33.9
+			width: 2
+			height: 2
+			speed: 4
+			absorbable: true
+			lifetime: 168
+			pierce: false
+			buildingDamageMultiplier: 0.1
+			collideTerrain: true
+	}
+}
+
+
+{
+	reload: 0
+	x: 4
+	y: 4
+	mirror: false
+	rotate: false
+	shootSound: sweepCharge
+	inaccuracy: 0
+	aiControllable: true
+	alwaysContinuous: true
+	continuous: true
+	useAmmo: false
+
+	bullet: {
+			type: ContinuousFlameBulletType
+			damage: 0
+			width: 1
+			length: 675
+			pierce: false
+			buildingDamageMultiplier: 0
+			collideTerrain: true
+			drawFlare: false
+			colors: ["ff00004b", "ff00009c", "ff0000d24b", "ff0000ff"]
+	}
+}
+
+{
+	reload: 1800
+	x: 4
+	y: 4
+	mirror: false
+	rotate: false
+	shootSound: yrkt
+	inaccuracy: 0
+	aiControllable: true
+
+	bullet: {
+			type: BasicBulletType
+			damage: 11.3
+			width: 2
+			height: 4
+			speed: 4
+			absorbable: true
+			lifetime: 168
+			pierce: false
+			buildingDamageMultiplier: 1.15
+			hitSound: coolboom
+			scaleLife: true
+			frontColor: 444444
+			backColor: 000000
+			trailEffect: {
+				type: ParticleEffect
+				sizeFrom: 2
+				sizeTo: 0
+				particles: 1
+				colorFrom: c0c0c0ff
+				colorTo: 00000000
+				interp: swingOut
+				lifetime: 16
+			}
+			trailInterval: 2
+			hitEffect: {
+				type: MultiEffect
+				effects: [
+					{
+						type: ParticleEffect
+						particles: 1
+						region: circle-shadow
+						sizeFrom: 32
+						sizeTo: 0
+						colorFrom: ffffffff
+						colorTo: ffffffff
+						interp: circleOut
+						lifetime: 16
+					}
+					{
+						type: ParticleEffect
+						particles: 9
+						sizeFrom: 8
+						sizeTo: 0
+						colorFrom: 8f320d
+						colorTo: 444444
+						interp: circleOut
+						lifetime: 80
+						length: 16
+					}
+					{
+						type: ParticleEffect
+						particles: 9
+						sizeFrom: 10
+						sizeTo: 0
+						colorFrom: 582612
+						colorTo: 444444
+						interp: circleOut
+						lifetime: 95
+						length: 20
+					}
+					{
+						type: ParticleEffect
+						particles: 9
+						sizeFrom: 3
+						sizeTo: 0
+						colorFrom: 582612
+						colorTo: 582612
+						interp: circleOut
+						lifetime: 30
+						length: 34
+					}
+					{
+						type: ParticleEffect
+						particles: 9
+						colorFrom: fffc61
+						colorTo: 310404
+						interp: circleOut
+						lifetime: 60
+						line: true
+						length: 22
+					}
+				]
+			}
+			collideTerrain: true
+			sprite: missile-large
+			splashDamage: 112.5
+			splashDamageRadius: 30
+			status: blowedup
+			statusDuration: 350
+			fragBullets: 70
+			fragBullet: {
+				type: BasicBulletType
+				damage: 3.7
+				width: 2
+				height: 2
+				speed: 4
+				absorbable: true
+				lifetime: 10
+				pierce: false
+				buildingDamageMultiplier: 0.3
+				collideTerrain: true
+				sprite: transfer-arrow
+				spin: 4
+			}
+	}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1

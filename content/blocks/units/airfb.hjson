@@ -1,0 +1,57 @@
+name: "Завод авиации"
+alwaysUnlocked: false
+type: UnitFactory
+health: 900
+size: 3
+configurable: true
+plans: [
+  {
+    unit: alpa
+    requirements: [
+      titan/15
+    ]
+    time: 600
+  },
+  {
+    unit: orel
+    requirements: [
+      pirosmes/5
+      titan/30
+      stal/45
+    ]
+    time: 1200
+  },
+    {
+    unit: sokol
+    requirements: [
+	titan/50
+	stal/90
+	coper/100
+    ]
+    time: 2450
+  },
+  {
+    unit: pegas
+    requirements: [
+	titan/150
+	stal/200
+	coper/500
+	svinec/150
+    ]
+    time: 4580
+  }
+]
+category: units
+requirements: [
+  titan/100
+  coper/100
+  svinec/95
+]
+research: {
+	parent: base-land
+	requirements: [
+		titan/200
+		coper/200
+		svinec/190
+	]
+}

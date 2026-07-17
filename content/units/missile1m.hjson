@@ -1,0 +1,374 @@
+type: missile
+controller: missileAI
+name: ПКР-1М
+speed: 2.5
+hitSize: 30
+hidden: false
+health: 330
+loopSound: missileTrail
+loopSoundVolume: 1
+outlines: false
+lifetime: 4000
+range: 8
+flying: true
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: ffbe45
+engineSize: 4
+engineOffset: 22
+rotateSpeed: 0.9
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+targetAir: true
+targetGround: true
+deathShake: 35
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          autoTarget: true
+          shootOnDeath: true
+          x: 0
+          shake: 15
+          y: 0
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 5270
+		splashDamageRadius: 201.4
+    speed: 0
+		hitEffect: {
+            type: multiEffect
+            effects: [
+              {
+                type: ParticleEffect
+                line: true
+                particles: 15
+                lifetime: 55
+                offset: 50
+                length: 540
+                cone: 360
+                baseLength: 250
+                interp: circleOut
+                sizeInterp: pow5Out
+                strokeFrom: 1.6
+                strokeTo: 0
+                lenFrom: 24
+                lenTo: 24
+                colorFrom: c0c0c0FF
+                colorTo: 000000FF
+              }
+              {
+                type: ParticleEffect
+                line: true
+                particles: 25
+                lifetime: 65
+                offset: 50
+                length: 500
+                baseLength: 250
+                cone: 360
+                interp: circleOut
+                sizeInterp: pow5Out
+                strokeFrom: 1.6
+                strokeTo: 0
+                lenFrom: 17
+                lenTo: 17
+                colorFrom: c0c0c0FF
+                colorTo: 000000FF
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 43
+                sizeTo: 1
+                length: 280
+                lifetime: 600
+                lightOpacity: 0
+                interp: circleOut
+                sizeInterp: pow5In
+                colorFrom: c0c0c0aa
+                colorTo: 000000aa
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 43
+                sizeTo: 1
+                length: 290
+                lifetime: 630
+                lightOpacity: 0
+                interp: circleOut
+                sizeInterp: pow5In
+                colorFrom: c0c0c0aa
+                colorTo: 000000aa
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 59
+                sizeTo: 1
+                length: 290
+                lifetime: 600
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: c0c0c0FF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 59
+                sizeTo: 1
+                length: 270
+                lifetime: 500
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: c0c0c0FF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 35
+                offset: 50
+                sizeFrom: 27
+                sizeTo: 1
+                length: 300
+                lifetime: 600
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: c0c0c0FF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 45
+                offset: 50
+                sizeFrom: 19
+                sizeTo: 1
+                length: 320
+                lifetime: 600
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: c0c0c0FF
+                colorTo: 000000FF
+                cone: 360
+              }
+                 {
+                type: WaveEffect
+                lifetime: 190
+                sizeFrom: 0
+                sizeTo: 800
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 60
+                strokeTo: 0
+                colorFrom: 757575c7
+                colorTo: 75757556
+                layer: 5
+                clip: 9000
+              }
+              {
+                type: WaveEffect
+                lifetime: 55
+                sizeFrom: 0
+                sizeTo: 450
+                lightColor: 66B1FFFFF
+                interp: circleOut
+                strokeFrom: 25
+                strokeTo: 0
+                colorFrom: c0c0c0FF
+                colorTo: 000000aa
+              }
+              {
+                type: WaveEffect
+                lifetime: 45
+                sizeFrom: 0
+                sizeTo: 550
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 19
+                strokeTo: 0
+                colorFrom: c0c0c0FF
+                colorTo: 000000FF
+              }
+              {
+                type: WaveEffect
+                lifetime: 45
+                sizeFrom: 0
+                sizeTo: 650
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 11
+                strokeTo: 0
+                colorFrom: c0c0c0FF
+                colorTo: 000000FF
+              }
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 25
+          sizeFrom: 3000
+          sizeTo: 0
+          startDelay: 0
+          layer: 135
+          clip: 8192
+        }
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 17.5
+          sizeFrom: 8192
+          sizeTo: 8192
+          startDelay: 0
+          layer: 135
+          colorTo: ffffff00
+          clip: 8192
+        }
+        {
+					type: ParticleEffect
+					lifetime: 15
+					particles: 1
+					length: 0
+					colorFrom: ffffff
+					colorTo: ffeedd
+					sizeFrom: 200
+					sizeTo: 0
+					interp: exp5Out
+					}
+					{
+					type: WaveEffect
+					lifetime: 50
+					colorFrom: ffa500
+					colorTo: ff4500
+					sizeFrom: 0
+					sizeTo: 220
+					strokeFrom: 16
+					strokeTo: 0
+					interp: pow3Out
+					}
+					{
+					type: WaveEffect
+					lifetime: 80
+					colorFrom: ffffdd
+					colorTo: ff6600
+					sizeFrom: 30
+					sizeTo: 160
+					strokeFrom: 8
+					strokeTo: 0
+					interp: pow2Out
+					}
+					{
+					type: ParticleEffect
+					lifetime: 120
+					particles: 30
+					length: 120
+					cone: 20
+					baseRotation: 90
+					colorFrom: 8c8c8c
+					colorTo: 3a3a3a
+					sizeFrom: 14
+					sizeTo: 4
+					interp: pow2Out
+					}
+					{
+					type: ParticleEffect
+					lifetime: 180
+					startDelay: 20
+					particles: 40
+					length: 100
+					cone: 360
+					colorFrom: ffbb66
+					colorTo: 2b2b2b
+					sizeFrom: 20
+					sizeTo: 0
+					interp: circleOut
+					}
+					{
+					type: ParticleEffect
+					lifetime: 60
+					particles: 35
+					length: 180
+					line: true
+					strokeFrom: 5
+					strokeTo: 0
+					lenFrom: 24
+					lenTo: 0
+					colorFrom: fffff0
+					colorTo: ff3300
+					interp: exp10Out
+					}
+					{
+					type: ParticleEffect
+					lifetime: 150
+					particles: 25
+					length: 140
+					colorFrom: a39682
+					colorTo: 3d372e
+					sizeFrom: 16
+					sizeTo: 0
+					interp: circleOut
+					}
+            ]
+	}
+		hitSound: droneBoom
+		hitSoundVolume: 10
+		killShooter: true
+		status: blowedup
+		statusDuration: 560
+	}
+	}
+]
+abilities: [
+{
+	type: MoveEffectAbility
+	effect: missileTrailSmoke
+	rotation: 0
+	y: -25
+	color: c0c0c0
+	interval: 1
+}
+{
+	type: MoveEffectAbility
+	effect: {
+    type: ParticleEffect
+    particles: 1
+    length: 20
+    lifetime: 15
+    interp: pow5Out
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: ffd37f
+    colorTo: ff8e52
+  }
+	rotation: 0
+	y: -22
+	interval: 1
+}
+]
+
+

@@ -1,0 +1,51 @@
+type: mech
+name: "[lime]Вое[green]нный [lime]Пу[green]н[lime]ь"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 1370
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+	range: 4
+	ammoPerItem: 5
+}
+ammoCapacity: 1200
+range: 10
+rotateMoveFirst: false
+rotateSpeed: 1.3
+hitSize: 8
+loopSound: voenp-idle
+loopSoundVolume: 1.5
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 5
+x: 6
+y: 8
+mirror: false
+rotate: false
+shootSound: shootPistol
+inaccuracy: 0
+bullet: {
+		type: BasicBulletType
+		damage: 245
+		width: 2
+		height: 2
+		speed: 4
+		absorbable: true
+		lifetime: 42
+		pierce: true
+		pierceBuilding: true
+		pierceCap: 4
+		buildingDamageMultiplier: 0.4
+		collideTerrain: true
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.6
+drawCell: false

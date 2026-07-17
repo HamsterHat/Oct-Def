@@ -1,0 +1,12 @@
+type: StorageBlock
+coreMerge: false
+itemCapacity: 75
+name: Ящик
+health: 25
+requirements: [
+    wood/16
+]
+destroySound: box-destroy
+category: defense
+buildVisibility: sandboxOnly
+createRubble: false

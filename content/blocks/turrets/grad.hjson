@@ -1,0 +1,165 @@
+type: ItemTurret
+name: Град
+description: Стреляет самонаводящимися ракетами
+size: 2
+outlineIcon: false
+health: 400
+rotateSpeed: 2
+targetAir: true
+targetGround: true
+range: 170
+shootCone: 3
+reload: 10
+shoot: {
+  type: ShootAlternate
+  shots: 1
+  barrels: 6
+  spread: 1
+}
+shootSound: missileLarge
+//spread:10
+inaccuracy: 3.5
+
+ammoTypes: {
+	coper: {
+		type: BasicBulletType
+		hitSize: 8
+		lifetime: 42
+		width: 2
+		height: 15
+		despawnEffect: none
+		hitEffect: blastExplosion
+		hitSound: largeExplosion
+		hitSoundVolume: 3
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		ammoMultiplier: 1
+		collidesAir: true
+		statusDuration: 600
+		status: none
+		hittable: false
+		reflectable: false
+		speed: 4
+		sprite: mod-rkt
+		damage: 10
+		splashDamage: 3
+		splashDamageRadius: 16
+		knockback: 1.6
+		frontColor: 0aad0a
+	}
+	pirosmes: {
+		type: MissileBulletType
+		hitSize: 15
+		lifetime: 42
+		width: 2
+		height: 15
+		despawnEffect: none
+		hitEffect: blastExplosion
+		hitSound: largeExplosion
+		hitSoundVolume: 3
+		sprite: mod-rkt
+		ammoMultiplier: 1
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
+		collidesAir: true
+		statusDuration: 600
+		status: gorenie
+		hittable: false
+		speed: 4
+		damage: 8
+		reflectable: false
+		trailColor: ff8c00
+		makeFire: true
+		splashDamage: 9
+		splashDamageRadius: 16
+		frontColor: f5a700
+	}
+	dinamit: {
+		type: MissileBulletType
+		hitSize: 20
+		lifetime: 42
+		hitSoundVolume: 3
+		width: 2
+		height: 15
+		despawnEffect: none
+		hitEffect: blastExplosion
+		hitSound: largeExplosion
+		shootEffect: shootBig
+		reflectable: false
+		smokeEffect: shootBigSmoke
+		sprite: mod-rkt
+		ammoMultiplier: 1
+		collidesAir: true
+		statusDuration: 122
+		status: blowedup
+		hittable: false
+		speed: 4
+		damage: 9
+		trailColor: ff8c00
+		splashDamage: 14
+		splashDamageRadius: 16
+		frontColor: a11515
+	}
+	energosteklo: {
+		type: MissileBulletType
+		hitSize: 15
+		hitSoundVolume: 3
+		lifetime: 42
+		width: 2
+		height: 15
+		despawnEffect: none
+		hitEffect: blastExplosion
+		shootEffect: shootBig
+		hitSound: largeExplosion
+		ammoMultiplier: 1
+		smokeEffect: shootBigSmoke
+		sprite: mod-rkt
+		collidesAir: true
+		statusDuration: 600
+		status: charged
+		hittable: false
+		speed: 4
+		damage: 15
+		trailColor: ff8c00
+		splashDamage: 12
+		splashDamageRadius: 16
+		lightningDamage: 5
+		lightning: 4
+		lightningLength: 4
+		frontColor: e5f500
+		lightningType: {
+		type: LightningBulletType
+		status: charged
+		statusDuration: 120
+		lifetime: 1
+                hitEffect: hitLancer
+                despawnEffect: none
+                lightingLength: 4
+                hittable: false
+                lightColor: ffffff
+                collidesAir: true
+                buildingDamageMultiplier: 1
+	}
+	lightningLength: 4
+	lightningLength: 4
+	}
+}
+requirements: [
+  coper/30
+  svinec/30
+  titan/15
+]
+category: turret
+research: {
+	parent: autopuska
+	requirements: [
+  		coper/60
+  		svinec/60
+  		titan/30
+	]
+}
+
+
+
+
+

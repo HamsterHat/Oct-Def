@@ -1,0 +1,67 @@
+name: ПРСЗО-1
+type: tank
+hitSize: 32
+omniMovement: false
+health: 990
+armor: 10
+speed: 0.6
+rotateSpeed: 2
+alwaysUnlocked: true
+range: 2160
+outlines: false
+crushDamage: 18
+targetAir: true
+targetGround: false
+ammoType: {
+	type: ItemAmmoType
+	item: missileCruise
+	range: 40
+	ammoPerItem: 1
+}
+ammoCapacity: 2
+treadRects: [
+  {
+    x: -96
+    y: -96
+    height: 192
+    width: 32
+  }
+]
+weapons: [
+ {
+ name: prszo-1-gun
+ x: 0
+ y: 0
+    rotateSpeed: 3
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 1800
+    recoil: 1
+    shootSound: missileLaunch
+  shoot: {
+  type: ShootBarrel
+  shots: 9
+  shotDelay: 10
+  barrels: [
+    -8, 14, 0
+    0, 14, 0
+    8, 14, 0
+  ]
+}
+ bullet: {
+   type: BasicBulletType
+   lifetime: 0
+   spawnUnit: rszoMissile
+    }
+   }
+
+]
+
+
+
+
+
+
+immunities: [blowedup]

@@ -1,0 +1,9 @@
+name: Шлак
+color: ff8c00
+lightColor: ffa500
+flammability: 0
+temperature: 2.35
+heatCapacity: 0
+viscosity: 0.55
+explosiveness: 0
+effect: melting

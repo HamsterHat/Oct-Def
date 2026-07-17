@@ -1,0 +1,108 @@
+type: TallBlock
+size: 3
+update: true
+customShadow: true
+drawTeamOverlay: false
+allowDerelictRepair: false
+alwaysReplace: false
+buildVisibility: editorOnly
+rotationRand: 90
+layer: 80
+shadowLayer: 79
+shadowOffset: -32
+shadowAlpha: 0.33
+solid: true
+destructible: true
+health: 15000
+buildTime: 3600
+instantDeconstruct: false
+clipSize: 240
+breakSound: plantBreak
+destroySound: plantBreak
+drawCracks: false
+createRubble: false
+
+requirements: [
+  wood/460
+]
+
+breakEffect: [
+  {
+    type: ParticleEffect
+    region: mod-branch
+    particles: 5
+    length: 40
+    lifetime: 20
+    interp: pow3Out
+    spin: 12
+    randRotation: true
+    sizeFrom: 8
+    sizeTo: 8
+    layer: 85
+    colorFrom: cca070
+    colorTo: cca07000
+  }
+  {
+    type: ParticleEffect
+    region: mod-fern-leaf
+    particles: 8
+    length: 55
+    lifetime: 30
+    interp: pow2Out
+    spin: 8
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 110
+    colorFrom: "528043"
+    colorTo: "52804300"
+  }
+]
+
+destroyEffect: [
+  {
+    type: ParticleEffect
+    region: mod-log
+    particles: 1
+    length: 45
+    lifetime: 1200
+    interp: pow2Out
+    sizeInterp: linear
+    sizeFrom: 8
+    sizeTo: 8
+    spin: 0
+    randRotation: true
+    layer: 25
+    colorFrom: 8c6239
+    colorTo: 8c623900
+  }
+  {
+    type: ParticleEffect
+    region: mod-branch
+    particles: 6
+    length: 70
+    lifetime: 180
+    spin: 4
+    randRotation: true
+    sizeFrom: 8
+    sizeTo: 8
+    layer: 25
+    colorFrom: cca070
+    colorTo: cca07000
+  }
+  {
+    type: ParticleEffect
+    region: mod-fern-leaf
+    particles: 20
+    length: 110
+    lifetime: 240
+    interp: circleOut
+    spin: 3
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 110
+    colorFrom: "528043"
+    colorTo: "52804300"
+  }
+]

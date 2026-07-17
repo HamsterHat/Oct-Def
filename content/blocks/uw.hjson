@@ -1,0 +1,59 @@
+name: Урановая стена
+health: 200
+destroyBullet: {
+	type: BasicBulletType
+	lifetime: 1
+	speed: 0.00001
+	height: 1
+	width: 1
+	damage: 750
+	splashDamage: 750
+	splashDamageRadius: 48
+	status: nuked
+	statusDuration: 120
+	makeFire: true
+	hitEffect: massiveExplosion
+}
+size: 1
+requirements: [
+  uran/5
+  stal/5
+]
+category: defense
+research: {
+	parent: titan-wall-big
+	requirements: [
+  		uran/10
+  		stal/10
+	]
+}
+type: PowerTurret
+description: "Защищает постройки от вражеских снарядов. Облучает врагов. Взрывается при разрушении."
+drawer: {
+  type: DrawTurret
+  basePrefix: uw-
+}
+reload: 1
+rotateSpeed: 0
+smokeEffect: none
+shootX: 0
+shootY: 0
+shootCone: 360
+shootSound: none
+recoil: 0
+range: 48
+shootType: {
+  instantDisappear: true
+  damage: 0
+  splashDamage: 0.083333333
+  splashDamageRadius: 48
+  status: radiated
+  statusDuration: 30
+  despawnEffect: none
+  hitEffect: none
+  shootEffect: none
+  splashDamagePierce: true
+  ammoMultiplier: 0
+  buildingDamageMultiplier: 0.0000001
+}
+consumes: { }

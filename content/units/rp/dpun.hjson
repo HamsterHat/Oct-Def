@@ -1,0 +1,77 @@
+type: mech
+name: "[lime]Пуня []Доктор"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 55
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 15
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 18.3
+		width: 1
+		height: 1
+		speed: 0
+		splashDamage: 8.34
+		splashDamageRadius: 8
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 9.89
+		impact: true
+		hitSound: pun-hit
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.11
+drawCell: false
+
+
+abilities: [
+  {
+type: EnergyFieldAbility
+damage: 0
+reload: 600
+range: 80
+healEffect: heal
+hitEffect: none	
+damageEffect: heal	
+status: slow
+shootSound: heal
+statusDuration: 0
+maxTargets: 999999
+healPercent: 15
+sameTypeHealMult: 1
+displayHeal: true
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0
+sectors: 0	
+color: #ffffff00
+useAmmo: false
+}
+]
+
+immunities: [atom-boost, boss]

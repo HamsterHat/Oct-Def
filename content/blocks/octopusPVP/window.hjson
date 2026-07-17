@@ -1,0 +1,10 @@
+type: Wall
+name: Окно
+health: 0.01
+requirements: [
+    cremn/1
+]
+destroySound: glassBreak
+category: defense
+buildVisibility: sandboxOnly
+createRubble: false

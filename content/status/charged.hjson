@@ -1,0 +1,26 @@
+name: Заряжен
+damage: 0.333333333
+effect: {
+    type: MultiEffect
+    effects: [
+        lightning,
+        {
+        type: ParticleEffect
+        particles: 20
+        lifetime: 15
+        region: mod-flash
+        length: 1
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: ffffff
+        colorTo: ffe600
+        spin: 0
+        layer: 200
+        },
+        {
+        type: SoundEffect
+        sound: shockBullet
+        effect: none
+        }
+    ]
+}

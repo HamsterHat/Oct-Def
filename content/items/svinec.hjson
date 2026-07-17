@@ -1,0 +1,9 @@
+name: Пиний
+description: Важный ресурс, нужен для многих построек.
+cost: 1
+color: 55b3c3
+hardness: 1
+charge: 1.2
+research: {
+	parent: coper
+}

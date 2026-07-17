@@ -1,0 +1,24 @@
+type: Battery
+name: Мини-аккамулятор
+health: 100
+description: Хранит и отдаёт энергию
+conductivePower: true
+   consumes: {
+     powerBuffered: 5000
+   }
+health: 100
+baseExplosiveness: 5.25
+category: power
+requirements: [
+	svinec/15
+	stal/5
+	coper/10
+]
+research: {
+	parent: provoda
+	requirements: [
+		svinec/30
+		stal/10
+		coper/20
+	]
+}

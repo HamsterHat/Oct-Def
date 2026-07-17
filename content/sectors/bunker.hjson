@@ -1,0 +1,24 @@
+localizedName: Бункер
+description: "Это заброшенный бункер Пуней, враги возввели здесь форпост. Произведите бомбардировщики и уничтожте вражескую базу"
+captureWave: 0
+difficulty: 2
+alwaysUnlocked: false
+addStartingItems: true
+showSectorLandInfo: true
+planet: pun
+name: bunker
+sector: 19
+research: {
+	parent: snowIsland
+		objectives: [
+			{
+				type: SectorComplete
+				preset: glush
+			}
+			{
+				type: SectorComplete
+				preset: snowIsland
+			}
+		]
+		
+}

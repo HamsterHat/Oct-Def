@@ -1,0 +1,7 @@
+name: Дерево
+cost: 1
+color: 6e4f21
+hardness: 1
+research: {
+	parent: base-land
+}

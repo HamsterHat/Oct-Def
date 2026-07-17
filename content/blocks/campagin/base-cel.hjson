@@ -1,0 +1,44 @@
+hasItems: true
+unloadable: true
+breakable: true
+rebuildable: false
+
+type: CoreBlock
+localizedName: База "Цель"
+description: База. Хранит 4000 предметов, легко бронирована
+category: effect
+health: 5500
+size: 4
+armor: 4
+
+itemCapacity: 4000
+unitCapModifier: 75
+unitType: "targeter"
+incinerateNonBuildable: true
+isFirstTier: false
+squareSprite: false
+
+requirements: [
+	titan/1000
+	coper/1500
+	svinec/1000
+	stal/1000
+]
+
+
+
+research: {
+    parent: base-land
+    requirements: [
+    	titan/2000
+    	coper/3000
+    	svinec/2000
+    	stal/2000
+    ]
+    objectives: [
+			{
+				type: SectorComplete
+				preset: boloto
+			}
+	]
+}

@@ -1,0 +1,46 @@
+hasItems: true
+unloadable: true
+breakable: true
+rebuildable: false
+
+type: CoreBlock
+localizedName: База "Крепость"
+description: База. Хранит 15 тысяч предметов, бронирована
+category: effect
+health: 18300
+size: 5
+armor: 12
+
+itemCapacity: 15000
+unitCapModifier: 100
+unitType: "castle"
+incinerateNonBuildable: true
+isFirstTier: false
+squareSprite: false
+
+requirements: [
+	cremn/500
+	titan/1500
+	coper/2500
+	stal/1500
+	svinec/2500
+]
+
+
+
+research: {
+    parent: base-cel
+    requirements: [
+    	cremn/1000
+    	titan/3000
+    	coper/5000
+    	stal/3000
+    	svinec/5000
+    ]
+    objectives: [
+			{
+				type: OnSector
+				preset: snowIsland
+			}
+	]
+}

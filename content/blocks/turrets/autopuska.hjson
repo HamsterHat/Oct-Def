@@ -1,0 +1,170 @@
+type: ItemTurret
+name: Пневмопушка
+description: "Быстро стреляет обычными пулями"
+size: 2
+outlineIcon: false
+health: 400
+rotateSpeed: 2.9
+targetAir: true
+targetGround: true
+range: 200
+shootCone: 1
+shootSound: shoot
+reload: 25
+inaccuracy: 1
+
+ammoTypes: {
+ svinec: {
+        type: BasicBulletType
+        hitSize: 10
+        lifetime: 55
+        width: 3
+        height: 8
+        hitEffect: explosion
+        shootEffect: none
+        smokeEffect: shootBigSmoke
+        ammoMultiplier: 1
+        collidesAir: true
+        statusDuration: 600
+        status: none
+        hittable: false
+        reflectable: false
+        speed: 4
+		knockback: 1.2
+        damage: 20
+        frontColor: 09752d
+        backColor: 0a3818
+        fragBullets: 1
+        fragBullet: {
+          type: BulletType
+          damage: 0
+          speed: 0
+          splashDamage: 99
+          splashDamageRadius: 18.9
+          absorbable: false
+          lifetime: 0
+          pierce: false
+          hitEffect: none
+          shootEffect: none
+          smokeEffect: none
+          despawnEffect: none
+          hitSound: shockBullet
+          despawnHit: true
+          status: charged
+          statusDuration: 999
+          createChance: 0.1
+          suppressionRange: 18.9
+          suppressionDuration: 999
+          suppressionEffectChance: 75
+          lightningColor: 38ecce
+          lightning: 3
+          lightningLength: 8
+          lightningLengthRand: 4
+          lightningDamage: 9
+          lightningType: {
+            type: BulletType
+            damage: 0
+            speed: 0
+            splashDamage: 9
+            splashDamageRadius: 4
+            absorbable: false
+            lifetime: 0
+            pierce: false
+            hitEffect: none
+            shootEffect: none
+            smokeEffect: none
+            despawnEffect: none
+            hitSound: shockBullet
+            despawnHit: true
+            status: charged
+            statusDuration: 60
+            suppressionRange: 8
+            suppressionDuration: 240
+            suppressionEffectChance: 75
+          }
+        }
+  }
+  coper: {
+        type: BasicBulletType
+	    ammoMultiplier: 1
+        hitSize: 10
+        lifetime: 50
+        width: 3
+        height: 8
+        reflectable: false
+        hitEffect: explosion
+        shootEffect: none
+        smokeEffect: shootBigSmoke
+        collidesAir: true
+        statusDuration: 600
+        status: none
+        hittable: false
+        speed: 4
+        damage: 15.5
+		knockback: 1.2
+        frontColor: 0aad0a
+        backColor: 14661aff
+  }
+  stal: {
+        type: BasicBulletType
+        ammoMultiplier: 1
+        hitSize: 10
+        lifetime: 50
+        width: 3
+        height: 8
+        reflectable: false
+        hitEffect: explosion
+        shootEffect: none
+        smokeEffect: shootBigSmoke
+        collidesAir: true
+        statusDuration: 600
+        status: none
+        hittable: false
+        speed: 4
+        damage: 40
+		    knockback: 1.3
+        frontColor: 665c5c
+        backColor: 241f1f
+ }
+ titan: {
+        type: BasicBulletType
+        ammoMultiplier: 1
+        hitSize: 10
+        lifetime: 50
+        width: 3
+        height: 8
+        reflectable: false
+        hitEffect: explosion
+        shootEffect: none
+        smokeEffect: shootBigSmoke
+        collidesAir: true
+        statusDuration: 600
+        status: none
+        hittable: false
+        speed: 4
+		    knockback: 1.5
+        damage: 47.5
+        frontColor: "0e4274"
+        backColor: 120329
+ }
+ 
+
+  }
+
+requirements: [
+  coper/30
+  svinec/15
+]
+category: turret
+research: {
+	parent: turret
+	requirements: [
+  		coper/60
+  		svinec/30
+	]
+}
+
+
+
+
+

@@ -1,0 +1,82 @@
+type: mech
+name: "[sky]Умный [lime]Пуня-[white]Учёный"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 175
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+
+loopSoundVolume: 1
+
+
+
+
+weapons: [
+{
+reload: 60
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: splash
+bullet: {
+		type: BulletType
+		damage: 0
+		width: 1
+		height: 1
+		speed: 0
+		splashDamage: 9
+		splashDamageRadius: 16
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 4.7
+		impact: true
+		hitSound: hit
+		status: acid-poison-II
+		statusDuration: 60
+		puddleLiquid: acid-II
+		puddleAmount: 110
+		puddleRange: 10
+		puddles: 2
+}
+}
+]
+
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.1
+drawCell: false
+
+
+
+abilities: [
+{
+type: StatusFieldAbility
+effect: knowing-III
+duration: 3600
+reload: 1200
+range: 160	
+applyEffect: none
+activeEffect: none
+}
+]
+
+
+
+immunities: [acid-poison-I, acid-poison-II, acid-poison-III]
+
+
+

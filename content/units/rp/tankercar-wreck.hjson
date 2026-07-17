@@ -1,0 +1,176 @@
+type: mech
+name: Разбитый Бензовоз
+
+
+loopSound: fire
+loopSoundVolume: 0.6
+hitSize: 32
+
+
+speed: 0
+rotateSpeed: 0
+accel: 0
+drag: 0
+
+
+health: 690
+armor: 4
+itemCapacity: 0
+
+
+targetable: false
+isEnemy: false
+hidden: true
+playerControllable: false
+logicControllable: false
+outlines: false
+drawCell: false
+
+
+weapons: [
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	aiControllable: false
+	controllable: false
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 1245
+		splashDamageRadius: 90
+		speed: 0
+		despawnHit: true
+		hitEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 2100
+      sizeFrom: 0
+      sizeTo: 1400
+      strokeFrom: 45
+      strokeTo: 45
+      interp: circleOut
+      colorFrom: 3a3a3aBB
+      colorTo: 1a1a1a00
+      layer: 5
+      clip: 9000
+    }
+    {
+      type: WaveEffect
+      lifetime: 60
+      sizeFrom: 0
+      sizeTo: 320
+      strokeFrom: 25
+      strokeTo: 0
+      colorFrom: ffffffFF
+      colorTo: ff5100FF
+      layer: 110
+    }
+    {
+      type: ParticleEffect
+      particles: 60
+      lifetime: 300
+      length: 280
+      baseLength: 20
+      cone: 360
+      interp: pow3Out
+      sizeFrom: 12
+      sizeTo: 0
+      colorFrom: ffa600FF
+      colorTo: ff3c0000
+      layer: 110
+    }
+    {
+      type: ParticleEffect
+      startDelay: 300
+      particles: 50
+      lifetime: 1800
+      length: 350
+      baseLength: 100
+      cone: 360
+      interp: pow10Out
+      sizeFrom: 45
+      sizeTo: 95
+      colorFrom: 2c2c2cDD
+      colorTo: 11111100
+      layer: 90
+    }
+  ]
+}
+
+		hitSound: droneBoom
+		hitSoundVolume: 12
+		killShooter: true
+		status: blowedup
+		statusDuration: 130
+		fragBullet: fireball
+		fragBullets: 12
+
+		despawnHit: true
+		
+		incendAmount: 45
+		incendSpread: 18
+		incendChance: 1
+	}
+}
+]
+
+
+
+abilities: [
+{
+type: StatusFieldAbility
+effect: burning
+duration: 600
+reload: 60
+range: 1
+applyEffect: none
+
+activeEffect: {
+		type: MultiEffect
+        effects: [
+			{
+			type: ParticleEffect
+			particles: 5
+			length: 25
+			lifetime: 90
+			sizeFrom: 3
+			sizeTo: 6
+			colorFrom: 2b2b2bff
+			colorTo: 5a5a5aff
+			interp: pow2Out
+			sizeInterp: linear
+			}
+			{
+			type: ParticleEffect
+			particles: 3
+			length: 40
+			lifetime: 45
+			sizeFrom: 2
+			sizeTo: 0
+			colorFrom: ffa64dff
+			colorTo: ff3300ff
+			baseRotation: 90
+			cone: 30
+			}
+        ]
+}
+
+
+}
+
+]
+
+

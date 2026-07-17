@@ -1,0 +1,47 @@
+type: mech
+name: "[green]Пунь с [brown]калашиком"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 100
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+	range: 4
+	ammoPerItem: 5
+}
+ammoCapacity: 120
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 5
+x: 6
+y: 8
+mirror: false
+rotate: false
+shootSound: ak
+inaccuracy: 0
+aiControllable: true
+
+bullet: {
+		type: BasicBulletType
+		damage: 11.3
+		width: 2
+		height: 2
+		speed: 4
+		absorbable: true
+		lifetime: 84
+		pierce: false
+		buildingDamageMultiplier: 0.1
+		collideTerrain: true
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1

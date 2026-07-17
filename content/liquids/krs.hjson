@@ -1,0 +1,9 @@
+name: Керосин
+color: ffff00
+lightColor: ffd700
+flammability: 1.85
+temperature: 0
+heatCapacity: 0
+viscosity: 0
+explosiveness: 0.95
+effect: none

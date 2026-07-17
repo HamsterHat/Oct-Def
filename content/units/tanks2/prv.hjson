@@ -1,0 +1,53 @@
+name: Т-3
+type: tank
+hitSize: 24
+omniMovement: false
+health: 8500
+armor: 1
+speed: 0.6
+rotateSpeed: 0.9
+alwaysUnlocked: false
+range: 250
+outlines: false
+ammoType: {
+	type: ItemAmmoType
+	item: uran
+	range: 40
+	ammoPerItem: 1
+}
+ammoCapacity: 40
+weapons: [
+ {
+ name: prvP
+ x: 0
+ y: 0
+    rotateSpeed: 3
+    shootY: 16
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 60
+    recoil: 8
+    shootSound: shootBig
+ bullet: {
+    type: BasicBulletType
+    width: 5
+    height: 10
+    status: radiated
+    statusDuration: 300
+    hitSize: 1
+    shootEffect: shootBig
+    makeFire: true
+    damage: 300
+    hitEffect: massiveExplosion
+    splashDamageRadius: 32
+    splashDamage: 300
+    speed: 5
+    lifetime: 50
+    fragBullets: 1
+    fragBullet: fireball
+    }
+   }
+]
+immunities: [blowedup]

@@ -1,0 +1,132 @@
+name: Замок
+type: payload
+flying: true
+alwaysUnlocked: true
+armor: 0
+faceTarget: true
+outlines: false
+health: 275
+range: 10
+hitSize: 8
+engineOffset: 8
+engineSize: 2
+rotateMoveFirst: false
+rotateSpeed: 1
+ammoType: {
+	type: ItemAmmoType
+	item: coper
+	range: 80
+	ammoPerItem: 3
+}
+ammoCapacity: 200
+fallEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 4
+      lifetime: 35
+      length: 12
+      baseLength: 4
+      sizeFrom: 3.5
+      sizeTo: 0
+      colorFrom: 454545
+      colorTo: 1a1a1a
+      layer: 118
+    }
+  ]
+}
+fallEngineEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 5
+      lifetime: 20
+      length: 18
+      cone: 30
+      sizeFrom: 2.2
+      sizeTo: 0
+      colorFrom: ff850a
+      colorTo: ff2f0a
+      layer: 118
+    }
+  ]
+}
+deathEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 18
+      sizeFrom: 0
+      sizeTo: 32
+      strokeFrom: 3
+      strokeTo: 0
+      colorFrom: ffbb00
+      colorTo: 454545
+      layer: 5
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 14
+      lifetime: 28
+      length: 40
+      cone: 360
+      strokeFrom: 2
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: a6a69c
+      layer: 118
+    }
+    {
+      type: ParticleEffect
+      particles: 6
+      lifetime: 45
+      length: 20
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: 2b2b2b
+      colorTo: 111111
+      layer: 118
+    }
+  ]
+}
+weapons: [
+{
+reload: 10
+x: 2
+y: 2
+mirror: true
+rotate: false
+		bullet: {
+			type: BasicBulletType
+			damage: 70
+			speed: 4
+			lifetime: 42
+		}
+}
+]
+controller: BuilderAI
+isEnemy: true
+mineWalls: true
+mineFloor: true
+buildSpeed: 3.9
+itemCapacity: 60
+speed: 2.9
+accel: 0.2
+drag: 0.1
+mineSpeed: 10
+mineTier: 3
+rotateSpeed: 10
+crashDamageMultiplier: 1
+hittable: true
+targetable: true
+fogRadius: 0
+coreUnitDock: true
+outlineColor: 000000
+payloadCapacity: 100
+pickupUnits: true
+#vulnerableWithPayloads: true
+immunities: [blowedup]

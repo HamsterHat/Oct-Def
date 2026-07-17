@@ -1,0 +1,8 @@
+name: Кремний
+description: Используется только в электронике
+cost: 0.6
+hardness: 2
+research: {
+	parent: svinec
+}
+color: 696969

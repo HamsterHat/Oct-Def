@@ -1,0 +1,6 @@
+name: Знание I
+effect: none
+healthMultiplier: 1.1
+damageMultiplier: 1.1
+permanent: true
+

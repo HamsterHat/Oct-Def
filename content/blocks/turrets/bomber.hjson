@@ -1,0 +1,68 @@
+type: ItemTurret
+name: Бомбёр
+description: Улучшенный ракетчик - стреляет медленной большой самонаводящейся ракетой
+details: Наверно это самая бесполезная турель в мире 
+size: 3
+outlineIcon: false
+health: 900
+rotateSpeed: 1.1
+targetAir: true
+targetGround: true
+range: 390
+shootCone: 1
+reload: 240
+shootSound: missileLaunch
+inaccuracy: 3.5
+
+ammoTypes: {
+dinamit: {
+        type: MissileBulletType
+        hitSize: 35
+        lifetime: 433.333333333
+        width: 3
+        height: 35
+        despawnEffect: massiveExplosion
+        reflectable: false
+        hitColor: ffb75e
+	hitEffect: {
+		type: MultiEffect
+		effects: [massiveExplosion, scatheExplosion, scatheLight, scatheSlash, instBomb]
+	}
+        hitSound: largeExplosion
+        shootEffect: shootBig2
+        smokeEffect: shootSmokeMissile
+        hitSoundVolume: 5
+        sprite: mod-rkt
+        ammoMultiplier: 1
+        collidesAir: true
+        statusDuration: 430
+        status: blowedup
+        hittable: false
+        speed: 0.9
+        damage: 850
+	trailColor: ffffff
+	splashDamage: 836
+        splashDamageRadius: 60
+        frontColor: b81111
+  }
+    }
+requirements: [
+  coper/550
+  svinec/830
+  titan/380
+  stal/670
+]
+category: turret
+research: {
+	parent: raketcik
+	requirements: [
+  		coper/1100
+  		svinec/1660
+  		titan/760
+  		stal/1340
+	]
+}
+
+
+
+

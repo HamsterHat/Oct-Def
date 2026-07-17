@@ -1,0 +1,9 @@
+name: Дистилированая вода
+color: 7fffd4
+lightColor: 00ffff
+flammability: 0
+temperature: -1.4
+heatCapacity: 1.45
+viscosity: 0
+explosiveness: 0
+effect: zamoroz

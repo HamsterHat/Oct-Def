@@ -1,0 +1,55 @@
+type: PowerTurret
+name: Разработка 396
+description: Стреляет тремя лазерами высокой мощности
+size: 4
+outlineIcon: false
+health: 1600
+shootY: 8
+rotateSpeed: 2.1
+targetAir: true
+targetGround: true
+maxAmmo: 1
+range: 224
+cooldownTime: 120
+reload: 150
+shootSound: 396Shoot
+shoot: {
+  type: ShootSpread
+  shots: 3
+  spread: 16
+}
+recoil: 0
+consumes: {
+	power: 833.333333333
+}
+shootType: {
+	type: LaserBulletType
+        hitEffect: hitLancer
+        lifetime: 15
+        damage: 1600
+        collidesAir: true
+        length: 244
+        ammoMultiplier: 1
+        pierceCap: 3
+        makeFire: true
+}
+
+
+requirements: [
+	coper/4000
+	titan/3000
+	stal/2100
+	energosteklo/200
+]
+category: turret
+research: {
+	parent: r192
+	requirements: [
+		coper/8000
+		titan/6000
+		stal/4200
+		energosteklo/400
+	]
+}
+
+

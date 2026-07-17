@@ -1,0 +1,18 @@
+type: SolarGenerator
+size: 2
+health: 400
+powerProduction: 0.416666667
+baseExplosiveness: 2.50
+name: Солнечная батарея
+category: power
+requirements: [
+	coper/10
+	cremn/30
+]
+research: {
+	parent: provoda
+	requirements: [
+		coper/20
+		cremn/60
+	]
+}

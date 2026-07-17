@@ -1,0 +1,9 @@
+name: Нефть
+color: 000000
+lightColor: 000000
+flammability: 0.7
+temperature: 0
+heatCapacity: 0
+viscosity: 0.9
+explosiveness: 0.15
+effect: none

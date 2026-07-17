@@ -1,0 +1,48 @@
+hasItems: true
+unloadable: true
+breakable: true
+rebuildable: false
+
+type: CoreBlock
+localizedName: База "Цитадель"
+description: База. Хранит 30 тысяч предметов,  отлично бронирована
+category: effect
+health: 38900
+size: 6
+armor: 24
+
+itemCapacity: 30000
+unitCapModifier: 125
+unitType: "nut"
+incinerateNonBuildable: true
+isFirstTier: false
+squareSprite: false
+
+requirements: [
+	cremn/1000
+	titan/5000
+	coper/5000
+	svinec/5000
+	stal/5000
+	energosteklo/2000
+]
+
+
+
+research: {
+    parent: base-crep
+    requirements: [
+    	cremn/2000
+    	titan/10000
+    	coper/10000
+    	stal/10000
+    	svinec/10000
+    	energosteklo/4000
+    ]
+    objectives: [
+			{
+				type: OnSector
+				preset: shoreBase
+			}
+	]
+}

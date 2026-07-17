@@ -1,0 +1,145 @@
+type: Wall
+size: 1
+breakable: true
+destructible: true
+targetable: false
+underBullets: true
+drawTeamOverlay: false
+allowDerelictRepair: false
+instantDeconstruct: false
+health: 300
+armor: -10
+buildTime: 180
+itemDrop: ugol
+buildVisibility: editorOnly
+drawCracks: false
+createRubble: false
+requirements: [
+  ugol/30
+  stone/90
+]
+breakSound: rockBreak
+breakEffect: [
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 6
+    length: 30
+    lifetime: 20
+    interp: pow3Out
+    spin: 15
+    randRotation: true
+    sizeFrom: 6
+    sizeTo: 6
+    layer: 85
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-rombe
+    particles: 4
+    length: 40
+    lifetime: 25
+    interp: pow2Out
+    spin: 10
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 90
+    colorFrom: 221f1e
+    colorTo: 221f1e00
+  }
+]
+destroyEffect: [
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 4
+    length: 40
+    lifetime: 1400
+    interp: pow2Out
+    sizeInterp: linear
+    sizeFrom: 6
+    sizeTo: 6
+    spin: 0
+    randRotation: true
+    layer: 25
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 10
+    length: 65
+    lifetime: 180
+    spin: 5
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 25
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-rombe
+    particles: 18
+    length: 90
+    lifetime: 220
+    interp: circleOut
+    spin: 4
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 110
+    colorFrom: 221f1e
+    colorTo: 221f1e00
+  }
+]
+
+
+
+
+
+destroyBullet: {
+          type: BulletType
+          damage: 0
+          speed: 0
+          splashDamage: 90
+          splashDamageRadius: 35
+          absorbable: false
+          lifetime: 0
+          pierce: false
+          hitEffect: none
+          shootEffect: none
+          smokeEffect: none
+          despawnEffect: none
+          hitSound: none
+          hitEffect: none
+          despawnHit: true
+          status: gorenie
+          fragBullets: 50
+          fragBullet:  {
+              type: BasicBulletType
+              speed: 2
+              lifetime: 10
+              damage: 4
+              width: 2
+              height: 2
+              sprite: mod-rombe
+              spin: 4
+              shrinkX: 0.1
+              shrinkY: 0.1
+              frontColor: 221f1e
+              backColor: 221f1e
+              despawnEffect: none
+              hitEffect: none
+              despawnHit: true
+              createChance: 0.1
+              fragBullets: 2
+              fragBullet: fireball
+          }
+}
+

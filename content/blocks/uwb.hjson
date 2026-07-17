@@ -1,0 +1,256 @@
+name: Большая урановая стена
+health: 800
+destroyBullet: {
+	type: BasicBulletType
+	lifetime: 1
+	speed: 0.00001
+	height: 1
+	width: 1
+	damage: 1500
+	splashDamage: 1560
+	splashDamageRadius: 160
+	status: nuked
+	statusDuration: 300
+	makeFire: true
+	hitEffect: {
+            type: multiEffect
+            effects: [
+              {
+                type: ParticleEffect
+                line: true
+                particles: 15
+                lifetime: 55
+                offset: 50
+                length: 540
+                cone: 360
+                baseLength: 250
+                interp: circleOut
+                sizeInterp: pow5Out
+                strokeFrom: 1.6
+                strokeTo: 0
+                lenFrom: 24
+                lenTo: 24
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+              {
+                type: ParticleEffect
+                line: true
+                particles: 25
+                lifetime: 65
+                offset: 50
+                length: 500
+                baseLength: 250
+                cone: 360
+                interp: circleOut
+                sizeInterp: pow5Out
+                strokeFrom: 1.6
+                strokeTo: 0
+                lenFrom: 17
+                lenTo: 17
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 43
+                sizeTo: 1
+                length: 280
+                lifetime: 285
+                lightOpacity: 0
+                interp: circleOut
+                sizeInterp: pow5In
+                colorFrom: cococoaa
+                colorTo: 000000aa
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 43
+                sizeTo: 1
+                length: 290
+                lifetime: 275
+                lightOpacity: 0
+                interp: circleOut
+                sizeInterp: pow5In
+                colorFrom: cococoaa
+                colorTo: 000000aa
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 59
+                sizeTo: 1
+                length: 290
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: cococoFF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 59
+                sizeTo: 1
+                length: 270
+                lifetime: 265
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: cococoFF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 35
+                offset: 50
+                sizeFrom: 27
+                sizeTo: 1
+                length: 300
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: cococoFF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 45
+                offset: 50
+                sizeFrom: 19
+                sizeTo: 1
+                length: 320
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: cococoFF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: WaveEffect
+                lifetime: 245
+                sizeFrom: 0
+                sizeTo: 350
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 19
+                strokeTo: 0
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+              {
+                type: WaveEffect
+                lifetime: 55
+                sizeFrom: 0
+                sizeTo: 450
+                lightColor: 66B1FFFFF
+                interp: circleOut
+                strokeFrom: 25
+                strokeTo: 0
+                colorFrom: cococoFF
+                colorTo: 000000aa
+              }
+              {
+                type: WaveEffect
+                lifetime: 45
+                sizeFrom: 0
+                sizeTo: 550
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 19
+                strokeTo: 0
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+              {
+                type: WaveEffect
+                lifetime: 45
+                sizeFrom: 0
+                sizeTo: 650
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 11
+                strokeTo: 0
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+			  {
+			   particles: 1
+			   length: 0
+			   region: circle-shadow
+			   lifetime: 70
+			   sizeFrom: 3000
+			   sizeTo: 0
+			   startDelay: 0
+			   layer: 135
+			   clip: 8192
+			 }
+			 {
+			   particles: 1
+			   length: 0
+			   region: circle-shadow
+			   lifetime: 17.5
+			   sizeFrom: 8192
+			   sizeTo: 8192
+			   startDelay: 0
+			   layer: 135
+			   colorTo: ffffff00
+			   clip: 8192
+			 }
+            ]
+	}
+}
+size: 2
+requirements: [
+  uran/20
+  stal/20
+]
+category: defense
+research: {
+	parent: uw
+	requirements: [
+  		uran/40
+  		stal/40
+	]
+}
+type: PowerTurret
+description: "Защищает постройки от вражеских снарядов. Облучает врагов. Взрывается при разрушении."
+drawer: {
+  type: DrawTurret
+  basePrefix: uwb-
+}
+reload: 1
+rotateSpeed: 0
+smokeEffect: none
+shootX: 0
+shootY: 0
+shootCone: 360
+shootSound: none
+recoil: 0
+range: 160
+shootType: {
+  instantDisappear: true
+  damage: 0
+  splashDamage: 0.083333333
+  ammoMultiplier: 1
+  splashDamageRadius: 160
+  status: radiated
+  statusDuration: 30
+  despawnEffect: none
+  hitEffect: none
+  shootEffect: none
+  splashDamagePierce: true
+  buildingDamageMultiplier: 0.0000001
+}
+consumes: { }

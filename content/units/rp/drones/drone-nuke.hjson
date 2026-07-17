@@ -1,0 +1,139 @@
+name: ???
+description: Гвоздика-???
+type: flying
+flying: true
+alwaysUnlocked: true
+armor: 0
+faceTarget: true
+outlines: false
+health: 285
+range: 24
+hitSize: 10
+engineOffset: 0
+engineSize: 0
+rotateMoveFirst: false
+rotateSpeed: 1.7
+hidden: true
+weapons: [
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 999999999
+		splashDamageRadius: 9999
+		speed: 0
+		despawnHit: true
+		hitEffect: {
+			  	type: MultiEffect
+				effects: [
+					{
+					type: ParticleEffect
+					lifetime: 15
+					particles: 1
+					length: 0
+					colorFrom: ffffff
+					colorTo: ffeedd
+					sizeFrom: 200
+					sizeTo: 0
+					interp: exp5Out
+					}
+					{
+					type: WaveEffect
+					lifetime: 50
+					colorFrom: ffa500
+					colorTo: ff4500
+					sizeFrom: 0
+					sizeTo: 220
+					strokeFrom: 16
+					strokeTo: 0
+					interp: pow3Out
+					}
+					{
+					type: WaveEffect
+					lifetime: 80
+					colorFrom: ffffdd
+					colorTo: ff6600
+					sizeFrom: 30
+					sizeTo: 160
+					strokeFrom: 8
+					strokeTo: 0
+					interp: pow2Out
+					}
+					{
+					type: ParticleEffect
+					lifetime: 120
+					particles: 30
+					length: 120
+					cone: 20
+					baseRotation: 90
+					colorFrom: 8c8c8c
+					colorTo: 3a3a3a
+					sizeFrom: 14
+					sizeTo: 4
+					interp: pow2Out
+					}
+					{
+					type: ParticleEffect
+					lifetime: 180
+					startDelay: 20
+					particles: 40
+					length: 100
+					cone: 360
+					colorFrom: ffbb66
+					colorTo: 2b2b2b
+					sizeFrom: 20
+					sizeTo: 0
+					interp: circleOut
+					}
+					{
+					type: ParticleEffect
+					lifetime: 60
+					particles: 35
+					length: 180
+					line: true
+					strokeFrom: 5
+					strokeTo: 0
+					lenFrom: 24
+					lenTo: 0
+					colorFrom: fffff0
+					colorTo: ff3300
+					interp: exp10Out
+					}
+					{
+					type: ParticleEffect
+					lifetime: 150
+					particles: 25
+					length: 140
+					colorFrom: a39682
+					colorTo: 3d372e
+					sizeFrom: 16
+					sizeTo: 0
+					interp: circleOut
+					}
+				]
+		}
+		hitSound: droneBoom
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 230
+	}
+}
+]
+speed: 2.4
+accel: 0.2
+drag: 0.1
+immunities: [blowedup]

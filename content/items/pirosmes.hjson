@@ -1,0 +1,9 @@
+name: Пиросмесь
+description: Огнеопасная смесь, исползуется как боеприпас для турелей.
+cost: 1
+color: ff8c00
+explosiveness: 0.1
+flammability: 1
+research: {
+	parent: pesok
+}

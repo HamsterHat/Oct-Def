@@ -1,0 +1,61 @@
+name: Скат
+type: naval
+alwaysUnlocked: false
+armor: 0
+outlines: false
+faceTarget: true
+#squareShape: true
+health: 5000
+range: 80
+rotateMoveFirst: false
+hitSize: 24
+rotateSpeed: 0.3
+speed: 0.8
+ammoType: {
+	type: ItemAmmoType
+	item: titan
+	range: 40
+	ammoPerItem: 1
+}
+ammoCapacity: 80
+weapons: [
+	{
+	name: su-laser
+	reload: 60
+	x: 0
+	y: 12
+	mirror: false
+	rotate: true
+	shootSound: laser
+	shootY: 2
+	rotateSpeed: 2.8
+		bullet: {
+			type: LaserBulletType
+			length: 180
+			damage: 250
+			lifetime: 15
+			makeFire: true
+			pierceCap: 3
+		}
+	}
+	{
+	name: su-puska
+	reload: 30
+	x: 0
+	y: -12
+	mirror: false
+	rotate: true
+	rotateSpeed: 5
+	shootSound: shootBig
+		bullet: {
+			damage: 100
+			speed: 4
+			lifetime: 100
+			makeFire: true
+		}
+	}
+]
+accel: 0.2
+drag: 0.1
+immunities: [wetted, wet]
+immunities: [blowedup]

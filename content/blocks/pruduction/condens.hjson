@@ -1,0 +1,36 @@
+name: Конденсатор
+description: Конденсирует воду из атмосферного воздуха
+type: genericCrafter
+outputLiquid: voda/0.033333333
+size: 2
+health: 400
+liquidCapacity: 50
+hasPower: false
+hasLiquids: true
+craftTime: 1
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawLiquidRegion
+		drawLiquid: voda
+		}
+	]
+}
+category: liquid	
+requirements: [
+	coper/10
+	stal/10
+	svinec/10
+]
+research: {
+	parent: base-land
+	requirements: [
+  		coper/20
+  		stal/20
+  		svinec/20
+	]
+}

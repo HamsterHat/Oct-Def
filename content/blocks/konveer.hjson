@@ -1,0 +1,20 @@
+name: Конвеер
+type: conveyor
+speed: 0.1
+rotate: true
+update: true
+group: transportation
+junctionReplacement: prk
+bridgeReplacement: tunel
+hasItems: true
+itemCapacity: 4
+unloadable: false 
+requirements: [
+	coper/1
+]
+research: {
+	parent: base-land
+	requirements: [
+  		coper/2
+	]
+}

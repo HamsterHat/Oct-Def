@@ -1,0 +1,31 @@
+type: "ConsumeGenerator"
+name: "Двигатель внутреннего сгорания"
+description: Вырабатывает энергию из угля
+health: 400
+size: 2
+hasItems: true
+outputsPower: true
+breakable: true
+buildCostMultiplier: 0.4
+powerProduction: 8.33
+consumes: {
+  items: [
+	ugol/1
+  ]
+}
+requirements: [
+	stal/35
+	coper/80
+	titan/10
+]
+category: "power" 
+research: {
+	parent: base-land
+	requirements: [
+  		stal/70
+  		coper/160
+  		titan/20
+	]
+}
+
+ 

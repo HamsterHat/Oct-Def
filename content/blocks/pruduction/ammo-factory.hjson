@@ -1,0 +1,35 @@
+name: Завод Патронов
+description: Производит патроны
+type: genericCrafter
+outputItem: ammo/24
+size: 3
+health: 900	
+itemCapacity: 192	
+hasPower: true
+craftEffect: smeltsmoke
+craftTime: 240
+consumes: {
+   power: 1
+    items:[
+    stal/1
+	svinec/1
+	coper/1
+	ugol/1
+]
+}
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawFlame
+		flameColor: dbcc45
+		}
+	]
+}
+category: crafting	
+requirements: [
+	coper/200
+]

@@ -1,0 +1,16 @@
+type: LiquidRouter
+name: Бак
+description: Хранит жидкости
+liquidCapacity: 500
+category: liquid
+size: 2
+health: 400
+requirements: [
+	coper/10
+]
+research: {
+	parent: condens
+	requirements: [
+  		coper/20
+	]
+}

@@ -1,0 +1,35 @@
+name: Завод Снарядов 30мм
+description: Производит снаряды калибра 30мм
+type: genericCrafter
+outputItem: ammo30/6
+size: 3
+health: 900	
+itemCapacity: 192	
+hasPower: true
+craftEffect: smeltsmoke
+craftTime: 300
+consumes: {
+   power: 1
+    items:[
+    stal/2
+	svinec/1
+	coper/2
+	dinamit/1
+]
+}
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawFlame
+		flameColor: 69664b
+		}
+	]
+}
+category: crafting	
+requirements: [
+	coper/200
+]

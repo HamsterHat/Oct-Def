@@ -1,0 +1,46 @@
+name: Пиранья
+type: naval
+alwaysUnlocked: false
+armor: 0
+faceTarget: true
+#squareShape: true
+health: 100
+range: 30
+rotateMoveFirst: false
+rotateSpeed: 1
+outlines: false
+ammoType: {
+	type: ItemAmmoType
+	item: coper
+	range: 40
+	ammoPerItem: 3
+}
+ammoCapacity: 200
+weapons: [
+{
+name: gmp
+reload: 12
+x: 0
+y: 0
+mirror: false
+rotate: true
+rotateSpeed: 5
+		bullet: {
+			type: BasicBulletType
+			damage: 30
+			speed: 4
+			lifetime: 45
+		}
+}
+]
+isEnemy: true
+speed: 1
+accel: 0.2
+drag: 0.1
+rotateSpeed: 10
+hittable: true
+targetable: true
+coreUnitDock: true
+outlineColor: 000000
+immunities: [wetted, wet]
+immunities: [blowedup]

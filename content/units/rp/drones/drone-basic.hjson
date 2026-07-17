@@ -1,0 +1,135 @@
+name: ПБПЛА-1Ф
+description: Гвоздика-Ф
+type: flying
+flying: true
+alwaysUnlocked: true
+armor: 0
+faceTarget: true
+outlines: false
+health: 285
+range: 24
+hitSize: 10
+engineOffset: 0
+engineSize: 0
+rotateMoveFirst: false
+rotateSpeed: 1.7
+weapons: [
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 690
+		splashDamageRadius: 65.6
+		speed: 0
+		despawnHit: true
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 1
+				length: 0
+				colorFrom: ffffff
+				colorTo: ffa64d
+				sizeFrom: 45
+				sizeTo: 0
+				interp: exp5Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				colorFrom: ffaa55
+				colorTo: ff4500
+				sizeFrom: 0
+				sizeTo: 64
+				strokeFrom: 10
+				strokeTo: 0
+				interp: pow3Out
+				}
+				{
+				type: ParticleEffect
+				lifetime: 20
+				particles: 24
+				length: 64
+				line: true
+				strokeFrom: 4
+				strokeTo: 0
+				lenFrom: 16
+				lenTo: 0
+				colorFrom: fffff5
+				colorTo: ff9d00
+				interp: pow2Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 50
+				colorFrom: ff5b14
+				colorTo: 801000
+				sizeFrom: 20
+				sizeTo: 55
+				strokeFrom: 4
+				strokeTo: 0
+				interp: pow2In
+				}
+				{
+				type: ParticleEffect
+				lifetime: 160
+				particles: 25
+				length: 110
+				colorFrom: 4a4a4a
+				colorTo: 1c1c1c
+				sizeFrom: 22
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 110
+				particles: 20
+				length: 72
+				colorFrom: 6b6b6b
+				colorTo: 1f1f1f
+				sizeFrom: 12
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 8
+				length: 50
+				colorFrom: ff6f00
+				colorTo: 3c3c3c
+				sizeFrom: 6
+				sizeTo: 2
+				spin: 4
+				interp: pow2Out
+				}
+			]
+		}
+		hitSound: droneBoom
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 230
+	}
+}
+]
+speed: 2.4
+accel: 0.2
+drag: 0.1
+immunities: [blowedup]

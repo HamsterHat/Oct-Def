@@ -1,0 +1,8 @@
+type: "Floor"
+name: Crash Trigger
+description: Crashes game when game trying to render it
+details: "[scarlet]U N L I M I T E D    [red]P O W E R"
+variants: 1
+buildVisibility: sandboxOnly
+alwaysUnlocked: true
+category: logic

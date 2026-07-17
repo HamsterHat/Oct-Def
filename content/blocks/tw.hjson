@@ -1,0 +1,31 @@
+name: Топиевая стена
+description: "[red]Взрывается[] при разрушении - [red]сжигает[] все вокруг"
+type: Wall
+health: 250
+destroyBullet: {
+	type: BasicBulletType
+	lifetime: 1
+	speed: 0.00001
+	height: 1
+	width: 1
+	damage: 750
+	splashDamage: 750
+	splashDamageRadius: 40
+	status: melting
+	statusDuration: 300
+	makeFire: true
+	hitEffect: massiveExplosion
+	fragBullets: 50
+        fragBullet: fireball
+}
+size: 1
+requirements: [
+  topi/5
+]
+category: defense
+research: {
+	parent: uwb
+	requirements: [
+  		topi/10
+	]
+}

@@ -1,0 +1,12 @@
+name: Сортировщик
+type: Sorter
+group: transportation
+requirements: [
+	coper/5
+]
+research: {
+	parent: rd
+	requirements: [
+  		coper/10
+	]
+}

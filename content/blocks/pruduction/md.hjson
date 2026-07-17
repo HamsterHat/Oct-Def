@@ -1,0 +1,31 @@
+name: Мешалка динамита
+description: Смешивает уголь и пиросмесь в динамит
+type: genericCrafter
+outputItem: dinamit/1
+size: 3
+health: 900
+itemCapacity: 50
+hasPower: true
+craftTime: 55
+craftEffect: formsmoke
+consumes: {
+   power: 0.83
+    items:[
+    pirosmes/1
+    ugol/1
+]
+}
+category: crafting	
+requirements: [
+	coper/85
+	titan/5
+	stal/50
+]
+research: {
+	parent: meshalka-piro
+	requirements: [
+  		coper/170
+  		titan/10
+  		stal/100
+	]
+}

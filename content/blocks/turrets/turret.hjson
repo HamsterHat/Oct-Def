@@ -1,0 +1,150 @@
+type: ItemTurret
+name: Пулялка
+description: Стреляет стандартными одиночными пулями
+size: 1
+outlineIcon: false
+health: 100
+rotateSpeed: 4
+targetAir: true
+targetGround: true
+maxAmmo: 30
+reload: 30
+range: 125
+reload: 30
+shootCone: 5
+shootSound: shoot
+inaccuracy: 5
+ammoTypes: {
+ coper: {
+        type: BasicBulletType
+        hitSize: 5
+        lifetime: 35
+        width: 5
+        height: 5
+        hitEffect: hitBulletSmall
+        shootEffect: shootSmall
+        smokeEffect: shootSmallSmoke
+        ammoMultiplier: 3
+        collidesAir: true
+        statusDuration: 600
+        buildingDamageMultiplier: 0.3
+        hitSound: rkst
+        status: none
+        hitSoundVolume: 0.1
+        hittable: false
+        speed: 4
+        damage: 6
+		knockback: 0.3
+    frontColor: 0aad0a
+        backColor: 14661aff
+  }
+  svinec: {
+        type: BasicBulletType
+        ammoMultiplier: 2
+        hitSize: 5
+        lifetime: 35
+        width: 5
+        height: 5
+        hitEffect: hitBulletSmall
+        shootEffect: shootSmall
+        hitSoundVolume: 0.1
+        smokeEffect: shootSmallSmoke
+        hitSound: rkst
+        collidesAir: true
+        statusDuration: 600
+        status: none
+        hittable: false
+        reloadMultiplier: 0.6
+        speed: 4
+        buildingDamageMultiplier: 0.3
+        damage: 9
+		    knockback: 0.4
+        frontColor: 09752d
+        backColor: 0a3818
+        fragBullets: 1
+        fragBullet: {
+          type: BulletType
+          damage: 0
+          speed: 0
+          splashDamage: 99
+          splashDamageRadius: 18.9
+          absorbable: false
+          lifetime: 0
+          pierce: false
+          hitEffect: none
+          shootEffect: none
+          smokeEffect: none
+          despawnEffect: none
+          hitSound: shockBullet
+          despawnHit: true
+          status: charged
+          statusDuration: 999
+          createChance: 0.01
+          suppressionRange: 18.9
+          suppressionDuration: 999
+          suppressionEffectChance: 75
+          lightningColor: 38ecce
+          lightning: 3
+          lightningLength: 8
+          lightningLengthRand: 4
+          lightningDamage: 9
+          lightningType: {
+            type: BulletType
+            damage: 0
+            speed: 0
+            splashDamage: 9
+            splashDamageRadius: 4
+            absorbable: false
+            lifetime: 0
+            pierce: false
+            hitEffect: none
+            shootEffect: none
+            smokeEffect: none
+            despawnEffect: none
+            hitSound: shockBullet
+            despawnHit: true
+            status: charged
+            statusDuration: 60
+            suppressionRange: 8
+            suppressionDuration: 240
+            suppressionEffectChance: 75
+          }
+        }
+  }
+  stal: {
+        type: BasicBulletType
+        hitSize: 5
+        lifetime: 35
+        width: 5
+        height: 5
+        hitEffect: hitBulletSmall
+        shootEffect: shootSmall
+        smokeEffect: shootSmallSmoke
+        ammoMultiplier: 1
+        collidesAir: true
+        statusDuration: 600
+        buildingDamageMultiplier: 0.7
+        hitSound: rkst
+        status: none
+        hitSoundVolume: 0.1
+        hittable: false
+        speed: 4
+        damage: 11
+        reloadMultiplier: 0.4
+		knockback: 0.7
+    frontColor: 665c5c
+        backColor: 241f1f
+  }
+    }
+requirements: [
+  coper/15
+]
+category: turret
+research: {
+	parent: base-land
+	requirements: [
+  		coper/30
+	]
+}
+
+

@@ -1,0 +1,34 @@
+name: Завод Аптечек
+description: Производит аптечки
+type: genericCrafter
+outputItem: apteka/4
+size: 3
+health: 900	
+itemCapacity: 32	
+hasPower: true
+craftEffect: smeltsmoke
+craftTime: 480
+consumes: {
+   power: 1
+    items:[
+		coper/2
+		ugol/1
+		cremn/1
+]
+}
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawFlame
+		flameColor: 39dd78
+		}
+	]
+}
+category: crafting	
+requirements: [
+	coper/200
+]

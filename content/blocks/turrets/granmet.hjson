@@ -1,0 +1,331 @@
+type: ItemTurret
+name: Гранатомёт
+description: Стреляет бронебойной самонаводящейся ракетой
+size: 2
+outlineIcon: false
+health: 400
+rotateSpeed: 2.4
+targetAir: true
+targetGround: true
+range: 230
+shootCone: 1
+reload: 240
+shootSound: yrkt
+inaccuracy: 3.5
+
+ammoTypes: {
+dinamit: {
+  type: MissileBulletType
+  sprite: "mod-yrkt"
+  speed: 5
+  lifetime: 46
+  width: 8
+  height: 8
+  
+
+  damage: 15
+  splashDamage: 15
+  splashDamageRadius: 8
+  knockback: 1.6
+
+  
+
+  
+  frontColor: "a6a69c"
+  backColor: "ff0000"
+  trailColor: "ffffff"
+  shootEffect: shootBig2
+  smokeEffect: shootBigSmoke
+  hittable: false
+  reflectable: false
+  collidesAir: true
+  
+  status: blowedup
+  statusDuration: 130
+  
+  hitEffect: {
+    type: MultiEffect
+    effects: [
+      {
+        type: ParticleEffect
+        line: true
+        particles: 12
+        lifetime: 25
+        length: 60
+        cone: 15
+        strokeFrom: 2
+        strokeTo: 0
+        colorFrom: "ff850a"
+        colorTo: "ffffff"
+      }
+      {
+        type: WaveEffect
+        lifetime: 15
+        sizeFrom: 0
+        sizeTo: 24
+        strokeFrom: 3
+        strokeTo: 0
+        colorFrom: "ff2f0a"
+        colorTo: "968d8c"
+      }
+    ]
+  }
+  despawnEffect: massiveExplosion
+  hitSound: largeExplosion
+  hitSoundVolume: 3
+
+
+  fragBullets: 1
+  fragVelocityMin: 1
+  fragVelocityMax: 1
+  fragRandomSpread: 0
+  fragSpread: 0
+  fragAngle: 0
+  fragBullet: {
+    type: BulletType
+    lifetime: 1
+    speed: 0
+    hittable: false
+    reflectable: false
+    collides: false
+    instantDisappear: true
+    killShooter: false
+    despawnHit: true
+    hitSound: droneBoom
+    hitSoundVolume: 8
+    status: blowedup
+    statusDuration: 230
+    
+    spawnBullets: [
+      {
+        type: LaserBulletType
+        damage: 95
+        length: 65
+        width: 12
+        lengthFalloff: 0.6
+        sideLength: 0
+        sideWidth: 0
+        sideAngle: 0
+        colors: ["ff2f0a", "ff850a", "ffffff"]
+        pierce: true
+        collidesTeam: false
+      }
+    ]
+  }
+}
+
+pirosmes: {
+  type: MissileBulletType
+  sprite: mod-yrkt
+  speed: 5
+  lifetime: 46
+  width: 8
+  height: 8
+  damage: 15
+  splashDamage: 15
+  splashDamageRadius: 8
+  knockback: 1.4
+  makeFire: true
+  incendAmount: 6
+  incendSpread: 12
+  incendChance: 1
+  frontColor: a07b3f
+  backColor: ff9e00
+  trailColor: ffbb00
+  shootEffect: shootBig2
+  smokeEffect: shootBigSmoke
+  hittable: false
+  reflectable: false
+  collidesAir: true
+  status: melting
+  statusDuration: 1200
+  hitEffect: {
+    type: MultiEffect
+    effects: [
+      {
+        type: ParticleEffect
+        line: true
+        particles: 12
+        lifetime: 25
+        length: 60
+        cone: 15
+        strokeFrom: 2
+        strokeTo: 0
+        colorFrom: ff850a
+        colorTo: ffffff
+      }
+      {
+        type: WaveEffect
+        lifetime: 15
+        sizeFrom: 0
+        sizeTo: 24
+        strokeFrom: 3
+        strokeTo: 0
+        colorFrom: ff2f0a
+        colorTo: 968d8c
+      }
+    ]
+  }
+  despawnEffect: massiveExplosion
+  hitSound: largeExplosion
+  hitSoundVolume: 3
+  fragBullets: 1
+  fragVelocityMin: 1
+  fragVelocityMax: 1
+  fragRandomSpread: 0
+  fragSpread: 0
+  fragAngle: 0
+  fragBullet: {
+    type: BulletType
+    lifetime: 1
+    speed: 0
+    hittable: false
+    reflectable: false
+    collides: false
+    instantDisappear: true
+    killShooter: false
+    despawnHit: true
+    hitSound: droneBoom
+    hitSoundVolume: 8
+    status: melting
+    statusDuration: 1200
+    spawnBullets: [
+      {
+        type: LaserBulletType
+        damage: 95
+        length: 65
+        width: 12
+        lengthFalloff: 0.6
+        sideLength: 0
+        sideWidth: 0
+        sideAngle: 0
+        colors: [ff2f0a, ff850a, ffffff]
+        pierce: true
+        collidesTeam: false
+      }
+    ]
+  }
+}
+energosteklo: {
+  type: MissileBulletType
+  sprite: mod-yrkt
+  speed: 5
+  lifetime: 46
+  width: 8
+  height: 8
+  damage: 15
+  splashDamage: 15
+  splashDamageRadius: 8
+  knockback: 1.8
+  lightning: 12
+  lightningLength: 18
+  lightningDamage: 40
+  lightningColor: e2ff00
+  frontColor: cdd877
+  backColor: e2ff00
+  trailColor: fff700
+  shootEffect: shootBig2
+  smokeEffect: shootBigSmoke
+  hittable: false
+  reflectable: false
+  collidesAir: true
+  status: charged
+  statusDuration: 600
+  
+  hitEffect: {
+    type: MultiEffect
+    effects: [
+      {
+        type: ParticleEffect
+        line: true
+        particles: 12
+        lifetime: 25
+        length: 60
+        cone: 15
+        strokeFrom: 2
+        strokeTo: 0
+        colorFrom: ff850a
+        colorTo: ffffff
+      }
+      {
+        type: WaveEffect
+        lifetime: 15
+        sizeFrom: 0
+        sizeTo: 24
+        strokeFrom: 3
+        strokeTo: 0
+        colorFrom: ff2f0a
+        colorTo: 968d8c
+      }
+    ]
+  }
+  despawnEffect: massiveExplosion
+  hitSound: largeExplosion
+  hitSoundVolume: 3
+  fragBullets: 1
+  fragVelocityMin: 1
+  fragVelocityMax: 1
+  fragRandomSpread: 0
+  fragSpread: 0
+  fragAngle: 0
+  fragBullet: {
+    type: BulletType
+    lifetime: 1
+    speed: 0
+    hittable: false
+    reflectable: false
+    collides: false
+    instantDisappear: true
+    killShooter: false
+    despawnHit: true
+    hitSound: droneBoom
+    hitSoundVolume: 8
+    status: charged
+    statusDuration: 600
+    lightning: 10
+    lightningLength: 15
+    lightningDamage: 35
+    lightningColor: e2ff00
+    spawnBullets: [
+      {
+        type: LaserBulletType
+        damage: 95
+        length: 65
+        width: 12
+        lengthFalloff: 0.6
+        sideLength: 0
+        sideWidth: 0
+        sideAngle: 0
+        colors: [ff2f0a, ff850a, ffffff]
+        pierce: true
+        collidesTeam: false
+        lightning: 8
+        lightningLength: 14
+        lightningDamage: 30
+        lightningColor: e2ff00
+      }
+    ]
+  }
+}
+
+    }
+requirements: [
+	  stal/30
+	  titan/15
+	  svinec/15
+	  coper/80
+]
+category: turret
+research: {
+	parent: grad
+	requirements: [
+  		stal/60
+  		titan/30
+  		svinec/30
+  		coper/160
+	]
+}
+
+
+
+

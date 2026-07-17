@@ -1,0 +1,13 @@
+type: Wall
+name: Железный ящик
+health: 85
+requirements: [
+	titan/15
+	stal/30
+	coper/5
+]
+createRubble: false
+variants: 3
+destroySound: stal-box-destroy
+category: defense
+buildVisibility: sandboxOnly

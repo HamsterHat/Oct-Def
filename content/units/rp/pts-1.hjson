@@ -1,0 +1,175 @@
+name: ПТС-1
+controller: missileAI
+type: naval
+alwaysUnlocked: true
+armor: 0
+outlines: false
+faceTarget: true
+health: 600
+range: 64
+rotateMoveFirst: false
+hitSize: 16
+rotateSpeed: 3.8
+drawCell: false
+
+
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          shootOnDeath: true
+          x: 0
+          shake: 15
+          y: 0
+          rotateSpeed: 0
+          rotate: false
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 1250
+		splashDamageRadius: 51.9
+    speed: 0
+hitEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 0
+      lifetime: 25
+      sizeFrom: 50
+      sizeTo: 0
+      colorFrom: ffffff
+      colorTo: 99c2ff
+    }
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 0
+      lifetime: 50
+      interp: pow3Out
+      sizeFrom: 15
+      sizeTo: 110
+      colorFrom: 70b5ffaa
+      colorTo: 3366cc00
+    }
+    {
+      type: WaveEffect
+      lifetime: 35
+      sizeFrom: 0
+      sizeTo: 140
+      strokeFrom: 12
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: 4da6ff00
+    }
+    {
+      type: WaveEffect
+      lifetime: 70
+      interp: pow2Out
+      sizeFrom: 10
+      sizeTo: 190
+      strokeFrom: 6
+      strokeTo: 0
+      colorFrom: 3385ff
+      colorTo: 1a339900
+    }
+    {
+      type: ParticleEffect
+      particles: 18
+      length: 80
+      lifetime: 80
+      interp: pow5Out
+      sizeFrom: 12
+      sizeTo: 0
+      colorFrom: b3d1ff
+      colorTo: 66a3ff00
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      length: 130
+      lifetime: 110
+      interp: pow10Out
+      sizeFrom: 16
+      sizeTo: 3
+      colorFrom: e6f0ff
+      colorTo: 99c2ff00
+    }
+    {
+      type: ParticleEffect
+      particles: 35
+      length: 160
+      lifetime: 35
+      interp: pow3Out
+      line: true
+      lenFrom: 25
+      lenTo: 0
+      strokeFrom: 3
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: 66b3ff00
+    }
+    {
+      type: ParticleEffect
+      particles: 25
+      length: 110
+      lifetime: 90
+      interp: pow2Out
+      sizeFrom: 6
+      sizeTo: 0
+      colorFrom: 80b3ff
+      colorTo: 3366ff00
+    }
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 0
+      lifetime: 130
+      sizeFrom: 150
+      sizeTo: 150
+      colorFrom: 3385ff11
+      colorTo: 00000000
+    }
+    {
+      type: ParticleEffect
+      particles: 15
+      length: 65
+      lifetime: 70
+      interp: circleOut
+      sizeFrom: 7
+      sizeTo: 0
+      colorFrom: 4d94ff
+      colorTo: 1a53ff00
+    }
+  ]
+}
+
+		hitSound: droneBoom
+		hitSoundVolume: 10
+		killShooter: true
+		status: blowedup
+		statusDuration: 560
+    despawnHit: true
+	}
+	}
+]
+
+
+isEnemy: true
+speed: 0.8
+accel: 0.2
+drag: 0.1
+hittable: true
+targetable: false
+groundLayer: 1.0
+
+immunities: [wetted, wet, blowedup]
+

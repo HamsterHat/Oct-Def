@@ -1,0 +1,34 @@
+hasItems: true
+unloadable: true
+breakable: true
+rebuildable: false
+
+type: CoreBlock
+localizedName: База "Посадка"
+description: База. Хранит 2000 предметов, не бронирована
+category: effect
+health: 1500
+size: 3
+
+itemCapacity: 2000
+unitCapModifier: 50
+unitType: "shield"
+incinerateNonBuildable: true
+isFirstTier: true
+squareSprite: true
+
+requirements: [
+	coper/1000
+	svinec/1500
+	stal/500
+]
+
+
+
+research: {
+    root: true
+    name: Пунь
+    planet: pun
+}
+
+alwaysUnlocked: true

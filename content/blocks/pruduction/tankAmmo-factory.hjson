@@ -1,0 +1,35 @@
+name: Завод Снарядов 155мм
+description: Производит снаряды калибра 155мм
+type: genericCrafter
+outputItem: tankAmmo/4
+size: 3
+health: 900	
+itemCapacity: 30	
+hasPower: true
+craftEffect: smeltsmoke
+craftTime: 600
+consumes: {
+   power: 3
+    items:[
+		bomb/2
+		stal/8
+		coper/4
+		svinec/2
+]
+}
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawFlame
+		flameColor: 6d4832
+		}
+	]
+}
+category: crafting	
+requirements: [
+	coper/320
+]

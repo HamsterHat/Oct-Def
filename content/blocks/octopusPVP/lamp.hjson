@@ -1,0 +1,15 @@
+type: LightBlock
+name: Уличный фонарь
+health: 15
+requirements: [
+	titan/1
+	stal/1
+	coper/1
+]
+createRubble: false
+destroySound: stal-box-destroy
+category: effect
+buildVisibility: sandboxOnly
+brightness: 0.6
+radius: 95
+consumes: { }

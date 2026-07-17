@@ -1,0 +1,13 @@
+type: StorageBlock
+name: Шкафчик
+itemCapacity: 5
+category: effect
+coreMerge: false
+size: 1
+health: 90
+rotate: true
+buildVisibility: sandboxOnly
+requirements: [
+stal/5
+wood/15
+]

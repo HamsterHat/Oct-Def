@@ -1,0 +1,114 @@
+name: Воробей
+type: flying
+flying: true
+alwaysUnlocked: false
+armor: 0
+faceTarget: true
+outlines: false
+health: 90
+range: 10
+hitSize: 8
+engineOffset: 8
+engineSize: 2
+rotateMoveFirst: false
+rotateSpeed: 1
+ammoType: {
+	type: ItemAmmoType
+	item: coper
+	range: 80
+	ammoPerItem: 3
+}
+ammoCapacity: 200
+
+fallEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 2
+      lifetime: 30
+      length: 8
+      baseLength: 2
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: 454545
+      colorTo: 1a1a1a
+      layer: 118
+    }
+  ]
+}
+fallEngineEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 3
+      lifetime: 15
+      length: 12
+      cone: 20
+      sizeFrom: 1.5
+      sizeTo: 0
+      colorFrom: ff850a
+      colorTo: ff2f0a
+      layer: 118
+    }
+  ]
+}
+deathEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 12
+      sizeFrom: 0
+      sizeTo: 16
+      strokeFrom: 2
+      strokeTo: 0
+      colorFrom: ffbb00
+      colorTo: 454545
+      layer: 5
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 8
+      lifetime: 20
+      length: 24
+      cone: 360
+      strokeFrom: 1.5
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: a6a69c
+      layer: 118
+    }
+  ]
+}
+
+
+
+weapons: [
+{
+name: alpa-puska
+reload: 12
+x: 0
+y: 0
+mirror: false
+rotate: true
+rotateSpeed: 5
+shootY: 12
+		bullet: {
+			type: BasicBulletType
+			damage: 30
+			speed: 4
+			lifetime: 42
+		}
+}
+]
+itemCapacity: 50
+speed: 2.8
+accel: 0.2
+drag: 0.1
+rotateSpeed: 10
+research: airfb
+researchCostMultiplier: 3
+immunities: [blowedup]

@@ -1,0 +1,60 @@
+name: Торнадо
+type: tank
+hitSize: 35
+omniMovement: false
+alwaysUnlocked: false
+outlines: false
+health: 3500
+armor: 1
+speed: 0.5
+rotateSpeed: 1.2
+range: 100
+ammoType: {
+	type: ItemAmmoType
+	item: pirosmes
+	range: 80
+	ammoPerItem: 2
+}
+ammoCapacity: 100
+weapons: [
+ {
+ name: endp
+ x: 0
+ y: 0
+    rotateSpeed: 0.7
+    shootY: 20
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 90
+    recoil: 1.6
+    shootSound: shootBig
+ bullet: {
+    type: BasicBulletType
+    width: 5
+    height: 10
+    status: gorenie
+    hitSize: 5
+    shootEffect: shootBig
+    damage: 250
+    hitEffect: massiveExplosion
+    splashDamageRadius: 32
+    splashDamage: 125
+    makeFire: true
+    speed: 5
+    lifetime: 65
+    fragBullets: 1
+    fragBullet: fireball
+    }
+   }
+]
+research: {
+	parent: gora
+	requirements: [
+		stal/165
+		coper/180
+		titan/570
+	]
+}
+immunities: [blowedup]

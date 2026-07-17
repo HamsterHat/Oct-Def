@@ -1,0 +1,56 @@
+name: "Завод основ"
+alwaysUnlocked: false
+type: UnitFactory
+health: 900
+size: 3
+configurable: true
+plans: [
+  {
+    unit: osnova
+    requirements: [
+      stal/15
+    ]
+    time: 600
+  },
+  {
+    unit: gora
+    requirements: [
+      stal/30
+      coper/35
+    ]
+    time: 800
+  },
+    {
+    unit: end
+    requirements: [
+      stal/55
+      coper/60
+      titan/50
+    ]
+    time: 2300
+  }
+  {
+    unit: uragan
+    requirements: [
+      stal/130
+      coper/120
+      titan/200
+      svinec/400
+    ]
+    time: 3100
+  }
+]
+category: units
+requirements: [
+  titan/100
+  coper/90
+  svinec/95
+]
+research: {
+	parent: base-land
+	requirements: [
+		titan/200
+		coper/180
+		svinec/190
+	]
+}

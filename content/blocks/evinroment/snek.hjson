@@ -1,0 +1,4 @@
+type: "Floor"
+variants: 1
+speedMultiplier: 0.6
+walkSound: walkSnow

@@ -1,0 +1,17 @@
+type: PowerNode
+name: Провода
+description: Передаёт энергию
+health: 100
+size: 1
+laserRange: 10
+maxNodes: 15
+category: "power"
+requirements: [
+    coper/3
+]
+research: {
+    parent: dvs
+    requirements: [
+        coper/6
+    ]
+}

@@ -1,0 +1,602 @@
+type: mech
+name: "[sky]Снежник"
+description: "[sky]Использует ледяную магию чтобы замораживать врагов."
+details: "[sky]Не злите её!"
+alwaysUnlocked: true
+armor: 10
+outlines: false
+health: 215
+range: 400
+rotateMoveFirst: false
+rotateSpeed: 6
+loopSound: none
+loopSoundVolume: 1.5
+canDrown: false
+engineOffset: 0
+deathExplosionEffect: none
+drawCell: false
+engineSize: 0
+hitSize: 8
+buildSpeed: 0
+stepShake: 0
+weapons: [
+
+
+{
+reload: 300
+x: 0
+y: 0
+mirror: false
+rotate: false
+shootSound: throw
+continuous: false
+alternate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BasicBulletType
+		scaleLife: true
+		damage: 0
+		splashDamage: 135
+		splashDamageRadius: 45.6
+		width: 8
+		height: 8
+		speed: 4
+		absorbable: true
+		lifetime: 100
+		frontColor: 80c7ebff
+		backColor: 00b3ffff
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: ParticleEffect
+					particles: 8
+					region: mod-snowflake
+					lifetime: 25
+					length: 1
+					sizeFrom: 1
+					sizeTo: 14
+					colorFrom: 0faae7
+					colorTo: 03fc7f
+					spin: 4
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				colorFrom: 1ea5c7
+				colorTo: 2cbe5d
+				sizeFrom: 0
+				sizeTo: 64
+				strokeFrom: 10
+				strokeTo: 0
+				interp: pow3Out
+				}
+				{
+				type: ParticleEffect
+				particles: 1
+				length: 0
+				lifetime: 45
+				sizeFrom: 56
+				sizeTo: 0
+				colorFrom: ffffff
+				colorTo: 2bffd1
+				region: mod-flash
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				sizeFrom: 0
+				sizeTo: 80
+				strokeFrom: 4
+				strokeTo: 0
+				colorFrom: ffffff
+				colorTo: ffffff88
+				}
+
+			]
+		}
+		shootEffect: none
+		pierce: false
+		despawnHit: true
+		status: ice-shock
+		statusDuration: 780
+		hitSound: magic-boom
+		spin: 4
+		reflectable: false
+		hitSoundVolume: 6
+		incendChance: 1
+		sprite: circle-bullet
+		fragBullet: {
+			type: BasicBulletType
+			speed: 5.6
+			lifetime: 10
+			pierce: true
+			pierceBuilding: true
+			pierceCap: 3
+			damage: 15
+			width: 4
+			height: 5
+			spin: 4
+			shrinkX: 0.3
+			shrinkY: 0.3
+			frontColor: 0000ff
+			backColor: 0000ff
+			despawnEffect: mine
+			hitEffect: mine
+			despawnHit: true
+			hitSound: lightSwShoot
+			hitColor: 00ff6a
+		}
+		fragBullets: 11
+}
+}
+
+
+
+{
+x: 0
+y: 0
+reload: 0
+shootCone: 360
+controllable: false
+aiControllable: false
+shootOnDeath: true
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	lifetime: 0
+	speed: 0
+	instantDisappear: true
+	killShooter: true
+	collides: false
+	splashDamage: 999
+	splashDamageRadius: 99
+	status: snowgrave
+	statusDuration: 999
+	hitEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 0
+      lifetime: 45
+      sizeFrom: 56
+      sizeTo: 0
+      colorFrom: ffffff
+      colorTo: 2bffd1
+      region: mod-flash
+    }
+    {
+      type: WaveEffect
+      lifetime: 30
+      sizeFrom: 0
+      sizeTo: 80
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ffffff88
+    }
+		{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 1
+				length: 0
+				colorFrom: ffffff
+				colorTo: 22ffbd
+				sizeFrom: 45
+				sizeTo: 0
+				interp: exp5Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				colorFrom: 1ea5c7
+				colorTo: 2cbe5d
+				sizeFrom: 0
+				sizeTo: 64
+				strokeFrom: 10
+				strokeTo: 0
+				interp: pow3Out
+				}
+				{
+				type: ParticleEffect
+				lifetime: 20
+				particles: 24
+				length: 64
+				line: true
+				strokeFrom: 4
+				strokeTo: 0
+				lenFrom: 16
+				lenTo: 0
+				colorFrom: f5fffd
+				colorTo: 00ff88
+				interp: pow2Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 50
+				colorFrom: 2054a1
+				colorTo: 108329
+				sizeFrom: 20
+				sizeTo: 55
+				strokeFrom: 4
+				strokeTo: 0
+				interp: pow2In
+				}
+				{
+				type: ParticleEffect
+				lifetime: 160
+				particles: 25
+				length: 110
+				colorFrom: 384740
+				colorTo: 2f3841
+				sizeFrom: 22
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 110
+				particles: 20
+				length: 72
+				colorFrom: 6b6b6b
+				colorTo: 203126
+				sizeFrom: 12
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 8
+				length: 50
+				colorFrom: 006eff
+				colorTo: 3c573f
+				sizeFrom: 6
+				sizeTo: 2
+				spin: 4
+				interp: pow2Out
+				}
+  ]
+}
+
+			
+
+
+	despawnHit: true
+	shootEffect: none
+}
+}
+
+
+
+
+
+
+
+{
+	reload: 3600
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootSound: wader-boom
+	chargeSound: stAtkCharge
+	continuous: false
+	alternate: false
+	inaccuracy: 0
+	useAmmo: false
+	shoot: {
+		shots: 1
+		firstShotDelay: 300
+	}
+
+	bullet: {
+				type: BasicBulletType
+				scaleLife: true
+				damage: 0
+				splashDamage: 999
+				splashDamageRadius: 85.5
+				width: 18
+				height: 18
+				speed: 4
+				absorbable: true
+				lifetime: 100
+				frontColor: 80c7ebff
+				backColor: 00b3ffff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				chargeEffect: {
+			type: MultiEffect
+			effects: [
+					{
+					type: ParticleEffect
+					lifetime: 300
+					particles: 1
+					cone: 360
+
+					baseLength: 0
+					length: 0
+
+					sizeFrom: 0
+					sizeTo: 15
+
+					strokeFrom: 0.8
+					strokeTo: 0
+
+					colorFrom: ffffff
+					colorTo: 1E90FF55
+					}
+					{
+					type: WaveEffect
+					lifetime: 300
+					sizeFrom: 70
+					sizeTo: 7
+					strokeFrom: 0
+					strokeTo: 7
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: WaveEffect
+					startDelay: 120
+					lifetime: 160
+					sizeFrom: 0
+					sizeTo: 15
+					strokeFrom: 0
+					strokeTo: 7
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: WaveEffect
+					startDelay: 290
+					lifetime: 15
+					sizeFrom: 150
+					sizeTo: 15
+					strokeFrom: 0
+					strokeTo: 5
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: WaveEffect
+					startDelay: 300
+					lifetime: 30
+					sizeFrom: 0
+					sizeTo: 120
+					strokeFrom: 0
+					strokeTo: 9
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					followParent: true
+					rotWithParent: true
+					}
+
+					{
+					type: ParticleEffect
+					baseLength: 60
+					length: -60
+					cone: 360
+					particles: 15
+					lifetime: 300
+					sizeFrom: 2.5
+					sizeTo: 0
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					strokeFrom: 0.8
+					strokeTo: 0.6 
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: ParticleEffect
+					baseLength: 50
+					length: -50
+					cone: 360
+					particles: 5
+					lifetime: 300
+					sizeFrom: 5
+					sizeTo: 0
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					strokeFrom: 0.8
+					strokeTo: 0.6 
+					followParent: true
+					rotWithParent: true
+					}
+					{
+					type: ParticleEffect
+					baseLength: 40
+					length: -40
+					cone: 360
+					particles: 3
+					lifetime: 300
+					sizeFrom: 9
+					sizeTo: 0
+					colorFrom: 1E90FF55
+					colorTo: ffffff
+					strokeFrom: 0.8
+					strokeTo: 0.6 
+					followParent: true
+					rotWithParent: true
+					}
+				]
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				hitEffect: {
+					type: MultiEffect
+					effects: [
+						{
+							type: ParticleEffect
+							particles: 25
+							region: mod-snowflake
+							lifetime: 25
+							length: 1
+							sizeFrom: 1
+							sizeTo: 14
+							colorFrom: 0faae7
+							colorTo: 03fc7f
+							spin: 4
+						}
+						{
+						type: WaveEffect
+						lifetime: 30
+						colorFrom: 1ea5c7
+						colorTo: 2cbe5d
+						sizeFrom: 0
+						sizeTo: 64
+						strokeFrom: 10
+						strokeTo: 0
+						interp: pow3Out
+						}
+						{
+						type: ParticleEffect
+						particles: 1
+						length: 0
+						lifetime: 45
+						sizeFrom: 56
+						sizeTo: 0
+						colorFrom: ffffff
+						colorTo:2bffd1
+						region: mod-flash
+						}
+						{
+						type: WaveEffect
+						lifetime: 30
+						sizeFrom: 0
+						sizeTo: 80
+						strokeFrom: 4
+						strokeTo: 0
+						colorFrom: ffffff
+						colorTo: ffffff88
+						}
+
+					]
+				}
+				shootEffect: none
+				pierce: false
+				despawnHit: true
+				status: snowgrave
+				statusDuration: 999
+				hitSound: magic-boom
+				spin: 4
+				reflectable: false
+				hitSoundVolume: 6
+				incendChance: 1
+				sprite: circle-bullet
+				fragBullet: {
+					type: BasicBulletType
+					speed: 5.6
+					lifetime: 10
+					pierce: true
+					pierceBuilding: true
+					pierceCap: 3
+					damage: 15
+					width: 4
+					height: 5
+					spin: 4
+					shrinkX: 0.3
+					shrinkY: 0.3
+					frontColor: 0000ff
+					backColor: 0000ff
+					despawnEffect: mine
+					hitEffect: mine
+					despawnHit: true
+					hitSound: lightSwShoot
+					hitColor: 00ff6a
+				}
+				fragBullets: 11
+		}
+}
+
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: ShieldRegenFieldAbility
+amount: 5.5
+max: 55
+reload: 60
+range: 80
+}
+{
+type: StatusFieldAbility
+effect: ice-heal
+duration: 600
+reload: 60
+range: 80
+applyEffect: none
+activeEffect: none
+}
+{
+type: EnergyFieldAbility
+damage: 135
+reload: 60
+range: 32
+healEffect: none
+status: ice-shock
+statusDuration: 685
+maxTargets: 250
+healPercent: 0.6
+sameTypeHealMult: 0.8
+color: 00b3ffff
+useAmmo: false
+layer: 0
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0	
+sectors: 0
+}
+]
+drag: 0.1
+speed: 2.11
+immunities: [zamoroz, freezing, ice-shock, snowgrave]

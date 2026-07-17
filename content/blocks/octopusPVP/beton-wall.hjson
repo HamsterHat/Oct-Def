@@ -1,0 +1,10 @@
+type: Wall
+name: Бетонная стена
+health: 615
+requirements: [
+    beton/16
+]
+destroySound: wall-break
+category: defense
+buildVisibility: sandboxOnly
+createRubble: false

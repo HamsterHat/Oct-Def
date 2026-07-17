@@ -1,0 +1,57 @@
+type: missile
+controller: missileAI
+name: Стартующая ядерная ракета Завоевателя
+speed: 0
+hitSize: 24
+hidden: true
+health: 340
+drag: 0
+loopSound: missileTrail
+loopSoundVolume: 1
+outlines: false
+rotateSpeed: 0
+lifetime: 180
+range: 0
+flying: true
+template: MissileUnitType
+drawCell: false
+trailColor: 00000000
+engineSize: 0
+engineOffset: 0
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+targetAir: false
+targetGround: false
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          autoTarget: false
+          shootOnDeath: true
+          x: 0
+          shake: 0
+          y: 0
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		speed: 0
+		ignoreSpawnAngle: true
+		killShooter: true
+		despawnUnit: conquer-missile
+	}
+	}
+]
+

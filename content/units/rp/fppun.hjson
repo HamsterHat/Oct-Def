@@ -1,0 +1,170 @@
+type: mech
+name: "[sky]Полицейский с [yellow]светошумовой [red]гранатой"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 125
+range: 160
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 120
+x: 4
+y: 0
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: throw
+bullet: {
+		type: BasicBulletType
+		damage: 5
+		speed: 4
+		splashDamage: 5
+		splashDamageRadius: 46
+		absorbable: true
+		lifetime: 40
+		pierce: false
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+				particles: 1
+				length: 0
+				region: circle-shadow
+				lifetime: 75
+				sizeFrom: 3000
+				sizeTo: 0
+				startDelay: 0
+				layer: 135
+				clip: 8192
+				},
+				{
+				particles: 1
+				length: 0
+				region: circle-shadow
+				lifetime: 17.5
+				sizeFrom: 8192
+				sizeTo: 8192
+				startDelay: 0
+				layer: 135
+				colorTo: ffffff00
+				clip: 8192
+				},
+				{
+					type: WaveEffect
+					lifetime: 35
+					sizeFrom: 0
+					sizeTo: 96
+					interp: pow5Out
+					colorFrom: ffffff
+					colorTo: ffea0000
+					strokeFrom: 12
+					strokeTo: 0
+				},
+				{
+					type: ParticleEffect
+					lifetime: 25
+					particles: 1
+					length: 0
+					cone: 0
+					sizeFrom: 64
+					sizeTo: 0
+					colorFrom: ffffff
+					colorTo: ffd20000
+					layer: 110
+				},
+				{
+					type: ParticleEffect
+					lifetime: 360
+					particles: 35
+					length: 80
+					baseLength: 10
+					cone: 360
+					interp: pow3Out
+					sizeFrom: 14
+					sizeTo: 24
+					colorFrom: bbbbbbff
+					colorTo: 55555500
+					layer: 95
+				},
+				{
+					type: ParticleEffect
+					lifetime: 240
+					particles: 20
+					length: 50
+					baseLength: 0
+					cone: 360
+					interp: pow2Out
+					sizeFrom: 8
+					sizeTo: 16
+					colorFrom: ffed7799
+					colorTo: 88888800
+					layer: 96
+				},
+				{
+					type: ParticleEffect
+					lifetime: 45
+					particles: 15
+					length: 110
+					baseLength: 20
+					cone: 360
+					interp: pow10Out
+					sizeFrom: 3
+					sizeTo: 0
+					colorFrom: ffffff
+					colorTo: ffd20000
+				}
+			]
+		}
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 9.89
+		status: blind
+		statusDuration: 1200
+		hitSound: flashbang
+		spin: 4
+		scaleLife: true
+		parts: [
+			{
+				type: RegionPart
+				name: mod-flashGrenade
+				outline: false
+				layer: 120
+			}
+		]
+		fragBullets: 1
+		fragBullet: {
+			type: BulletType
+			lifetime: 1
+			hittable: false
+			instantDisappear: true
+			damage: 0
+			collides: false
+			reflectable: false
+			splashDamage: 0
+			splashDamageRadius: 46
+			speed: 0
+			hitSound: droneBoom
+			status: stun
+			statusDuration: 600
+		}
+
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.11
+drawCell: false
+
+
+
+
+

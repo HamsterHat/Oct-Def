@@ -1,0 +1,21 @@
+type: CanvasBlock
+name: Школьная доска
+category: logic
+size: 1
+health: 5
+buildVisibility: sandboxOnly
+requirements: [
+ugol/5
+]
+
+padding: 0	
+canvasSize: 32
+palette: [
+  353776895
+  -1725224193
+  -1112981505
+  1033026815
+  608398591
+  1546020607
+  -741093377
+]

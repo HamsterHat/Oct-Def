@@ -1,0 +1,8 @@
+name: Туньпуний
+description: Прочный ресурс, необходим для построек среднего уровня.
+cost: 1
+color: 483D8B
+hardness: 1
+research: {
+	parent: stal
+}

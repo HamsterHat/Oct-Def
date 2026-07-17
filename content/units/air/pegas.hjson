@@ -1,0 +1,282 @@
+name: Пегас
+type: flying
+flying: true
+alwaysUnlocked: false
+outlines: false
+armor: 0
+faceTarget: true
+squareShape: false
+hitSize: 16
+health: 12000
+speed: 0.9
+range: 250
+rotateSpeed: 0.9
+ammoType: {
+	type: ItemAmmoType
+	item: dinamit
+	range: 80
+	ammoPerItem: 4
+}
+
+fallEffect: {
+    type: MultiEffect,
+    effects: [
+        {
+            type: ParticleEffect,
+            colorFrom: "ff4444",
+            colorTo: "000000",
+            particles: 15,
+            randLength: true,
+            casingFlip: false,
+            cone: 180.0,
+            length: 30.0,
+            baseLength: 0.0,
+            interp: pow2In,
+            sizeFrom: 4.0,
+            sizeTo: 0.0,
+            useRotation: true,
+            region: "circle",
+            lightScl: 1.5,
+            lightOpacity: 0.6,
+            layer: 118
+        },
+        {
+            type: ParticleEffect,
+            colorFrom: "cccccc",
+            colorTo: "333333",
+            particles: 8,
+            randLength: true,
+            casingFlip: true,
+            cone: 90.0,
+            length: 50.0,
+            baseLength: 10.0,
+            interp: linear,
+            sizeFrom: 6.0,
+            sizeTo: 0.0,
+            spin: 20.0,
+            lightScl: 0.8,
+            lightOpacity: 0.4,
+            layer: 118
+        }
+    ]
+},
+
+fallEngineEffect: {
+    type: MultiEffect,
+    effects: [
+        {
+            type: ParticleEffect,
+            colorFrom: "ffffaa",
+            colorTo: "ff6600",
+            particles: 25,
+            randLength: false,
+            casingFlip: false,
+            cone: 360.0,
+            length: 20.0,
+            baseLength: 0.0,
+            interp: pow2In,
+            sizeFrom: 3.0,
+            sizeTo: 0.0,
+            useRotation: false,
+            region: "circle",
+            lightScl: 2.0,
+            lightOpacity: 0.8,
+            layer: 118
+        },
+        {
+            type: ParticleEffect,
+            colorFrom: "888888",
+            colorTo: "111111",
+            particles: 6,
+            randLength: true,
+            casingFlip: false,
+            cone: 45.0,
+            length: 80.0,
+            baseLength: 20.0,
+            interp: linear,
+            sizeFrom: 5.0,
+            sizeTo: 0.0,
+            useRotation: false,
+            region: "circle",
+            lightScl: 0.5,
+            lightOpacity: 0.3,
+            layer: 118
+        }
+    ]
+},
+
+deathEffect: {
+    type: MultiEffect,
+    effects: [
+        {
+            type: ParticleEffect,
+            colorFrom: "ffffff",
+            colorTo: "ff0000",
+            particles: 50,
+            randLength: true,
+            casingFlip: false,
+            cone: 360.0,
+            length: 100.0,
+            baseLength: 0.0,
+            interp: pow2Out,
+            sizeFrom: 12.0,
+            sizeTo: 0.0,
+            useRotation: true,
+            region: "circle",
+            lightScl: 3.0,
+            lightOpacity: 0.9,
+            layer: 118
+        },
+        {
+            type: ParticleEffect,
+            colorFrom: "aaaaaa",
+            colorTo: "222222",
+            particles: 30,
+            randLength: true,
+            casingFlip: true,
+            cone: 180.0,
+            length: 120.0,
+            baseLength: 40.0,
+            interp: linear,
+            sizeFrom: 10.0,
+            sizeTo: 0.0,
+            spin: 45.0,
+            lightScl: 1.2,
+            lightOpacity: 0.7,
+            layer: 118
+        },
+        {
+            type: WaveEffect,
+            colorFrom: "ffffff",
+            colorTo: "666666",
+            sizeFrom: 0.0,
+            sizeTo: 350.0,
+            strokeFrom: 8.0,
+            strokeTo: 0.0,
+            sides: -1,
+            interp: pow2Out,
+            lightScl: 4.0,
+            lightOpacity: 0.8,
+            layer: 5
+        }
+    ]
+}
+ 
+ammoCapacity: 120
+weapons: [
+	{
+	name: pegml
+	reload: 240
+	x: 0
+	y: 0
+	mirror: false
+	rotate: true
+	shootSound: largeCannon
+	rotateSpeed: 1.3
+	recoil: 4
+	continuous: false
+	shake: 4
+	bullet: {
+				damage: 240
+				speed: 6
+				lifetime: 41.666666667
+				makeFire: true
+				splashDamage: 250
+				splashDamageRadius: 45
+				hitEffect: titanSmoke
+				hitColor: ea8878
+				despawnHit: true
+				type: MissileBulletType
+				width: 8
+				height: 8
+				shootEffect: shootBig2
+				smokeEffect: shootBigSmoke
+				hitSound: largeExplosion
+				sprite: mod-yrkt
+				frontColor: a6a69c
+				backColor: ff0000
+				statusDuration: 130
+				status: blowedup
+				hittable: false
+				reflectable: false
+				hitSoundVolume: 3
+				pierceCap: 4
+				pierce: true
+				pierceBuilding: true
+				pierceArmor: true
+				trailColor: ffffff
+				fragBullets: 16
+				fragBullet: fireball
+			}
+	}
+{
+name: peggun
+	reload: 10
+	x: 16
+	y: 0
+	controllable: false
+	autoTarget: true
+	mirror: true
+	rotate: true
+	rotateSpeed: 5
+		bullet: {
+			type: BasicBulletType
+			damage: 75
+			speed: 4
+			lifetime: 62.5
+			collidesGround: true
+			collidesAir: true
+		}
+}
+{
+reload: 120
+x: 8
+y: 0
+mirror: true
+rotate: false
+shootSound: missileLaunch
+recoil: 0
+continuous: false
+shake: 2
+bullet: {
+type: BasicBulletType
+lifetime: 0
+spawnUnit: sokolMissile
+}
+}
+{
+reload: 120
+x: 16
+y: 0
+mirror: true
+rotate: false
+shootSound: missileLaunch
+recoil: 0
+continuous: false
+shake: 2
+bullet: {
+type: BasicBulletType
+lifetime: 0
+spawnUnit: sokolMissile
+}
+}
+{
+reload: 120
+x: 24
+y: 0
+mirror: true
+rotate: false
+shootSound: missileLaunch
+recoil: 0
+continuous: false
+shake: 2
+bullet: {
+type: BasicBulletType
+lifetime: 0
+spawnUnit: sokolMissile
+}
+}
+]
+research: sokol
+researchCostMultiplier: 3
+immunities: [blowedup]

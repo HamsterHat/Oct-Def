@@ -1,0 +1,13 @@
+type: Wall
+name: Цветное Стекло
+health: 0.01
+requirements: [
+    cremn/1
+    coper/1
+]
+destroySound: glassBreak
+category: defense
+buildVisibility: sandboxOnly
+instantDeconstruct: true
+createRubble: false
+rotate: true

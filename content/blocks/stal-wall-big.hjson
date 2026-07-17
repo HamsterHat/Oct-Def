@@ -1,0 +1,18 @@
+name: Большая железная стена
+description: Защищает постройки от вражеских снарядов
+type: Wall
+health: 1000
+size: 2
+flashHit: false
+chanceDeflect: 8
+deflectSound: rkst
+requirements: [
+  stal/20
+]
+category: defense
+research: {
+	parent: stal-wall-small
+	requirements: [
+  		stal/40
+	]
+}

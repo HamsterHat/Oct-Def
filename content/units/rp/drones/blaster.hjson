@@ -1,0 +1,62 @@
+type: flying
+name: gaster-blaster-unit
+description: A mysterious, floating floating construct that fires a devastating beam of pure energy.
+hidden: true
+health: 12000
+armor: 15
+speed: 1.8
+accel: 0.08
+drag: 0.04
+hitSize: 42
+flying: true
+lowAlt: false
+engineSize: 0
+rotateSpeed: 2.5
+
+weapons: [
+  {
+    name: gaster-blaster-laser
+    x: 0
+    y: 12
+    mirror: false
+    reload: 150
+    cooldownTime: 120
+    chargeTime: 25
+    shootStatus: fast
+    shootStatusDuration: 35
+    shootSound: laserbig
+    
+bullet: {
+  type: ContinuousLaserBulletType
+  damage: 1
+  statusEffect: KR
+  statusDuration: 12
+  
+
+  lifetime: 48
+
+  length: 280
+  width: 60
+  
+  colors: [ ffffff, ffffff, ffffff ]
+  
+
+  drawSize: 60
+  
+  shake: 6
+  
+  chargeEffect: {
+    type: ParticleEffect
+    lifetime: 25
+    particles: 12
+    length: -30
+    colorFrom: ffffff
+    colorTo: ffffff
+    sizeFrom: 3
+    sizeTo: 0
+  }
+}
+
+
+  }
+]

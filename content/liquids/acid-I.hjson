@@ -1,0 +1,9 @@
+name: "Кислота I"
+color: 3fff19
+lightColor: 8aff8a
+flammability: 0
+temperature: 5
+heatCapacity: 0
+viscosity: 0.2
+explosiveness: 0
+effect: acid-poison-I

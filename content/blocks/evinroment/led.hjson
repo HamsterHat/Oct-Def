@@ -1,0 +1,5 @@
+type: "Floor"
+variants: 1
+speedMultiplier: 2.6
+dragMultiplier: 0.6
+walkSound: walkIce

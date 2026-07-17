@@ -1,0 +1,226 @@
+type: mech
+name: "[lime]Пуня[] с [red]TNT"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 100
+range: 160
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+ammoType: {
+	type: ItemAmmoType
+	item: dinamit
+	range: 4
+	ammoPerItem: 1
+}
+ammoCapacity: 16
+weapons: [
+{
+reload: 90
+x: 4
+y: 0
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: throw
+bullet: {
+		type: BasicBulletType
+		damage: 5
+		speed: 4
+		absorbable: true
+		lifetime: 40
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 3.89
+		hitSound: none
+		spin: 4
+		scaleLife: true
+		width: 0
+		height: 0
+		parts: [
+			{
+				type: RegionPart
+				name: mod-tnt
+				outline: false
+				layer: 120
+			}
+		]
+		trailEffect: {
+				type: ParticleEffect
+				sizeFrom: 2
+				sizeTo: 0
+				particles: 3
+				colorFrom: c0c0c0ff
+				colorTo: 000000
+				interp: swingOut
+				lifetime: 40
+				cone: 1
+				length: 5
+			}
+			collideTerrain: true
+			trailInterval: 1
+		fragBullets: 1
+		fragBullet: {
+			type: BasicBulletType
+			parts: [
+			{
+				type: RegionPart
+				name: mod-tnt
+				outline: false
+				layer: 55
+			}
+		]
+				shootEffect: none
+				damage: 0
+				lifetime: 360
+				smokeEffect: none
+				despawnEffect: none
+				trailEffect: {
+				type: ParticleEffect
+				sizeFrom: 2
+				sizeTo: 0
+				particles: 3
+				colorFrom: c0c0c0ff
+				colorTo: 000000
+				interp: swingOut
+				lifetime: 40
+				cone: 360
+				length: 5
+			}
+			trailInterval: 5
+				hitEffect: {
+					type: MultiEffect
+					effects: [
+						{
+							type: ParticleEffect
+							particles: 1
+							region: circle-shadow
+							sizeFrom: 64
+							sizeTo: 0
+							colorFrom: ffffffff
+							colorTo: ffffffff
+							interp: circleOut
+							lifetime: 24
+							layer: 119
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							sizeFrom: 14
+							sizeTo: 0
+							colorFrom: b8b782
+							colorTo: 636363
+							interp: circleOut
+							lifetime: 620
+							length: 40
+							layer: 118
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							sizeFrom: 16
+							sizeTo: 0
+							colorFrom: 584a36
+							colorTo: 636363
+							interp: circleOut
+							lifetime: 700
+							length: 50
+							layer: 118.1
+						}
+						{
+							type: ParticleEffect
+							particles: 18
+							sizeFrom: 5
+							sizeTo: 0
+							colorFrom: 582612
+							colorTo: 582612
+							interp: circleOut
+							lifetime: 160
+							length: 80
+							layer: 81
+						}
+						{
+							type: ParticleEffect
+							particles: 18
+							sizeFrom: 8
+							sizeTo: 0
+							colorFrom: 582612
+							colorTo: 582612
+							interp: circleOut
+							lifetime: 160
+							length: 80
+							layer: 81
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							colorFrom: fffc61
+							colorTo: 5f3737
+							interp: circleOut
+							lifetime: 245
+							line: true
+							length: 90
+							layer: 117
+						}
+						{
+							type: WaveEffect
+							lifetime: 40
+							sizeFrom: 0
+							sizeTo: 100
+							lightColor: 66B1FFFF
+							interp: circleOut
+							strokeFrom: 18
+							strokeTo: 0
+							colorFrom: 757575c7
+							colorTo: 75757556
+							layer: 5
+							clip: 90
+						}
+					]
+				}
+				collides: false
+				hitSound: coolboom
+				hitSoundVolume: 8
+				hittable: false
+				reflectable: false
+				absorbable: false
+				width: 0
+				height: 0
+				splashDamage: 260
+				splashDamageRadius: 50
+				status: blowedup
+				statusDuration: 475
+				knockback: 0
+				shrinkX: 0
+				shrinkY: 0
+				lightRadius: 0
+				lightOpacity: 0
+				lightColor: ffffff
+				hitShake: 0
+				despawnShake: 0
+				speed: 0
+				buildingDamageMultiplier: 2.75
+				fragBullets: 3
+				fragBullet: fireball
+		}
+
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.11
+drawCell: false
+
+
+
+
+

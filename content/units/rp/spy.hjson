@@ -1,0 +1,57 @@
+type: mech
+name: "[lime]Пуня"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 100
+range: 8
+canDrown: false
+targetable: false
+drawMinimap: false
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+	range: 4
+	ammoPerItem: 5
+}
+ammoCapacity: 18
+rotateMoveFirst: false
+rotateSpeed: 4
+hitSize: 8
+stepShake: 0
+weapons: [
+{
+reload: 15
+x: 4
+y: 4
+aiControllable: true
+inaccuracy: 0
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+}
+maxAmmo: 18
+mirror: false
+rotate: false
+shootSound: bang
+shootSoundVolume: 0.1
+bullet: {
+		type: BasicBulletType
+		damage: 69.92
+		width: 2
+		height: 2
+		speed: 4
+		absorbable: true
+		lifetime: 40
+		pierce: false
+		buildingDamageMultiplier: 0.1
+		collideTerrain: true
+		status: stun
+		statusDuration: 30
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+drawCell: false

@@ -1,0 +1,21 @@
+name: Большая стена из туньпуния
+description: Защищает постройки от вражеских снарядов. Способна поглощать лазеры.
+type: Wall
+health: 1200
+size: 2
+flashHit: false
+chanceDeflect: 9
+deflectSound: rkst
+absorbLasers: true
+requirements: [
+  titan/20
+  coper/20
+]
+category: defense
+research: {
+	parent: titan-wall-small
+	requirements: [
+  		titan/40
+  		coper/40
+	]
+}

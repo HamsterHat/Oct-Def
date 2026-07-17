@@ -1,0 +1,39 @@
+type: ShockMine
+name: Капкан
+underBullets: true
+requirements: [
+	stal/20
+	wood/10
+]
+teamAlpha: 0
+hasShadow: false
+category: effect
+health: 50
+placeableLiquid: true
+tileDamage: 50
+createRubble: false
+buildVisibility: sandboxOnly
+damage: 0
+length: 0
+tendrils: 0
+shots: 1
+cooldown: 40
+bullet: {
+	width: 1
+	height: 1
+	speed: 0
+	lifetime: 1
+	damage: 0
+	splashDamage: 18
+	splashDamageRadius: 8
+	collidesAir: false
+	absorbable: false
+	hittable: false
+	hitEffect: none
+	hitSound: beartrapped
+	hitSoundVolume: 1.2
+	despawnHit: true
+	status: stun
+	statusDuration: 480
+}
+

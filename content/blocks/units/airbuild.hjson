@@ -1,0 +1,134 @@
+name: "Сборщик Авиации"
+alwaysUnlocked: false
+type: UnitFactory
+health: 900
+size: 3
+configurable: true
+plans: [
+  {
+    unit: pb-1
+    requirements: [
+      titan/150
+      stal/350
+      coper/200
+    ]
+    time: 10800
+  },
+  {
+    unit: pb-1-500
+    requirements: [
+      titan/150
+      stal/350
+      coper/200
+    ]
+    time: 10800
+  },
+  {
+    unit: pgv-1
+    requirements: [
+      titan/90
+      stal/240
+      cremn/120
+    ]
+    time: 9000
+  },
+  {
+    unit: pi-1
+    requirements: [
+      titan/110
+      stal/280
+      cremn/150
+    ]
+    time: 10800
+  },
+  {
+    unit: ppla-1
+    requirements: [
+      titan/200
+      stal/150
+      cremn/80
+    ]
+    time: 14400
+  },
+  {
+    unit: pvpr-1
+    requirements: [
+      titan/80
+      stal/450
+      pirosmes/200
+    ]
+    time: 18000
+  },
+  {
+    unit: drone-basic
+    requirements: [
+      coper/10
+      svinec/10
+      stal/5
+      dinamit/1
+      bomb/1
+    ]
+    time: 2400
+  },
+  {
+    unit: drone-boom
+    requirements: [
+      titan/20
+      coper/10
+      svinec/10
+      stal/5
+      dinamit/3
+      bomb/3
+    ]
+    time: 4800
+  },
+  {
+    unit: drone-fake
+    requirements: [
+      coper/15
+      svinec/10
+      stal/5
+    ]
+    time: 1800
+  },
+  {
+    unit: drone-fire
+    requirements: [
+      titan/20
+      coper/10
+      svinec/10
+      stal/5
+      pirosmes/6
+    ]
+    time: 4200
+  },
+  {
+    unit: drone-firework
+    requirements: [
+      coper/20
+      svinec/15
+      stal/5
+      pirosmes/4
+    ]
+    time: 3600
+  },
+  {
+    unit: drone-pierce
+    requirements: [
+      titan/30
+      coper/15
+      svinec/10
+      stal/10
+      bomb/4
+      dinamit/6
+    ]
+    time: 5400
+  }
+]
+
+
+category: units
+requirements: [
+  coper/1200
+  stal/1200
+]

@@ -1,0 +1,21 @@
+name: Стена из туньпуния
+description: Защищает постройки от вражеских снарядов. Способна поглощать лазеры.
+type: Wall
+health: 300
+size: 1
+flashHit: false
+chanceDeflect: 8
+deflectSound: rkst
+absorbLasers: true
+requirements: [
+  titan/5
+  coper/5
+]
+category: defense
+research: {
+	parent: stal-wall-big
+	requirements: [
+  		titan/10
+  		coper/10
+	]
+}

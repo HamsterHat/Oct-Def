@@ -1,0 +1,7 @@
+name: Глина
+cost: 1
+color: 4a484e
+hardness: 1
+research: {
+	parent: stone
+}

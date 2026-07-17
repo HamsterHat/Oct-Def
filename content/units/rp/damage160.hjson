@@ -1,0 +1,51 @@
+type: missile
+controller: MinerAI
+defaultController: MinerAI
+playerControllable: false
+health: 1
+hitSize: 1
+drag: 10000
+physics: false
+drawBody: false
+drawCell: false
+outlines: false
+hoverable: false
+groundLayer: 0
+deathShake: 0
+lifetime: 1
+speed: 0
+hittable: false
+targetable: false
+hidden: true
+
+abilities: [
+  {
+    type: RegenAbility
+    percentAmount: 1
+  }
+{
+type: StatusFieldAbility
+effect: damage
+duration: 160
+reload: 0
+range: 4
+applyEffect: none
+activeEffect: none	
+color: 00000000
+}
+{
+type: StatusFieldAbility
+effect: stun
+duration: 270
+reload: 0
+range: 4
+applyEffect: none
+activeEffect: none	
+color: 00000000
+}
+]
+
+deathSound: none
+createScorch: false
+
+deathExplosionEffect: none

@@ -1,0 +1,8 @@
+type: "Floor"
+name: "Песок"
+variants: 1
+isLiquid: false
+itemDrop: pesok
+speedMultiplier: 0.7
+walkSound: walkSand
+ 

@@ -1,0 +1,57 @@
+type: LaserTurret
+name: Уничтожитель
+description: Поджаривает то, что посмело приблизится
+details: ААААААААААААААААААААААА!
+size: 5
+outlineIcon: false
+health: 2500
+shootY: -4
+rotateSpeed: 2.3
+targetAir: true
+targetGround: true
+maxAmmo: 1
+range: 240
+shootDuration: 600
+reload: 300
+shootSound: laser
+loopSound: beam
+cooldownTime: 270
+recoil: 4
+consumes: {
+	power: 500
+	coolant: {
+		amount: 1
+		optional: true
+	}
+}
+shootType: {
+	type: ContinuousLaserBulletType
+        length: 240
+        hitEffect: hitMeltdown
+        hitColor: meltdownHit
+        damage: 105.833333333
+        makeFire: true
+        status: melt
+        width: 4
+        ammoMultiplier: 1
+}
+
+
+requirements: [
+	coper/3800
+	titan/2500
+	stal/1800
+	energosteklo/150
+]
+category: turret
+research: {
+	parent: r192
+	requirements: [
+		coper/7600
+		titan/5000
+		stal/3600
+		energosteklo/300
+	]
+}
+
+

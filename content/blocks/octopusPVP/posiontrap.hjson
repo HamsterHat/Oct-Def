@@ -1,0 +1,38 @@
+type: ShockMine
+name: Ловушка
+underBullets: true
+requirements: [
+	wood/20
+]
+teamAlpha: 0
+hasShadow: false
+category: effect
+health: 15
+placeableLiquid: true
+tileDamage: 1
+createRubble: false
+buildVisibility: sandboxOnly
+damage: 0
+length: 0
+tendrils: 0
+shots: 1
+cooldown: 40
+bullet: {
+	width: 1
+	height: 1
+	speed: 0
+	lifetime: 1
+	damage: 0
+	splashDamage: 2
+	splashDamageRadius: 8
+	collidesAir: false
+	absorbable: false
+	hittable: false
+	hitEffect: none
+	hitSound: arrowhit
+	hitSoundVolume: 1.2
+	despawnHit: true
+	status: poison
+	statusDuration: 240
+}
+

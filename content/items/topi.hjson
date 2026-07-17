@@ -1,0 +1,9 @@
+name: Топий
+description: Опасный энергетический ресурс.
+cost: 1
+color: fа7а50
+explosiveness: 0.9
+flammability: 2.3
+research: {
+	parent: pesok
+}

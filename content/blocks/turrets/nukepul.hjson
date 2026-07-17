@@ -1,0 +1,74 @@
+type: ItemTurret
+name: Ядерный пулемёт
+description: Стреляет по врагам кусками урана
+size: 4
+outlineIcon: false
+health: 1600
+rotateSpeed: 0.6
+targetAir: true
+targetGround: true
+range: 160
+reload: 5
+shootCone: 1
+shoot: {
+    type: ShootAlternate
+    barrels: 6
+    spread: 1
+    shots: 1
+}
+
+shootSound: shootBig
+inaccuracy: 3.5
+consumes: {
+   power: 64.16
+   liquid: {
+   	liquid: voda
+   	amount: 0.1
+   }
+}
+
+ammoTypes: {
+uran: {
+        type: BasicBulletType
+        lifetime: 32
+        pierce: true
+        width: 3
+        height: 3
+        sprite: mod-yaderka
+        despawnEffect: massiveExplosion
+        ammoMultiplier: 5
+        hitEffect: massiveExplosion
+        shootEffect: shootBig2
+        smokeEffect: shootBigSmoke2
+        hitSound: rkst
+        collidesAir: true
+        pierceBuilding: true
+        hitSoundVolume: 0.3
+        reflectable: false
+        statusDuration: 280
+        status: radiated
+        speed: 5
+        damage: 80
+        makeFire: true
+		knockback: 0.4
+        frontColor: 31f500
+	}
+}
+requirements: [
+	coper/570
+	svinec/980
+	titan/300
+	energosteklo/10
+]
+category: turret
+research: {
+	parent: nuke
+	requirements: [
+  		coper/1200
+  		svinec/2200
+  		titan/600
+  		energosteklo/20
+	]
+}
+
+

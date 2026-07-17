@@ -1,0 +1,57 @@
+type: mech
+name: "[lime]Пуни[] с [pink]веночком"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 85
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 15
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 24.3
+		speed: 0
+		splashDamage: 13.34
+		splashDamageRadius: 8
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 11.7
+		impact: true
+		hitSound: pun-hit
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.1
+drawCell: false
+
+abilities: [
+{
+type: StatusFieldAbility
+effect: flowery-aura
+duration: 7200
+reload: 30
+range: 40	
+applyEffect: none
+activeEffect: none
+}
+]

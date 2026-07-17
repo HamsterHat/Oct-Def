@@ -1,0 +1,23 @@
+type: flying
+name: "[sky]Осминожка"
+alwaysUnlocked: false
+armor: 0
+outlines: false
+health: 10000000
+range: 0
+rotateMoveFirst: false
+rotateSpeed: 6
+flying: true
+engineOffset: 0
+deathExplosionEffect: none
+engineSize: 0
+hitSize: 8
+isEnemy: false
+hittable: false
+killable: false
+targetable: false
+buildSpeed: 1.75
+accel: 0.2
+drag: 0.1
+speed: 3.5
+

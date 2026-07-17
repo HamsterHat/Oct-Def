@@ -1,0 +1,191 @@
+type: missile
+controller: missileAI
+name: ПРРСЗО-1З
+speed: 6.1
+hitSize: 12
+hidden: false
+health: 125
+loopSound: missileTrail
+loopSoundVolume: 1
+outlines: false
+lifetime: 354.09836065573774
+range: 35
+flying: true
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: ffbe45
+engineSize: 2
+engineOffset: 12
+rotateSpeed: 1.4
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+targetAir: true
+targetGround: false
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          autoTarget: true
+          shootOnDeath: true
+          x: 0
+          shake: 15
+          y: 0
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 1395
+		splashDamageRadius: 175.8
+    speed: 0
+hitEffect: {
+  type: multiEffect
+  layer: 110.002
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 30
+      sizeFrom: 0
+      sizeTo: 190
+      strokeFrom: 24
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ffa64d
+      interp: pow5Out
+    }
+    {
+      type: WaveEffect
+      lifetime: 55
+      sizeFrom: 30
+      sizeTo: 175
+      strokeFrom: 12
+      strokeTo: 0
+      colorFrom: ff7700
+      colorTo: b31f00
+      interp: pow3Out
+    }
+    {
+      type: ParticleEffect
+      particles: 45
+      length: 160
+      baseLength: 15
+      lifetime: 110
+      sizeFrom: 24
+      sizeTo: 8
+      colorFrom: fff2a3
+      colorTo: ff3300
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      length: 180
+      lifetime: 80
+      sizeFrom: 16
+      sizeTo: 0
+      colorFrom: ff9d00
+      colorTo: 661100
+      interp: pow2Out
+    }
+    {
+      type: ParticleEffect
+      particles: 35
+      length: 155
+      baseLength: -20
+      lifetime: 160
+      sizeFrom: 28
+      sizeTo: 36
+      colorFrom: ff550099
+      colorTo: 22222200
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      particles: 25
+      length: 140
+      lifetime: 130
+      sizeFrom: 18
+      sizeTo: 30
+      colorFrom: 444444b0
+      colorTo: 11111100
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      particles: 15
+      length: 195
+      line: true
+      strokeFrom: 8
+      strokeTo: 0
+      lenFrom: 35
+      lenTo: 5
+      lifetime: 40
+      colorFrom: ffffff
+      colorTo: ff4500
+      interp: pow4Out
+    }
+  ]
+}
+
+
+		hitSound: droneBoom
+		hitSoundVolume: 10
+		killShooter: true
+		status: blowedup
+		statusDuration: 560
+    puddleLiquid: os
+		puddleAmount: 90
+		puddleRange: 40
+		puddles: 7
+		despawnHit: true
+		
+		incendAmount: 25
+		incendSpread: 40
+		incendChance: 1
+		fragBullets: 35
+		fragBullet: fireball
+
+	}
+	}
+]
+abilities: [
+{
+	type: MoveEffectAbility
+	effect: missileTrailSmoke
+	rotation: 0
+	y: -14
+	color: c0c0c0
+	interval: 1
+}
+{
+	type: MoveEffectAbility
+	effect: {
+    type: ParticleEffect
+    particles: 1
+    length: 20
+    lifetime: 15
+    interp: pow5Out
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: ffd37f
+    colorTo: ff8e52
+  }
+	rotation: 0
+	y: -12
+	interval: 1
+}
+]
+
+

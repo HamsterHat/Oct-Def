@@ -1,0 +1,51 @@
+type: ItemTurret
+name: Ядерка
+description: "Запускает ядерные ракеты на большую дистанцию"
+size: 3
+outlineIcon: false
+health: 900
+rotateSpeed: 1.2
+targetAir: true
+targetGround: true
+range: 700
+reload: 1500
+shootCone: 1
+shootSound: missileLaunch
+inaccuracy: 3.5
+maxAmmo:  25
+ammoPerShot: 25
+consumes: {
+   power: 25
+}
+
+ammoTypes: {
+uran: {
+	type: BasicBulletType
+	lifetime: 0
+	spawnUnit: nukeMissile
+	ammoMultiplier: 1
+}
+}
+requirements: [
+	uran/5
+	titan/30
+	stal/30
+	energosteklo/5
+	coper/100
+]
+category: turret
+research: {
+	parent: raketcik
+	requirements: [
+  		uran/10
+  		titan/60
+  		stal/60
+  		coper/600
+  		energosteklo/10
+	]
+}
+
+
+
+
+

@@ -1,0 +1,19 @@
+name: Пуниумовая Буровая Установка
+description: Медленно добывает ресурсы.
+type: Drill
+health: 400
+size: 2
+rotateSpeed: 1
+tier: 1
+drillTime: 400
+warmupSpeed: 0.001
+requirements: [
+	coper/15
+]
+category: production
+research: {
+	parent: base-land
+	requirements: [
+  		coper/30
+	]
+}

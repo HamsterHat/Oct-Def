@@ -1,0 +1,12 @@
+type: StorageBlock
+name: Холодильник
+itemCapacity: 25
+category: effect
+coreMerge: false
+size: 2
+health: 90
+rotate: true
+buildVisibility: sandboxOnly
+requirements: [
+stal/20
+]

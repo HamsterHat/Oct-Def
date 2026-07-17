@@ -1,0 +1,37 @@
+name: Плавление
+damage: 0.583333333
+speedMultiplier: 0.3
+effect: {
+    type: MultiEffect
+    effects: [
+        melting,
+        {
+        type: ParticleEffect
+        particles: 4
+        lifetime: 900
+        length: 4
+        sizeFrom: 1
+        sizeTo: 0
+        colorFrom: "867763"
+        colorTo: 2e2c23
+        spin: 0
+        layer: 5
+        cone: 360
+        },
+        {
+        type: ParticleEffect
+        particles: 2
+        lifetime: 900
+        length: 4
+        sizeFrom: 1
+        sizeTo: 0
+        colorFrom: "867763"
+        colorTo: 2e2c23
+        spin: 0
+        layer: 5
+        cone: 360
+        }
+    ]
+}
+ 
+opposites: [wetted]

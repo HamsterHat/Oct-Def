@@ -1,0 +1,205 @@
+type: missile
+controller: missileAI
+name: ППР-1
+speed: 6
+hitSize: 12
+hidden: false
+health: 750
+loopSound: missileTrail
+loopSoundVolume: 1
+outlines: false
+lifetime: 533.3333333333334
+range: 35
+flying: true
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: ffbe45
+engineSize: 2
+engineOffset: 12
+rotateSpeed: 2.7
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+targetAir: true
+targetGround: false
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          autoTarget: true
+          shootOnDeath: true
+          x: 0
+          shake: 15
+          y: 0
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 5760
+		splashDamageRadius: 132.4
+    speed: 0
+		hitEffect: {
+        type: MultiEffect
+        effects: [
+          {
+            type: ParticleEffect
+            particles: 1
+            length: 0
+            lifetime: 30
+            sizeFrom: 60
+            sizeTo: 0
+            colorFrom: ffffff
+            colorTo: ffbe45
+          }
+          {
+            type: ParticleEffect
+            particles: 1
+            length: 0
+            lifetime: 60
+            interp: pow3Out
+            sizeFrom: 20
+            sizeTo: 140
+            colorFrom: ffea85
+            colorTo: ff6b3500
+          }
+          {
+            type: WaveEffect
+            lifetime: 45
+            sizeFrom: 0
+            sizeTo: 160
+            strokeFrom: 15
+            strokeTo: 0
+            colorFrom: ffffff
+            colorTo: ffaa4400
+          }
+          {
+            type: WaveEffect
+            lifetime: 80
+            interp: pow2Out
+            sizeFrom: 20
+            sizeTo: 220
+            strokeFrom: 8
+            strokeTo: 0
+            colorFrom: ff8844
+            colorTo: 44444400
+          }
+          {
+            type: ParticleEffect
+            particles: 15
+            length: 90
+            lifetime: 90
+            interp: pow5Out
+            sizeFrom: 16
+            sizeTo: 0
+            colorFrom: ff9d42
+            colorTo: 2b2b2b00
+          }
+          {
+            type: ParticleEffect
+            particles: 25
+            length: 150
+            lifetime: 120
+            interp: pow10Out
+            sizeFrom: 24
+            sizeTo: 4
+            colorFrom: 515151
+            colorTo: 1a1a1a00
+          }
+          {
+            type: ParticleEffect
+            particles: 30
+            length: 180
+            lifetime: 40
+            interp: pow3Out
+            line: true
+            lenFrom: 20
+            lenTo: 0
+            strokeFrom: 4
+            strokeTo: 0
+            colorFrom: ffffff
+            colorTo: ffbe4500
+          }
+          {
+            type: ParticleEffect
+            particles: 20
+            length: 130
+            lifetime: 100
+            interp: pow2Out
+            sizeFrom: 5
+            sizeTo: 0
+            colorFrom: ffd37f
+            colorTo: ff525200
+          }
+          {
+            type: ParticleEffect
+            particles: 1
+            length: 0
+            lifetime: 150
+            sizeFrom: 180
+            sizeTo: 180
+            colorFrom: ffaa4422
+            colorTo: 00000000
+          }
+          {
+            type: ParticleEffect
+            particles: 12
+            length: 70
+            lifetime: 75
+            interp: circleOut
+            sizeFrom: 8
+            sizeTo: 0
+            colorFrom: ff5252
+            colorTo: 3a3a3a00
+          }
+        ]
+      }
+		hitSound: droneBoom
+		hitSoundVolume: 10
+		killShooter: true
+		status: blowedup
+		statusDuration: 560
+    despawnHit: true
+	}
+	}
+]
+abilities: [
+{
+	type: MoveEffectAbility
+	effect: missileTrailSmoke
+	rotation: 0
+	y: -14
+	color: c0c0c0
+	interval: 1
+}
+{
+	type: MoveEffectAbility
+	effect: {
+    type: ParticleEffect
+    particles: 1
+    length: 20
+    lifetime: 15
+    interp: pow5Out
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: ffd37f
+    colorTo: ff8e52
+  }
+	rotation: 0
+	y: -12
+	interval: 1
+}
+]
+
+

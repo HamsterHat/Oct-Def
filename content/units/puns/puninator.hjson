@@ -1,0 +1,149 @@
+type: flying
+name: "[darkgray]Пуня-[scarlet]терминатор"
+alwaysUnlocked: true
+armor: 650
+buildSpeed: 12000000
+outlines: false
+health: 85490
+range: 80000
+rotateMoveFirst: false
+rotateSpeed: 6
+loopSound: none
+flying: true
+loopSoundVolume: 1.5
+engineOffset: 6
+deathExplosionEffect: none
+engineSize: 4
+hitSize: 8
+drawCell: false
+createWreck: false
+weapons: [
+{
+reload: 60
+x: 2
+y: 4
+mirror: true
+rotate: false
+shootSound: laserbig
+continuous: true
+alternate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+	type: ContinuousLaserBulletType
+        length: 2500
+        hitEffect: hitMeltdown
+        hitColor: meltdownHit
+        damage: 615.416666667
+        laserAbsorb: false
+        makeFire: true
+        status: none
+        pierce: true
+        pierceBuilding: true
+        width: 0.5
+        lifetime: 600
+        ammoMultiplier: 1
+}
+}
+{
+reload: 1800
+x: 0
+y: 0
+mirror: false
+rotate: false
+shootSound: railgun
+alternate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	width: 64
+	height: 64
+	splashDamage: 35800
+	splashDamageRadius: 35
+	sprite: large-bomb
+	frontColor: ffffff
+	backColor: ff0000
+	lifetime: 600
+	makeFire: true
+	speed: 1.6
+	pierce: true
+	pierceBuilding: true
+	spin: 3
+	hitEffect: titanSmoke
+	hitColor: ff0000
+	despawnEffect: none
+	despawnHit: false
+	reflectable: false
+	shrinkY: 0.01
+	shrinkX: 0.01
+}
+}
+{
+x: 0
+y: 0
+reload: 0
+shootCone: 360
+controllable: false
+aiControllable: false
+shootOnDeath: true
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	lifetime: 0
+	speed: 0
+	instantDisappear: true
+	killShooter: true
+	collides: false
+	splashDamage: 10000000
+	splashDamageRadius: 800
+	splashDamagePierce: false
+	hitEffect: {
+		type: ExplosionEffect
+		waveColor: ff0000ff
+		smokeColor: ff0000ff
+		sparkColor: ff0000ff
+		waveLife: 60
+		waveRad: 880
+		waveRadBase: 2.5
+		sparkRad: 40
+		sparkLen: 8
+		smokeSize: 12
+		smokeRad: 200
+		smokes: 17
+		sparks: 11
+	}
+	despawnHit: true
+	shootEffect: none
+}
+}
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: StatusFieldAbility
+effect: boss
+duration: 600
+reload: 60
+range: 1
+applyEffect: none
+activeEffect: none
+}
+{
+type: EnergyFieldAbility
+damage: 12700
+reload: 5
+range: 40
+healEffect: none
+status: nuked
+statusDuration: 600
+maxTargets: 1000
+healPercent: 100
+color: ff0000ff
+useAmmo: false
+}
+]
+drag: 0.1
+speed: 3.5
+immunities: [gorenie, burning, melting, melt, wetted, charged, radiated, nuked, blowedup, emi]

@@ -1,0 +1,53 @@
+name: Буря
+type: tank
+hitSize: 3
+omniMovement: false
+alwaysUnlocked: false
+health: 100
+armor: 0
+speed: 0.6
+outlines: false
+rotateSpeed: 1.6
+range: 200
+ammoType: {
+	type: ItemAmmoType
+	item: coper
+	range: 80
+	ammoPerItem: 3
+}
+ammoCapacity: 200
+weapons: [
+ {
+ name: puskaG
+ x: 0
+ y: 0
+    rotateSpeed: 2
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 60
+    recoil: 0.9
+    shootSound: shoot
+ bullet: {
+    type: BasicBulletType
+    width: 5
+    height: 5
+    status: gorenie
+    hitSize: 1
+    shootEffect: shootSmall
+    damage: 50
+    speed: 5
+    makeFire: true
+    lifetime: 40
+    }
+   }
+]
+research: {
+	parent: osnova
+	requirements: [
+		stal/90
+		coper/105
+	]
+}
+immunities: [blowedup]

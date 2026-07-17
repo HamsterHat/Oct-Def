@@ -1,0 +1,8 @@
+name: Дождик
+type: RainWeather
+duration: 54000	
+sound: rainy
+soundVol: 0.75	
+status: wetted	
+statusDuration: 240		
+liquid: voda

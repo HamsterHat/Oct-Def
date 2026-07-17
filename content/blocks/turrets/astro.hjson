@@ -1,0 +1,106 @@
+type: ItemTurret
+name: Астро
+description: "Секретная разработка стреляющяя плазмой по врагам"
+size: 3
+outlineIcon: false
+health: 900
+rotateSpeed: 2.5
+targetAir: true
+targetGround: true
+range: 760
+reload: 660
+shootSound: astro
+shootY: -4
+maxAmmo: 24
+ammoPerShot: 6
+recoil: 4
+shake: 16
+consumes: {
+	power: 266.666666667
+}
+
+ammoTypes: {
+	  energosteklo: {
+        	type: basicBulletType
+        	splashDamageRadius: 24
+        	damage: 3280
+        	splashDamage: 330
+        	width: 25
+        	height: 30
+    		frontColor: b7e7ff
+    		backColor: 80c7eb
+    		pierceCap: 16
+    		pierceArmor: true
+    		pierceBuilding: true
+        	lifetime: 95
+        	speed: 8
+        	status: atom-colapse
+        	shootEffect: titanSmoke
+        	hitColor: 80c7eb
+        	sprite: large-bomb
+			knockback: 2.3
+        	spin: 8
+        	statusDuration: 250
+        	collidesAir: true
+    		trailChance: 1
+    		trailEffect: {
+                	type: ParticleEffect
+               		particles: 10
+               		lifetime: 30
+              		length: 15
+              		sizeFrom: 4
+              		sizeTo: 1
+              		colorFrom: 36add6
+              		colorTo: abe2f5
+              		strokeFrom: 3
+              		strokeTo: 1.5
+              		interp: pow3Out
+              		spin: 5
+              		sizeInterp: pow2In
+              		region: mod-triangle
+              		offsetX: 3
+    		}
+        	hitEffect: [
+        		{
+          		type: WaveEffect
+          		lifetime: 30
+          		sizeFrom: 1
+          		sizeTo: 70
+          		strokeFrom: 5
+          		strokeTo: 0
+          		colorFrom: c0ecff
+          		colorTo: c0ecff
+        		}
+          	      	{
+          		type: ParticleEffect
+          		lifetime: 40
+          		sizeFrom: 1
+          		sizeTo: 10
+          		strokeFrom: 100
+         		strokeTo: 0
+          		colorFrom: c0ecff
+          		colorTo: c0ecff
+          		spin: 5
+          		region: mod-triangle
+        		}
+        	]
+        }
+}
+requirements: [
+	coper/2100
+	titan/1400
+	stal/2000
+	energosteklo/780
+]
+category: turret
+research: {
+	parent: r396
+	requirements: [
+		coper/4200
+		titan/2800
+		stal/4000
+		energosteklo/1560
+	]
+}
+
+

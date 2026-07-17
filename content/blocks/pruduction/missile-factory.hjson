@@ -1,0 +1,35 @@
+name: Ракетный Завод
+description: Производит ракеты
+type: genericCrafter
+outputItem: missile/3
+size: 3
+health: 900	
+itemCapacity: 30	
+hasPower: true
+craftEffect: smeltsmoke
+craftTime: 600
+consumes: {
+   power: 2
+    items:[
+		bomb/2
+		stal/4
+		coper/1
+		svinec/1
+]
+}
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawFlame
+		flameColor: 645836
+		}
+	]
+}
+category: crafting	
+requirements: [
+	coper/200
+]

@@ -1,0 +1,9 @@
+name: Вода
+color: 6455F6
+lightColor: 6455F6
+flammability: 0
+temperature: 0.5
+heatCapacity: 0.4
+viscosity: 0.5
+explosiveness: 0
+effect: wet

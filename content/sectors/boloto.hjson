@@ -1,0 +1,25 @@
+localizedName: Болото
+description: Здесь немного врагов, изучите Туньпуний и способы его применения.
+captureWave:11
+difficulty: 2
+alwaysUnlocked: false
+addStartingItems: true
+startWaveTimeMultiplier: 3
+showSectorLandInfo: true
+planet: pun
+name: boloto
+sector: 22
+
+research: {
+	parent: vilage
+		objectives: [
+			{
+				type: SectorComplete
+				preset: vilage
+			}
+			turret
+		]
+}
+
+
+

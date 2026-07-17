@@ -1,0 +1,31 @@
+name: Взорван ядеркой
+damage: 5.833333333
+healthMultiplier: 0.4
+speedMultiplier: 0.1
+effect: {
+type: MultiEffect
+effects: [melting, {
+type: ParticleEffect
+sizeFrom: 4
+sizeTo: 0
+lifetime: 25
+particles: 10
+cone: 360
+length: 2
+colorFrom: FF3C0099
+colorTo: 2A712F99
+},
+{
+type: ParticleEffect
+sizeFrom: 4
+sizeTo: 0
+lifetime: 600
+particles: 3
+cone: 360
+length: 2
+colorFrom: FF3C0099
+colorTo: 2A712F99
+layer: 5
+}]
+}
+ 

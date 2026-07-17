@@ -1,0 +1,23 @@
+name: Намок
+speedMultiplier: 0.7
+effect: {
+    type: MultiEffect
+    effects: [
+        wet,
+        {
+                type: ParticleEffect
+                particles: 2
+                lifetime: 1200
+                length: 1
+                sizeFrom: 0.2
+                sizeTo: 0
+                colorFrom: 0000ff
+                colorTo: 0000ff
+                spin: 1
+                layer: 5
+        }
+        ]
+}
+healthMultiplier: 0.9 
+transitionDamage: 125
+affinities: [charged]

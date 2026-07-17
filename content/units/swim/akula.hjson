@@ -1,0 +1,85 @@
+name: Акула
+type: naval
+alwaysUnlocked: false
+armor: 0
+outlines: false
+faceTarget: true
+health: 14000
+range: 320
+rotateMoveFirst: false
+hitSize: 24
+rotateSpeed: 0.15
+speed: 0.4
+ammoType: {
+	type: ItemAmmoType
+	item: titan
+	range: 40
+	ammoPerItem: 1
+}
+ammoCapacity: 120
+weapons: [
+	{
+	name: akulp1
+	reload: 120
+	x: 0
+	y: 12
+	mirror: false
+	rotate: true
+	shootSound: laserblast
+	shootY: 6
+	rotateSpeed: 2.8
+		bullet: {
+			type: LaserBoltBulletType
+			width: 2
+			height: 16
+			damage: 300
+			lifetime: 80
+			speed: 4
+			frontColor: 00ff00
+			backColor: 00ff00
+			makeFire: true
+			pierceCap: 3
+			shootEffect: railShoot
+			hitEffect: hitLaserBlast
+			splashDamage: 120
+			splashDamageRadius: 20
+			pierce: true
+			pierceBuilding: true
+		}
+	}
+	{
+	name: akulp2
+	reload: 240
+	x: 0
+	y: -16
+	mirror: false
+	rotate: true
+	rotateSpeed: 5
+	shootSound: veryBigCannon
+		bullet: {
+			type: BasicBulletType
+			damage: 120
+			width: 4
+			height: 16
+			speed: 4
+			frontColor: cococo
+			backColor: cococo
+			lifetime: 80
+			makeFire: true
+			splashDamage: 600
+			splashDamageRadius: 32
+			shootEffect: shootBig
+			hitEffect: {
+				type: MultiEffect
+				effects: [titanExplosion, titanSmoke]
+			}
+			hitColor: ea8878
+			scaleLife: true
+			despawnHit: true
+		}
+	}
+]
+accel: 0.2
+drag: 0.1
+immunities: [wetted, wet]
+immunities: [blowedup]

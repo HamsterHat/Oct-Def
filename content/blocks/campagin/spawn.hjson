@@ -1,0 +1,15 @@
+type: CoreBlock
+localizedName: База
+category: effect
+health: 1755
+size: 2
+
+itemCapacity: 8000
+unitCapModifier: 500
+unitType: "przrk"
+incinerateNonBuildable: true
+isFirstTier: true
+squareSprite: true
+
+requirements: []
+BuildVisibility: sandboxOnly

@@ -1,0 +1,30 @@
+
+
+type: LaunchPad
+localizedName: Разработка 010
+category: effect
+health: 99999
+size: 3
+armor: 999
+
+itemCapacity: 99
+
+
+requirements: [
+	coper/500
+]
+
+
+
+research: {
+    parent: base-land
+    requirements: [
+    	coper/100
+    	stal/100
+    	svinec/100
+    ]
+}
+
+launchTime: 0.5
+lightColor: 00ffff
+acceptMultipleItems: true

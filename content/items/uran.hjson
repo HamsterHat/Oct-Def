@@ -1,0 +1,11 @@
+name: Уран
+description: Радиоактивное топливо для ядерного реактора
+cost: 1
+color: 00ff00
+explosiveness: 0.3
+radioactivity: 2.38
+flammability: 0.1
+research: {
+	parent: coper
+}
+hardness: 2

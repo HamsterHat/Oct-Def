@@ -1,0 +1,11 @@
+name: Энергостекло
+description: Высокотехнологичный сплав. Используется для построек высокого уровня и турелей.
+cost: 1.2
+color: ffd700
+explosiveness: 0.2
+flammability: 0
+hardness: 4
+charge: 1.5
+research: {
+	parent: cremn
+}

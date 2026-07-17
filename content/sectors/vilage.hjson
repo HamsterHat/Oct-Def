@@ -1,0 +1,15 @@
+localizedName: Деревня Пунь-пунят
+description: Раньше здесь была деревня Пуней, изучите базовые технологии.
+captureWave: 6
+difficulty: 1
+alwaysUnlocked: true
+addStartingItems: true
+startWaveTimeMultiplier: 3 
+showSectorLandInfo: true
+planet: pun
+allowLaunchLoadout: true
+name: vilage
+sector: 1
+research: {
+	parent: base-land
+}

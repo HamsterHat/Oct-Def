@@ -1,0 +1,65 @@
+name: Таблетки
+type: ConsumeGenerator
+health: 15
+category: effect
+explodeOnFull: true
+destructible: true
+breakable: true
+rebuildable: false
+size: 1
+hasShadow: false
+itemCapacity: 20
+liquidCapacity: 20
+itemDuration: 300
+powerProduction: 0
+outputLiquid: fakeLiquid/1024
+hasPower: false
+breakEffect: none
+destroyEffect: none
+explosionRadius: 0
+explosionDamage: 0
+explodeEffect: none
+explodeSound: none
+explosionPuddles: 0
+explosionPuddleRange: 0
+explosionPuddleAmount: 0
+explosionShake: 0
+explosionShakeDuration: 0
+destroyBulletSameTeam: true
+createRubble: false
+buildVisibility: sandboxOnly
+
+placeSound: none
+placePitchChange: false
+breakSound: none
+destroySound: none
+
+requirements: [
+	apteka/1
+]
+destroyBullet: 
+{
+		type: BasicBulletType
+		spawnUnit: tabletHeal
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		collides: false
+		hittable: false
+		reflectable: false
+		absorbable: false
+		width: 0
+		height: 0
+		instantDisappear: true
+		damage: 0
+		splashDamage: 0
+		shrinkX: 0
+		shrinkY: 0
+		lightRadius: 0
+		lightOpacity: 0
+		lightColor: ffffff
+		hitShake: 0
+		despawnShake: 0
+		
+}

@@ -1,0 +1,60 @@
+type: mech
+name: "[lime]Пуня[]-[royal]Физрук"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 130
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 15
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 49.6
+		width: 1
+		height: 1
+		speed: 0
+		splashDamage: 28.2
+		splashDamageRadius: 8
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 14.7
+		impact: true
+		hitSound: pun-hit
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.9
+drawCell: false
+
+
+abilities: [
+{
+type: StatusFieldAbility
+effect: strength
+duration: 7200
+reload: 1200
+range: 80
+applyEffect: none
+activeEffect: none
+}
+]

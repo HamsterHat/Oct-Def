@@ -1,0 +1,18 @@
+name: Железная стена
+description: Защищает постройки от вражеских снарядов
+type: Wall
+health: 250
+size: 1
+flashHit: false
+chanceDeflect: 6
+deflectSound: rkst
+requirements: [
+  stal/5
+]
+category: defense
+research: {
+	parent: coper-wall-big
+	requirements: [
+  		stal/10
+	]
+}

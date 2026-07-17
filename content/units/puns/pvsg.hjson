@@ -1,0 +1,57 @@
+type: mech
+name: "[lime]Пунь с [#212121]дробашиком"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 100
+range: 8
+canDrown: false
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+	range: 4
+	ammoPerItem: 5
+}
+ammoCapacity: 18
+rotateMoveFirst: false
+rotateSpeed: 4
+hitSize: 8
+stepShake: 0
+drawCell: false
+weapons: [
+{
+reload: 80
+x: -8
+y: 8
+aiControllable: true
+inaccuracy: 0
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+}
+maxAmmo: 10
+mirror: false
+rotate: false
+shootSound: sniperGun
+shoot: {
+  type: ShootSpread
+  shots: 7
+  spread: 3.214285714285714
+}
+bullet: {
+		type: BasicBulletType
+		damage: 15
+		width: 2
+		height: 2
+		speed: 4
+		absorbable: true
+		lifetime: 30
+		pierce: false
+		buildingDamageMultiplier: 0.1
+		collideTerrain: true
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1

@@ -1,0 +1,56 @@
+type: legs
+name: "Пирожок Мира"
+description: "Ням ням... Ой он съел описание"
+details: "Что что? Пирожок... мира?!"
+alwaysUnlocked: true
+drag: 0.1
+speed: 1.5
+hitSize: 32
+health: 207857
+armor: 0
+drawCell: false
+outlines: false
+range: 160
+buildSpeed: 120000000
+rotateSpeed: 3.43
+canDrown: false
+
+legCount: 8
+legMoveSpace: 0.8
+legPairOffset: 3
+legLength: 16
+legExtension: -20
+legBaseOffset: 8
+stepShake: 1
+legLengthScl: 0.93
+rippleScale: 3
+legSpeed: 0.994
+
+legSplashDamage: 7380
+legSplashRange: 20.25
+
+hovering: true
+shadowElevation: 0.95
+immunities: [gorenie, burning, melting, melt, wetted, charged, radiated, nuked, blowedup, atom-colapse, emi, unmoving, burning, wet, slow, sapped, shocked, freezing, corroded, tarred, muddy, spore-slowed, blasted, disarmed, electrified, melting, slow]
+
+abilities: [
+{
+type: SpawnDeathAbility
+unit: spider-of-world	
+amount: 1		
+spread: 0
+}
+{
+type: EnergyFieldAbility
+damage: 1200
+reload: 30
+range: 160
+healEffect: none
+status: emi
+statusDuration: 300
+maxTargets: 1000
+healPercent: 100
+color: ffffffff
+useAmmo: false
+}
+]

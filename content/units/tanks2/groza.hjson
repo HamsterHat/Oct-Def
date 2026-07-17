@@ -1,0 +1,46 @@
+name: Т-2
+type: tank
+hitSize: 24
+omniMovement: false
+alwaysUnlocked: false
+health: 300
+armor: 0
+speed: 0.5
+rotateSpeed: 1.1
+outlines: false
+range: 250
+ammoType: {
+	type: ItemAmmoType
+	item: titan
+	range: 80
+	ammoPerItem: 2
+}
+ammoCapacity: 120
+weapons: [
+ {
+ name: grp
+ x: 0
+ y: 0
+    rotateSpeed: 3
+    shootY: 12
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 30
+    recoil: 3
+    shootSound: shootBig
+ bullet: {
+    type: BasicBulletType
+    width: 5
+    height: 5
+    status: none
+    hitSize: 1
+    shootEffect: shootBig
+    damage: 100
+    speed: 5
+    lifetime: 50
+    }
+   }
+]
+immunities: [blowedup]

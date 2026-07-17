@@ -1,0 +1,83 @@
+generator: PlanetGenerator
+localizedName: "Пунь"
+parent: sun
+iconColor: 4FB542
+orbitRadius: 50
+hasAtmosphere: true
+
+updateLighting: true
+rotateTime: 720
+orbitTime: 262800
+
+
+atmosphereRadIn: 0.02
+atmosphereRadOut: 0.3
+atmosphereColor: 4c97f4
+drawOrbit: true
+allowWaveSimulation: true
+
+accessible: true
+alwaysUnlocked: true
+defaultCore: "base-land"
+sectorSeed: 7452
+startSector: 1
+sectorSize: 1
+clearSectorOnLose: false
+allowSectorInvasion: true
+allowLaunchToNumbered: true
+radius: 1
+allowLaunchSchematics: false
+allowLaunchLoadout: false
+
+//Отрисовка облаков
+cloudMesh: {
+  type: HexSkyMesh
+  planet: Pun
+  seed: 2
+  speed: 3
+  radius: 0.05
+  divisions: 5
+  color: b9edf0
+  octaves: 2
+  persistence: 1
+  scl: 2
+  thresh: 0.45
+}
+
+mesh: {
+    type: NoiseMesh
+    planet: Pun
+    seed: 562697
+    color1: 2f88a8
+    color2: 37b726
+    divisions: 5
+    radius: 0.9
+    octaves: 7
+    persistence: 1
+    scl: 0.75
+    mag: 1.2
+}
+hiddenItems: [
+    "copper"
+    "lead"
+    "scrap"
+    "graphite"
+    "coal"
+    "titanium"
+    "thorium"
+    "silicon"
+    "sand"
+    "plastanium"
+    "phase-fabric"
+    "surge-alloy"
+    "spore-pod"
+    "blast-compound"
+    "pyratite"
+    "metaglass"
+    "beryllium"
+    "oxide"
+    "tungsten"
+    "carbide"
+    "fissile-matter"
+    "dormant-cyst"
+]

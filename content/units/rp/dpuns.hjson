@@ -1,0 +1,89 @@
+type: mech
+name: "[lime]Пуня []Доктор с [sky]шприцом"
+alwaysUnlocked: true
+armor: 2
+outlines: false
+health: 120
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 120
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: heal
+bullet: {
+		type: BasicBulletType
+		spawnUnit: buff
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		hitEffect: none
+		collides: false
+		hittable: false
+		reflectable: false
+		absorbable: false
+		width: 0
+		height: 0
+		instantDisappear: true
+		damage: 19.5
+		splashDamage: 8.8
+		splashDamageRadius: 9.6
+		damage: 18.7
+		knockback: 9.6
+		impact: true
+		shrinkX: 0
+		shrinkY: 0
+		lightRadius: 0
+		lightOpacity: 0
+		lightColor: ffffff
+		hitShake: 0
+		despawnShake: 0
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.11
+drawCell: false
+
+
+abilities: [
+  {
+type: EnergyFieldAbility
+damage: 0
+reload: 600
+range: 80
+healEffect: heal
+hitEffect: none	
+damageEffect: heal	
+status: slow
+shootSound: heal
+statusDuration: 0
+maxTargets: 999999
+healPercent: 15
+sameTypeHealMult: 1
+displayHeal: true
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0
+sectors: 0	
+color: #ffffff00
+useAmmo: false
+}
+]
+
+immunities: [atom-boost, boss]
+
+

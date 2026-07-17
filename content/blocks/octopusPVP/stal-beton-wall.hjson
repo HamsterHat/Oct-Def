@@ -1,0 +1,14 @@
+type: Wall
+name: Железо-бетонная стена
+health: 855
+requirements: [
+    beton/32
+    stal/16
+    titan/12
+    coper/16
+]
+destroySound: wall-break
+category: defense
+buildVisibility: sandboxOnly
+instantDeconstruct: true
+createRubble: false

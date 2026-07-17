@@ -1,0 +1,204 @@
+type: mech
+name: "[orange]Пиня"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 3951
+range: 10
+rotateMoveFirst: false
+rotateSpeed: 4
+loopSound: pinya-flies
+ammoType: {
+	type: ItemAmmoType
+	item: flaming-berry
+	range: 4
+	ammoPerItem: 1
+}
+ammoCapacity: 75
+loopSoundVolume: 1.5
+canDrown: false
+engineOffset: 0
+deathExplosionEffect: massiveExplosion
+engineSize: 0
+hitSize: 8
+stepShake: 0
+weapons: [
+{
+reload: 120
+x: 6
+y: 4
+mirror: false
+rotate: false
+shootSound: largeExplosion
+inaccuracy: 0
+
+bullet: {
+		type: ArtilleryBulletType
+		damage: 600
+		splashDamage: 573
+		splashDamageRadius: 16
+		width: 8
+		height: 8
+		speed: 4
+		absorbable: true
+		lifetime: 42
+		frontColor: ffba33
+		hitEffect: massiveExplosion
+		shootEffect: none
+		backColor: fc8500
+		pierce: false
+		despawnHit: true
+		status: gorenie
+		trailSize: 0
+		statusDuration: 600
+		makeFire: true
+		incendAmount: 4
+		incendSpread: 8
+		hitSound: blastBoom
+		reflectable: false
+		hitSoundVolume: 6
+		incendChance: 1
+		sprite: mod-clbca
+}
+}
+{
+reload: 1800
+x: 0
+y: 0
+mirror: false
+rotate: false
+shootSound: conquerWarhead
+inaccuracy: 0
+bullet: {
+		type: BulletType
+		damage: 0
+		splashDamage: 743
+		splashDamageRadius: 100
+		width: 0
+		height: 0
+		speed: 0
+		absorbable: false
+		lifetime: 0
+		hitEffect: {
+            type: multiEffect
+            effects: [impactReactorExplosion, spawnShockwave,
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 70
+          sizeFrom: 3000
+          sizeTo: 0
+          startDelay: 0
+          layer: 135
+          clip: 8192
+        },
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 17.5
+          sizeFrom: 8192
+          sizeTo: 8192
+          startDelay: 0
+          layer: 135
+          colorTo: ffffff00
+          clip: 8192
+        }
+            ]
+	}
+		shootEffect: none
+		pierce: true
+		despawnHit: true
+		status: gorenie
+		statusDuration: 600
+		makeFire: true
+		incendAmount: 100
+		incendSpread: 100
+		hitSound: none
+		reflectable: false
+		hitSoundVolume: 6
+		incendChance: 1
+}
+}
+{
+x: 0
+y: 0
+reload: 0
+shootCone: 360
+controllable: false
+aiControllable: false
+shootOnDeath: true
+shootSound: conquerWarhead
+inaccuracy: 0
+bullet: {
+		type: BulletType
+		damage: 0
+		splashDamage: 743
+		splashDamageRadius: 100
+		width: 0
+		height: 0
+		speed: 0
+		absorbable: false
+		lifetime: 0
+		hitEffect: {
+            type: multiEffect
+            effects: [impactReactorExplosion, spawnShockwave,
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 70
+          sizeFrom: 3000
+          sizeTo: 0
+          startDelay: 0
+          layer: 135
+          clip: 8192
+        },
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 17.5
+          sizeFrom: 8192
+          sizeTo: 8192
+          startDelay: 0
+          layer: 135
+          colorTo: ffffff00
+          clip: 8192
+        }
+            ]
+	}
+		shootEffect: none
+		pierce: true
+		despawnHit: true
+		status: gorenie
+		statusDuration: 600
+		makeFire: true
+		incendAmount: 100
+		incendSpread: 100
+		hitSound: none
+		reflectable: false
+		hitSoundVolume: 6
+		incendChance: 1
+}
+}
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: ForceFieldAbility
+radius: 8
+regen: 0.833333333
+max: 1700
+cooldown: 3600
+sides: 360
+rotation: 0
+}
+]
+drag: 0.1
+speed: 2
+canBoost: true
+boostMultiplier: 2
+immunities: [gorenie, burning, melting, melt]

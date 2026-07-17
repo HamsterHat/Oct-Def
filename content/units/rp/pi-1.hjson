@@ -1,0 +1,374 @@
+name: ПИ-1
+type: flying
+flying: true
+alwaysUnlocked: true
+outlines: false
+armor: 4
+faceTarget: true
+squareShape: false
+hitSize: 32
+health: 610
+speed: 4.3
+range: 1080
+rotateSpeed: 1.5
+drawCell: false
+fallSpeed: 0.018
+engineSize: 8
+engineOffset: 42
+accel: 0.8
+drag: 0.08
+ammoType: {
+	type: ItemAmmoType
+	item: ammo30
+	range: 80
+	ammoPerItem: 6
+}
+ammoCapacity: 240
+weapons: [
+{
+	reload: 2
+	x: -14
+	y: 18
+	autoTarget: true
+  alternate: false
+	mirror: true
+	rotate: false
+  shootSound: shootBig
+		bullet: {
+                            type: LaserBoltBulletType
+                            lifetime: 154.28571428571428
+                            width: 1
+                            height: 12
+                            despawnHit: true
+                            hitEffect: {
+                              type: MultiEffect
+                              effects: [
+                                {
+                                type: ParticleEffect
+                                lifetime: 10
+                                particles: 1
+                                length: 0
+                                colorFrom: ffffff
+                                colorTo: ffa64d
+                                sizeFrom: 45
+                                sizeTo: 0
+                                interp: exp5Out
+                                }
+                                {
+                                type: WaveEffect
+                                lifetime: 30
+                                colorFrom: ffaa55
+                                colorTo: ff4500
+                                sizeFrom: 0
+                                sizeTo: 64
+                                strokeFrom: 10
+                                strokeTo: 0
+                                interp: pow3Out
+                                }
+                                {
+                                type: ParticleEffect
+                                lifetime: 20
+                                particles: 24
+                                length: 64
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 16
+                                lenTo: 0
+                                colorFrom: fffff5
+                                colorTo: ff9d00
+                                interp: pow2Out
+                                }
+                                {
+                                type: WaveEffect
+                                lifetime: 50
+                                colorFrom: ff5b14
+                                colorTo: 801000
+                                sizeFrom: 20
+                                sizeTo: 55
+                                strokeFrom: 4
+                                strokeTo: 0
+                                interp: pow2In
+                                }
+                                {
+                                type: ParticleEffect
+                                lifetime: 160
+                                particles: 25
+                                length: 110
+                                colorFrom: 4a4a4a
+                                colorTo: 1c1c1c
+                                sizeFrom: 22
+                                sizeTo: 0
+                                interp: circleOut
+                                }
+                                {
+                                type: ParticleEffect
+                                lifetime: 110
+                                particles: 20
+                                length: 72
+                                colorFrom: 6b6b6b
+                                colorTo: 1f1f1f
+                                sizeFrom: 12
+                                sizeTo: 0
+                                interp: circleOut
+                                }
+                                {
+                                type: ParticleEffect
+                                lifetime: 45
+                                particles: 8
+                                length: 50
+                                colorFrom: ff6f00
+                                colorTo: 3c3c3c
+                                sizeFrom: 6
+                                sizeTo: 2
+                                spin: 4
+                                interp: pow2Out
+                                }
+                              ]
+                            }
+                            hitSound: coolplasmaboom
+                            shootEffect: none
+                            smokeEffect: shootBigSmoke
+                            ammoMultiplier: 1
+                            statusDuration: 600
+                            status: none
+                            hittable: false
+                            reflectable: false
+                            speed: 7
+                            backColor: ff0000
+                            frontColor: ffffff
+                            fragBullets: 8
+                            fragBullet: {
+                                type: LaserBoltBulletType
+                                despawnHit: true
+                                lifetime: 8
+                                width: 3
+                                height: 3
+                                hitEffect: explosion
+                                shootEffect: none
+                                smokeEffect: shootBigSmoke
+                                ammoMultiplier: 1
+                                collidesAir: true
+                                statusDuration: 600
+                                status: none
+                                hittable: false
+                                reflectable: false
+                                speed: 6
+                                backColor: ff0000
+                                frontColor: ffffff
+                                damage: 25
+                            }
+                            knockback: 5.7
+                            damage: 125
+                            splashDamage: 340
+                            splashDamageRadius: 25
+                            scaleLife: true
+                        }
+}
+{
+reload: 1500
+x: -28
+y: -14
+mirror: true
+alternate: false
+rotate: false
+shootSound: missileLaunch
+recoil: 0
+continuous: false
+shake: 2
+bullet: {
+type: BasicBulletType
+lifetime: 0
+spawnUnit: missile1m
+}
+}
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	aiControllable: false
+	controllable: false
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 1340
+		splashDamageRadius: 140
+		speed: 0
+		despawnHit: true
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+
+{
+      type: WaveEffect
+      lifetime: 40
+      sizeFrom: 0
+      sizeTo: 120
+      strokeFrom: 10
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ffaa55
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 15
+      lifetime: 60
+      length: 180
+      lenFrom: 20
+      lenTo: 5
+      strokeFrom: 3
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ff4500
+    }
+    {
+      type: ParticleEffect
+      particles: 20
+      lifetime: 150
+      length: 140
+      sizeFrom: 12
+      sizeTo: 0
+      colorFrom: 444444aa
+      colorTo: 11111100
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      lifetime: 90
+      length: 100
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: ffa64d
+      colorTo: ff4500
+      baseRotation: 0
+      cone: 360
+    }
+    {
+      type: WaveEffect
+      lifetime: 80
+      sizeFrom: 20
+      sizeTo: 150
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: ff4500
+      colorTo: 555555
+    }
+
+				{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 1
+				length: 0
+				colorFrom: ffffff
+				colorTo: ffa64d
+				sizeFrom: 45
+				sizeTo: 0
+				interp: exp5Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				colorFrom: ffaa55
+				colorTo: ff4500
+				sizeFrom: 0
+				sizeTo: 64
+				strokeFrom: 10
+				strokeTo: 0
+				interp: pow3Out
+				}
+				{
+				type: ParticleEffect
+				lifetime: 20
+				particles: 24
+				length: 64
+				line: true
+				strokeFrom: 4
+				strokeTo: 0
+				lenFrom: 16
+				lenTo: 0
+				colorFrom: fffff5
+				colorTo: ff9d00
+				interp: pow2Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 50
+				colorFrom: ff5b14
+				colorTo: 801000
+				sizeFrom: 20
+				sizeTo: 55
+				strokeFrom: 4
+				strokeTo: 0
+				interp: pow2In
+				}
+				{
+				type: ParticleEffect
+				lifetime: 160
+				particles: 25
+				length: 110
+				colorFrom: 4a4a4a
+				colorTo: 1c1c1c
+				sizeFrom: 22
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 110
+				particles: 20
+				length: 72
+				colorFrom: 6b6b6b
+				colorTo: 1f1f1f
+				sizeFrom: 12
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 8
+				length: 50
+				colorFrom: ff6f00
+				colorTo: 3c3c3c
+				sizeFrom: 6
+				sizeTo: 2
+				spin: 4
+				interp: pow2Out
+				}
+			]
+		}
+		hitSound: droneBoom
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 75
+		fragBullet: fireball
+		fragBullets: 8
+
+		puddleLiquid: os
+		puddleAmount: 140
+		puddleRange: 16
+		puddles: 4
+		despawnHit: true
+		
+		incendAmount: 5
+		incendSpread: 32
+		incendChance: 1
+	}
+}
+]
+
+
+immunities: [blowedup]

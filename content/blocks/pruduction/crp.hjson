@@ -1,0 +1,42 @@
+name: Кремниевая печь
+description: Плавит песок в кремний
+type: genericCrafter
+outputItem: cremn/1
+size: 3
+health: 900	
+itemCapacity: 50	
+hasPower: true
+craftEffect: smeltsmoke
+craftTime: 65
+consumes: {
+   power: 0.83
+    items:[
+    pesok/1
+]
+}
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawFlame
+		flameColor: e0c2af
+		}
+	]
+}
+category: crafting	
+requirements: [
+	coper/150
+	titan/90
+	svinec/50
+]
+research: {
+	parent: base-land
+	requirements: [
+  		coper/300
+  		titan/180
+  		svinec/100
+	]
+}

@@ -1,0 +1,20 @@
+localizedName: Заснеженный остров
+description: "Здесь можно найти топий - используйте этот ресурс чтобы уничтожить врагов."
+captureWave: 21
+difficulty: 3
+alwaysUnlocked: false
+addStartingItems: true
+startWaveTimeMultiplier: 3
+showSectorLandInfo: true
+planet: pun
+name: snowIsland
+sector: 20
+research: {
+	parent: glush
+		objectives: [
+			{
+				type: SectorComplete
+				preset: glush
+			}
+		]
+}

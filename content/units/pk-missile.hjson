@@ -1,0 +1,75 @@
+type: missile
+controller: missileAI
+name: Блинчиковая ракета
+speed: 6
+hitSize: 16
+hidden: false
+health: 1565
+loopSound: missileTrail
+loopSoundVolume: 1
+outlines: false
+rotateSpeed: 3
+lifetime: 74.066666667
+range: 16
+flying: true
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: ffffff00
+engineSize: 4
+engineOffset: 8
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: true
+physics: false
+createWreck: false
+createScorch: false
+targetAir: true
+targetGround: true
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          autoTarget: true
+          shootOnDeath: true
+          x: 0
+          shake: 15
+          y: 0
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 19370
+		splashDamageRadius: 124
+		speed: 0
+		hitColor: ffb75e
+		hitEffect: {
+			type: MultiEffect
+			effects: [massiveExplosion, scatheExplosion, scatheLight, scatheSlash, instBomb, titanSmoke]
+		}
+		hitSound: largeExplosion
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 230
+		fragBullets: 7
+		fragBullet: fireball
+	}
+	}
+]
+abilities: [
+{
+type: SpawnDeathAbility
+unit: smol-pancake	
+amount: 23
+spread: 5
+}
+]

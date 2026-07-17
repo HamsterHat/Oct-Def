@@ -1,0 +1,49 @@
+type: Wall
+name: C4
+health: 75
+requirements: [
+	dinamit/50
+	bomb/15
+]
+createRubble: false
+destroyBullet: {
+	type: BasicBulletType
+	lifetime: 1
+	speed: 0
+	height: 1
+	width: 1
+	damage: 0
+	splashDamage: 380
+	splashDamageRadius: 100
+	status: blowedup
+	hitShake: 30
+	statusDuration: 595
+	hitColor: ffb75e
+	hitEffect: {
+		type: MultiEffect
+		effects: [massiveExplosion, scatheExplosion, scatheLight, scatheSlash, instBomb]
+	}
+	hitSound: largeExplosion
+	hitSoundVolume: 7
+	fragBullets: 10
+	fragBullet: {
+		type: BasicBulletType
+		lifetime: 15
+		speed: 5
+		width: 1
+		height: 1
+		damage: 0
+		splashDamage: 0
+		despawnHit: true
+		hitEffect: massiveExplosion
+		hitColor: 754945
+		pierce: true
+		hitSound: blastBoom
+		hitSoundVolume: 4
+		pierceBuilding: true
+	}
+}
+variants: 3
+destroySound: box-destroy
+category: defense
+buildVisibility: sandboxOnly

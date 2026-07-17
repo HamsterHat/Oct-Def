@@ -1,0 +1,37 @@
+type: TractorBeamTurret
+name: Лазерный пылесос
+description: Притягивает цели, при этом нанося им урон
+details: НЕЕЕЕЕЕЕЕЕТ! Я НЕНАВИЖУ ПЫЛЕСОСЫ!
+size: 3
+outlineIcon: false
+health: 900
+rotateSpeed: 2.6
+targetAir: true
+targetGround: true
+range: 240
+hasPower: true
+retargetTime: 0
+force: 32		
+laserColor: ffffff
+damage: 1.55
+consumes: {
+	power: 8.833333333
+}
+requirements: [
+	coper/1200
+	titan/310
+	stal/110
+]
+category: turret
+research: {
+	parent: raketcik
+	requirements: [
+  		coper/2400
+  		titan/620
+  		stal/220
+	]
+}
+
+
+
+

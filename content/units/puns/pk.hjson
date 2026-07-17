@@ -1,0 +1,123 @@
+type: flying
+name: "[red]вовкамг"
+description: "Тестировщик [green]Octopus Defence"
+alwaysUnlocked: true
+armor: 90
+buildSpeed: 120000
+outlines: false
+health: 351231
+range: 444.4
+rotateMoveFirst: false
+rotateSpeed: 8
+loopSound: none
+flying: true
+loopSoundVolume: 1.5
+engineOffset: 0
+deathExplosionEffect: none
+engineSize: 0
+hitSize: 24
+createWreck: false
+weapons: [
+{
+reload: 300
+x: 8
+y: 0
+mirror: false
+rotate: false
+shootSound: railgun
+recoil: 0
+continuous: false
+shake: 15
+useAmmo: false
+shoot: {
+	type: ShootPattern
+	shots: 10
+	firstShotDelay: 0
+	shotDelay: 10
+}
+bullet: {
+type: BasicBulletType
+lifetime: 0
+inaccuracy: 25
+spawnUnit: smol-pancake
+shootEffect: instShoot
+}
+}
+{
+reload: 900
+x: 0
+y: 8
+mirror: false
+rotate: false
+shootSound: megaStrongLaser
+alternate: false
+continuous: true
+inaccuracy: 0
+useAmmo: false
+bullet: {
+	type: ContinuousLaserBulletType
+        length: 444.4
+        hitEffect: none
+        damage: 4831.25
+        laserAbsorb: false
+        makeFire: true
+        status: disarmed
+        statusDuration: 120
+        pierce: true
+        pierceBuilding: true
+        pierceArmor: true
+        width: 90
+        lifetime: 600
+        ammoMultiplier: 1
+        colors: ["ffff00","ffffff"]
+        fadeTime: 60	
+	strokeFrom: 1.25	
+	strokeTo: 0.75	
+	backLength: 24
+}
+}
+{
+reload: 2100
+x: 8
+y: 0
+mirror: false
+rotate: false
+shootSound: railgun
+recoil: 0
+continuous: false
+shake: 45
+useAmmo: false
+bullet: {
+type: BasicBulletType
+lifetime: 0
+inaccuracy: 25
+spawnUnit: pk-missile
+shootEffect: instShoot
+}
+}
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: StatusFieldAbility
+effect: boss
+duration: 600
+reload: 60
+range: 1
+applyEffect: none
+activeEffect: none
+}
+]
+drag: 0.1
+speed: 5
+drawCell: false
+immunities: [gorenie, burning, melting, melt, wetted, charged, radiated, nuked, blowedup, atom-colapse]
+abilities: [
+{
+type: SpawnDeathAbility
+unit: pk-missile	
+amount: 125
+spread: 5
+}
+]

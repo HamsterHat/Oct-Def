@@ -1,0 +1,8 @@
+name: Пропан
+gas: true
+color: b0e0e6
+flammability: 1.4
+temperature: 0
+heatCapacity: 0
+explosiveness: 1.55
+effect: none

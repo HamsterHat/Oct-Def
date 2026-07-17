@@ -1,0 +1,94 @@
+type: missile
+controller: missileAI
+name: Ядерная ракета завоевателя
+speed: 1.3
+hitSize: 24
+hidden: false
+health: 340
+loopSound: missileTrail
+loopSoundVolume: 1
+outlines: false
+rotateSpeed: 3.5
+lifetime: 1846.153846154
+range: 8
+flying: true
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: 15ff00
+engineSize: 0
+engineOffset: 0
+rotateSpeed: 1
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: true
+physics: false
+createWreck: false
+createScorch: false
+targetAir: true
+targetGround: true
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          autoTarget: true
+          shootOnDeath: true
+          x: 0
+          shake: 9
+          y: 16
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		speed: 0
+		despawnUnit: conquer-warhead
+		killShooter: true
+	}
+	}
+]
+abilities: [
+{
+	type: MoveEffectAbility
+	effect: missileTrailSmoke
+	color: cococo
+	rotation: 180
+	y: -38
+	x: -6
+	interval: 2
+}
+{
+	type: MoveEffectAbility
+	effect: missileTrailSmoke
+	color: cococo
+	rotation: 180
+	y: -38
+	x: -2
+	interval: 2
+}
+{
+	type: MoveEffectAbility
+	effect: missileTrailSmoke
+	color: cococo
+	rotation: 180
+	y: -38
+	x: 2
+	interval: 2
+}
+{
+	type: MoveEffectAbility
+	effect: missileTrailSmoke
+	color: cococo
+	rotation: 180
+	y: -38
+	x: 6
+	interval: 2
+}
+]

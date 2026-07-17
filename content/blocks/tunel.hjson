@@ -1,0 +1,19 @@
+name: Тунель
+type: BufferedItemBridge
+group: transportation
+range: 10
+health: 100
+transportTime: 15
+requirements: [
+	coper/10
+	svinec/15
+	titan/5
+]
+research: {
+	parent: sort
+	requirements: [
+  		coper/20
+		svinec/30
+		titan/10
+	]
+}

@@ -1,0 +1,234 @@
+type: mech
+name: "[lime]Пунь[]-[#444444]Спецназовец[] с [red]Гранатомётом"
+alwaysUnlocked: true
+armor: 16
+outlines: false
+health: 160
+ammoType: {
+	type: ItemAmmoType
+	item: missile
+	range: 4
+	ammoPerItem: 1
+}
+ammoCapacity: 6
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+drawCell: false
+weapons: [
+{
+	reload: 0
+	x: 4
+	y: 4
+	mirror: false
+	rotate: false
+	shootSound: sweepCharge
+	inaccuracy: 0
+	aiControllable: true
+	alwaysContinuous: true
+	continuous: true
+	useAmmo: false
+
+	bullet: {
+			type: ContinuousFlameBulletType
+			damage: 0
+			width: 1
+			length: 675
+			pierce: false
+			buildingDamageMultiplier: 0
+			collideTerrain: true
+			drawFlare: false
+			colors: ["ff00004b", "ff00009c", "ff0000d24b", "ff0000ff"]
+	}
+}
+
+{
+	reload: 180
+	x: 4
+	y: 4
+	mirror: false
+	rotate: false
+	shootSound: yrkt
+	inaccuracy: 0
+	aiControllable: true
+	shootStatus: blowedup
+	shootStatusDuration: 55
+
+	bullet: {
+			type: BasicBulletType
+			damage: 30
+			width: 8
+			height: 8
+			speed: 4
+			absorbable: true
+			lifetime: 168
+			pierce: false
+			buildingDamageMultiplier: 0.4
+			hitSound: coolboom
+			scaleLife: true
+			sprite: mod-yrkt
+			frontColor: 817766
+        	backColor: ff9e00
+			hitSound: bang
+			trailEffect: {
+				type: ParticleEffect
+				sizeFrom: 2
+				sizeTo: 0
+				particles: 1
+				colorFrom: c0c0c0ff
+				colorTo: 000000
+				interp: swingOut
+				lifetime: 18
+				cone: 1
+			}
+			trailInterval: 2
+			hitEffect: {
+						type: ParticleEffect
+						particles: 9
+						sizeFrom: 8
+						sizeTo: 5
+						colorFrom: ffe138
+						colorTo: 8fb13175
+						interp: circleOut
+						lifetime: 95
+						length: 34
+						layer: 119
+			}
+			collideTerrain: true
+			splashDamage: 0
+			splashDamageRadius: 4
+			status: stun
+			statusDuration: 30
+			fragBullets: 1
+			fragBullet: {
+				type: BasicBulletType
+				shootEffect: none
+				damage: 65
+				lifetime: 25
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: {
+					type: MultiEffect
+					effects: [
+						{
+							type: ParticleEffect
+							particles: 1
+							region: circle-shadow
+							sizeFrom: 64
+							sizeTo: 0
+							colorFrom: ffffffff
+							colorTo: ffffffff
+							interp: circleOut
+							lifetime: 24
+							layer: 119
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							sizeFrom: 14
+							sizeTo: 0
+							colorFrom: fffd87
+							colorTo: 636363
+							interp: circleOut
+							lifetime: 245
+							length: 40
+							layer: 118
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							sizeFrom: 16
+							sizeTo: 0
+							colorFrom: 755121
+							colorTo: 636363
+							interp: circleOut
+							lifetime: 280
+							length: 50
+							layer: 118.1
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							sizeFrom: 5
+							sizeTo: 0
+							colorFrom: 582612
+							colorTo: 582612
+							interp: circleOut
+							lifetime: 110
+							length: 80
+							layer: 81
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							sizeFrom: 8
+							sizeTo: 0
+							colorFrom: 582612
+							colorTo: 582612
+							interp: circleOut
+							lifetime: 110
+							length: 80
+							layer: 81
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							colorFrom: fffc61
+							colorTo: 5f3737
+							interp: circleOut
+							lifetime: 190
+							line: true
+							length: 90
+							layer: 117
+						}
+						{
+							type: WaveEffect
+							lifetime: 40
+							sizeFrom: 0
+							sizeTo: 100
+							lightColor: 66B1FFFF
+							interp: circleOut
+							strokeFrom: 18
+							strokeTo: 0
+							colorFrom: 757575c7
+							colorTo: 75757556
+							layer: 5
+							clip: 90
+						}
+					]
+				}
+				collides: false
+				hitSound: thermoBoom
+				hitSoundVolume: 8
+				hittable: false
+				reflectable: false
+				absorbable: false
+				width: 0
+				height: 0
+				splashDamage: 375
+				splashDamageRadius: 45.6
+				status: blowedup
+				statusDuration: 475
+				knockback: 0
+				shrinkX: 0
+				shrinkY: 0
+				lightRadius: 0
+				lightOpacity: 0
+				lightColor: ffffff
+				hitShake: 0
+				despawnShake: 0
+				speed: 0
+				buildingDamageMultiplier: 3.55
+				fragBullets: 75
+				fragBullet: fireball
+		}
+	}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.57

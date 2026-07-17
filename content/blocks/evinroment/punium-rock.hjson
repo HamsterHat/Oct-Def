@@ -1,0 +1,101 @@
+type: Wall
+size: 3
+breakable: true
+destructible: true
+targetable: false
+underBullets: true
+drawTeamOverlay: false
+allowDerelictRepair: false
+instantDeconstruct: false
+health: 450
+armor: 5
+buildTime: 300
+itemDrop: coper
+buildVisibility: editorOnly
+drawCracks: false
+createRubble: false
+requirements: [
+  coper/70
+  stone/140
+]
+breakSound: rockBreak
+breakEffect: [
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 6
+    length: 30
+    lifetime: 20
+    interp: pow3Out
+    spin: 15
+    randRotation: true
+    sizeFrom: 6
+    sizeTo: 6
+    layer: 85
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-punium-crystal
+    particles: 4
+    length: 40
+    lifetime: 25
+    interp: pow2Out
+    spin: 10
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 90
+    colorFrom: 8cd973
+    colorTo: 8cd97300
+  }
+]
+destroyEffect: [
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 4
+    length: 40
+    lifetime: 1400
+    interp: pow2Out
+    sizeInterp: linear
+    sizeFrom: 6
+    sizeTo: 6
+    spin: 0
+    randRotation: true
+    layer: 25
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 10
+    length: 65
+    lifetime: 180
+    spin: 5
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 25
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-punium-crystal
+    particles: 18
+    length: 90
+    lifetime: 220
+    interp: circleOut
+    spin: 4
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 110
+    colorFrom: 8cd973
+    colorTo: 8cd97300
+  }
+]
+

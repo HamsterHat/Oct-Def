@@ -1,0 +1,27 @@
+name: Лазерная Буровая Установка
+description: Самый лучший бур. Способен добывать энергостекло.
+type: Drill
+health: 900
+size: 3
+tier: 4
+drillTime: 280
+rotateSpeed: 5
+updateEffect: pulverize
+warmupSpeed: 0.01
+consumes: {
+	power: 1.75
+}
+requirements: [
+	stal/30
+	titan/10
+	energosteklo/5
+]
+category: production
+research: {
+	parent: titan-drill
+	requirements: [
+  		stal/60
+  		titan/20
+  		energosteklo/10
+	]
+}

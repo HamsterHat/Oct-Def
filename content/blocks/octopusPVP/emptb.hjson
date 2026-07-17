@@ -1,0 +1,11 @@
+type: Wall
+name: Бочка
+health: 45
+requirements: [
+	stal/25
+]
+createRubble: false
+variants: 3
+destroySound: stal-box-destroy
+category: defense
+buildVisibility: sandboxOnly

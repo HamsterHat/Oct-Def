@@ -1,0 +1,166 @@
+type: missile
+controller: missileAI
+name: "[yellow]C4"
+speed: 0
+hitSize: 8
+hidden: false
+health: 30
+loopSound: timer
+loopSoundVolume: 1
+outlines: false
+rotateSpeed: 0
+lifetime: 600
+range: 8
+flying: false
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: ffb75e
+engineSize: 0
+engineOffset: 0
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+targetAir: true
+targetGround: true
+targetable: false
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          predictTarget: false
+          autoTarget: true
+          shootOnDeath: true
+          x: 0
+          shake: 15
+          y: 0
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 675
+		splashDamageRadius: 69.6
+		buildingDamageMultiplier: 1.75
+		speed: 0
+				hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: WaveEffect
+					lifetime: 45
+					sizeFrom: 0
+					sizeTo: 110
+					strokeFrom: 18
+					strokeTo: 0
+					colorFrom: 757575c7
+					colorTo: 3a3a3a00
+					interp: circleOut
+					layer: 5
+					clip: 120
+				}
+				{
+					type: WaveEffect
+					lifetime: 35
+					sizeFrom: 0
+					sizeTo: 90
+					strokeFrom: 14
+					strokeTo: 0
+					colorFrom: ffffff
+					colorTo: ff8833
+					interp: pow5Out
+				}
+				{
+					type: WaveEffect
+					lifetime: 55
+					sizeFrom: 15
+					sizeTo: 75
+					strokeFrom: 6
+					strokeTo: 0
+					colorFrom: ff7700
+					colorTo: 44444455
+					interp: pow3Out
+				}
+				{
+					type: ParticleEffect
+					particles: 1
+					length: 0
+					lifetime: 15
+					sizeFrom: 45
+					sizeTo: 0
+					colorFrom: ffffff
+					colorTo: ffa64d
+					interp: exp5Out
+				}
+				{
+					type: ParticleEffect
+					particles: 20
+					line: true
+					length: 85
+					lifetime: 30
+					strokeFrom: 4
+					strokeTo: 0
+					lenFrom: 25
+					lenTo: 0
+					colorFrom: ffffff
+					colorTo: ff4500
+					interp: pow4Out
+				}
+				{
+					type: ParticleEffect
+					particles: 25
+					length: 75
+					lifetime: 45
+					sizeFrom: 6
+					sizeTo: 0
+					colorFrom: ffaa00
+					colorTo: 3c3c3c
+					spin: 8
+					interp: pow2Out
+				}
+				{
+					type: ParticleEffect
+					particles: 20
+					length: 65
+					lifetime: 140
+					sizeFrom: 16
+					sizeTo: 22
+					colorFrom: 555555bb
+					colorTo: 1c1c1c00
+					interp: circleOut
+					layer: 95
+				}
+				{
+					type: ParticleEffect
+					particles: 15
+					length: 45
+					lifetime: 90
+					sizeFrom: 8
+					sizeTo: 12
+					colorFrom: 88888880
+					colorTo: 22222200
+					interp: circleOut
+					layer: 96
+				}
+			]
+		}
+		hitSound: largeExplosion
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 230
+		fragBullets: 7
+		fragBullet: fireball
+	}
+	}
+]
+

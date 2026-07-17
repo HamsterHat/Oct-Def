@@ -1,0 +1,17 @@
+type: Door
+name: Дверь
+health: 150
+category: defense
+requirements: [
+	coper/15
+	stal/30
+	titan/35
+]
+research: {
+	parent: titan-wall-small
+	requirements: [
+		coper/30
+		stal/60
+		titan/70
+	]
+}

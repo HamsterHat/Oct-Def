@@ -1,0 +1,237 @@
+type: mech
+name: "[#212121]Хакер Пунь"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 2203
+range: 160
+rotateMoveFirst: false
+rotateSpeed: 4
+canDrown: false
+loopSound: haker-idle
+buildSpeed: 100000.00
+loopSoundVolume: 1.5
+deathExplosionEffect: massiveExplosion
+hitSize: 8
+stepShake: 0
+weapons: [
+{
+reload: 179
+x: 6
+y: 4
+mirror: false
+rotate: false
+shootSound: lasershoot
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: ArtilleryBulletType
+		damage: 1
+		splashDamage: 1
+		splashDamageRadius: 32
+		buildingDamageMultiplier: 1131
+		width: 4
+		height: 8
+		speed: 4
+		absorbable: true
+		lifetime: 40
+		hitEffect: massiveExplosion
+		hitColor: ffffff
+		shootEffect: none
+		pierce: false
+		despawnHit: true
+		trailSize: 0
+		hitSound: laser
+		reflectable: false
+		collideTerrain: true
+		hitSoundVolume: 2
+		sprite: mod-hak-bomb
+		fragBullets: 11
+		status: KR
+		statusDuration: 1131
+		fragBullet: {
+			type: BasicBulletType
+			damage: 1
+			status: KR
+			statusDuration: 157
+			buildingDamageMultiplier: 157
+			width: 4
+			height: 4
+			speed: 3
+			lifetime: 7.5
+			sprite: mod-hak-bomb-frag
+			hitEffect: none
+			collideTerrain: true
+			despawnEffect: none
+			fragBullets: 8
+			fragBullet: {
+				type: BasicBulletType
+				damage: 1
+				status: KR
+				statusDuration: 84
+				buildingDamageMultiplier: 84
+				width: 4
+				height: 4
+				speed: 3
+				despawnEffect: none
+				hitEffect: none
+				lifetime: 7.5
+				sprite: mod-hak-bomb-frag-f
+				collideTerrain: true
+				fragBullets: 4
+				fragBullet: {
+					type: BasicBulletType
+					damage: 1
+					status: KR
+					statusDuration: 67
+					buildingDamageMultiplier: 67
+					width: 4
+					height: 4
+					speed: 3
+					despawnEffect: none
+					hitEffect: none
+					lifetime: 7.5
+					sprite: mod-hak-bomb-frag
+					collideTerrain: true
+				}
+			}
+		}
+}
+}
+{
+	x: 0
+	y: 0
+	reload: 0
+	shootCone: 360
+	controllable: false
+	aiControllable: false
+	shootOnDeath: true
+	shoot: {
+	  type: ShootSpread
+	  shots: 57
+	  spread: 6.315789473684211
+	}
+	useAmmo: false
+	bullet: {
+		type: ArtilleryBulletType
+		damage: 1
+		splashDamage: 1
+		splashDamageRadius: 32
+		buildingDamageMultiplier: 11.31
+		width: 4
+		height: 8
+		speed: 4
+		absorbable: true
+		lifetime: 40
+		hitEffect: massiveExplosion
+		hitColor: ffffff
+		shootEffect: none
+		pierce: false
+		despawnHit: true
+		trailSize: 0
+		hitSound: laser
+		reflectable: false
+		collideTerrain: true
+		hitSoundVolume: 2
+		sprite: mod-hak-bomb
+		fragBullets: 11
+		status: KR
+		statusDuration: 1131
+		fragBullet: {
+			type: BasicBulletType
+			damage: 1
+			status: KR
+			statusDuration: 157
+			buildingDamageMultiplier: 1.57
+			width: 4
+			height: 4
+			speed: 3
+			lifetime: 7.5
+			sprite: mod-hak-bomb-frag
+			hitEffect: none
+			collideTerrain: true
+			despawnEffect: none
+			fragBullets: 8
+			fragBullet: {
+				type: BasicBulletType
+				damage: 1
+				status: KR
+				statusDuration: 84
+				buildingDamageMultiplier: 0.84
+				width: 4
+				height: 4
+				speed: 3
+				despawnEffect: none
+				hitEffect: none
+				lifetime: 7.5
+				sprite: mod-hak-bomb-frag-f
+				collideTerrain: true
+				fragBullets: 4
+				fragBullet: {
+					type: BasicBulletType
+					damage: 1
+					status: KR
+					statusDuration: 67
+					buildingDamageMultiplier: 0.67
+					width: 4
+					height: 4
+					speed: 3
+					despawnEffect: none
+					hitEffect: none
+					lifetime: 7.5
+					sprite: mod-hak-bomb-frag
+					collideTerrain: true
+				}
+			}
+		}
+	}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.9
+immunities: [blowedup, gorenie, burning, melting, melt, wetted, charged, radiated, emi, disarmed, unmoving, burning, wet, slow, sapped, shocked, freezing, corroded, tarred, muddy, spore-slowed, blasted, disarmed, electrified, melting, slow]
+
+abilities: [
+{
+type: StatusFieldAbility
+effect: invincible
+duration: 285
+reload: 600
+range: 1
+applyEffect: none
+activeEffect: none
+}
+{
+type: RegenAbility
+percentAmount: 0.175
+}
+{
+type: ShieldRegenFieldAbility
+amount: 6800
+max: 6800
+reload: 1200	
+range: 1
+}
+{
+type: EnergyFieldAbility
+damage: 275
+reload: 600
+range: 40
+status: paused
+statusDuration: 545
+maxTargets: 1000
+healPercent: 30
+sameTypeHealMult: 1
+color: 8f9aff
+useAmmo: false
+layer: 0
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0	
+sectors: 0
+}
+]

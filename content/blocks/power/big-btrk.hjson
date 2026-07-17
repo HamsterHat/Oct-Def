@@ -1,0 +1,26 @@
+type: Battery
+name: Аккамулятор
+health: 900
+size: 3
+description: Хранит и отдаёт энергию
+conductivePower: true
+   consumes: {
+     powerBuffered: 135000
+}
+baseExplosiveness: 15
+category: power
+requirements: [
+	svinec/150
+	stal/50
+	coper/100
+	energosteklo/10
+]
+research: {
+	parent: btrk
+	requirements: [
+	svinec/300
+	stal/100
+	coper/200
+	energosteklo/20
+	]
+}

@@ -1,0 +1,111 @@
+type: mech
+name: "[lime]Самый Главный Пунь"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 11859
+range: 800
+rotateMoveFirst: false
+rotateSpeed: 6
+loopSound: pun-idle
+loopSoundVolume: 1.5
+canDrown: false
+engineOffset: 0
+deathExplosionEffect: none
+engineSize: 0
+hitSize: 8
+buildSpeed: 2.35
+stepShake: 0
+weapons: [
+{
+reload: 240
+x: 2
+y: 4
+mirror: true
+rotate: false
+shootSound: beam
+continuous: true
+alternate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+	type: ContinuousLaserBulletType
+        length: 800
+        hitEffect: hitMeltdown
+        hitColor: meltdownHit
+        damage: 154.416666667
+        makeFire: true
+        status: none
+        pierce: false
+        pierceBuilding: false
+        width: 0.5
+        lifetime: 600
+        ammoMultiplier: 1
+        colors: ["ff844a","ff4e28","ff3f16","fe0000"]
+}
+}
+{
+x: 0
+y: 0
+reload: 0
+shootCone: 360
+controllable: false
+aiControllable: false
+shootOnDeath: true
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	lifetime: 0
+	speed: 0
+	instantDisappear: true
+	killShooter: true
+	collides: false
+	splashDamage: 1500
+	splashDamageRadius: 120
+	hitEffect: shockwave
+	despawnUnit: zlsamglpun
+	despawnHit: true
+	shootEffect: none
+}
+}
+{
+x: 32
+mirror: true
+alternate: false
+y: 0
+reload: 3600
+shootCone: 360
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	lifetime: 0
+	speed: 0
+	instantDisappear: true
+	collides: false
+	splashDamage: 1500
+	splashDamageRadius: 120
+	hitEffect: shockwave
+	despawnUnit: voen-pun
+	despawnHit: true
+	shootEffect: none
+}
+}
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: ForceFieldAbility
+radius: 8
+regen: 4.166666667
+max: 3800
+cooldown: 3600
+sides: 360
+rotation: 0
+}
+]
+drag: 0.1
+speed: 2
+canBoost: true
+immunities: [gorenie, burning, melting, melt, wetted, charged, radiated, nuked, emi, unmoving, disarmed, unmoving, burning, wet, slow, sapped, shocked, freezing, corroded, tarred, muddy, spore-slowed, blasted, disarmed, electrified, melting, slow]
+boostMultiplier: 3.4

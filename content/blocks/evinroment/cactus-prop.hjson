@@ -1,0 +1,4 @@
+type: Prop
+name: "cactus-prop"
+variants: 1
+breakSound: plantBreak

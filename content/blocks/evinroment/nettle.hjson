@@ -1,0 +1,5 @@
+type: Prop
+name: "nettle"
+variants: 1
+solid: false
+breakSound: plantBreak

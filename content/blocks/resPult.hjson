@@ -1,0 +1,35 @@
+type: MassDriver
+name: Ресурсопульта
+description: Стреляет капсулами с ресурсами в другие ресурсопульты
+size: 5
+outlineIcon: false
+health: 2500
+range: 680
+rotateSpeed: 5
+minDistribute: 10
+knockback: 15
+reload: 300
+bulletSpeed: 4
+bulletLifetime: 170
+shootSound: shootBig
+consumes: {
+   power: 3
+}
+requirements: [
+	coper/115
+	svinec/110
+	stal/90
+	titan/30
+]
+category: distribution
+research: {
+	parent: rz
+	requirements: [
+		coper/230
+		svinec/220
+		stal/180
+		titan/60
+	]
+}
+
+

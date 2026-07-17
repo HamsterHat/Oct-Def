@@ -1,0 +1,150 @@
+name: Орёл
+type: flying
+flying: true
+alwaysUnlocked: false
+outlines: false
+armor: 0
+faceTarget: true
+squareShape: false
+hitSize: 16
+health: 250
+speed: 1.9
+range: 250
+circleTarget: true
+rotateSpeed: 1
+ammoType: {
+	type: ItemAmmoType
+	item: pirosmes
+	range: 80
+	ammoPerItem: 2
+}
+
+fallEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 5
+      lifetime: 38
+      length: 14
+      baseLength: 4
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: 454545
+      colorTo: 1a1a1a
+      layer: 118
+    }
+  ]
+}
+fallEngineEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 6
+      lifetime: 22
+      length: 20
+      cone: 32
+      sizeFrom: 2.5
+      sizeTo: 0
+      colorFrom: ff850a
+      colorTo: ff2f0a
+      layer: 118
+    }
+  ]
+}
+deathEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 20
+      sizeFrom: 0
+      sizeTo: 38
+      strokeFrom: 3.5
+      strokeTo: 0
+      colorFrom: ffbb00
+      colorTo: 454545
+      layer: 5
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 16
+      lifetime: 30
+      length: 48
+      cone: 360
+      strokeFrom: 2.2
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: a6a69c
+      layer: 118
+    }
+    {
+      type: ParticleEffect
+      particles: 8
+      lifetime: 50
+      length: 24
+      sizeFrom: 5
+      sizeTo: 0
+      colorFrom: 2b2b2b
+      colorTo: 111111
+      layer: 118
+    }
+  ]
+}
+ammoCapacity: 70
+weapons: [
+	{
+	name: op
+	reload: 15
+	x: 12
+	y: -4
+	controllable: false
+	autoTarget: true
+	mirror: true
+	rotate: true
+	rotateSpeed: 5
+		bullet: {
+			type: BasicBulletType
+			damage: 30
+			speed: 4
+			lifetime: 62.5
+			collidesGround: false
+			collidesAir: true
+		}
+	}
+	{
+	    x: 3
+        shootY: 0
+        reload: 10
+        shootCone: 180
+        ejectEffect: none
+        inaccuracy: 15
+        ignoreRotation: true
+        shootSound: none
+                bullet: {
+                    type: BombBulletType
+                    width: 8
+                    height: 24
+                    sprite: missile
+                    hitEffect: massiveExplosion
+                    hitSound: droneBoom
+                    hitSoundVolume: 5
+                    shootEffect: none
+                    smokeEffect: none
+                    status: melting
+                    statusDuration: 900
+                    makeFire: true
+                    damage: 55
+                    splashDamage: 160
+                    splashDamageRadius: 32
+                    fragBullets: 50
+                    fragBullet: fireball
+                }
+	}
+]
+research: alpa
+researchCostMultiplier: 3
+
+immunities: [blowedup]

@@ -1,0 +1,10 @@
+type: Wall
+name: Стена из чёрного камня
+health: 260
+requirements: [
+    stone/16
+]
+destroySound: wall-break
+category: defense
+buildVisibility: sandboxOnly
+createRubble: false

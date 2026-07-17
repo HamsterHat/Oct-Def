@@ -1,0 +1,219 @@
+type: ItemTurret
+name: Разработка 283
+description: Рельсотронный ускоритель снарядов
+details: Только не думай подходить близко
+size: 6
+outlineIcon: false
+health: 3600
+rotateSpeed: 1.8
+targetAir: true
+targetGround: true
+range: 1560
+reload: 600
+shootSound: railgun
+maxAmmo: 32
+ammoPerShot: 32
+recoil: 5
+shake: 32
+size: 6
+shootCone: 2
+consumes: {
+   power: 21.666666667
+}
+
+ammoTypes: {
+
+titan: {
+	type: RailBulletType
+	shootEffect: instShoot
+        hitEffect: {
+			type: MultiEffect
+			effects: [
+				instHit,
+				{
+					particles: 1
+					length: 0
+					baseLength: 0
+					randLength: false
+					lifetime: 40
+					cone: 0
+					offset: 0
+					region: mod-squishwave
+					sizeFrom: 8
+					sizeTo: 160
+					colorFrom: 646464
+					colorTo: 64646400
+					layer: 118
+				}
+
+			]
+			}
+        pierceEffect: railHit
+        smokeEffect: smokeCloud
+        pointEffect: instTrail
+        despawnEffect: instBomb
+        damage: 2800
+        length: 1560
+        buildingDamageMultiplier: 0.5
+        pierceDamageFactor: 1
+        hitShake: 16
+        ammoMultiplier: 1
+		scaleLife: true
+		knockback: 11.5
+		impact: true
+	}
+
+energosteklo: {
+	type: RailBulletType
+	shootEffect: instShoot
+        hitEffect: {
+			type: MultiEffect
+			effects: [
+				instHit,
+				{
+          		type: WaveEffect
+          		lifetime: 30
+          		sizeFrom: 1
+          		sizeTo: 70
+          		strokeFrom: 5
+          		strokeTo: 0
+          		colorFrom: c0ecff
+          		colorTo: c0ecff
+        		},
+          	    {
+          		type: ParticleEffect
+          		lifetime: 40
+          		sizeFrom: 1
+          		sizeTo: 10
+          		strokeFrom: 100
+         		strokeTo: 0
+          		colorFrom: c0ecff
+          		colorTo: c0ecff
+          		spin: 5
+          		region: mod-triangle
+        		},
+				{
+                	type: ParticleEffect
+               		particles: 10
+               		lifetime: 30
+              		length: 15
+              		sizeFrom: 4
+              		sizeTo: 1
+              		colorFrom: 36add6
+              		colorTo: abe2f5
+              		strokeFrom: 3
+              		strokeTo: 1.5
+              		interp: pow3Out
+              		spin: 5
+              		sizeInterp: pow2In
+              		region: mod-triangle
+              		offsetX: 3
+    			},
+
+				{
+					type: ParticleEffect
+					lifetime: 25
+					particles: 1
+					length: 0
+					colorFrom: ffffff
+					colorTo: b7e7ff
+					sizeFrom: 45
+					sizeTo: 0
+					interp: exp10Out
+				},
+				{
+					type: WaveEffect
+					lifetime: 55
+					colorFrom: b7e7ff
+					colorTo: 36add6
+					sizeFrom: 10
+					sizeTo: 120
+					strokeFrom: 24
+					strokeTo: 0
+					interp: pow3Out
+				},
+				{
+					type: ParticleEffect
+					lifetime: 45
+					particles: 60
+					length: 55
+					line: true
+					strokeFrom: 5
+					strokeTo: 0
+					lenFrom: 45
+					lenTo: 0
+					colorFrom: fffff5
+					colorTo: 80c7eb
+					interp: pow2Out
+				},
+				{
+					type: ParticleEffect
+					lifetime: 180
+					particles: 40
+					length: 60
+					colorFrom: 36add6
+					colorTo: 141715
+					sizeFrom: 40
+					sizeTo: 0
+					interp: circleOut
+				},
+				{
+					particles: 1
+					length: 0
+					baseLength: 0
+					randLength: false
+					lifetime: 40
+					cone: 0
+					offset: 0
+					region: mod-squishwave
+					sizeFrom: 8
+					sizeTo: 160
+					colorFrom: 00b7ff
+					colorTo: 00b7ff00
+					layer: 118
+				}
+			]
+		}
+        pierceEffect: railHit
+        smokeEffect: smokeCloud
+        pointEffect: instTrail
+        despawnEffect: instBomb
+        damage: 5320
+        length: 1560
+        buildingDamageMultiplier: 1.75
+        pierceDamageFactor: 1
+        hitShake: 16
+        ammoMultiplier: 1
+		scaleLife: true
+		splashDamage: 4795
+		splashDamageRadius: 65
+		status: atom-colapse
+		statusDuration: 180
+		hitSound: astro
+		knockback: 16.5
+		impact: true
+	}
+
+}
+requirements: [
+	coper/1500
+	titan/1500
+	stal/5000
+	energosteklo/530
+	cremn/20
+	svinec/550
+]
+category: turret
+research: {
+	parent: r192
+	requirements: [
+		coper/3000
+		titan/3000
+		stal/1000
+		energosteklo/1060
+		cremn/40
+		svinec/1100
+	]
+}
+
+

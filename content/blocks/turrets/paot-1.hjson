@@ -1,0 +1,163 @@
+type: PowerTurret
+name: ПАОТ-1
+description: Пунический Автономный ДОТ.
+size: 3
+outlineIcon: false
+health: 2280
+armor: 16
+rotateSpeed: 0.8
+targetAir: true
+targetGround: true
+maxAmmo: 1
+range: 1760
+reload: 45
+shootCone: 90
+shootSound: shootBig
+recoil: 0
+buildVisibility: sandboxOnly
+category: turret
+consumes: {}
+shoot: {
+  type: ShootBarrel
+  shots: 1
+  barrels: [
+    -4, 20, 0
+    4, 20, 0
+  ]
+}
+hasShadow: false
+shootType: {
+                            type: LaserBoltBulletType
+                            lifetime: 195.55555555555554
+                            width: 1
+                            height: 12
+                            despawnHit: true
+                            collidesAir: true
+                            hitEffect: {
+                              type: MultiEffect
+                              effects: [
+                                {
+                                type: ParticleEffect
+                                lifetime: 10
+                                particles: 1
+                                length: 0
+                                colorFrom: ffffff
+                                colorTo: ffa64d
+                                sizeFrom: 45
+                                sizeTo: 0
+                                interp: exp5Out
+                                }
+                                {
+                                type: WaveEffect
+                                lifetime: 30
+                                colorFrom: ffaa55
+                                colorTo: ff4500
+                                sizeFrom: 0
+                                sizeTo: 64
+                                strokeFrom: 10
+                                strokeTo: 0
+                                interp: pow3Out
+                                }
+                                {
+                                type: ParticleEffect
+                                lifetime: 20
+                                particles: 24
+                                length: 64
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 16
+                                lenTo: 0
+                                colorFrom: fffff5
+                                colorTo: ff9d00
+                                interp: pow2Out
+                                }
+                                {
+                                type: WaveEffect
+                                lifetime: 50
+                                colorFrom: ff5b14
+                                colorTo: 801000
+                                sizeFrom: 20
+                                sizeTo: 55
+                                strokeFrom: 4
+                                strokeTo: 0
+                                interp: pow2In
+                                }
+                                {
+                                type: ParticleEffect
+                                lifetime: 160
+                                particles: 25
+                                length: 110
+                                colorFrom: 4a4a4a
+                                colorTo: 1c1c1c
+                                sizeFrom: 22
+                                sizeTo: 0
+                                interp: circleOut
+                                }
+                                {
+                                type: ParticleEffect
+                                lifetime: 110
+                                particles: 20
+                                length: 72
+                                colorFrom: 6b6b6b
+                                colorTo: 1f1f1f
+                                sizeFrom: 12
+                                sizeTo: 0
+                                interp: circleOut
+                                }
+                                {
+                                type: ParticleEffect
+                                lifetime: 45
+                                particles: 8
+                                length: 50
+                                colorFrom: ff6f00
+                                colorTo: 3c3c3c
+                                sizeFrom: 6
+                                sizeTo: 2
+                                spin: 4
+                                interp: pow2Out
+                                }
+                              ]
+                            }
+                            hitSound: tankPrjBoom
+                            shootEffect: none
+                            smokeEffect: shootBigSmoke
+                            ammoMultiplier: 1
+                            statusDuration: 600
+                            status: blowedup
+                            hittable: false
+                            reflectable: false
+                            speed: 9
+                            backColor: ff0000
+                            frontColor: ffffff
+                            fragBullets: 68
+                            pierce: true
+                            pierceCap: 8
+                            fragBullet: {
+                                type: LaserBoltBulletType
+                                despawnHit: true
+                                lifetime: 8
+                                width: 3
+                                height: 3
+                                hitEffect: explosion
+                                shootEffect: none
+                                smokeEffect: shootBigSmoke
+                                ammoMultiplier: 1
+                                collidesAir: true
+                                statusDuration: 600
+                                status: none
+                                hittable: false
+                                reflectable: false
+                                speed: 6
+                                backColor: ff0000
+                                frontColor: ffffff
+                                damage: 94
+                                hitSound: droneBoom
+                                knockback: 8
+                            }
+                            knockback: 16.5
+                            damage: 120
+                            splashDamage: 785
+                            splashDamageRadius: 185.95
+                            scaleLife: true
+                        }

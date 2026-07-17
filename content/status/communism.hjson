@@ -1,0 +1,6 @@
+name: "[red]Коммунизм"
+speedMultiplier: 1.25
+buildSpeedMultiplier: 3
+healthMultiplier: 1.25
+reloadMultiplier: 1.50
+damageMultiplier: 1.25

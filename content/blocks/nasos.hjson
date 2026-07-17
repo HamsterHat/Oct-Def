@@ -1,0 +1,42 @@
+type: pump
+name: Насос
+hasLiquids: true
+liquidCapacity: 100
+size: 2
+squareSprite: false
+pumpAmount: 0.25
+category: liquid
+consumes: {
+	power: 0.833333333
+}
+requirements: [
+	coper/50
+	stal/30
+]
+research: {
+parent: condens
+requirements: [
+	coper/100
+	stal/60
+]
+objectives: [
+{
+type: OnSector
+preset: glush
+}
+]
+}
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawDefault
+}
+{
+type: DrawRegion
+suffix: -rotator
+spinSprite: true
+rotateSpeed: 3
+}
+ ]
+ }

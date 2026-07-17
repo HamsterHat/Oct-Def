@@ -1,0 +1,133 @@
+name: Орех
+type: payload
+flying: true
+alwaysUnlocked: true
+armor: 0
+faceTarget: true
+outlines: false
+health: 460
+range: 10
+hitSize: 8
+engineOffset: 6
+engineSize: 2
+rotateMoveFirst: false
+rotateSpeed: 1
+ammoType: {
+	type: ItemAmmoType
+	item: coper
+	range: 80
+	ammoPerItem: 3
+}
+ammoCapacity: 200
+
+fallEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 6
+      lifetime: 40
+      length: 16
+      baseLength: 5
+      sizeFrom: 4.5
+      sizeTo: 0
+      colorFrom: 454545
+      colorTo: 1a1a1a
+      layer: 118
+    }
+  ]
+}
+fallEngineEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 7
+      lifetime: 25
+      length: 22
+      cone: 35
+      sizeFrom: 2.8
+      sizeTo: 0
+      colorFrom: ff850a
+      colorTo: ff2f0a
+      layer: 118
+    }
+  ]
+}
+deathEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      lifetime: 22
+      sizeFrom: 0
+      sizeTo: 45
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: ffbb00
+      colorTo: 454545
+      layer: 5
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 18
+      lifetime: 32
+      length: 55
+      cone: 360
+      strokeFrom: 2.5
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: a6a69c
+      layer: 118
+    }
+    {
+      type: ParticleEffect
+      particles: 9
+      lifetime: 55
+      length: 28
+      sizeFrom: 5.5
+      sizeTo: 0
+      colorFrom: 2b2b2b
+      colorTo: 111111
+      layer: 118
+    }
+  ]
+}
+weapons: [
+{
+reload: 5
+x: 2
+y: 6
+mirror: true
+rotate: false
+		bullet: {
+			type: BasicBulletType
+			damage: 95
+			speed: 4
+			lifetime: 42
+		}
+}
+]
+controller: BuilderAI
+isEnemy: true
+mineWalls: true
+mineFloor: true
+buildSpeed: 5.1
+itemCapacity: 75
+speed: 3.1
+accel: 0.2
+drag: 0.1
+mineSpeed: 15
+mineTier: 4
+rotateSpeed: 10
+crashDamageMultiplier: 1
+hittable: true
+targetable: true
+fogRadius: 0
+coreUnitDock: true
+outlineColor: 000000
+payloadCapacity: 100
+pickupUnits: true
+#vulnerableWithPayloads: true
+immunities: [blowedup]

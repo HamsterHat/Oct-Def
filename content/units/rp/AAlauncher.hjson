@@ -1,0 +1,219 @@
+name: ПВРУ-1
+type: tank
+hitSize: 32
+omniMovement: false
+health: 1105
+armor: 8
+speed: 0.6
+rotateSpeed: 2
+alwaysUnlocked: true
+range: 840
+outlines: false
+crushDamage: 8
+targetAir: true
+targetGround: false
+treadRects: [
+  {
+    x: -112
+    y: -112
+    height: 224
+    width: 32
+  }
+]
+ammoType: {
+	type: ItemAmmoType
+	item: ammo30
+	range: 40
+	ammoPerItem: 6
+}
+ammoCapacity: 240
+weapons: [
+ {
+ name: AAlauncher-launcher
+ x: 0
+ y: -8
+    rotateSpeed: 3
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 985
+    recoil: 1
+    shootSound: missileLaunch
+  shoot: {
+  type: ShootBarrel
+  shots: 1
+  barrels: [
+    -8, 20, 0
+    0, 20, 0
+    8, 20, 0
+  ]
+}
+ bullet: {
+   type: BasicBulletType
+   lifetime: 0
+   spawnUnit: antiAirM
+    }
+   }
+
+    {
+ name: AAlauncher-gun
+ x: -12
+ y: 20
+    rotateSpeed: 4
+    mirror: true
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 5
+    recoil: 1
+    shootSound: shootBig
+  shoot: {
+  type: ShootBarrel
+  shots: 1
+  barrels: [
+    -2, 12, 0
+    2, 12, 0
+  ]
+}
+ bullet: {
+        type: LaserBoltBulletType
+        lifetime: 140
+        width: 1
+        height: 12
+        despawnHit: true
+        collidesAir: true
+        collidesGround: false
+        hitEffect: {
+          type: MultiEffect
+          effects: [
+            {
+            type: ParticleEffect
+            lifetime: 10
+            particles: 1
+            length: 0
+            colorFrom: ffffff
+            colorTo: ffa64d
+            sizeFrom: 45
+            sizeTo: 0
+            interp: exp5Out
+            }
+            {
+            type: WaveEffect
+            lifetime: 30
+            colorFrom: ffaa55
+            colorTo: ff4500
+            sizeFrom: 0
+            sizeTo: 64
+            strokeFrom: 10
+            strokeTo: 0
+            interp: pow3Out
+            }
+            {
+            type: ParticleEffect
+            lifetime: 20
+            particles: 24
+            length: 64
+            line: true
+            strokeFrom: 4
+            strokeTo: 0
+            lenFrom: 16
+            lenTo: 0
+            colorFrom: fffff5
+            colorTo: ff9d00
+            interp: pow2Out
+            }
+            {
+            type: WaveEffect
+            lifetime: 50
+            colorFrom: ff5b14
+            colorTo: 801000
+            sizeFrom: 20
+            sizeTo: 55
+            strokeFrom: 4
+            strokeTo: 0
+            interp: pow2In
+            }
+            {
+            type: ParticleEffect
+            lifetime: 160
+            particles: 25
+            length: 110
+            colorFrom: 4a4a4a
+            colorTo: 1c1c1c
+            sizeFrom: 22
+            sizeTo: 0
+            interp: circleOut
+            }
+            {
+            type: ParticleEffect
+            lifetime: 110
+            particles: 20
+            length: 72
+            colorFrom: 6b6b6b
+            colorTo: 1f1f1f
+            sizeFrom: 12
+            sizeTo: 0
+            interp: circleOut
+            }
+            {
+            type: ParticleEffect
+            lifetime: 45
+            particles: 8
+            length: 50
+            colorFrom: ff6f00
+            colorTo: 3c3c3c
+            sizeFrom: 6
+            sizeTo: 2
+            spin: 4
+            interp: pow2Out
+            }
+          ]
+        }
+        hitSound: coolplasmaboom
+        shootEffect: none
+        smokeEffect: shootBigSmoke
+        ammoMultiplier: 1
+        statusDuration: 600
+        status: none
+        hittable: false
+        reflectable: false
+        speed: 6
+        backColor: ff0000
+        frontColor: ffffff
+        fragBullets: 7
+        fragBullet: {
+            type: LaserBoltBulletType
+            despawnHit: true
+            lifetime: 8
+            width: 3
+            height: 3
+            hitEffect: explosion
+            shootEffect: none
+            smokeEffect: shootBigSmoke
+            ammoMultiplier: 1
+            collidesAir: true
+            statusDuration: 600
+            status: none
+            hittable: false
+            reflectable: false
+            speed: 6
+            backColor: ff0000
+            frontColor: ffffff
+            damage: 27
+        }
+		    knockback: 1.2
+        damage: 95
+        splashDamage: 120
+        splashDamageRadius: 26
+        scaleLife: true
+    }
+   }
+]
+
+
+
+
+
+
+immunities: [blowedup]

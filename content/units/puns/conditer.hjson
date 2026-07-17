@@ -1,0 +1,68 @@
+type: mech
+name: "Самый Главный Кондитер"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 8531
+range: 160
+rotateMoveFirst: false
+rotateSpeed: 4
+loopSound: cond-idle
+loopSoundVolume: 1.5
+canDrown: false
+engineOffset: 0
+deathExplosionEffect: massiveExplosion
+engineSize: 0
+hitSize: 8
+stepShake: 0
+weapons: [
+{
+reload: 120
+useAmmo: false
+x: 4
+y: 4
+shootStatus: unmoving
+shootStatusDuration: 90
+mirror: false
+rotate: false
+inaccuracy: 0
+shoot: {
+	shootType: shootPattern
+	firstShotDelay: 30
+}
+chargeSound: swordEdj
+shootSound: lightSwShoot
+bullet: {
+	type: ShrapnelBulletType
+        length: 160
+        damage: 7597
+        pierceArmor: true
+        pierce: true
+        pierceBuilding: true
+        width: 48
+        serrations: 4
+        lifetime: 60
+        toColor: e1e9f0
+        hitShake: 15
+}
+}
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: ForceFieldAbility
+radius: 8
+regen: 0.833333333
+max: 3000
+cooldown: 3600
+sides: 360
+rotation: 0
+}
+]
+drag: 0.1
+speed: 3.4
+canBoost: true
+boostMultiplier: 2
+immunities: [gorenie, burning, melting, melt, wetted, charged, radiated, nuked]
+drawCell: false

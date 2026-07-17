@@ -1,0 +1,21 @@
+type: StorageBlock
+name: Хранилище
+description: Хранит предметы
+itemCapacity: 1000
+category: effect
+coreMerge: true
+size: 3
+health: 100
+requirements: [
+	coper/50
+	stal/500
+	titan/35
+]
+research: {
+	parent: base-land
+	requirements: [
+  		coper/100
+  		stal/1000
+  		titan/70
+	]
+}

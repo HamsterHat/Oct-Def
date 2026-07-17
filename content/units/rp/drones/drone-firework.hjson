@@ -1,0 +1,211 @@
+name: ПБПЛА-1Т с феерверком
+description: что?
+type: flying
+flying: true
+alwaysUnlocked: true
+armor: 0
+faceTarget: true
+outlines: false
+health: 320
+range: 0
+hitSize: 10
+engineOffset: 0
+engineSize: 0
+rotateMoveFirst: false
+rotateSpeed: 1.7
+lifetime: 900
+weapons: [
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 125
+		splashDamageRadius: 44
+		speed: 0
+		despawnHit: true
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 1
+				length: 0
+				colorFrom: ffffff
+				colorTo: ffa64d
+				sizeFrom: 45
+				sizeTo: 0
+				interp: exp5Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				colorFrom: ffaa55
+				colorTo: ff4500
+				sizeFrom: 0
+				sizeTo: 64
+				strokeFrom: 10
+				strokeTo: 0
+				interp: pow3Out
+				}
+				{
+				type: ParticleEffect
+				lifetime: 20
+				particles: 24
+				length: 64
+				line: true
+				strokeFrom: 4
+				strokeTo: 0
+				lenFrom: 16
+				lenTo: 0
+				colorFrom: fffff5
+				colorTo: ff9d00
+				interp: pow2Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 50
+				colorFrom: ff5b14
+				colorTo: 801000
+				sizeFrom: 20
+				sizeTo: 55
+				strokeFrom: 4
+				strokeTo: 0
+				interp: pow2In
+				}
+				{
+				type: ParticleEffect
+				lifetime: 160
+				particles: 25
+				length: 110
+				colorFrom: 4a4a4a
+				colorTo: 1c1c1c
+				sizeFrom: 22
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 110
+				particles: 20
+				length: 72
+				colorFrom: 6b6b6b
+				colorTo: 1f1f1f
+				sizeFrom: 12
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 8
+				length: 50
+				colorFrom: ff6f00
+				colorTo: 3c3c3c
+				sizeFrom: 6
+				sizeTo: 2
+				spin: 4
+				interp: pow2Out
+				}
+			]
+		}
+		hitSound: coolplasmaboom
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 75
+		fragBullet: fireball
+		fragBullets: 8
+
+		despawnHit: true
+		
+		incendAmount: 5
+		incendSpread: 32
+		incendChance: 1
+
+		spawnBullets: [
+		{
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 15
+		splashDamageRadius: 44
+		speed: 0
+		despawnHit: true
+		hitEffect: explosion
+		hitSound: coolplasmaboom
+		hitSoundVolume: 8
+		status: gorenie
+		statusDuration: 75
+		
+
+		despawnHit: true
+		fragBullets: 95
+		fragBullet: {
+			type: BulletType
+			lifetime: 32
+			damage: 12
+			splashDamage: 26
+			splashDamageRadius: 16
+			speed: 5
+			despawnHit: true
+			hitEffect: explosion
+			hitSound: bang
+			hitSoundVolume: 3
+			status: gorenie
+			statusDuration: 900
+			trailLength: 5
+        	trailWidth: 5
+			frontColor: ff9204
+			backColor: e63904
+
+			despawnHit: true
+			fragBullets: 5
+			fragBullet: {
+				type: BulletType
+				lifetime: 8
+				damage: 6
+				splashDamage: 18
+				splashDamageRadius: 8
+				speed: 5
+				despawnHit: true
+				hitEffect: explosion
+				hitSound: bang
+				hitSoundVolume: 1
+				status: gorenie
+				statusDuration: 900
+				trailLength: 5
+				trailWidth: 5
+				frontColor: ff9204
+				backColor: e63904
+
+				despawnHit: true
+			}
+		}
+		
+		}
+		]
+	}
+}
+]
+speed: 2.8
+accel: 0.2
+drag: 0.1
+immunities: [blowedup]

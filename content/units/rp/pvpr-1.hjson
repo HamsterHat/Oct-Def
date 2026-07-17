@@ -1,0 +1,339 @@
+name: ПВПР-1
+type: payload
+flying: true
+alwaysUnlocked: true
+outlines: false
+armor: 0
+faceTarget: true
+squareShape: false
+hitSize: 50
+health: 895
+speed: 1.8
+range: 0
+rotateSpeed: 0.6
+drawCell: false
+fallSpeed: 0.0008
+engineSize: 0
+engineOffset: 0
+itemCapacity: 7895
+crashDamageMultiplier: 0.6
+payloadCapacity: 5120
+pickupUnits: true
+accel: 0.02
+drag: 0.02
+
+weapons: [
+{
+	reload: 0
+	x: 0
+	y: 0
+	mirror: false
+	rotate: false
+	shootOnDeath: true
+	ignoreRotation: true
+	aiControllable: false
+	controllable: false
+	shootCone: 360
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 2985
+		splashDamageRadius: 185
+		speed: 0
+		despawnHit: true
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+
+{
+      type: WaveEffect
+      lifetime: 40
+      sizeFrom: 0
+      sizeTo: 120
+      strokeFrom: 10
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ffaa55
+    }
+    {
+      type: ParticleEffect
+      line: true
+      particles: 15
+      lifetime: 60
+      length: 180
+      lenFrom: 20
+      lenTo: 5
+      strokeFrom: 3
+      strokeTo: 0
+      colorFrom: ffffff
+      colorTo: ff4500
+    }
+    {
+      type: ParticleEffect
+      particles: 20
+      lifetime: 150
+      length: 140
+      sizeFrom: 12
+      sizeTo: 0
+      colorFrom: 444444aa
+      colorTo: 11111100
+      interp: circleOut
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      lifetime: 90
+      length: 100
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: ffa64d
+      colorTo: ff4500
+      baseRotation: 0
+      cone: 360
+    }
+    {
+      type: WaveEffect
+      lifetime: 80
+      sizeFrom: 20
+      sizeTo: 150
+      strokeFrom: 4
+      strokeTo: 0
+      colorFrom: ff4500
+      colorTo: 555555
+    }
+
+				{
+				type: ParticleEffect
+				lifetime: 10
+				particles: 1
+				length: 0
+				colorFrom: ffffff
+				colorTo: ffa64d
+				sizeFrom: 45
+				sizeTo: 0
+				interp: exp5Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				colorFrom: ffaa55
+				colorTo: ff4500
+				sizeFrom: 0
+				sizeTo: 64
+				strokeFrom: 10
+				strokeTo: 0
+				interp: pow3Out
+				}
+				{
+				type: ParticleEffect
+				lifetime: 20
+				particles: 24
+				length: 64
+				line: true
+				strokeFrom: 4
+				strokeTo: 0
+				lenFrom: 16
+				lenTo: 0
+				colorFrom: fffff5
+				colorTo: ff9d00
+				interp: pow2Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 50
+				colorFrom: ff5b14
+				colorTo: 801000
+				sizeFrom: 20
+				sizeTo: 55
+				strokeFrom: 4
+				strokeTo: 0
+				interp: pow2In
+				}
+				{
+				type: ParticleEffect
+				lifetime: 160
+				particles: 25
+				length: 110
+				colorFrom: 4a4a4a
+				colorTo: 1c1c1c
+				sizeFrom: 22
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 110
+				particles: 20
+				length: 72
+				colorFrom: 6b6b6b
+				colorTo: 1f1f1f
+				sizeFrom: 12
+				sizeTo: 0
+				interp: circleOut
+				}
+				{
+				type: ParticleEffect
+				lifetime: 45
+				particles: 8
+				length: 50
+				colorFrom: ff6f00
+				colorTo: 3c3c3c
+				sizeFrom: 6
+				sizeTo: 2
+				spin: 4
+				interp: pow2Out
+				}
+				{
+				type: WaveEffect
+				lifetime: 900
+				sizeFrom: 0
+				sizeTo: 450
+				interp: pow10Out
+				colorFrom: ffffff
+				colorTo: ff550000
+				strokeFrom: 30
+				strokeTo: 0
+				}
+				{
+				type: RadialEffect
+				amount: 45
+				rotation: 0
+				length: 380
+				lifetime: 750
+				effect: {
+					type: ParticleEffect
+					lifetime: 450
+					particles: 12
+					length: 90
+					baseLength: 20
+					cone: 360
+					interp: pow5Out
+					sizeFrom: 32
+					sizeTo: 0
+					colorFrom: ffbb44
+					colorTo: 333333ff
+				}
+				}
+				{
+				type: ParticleEffect
+				lifetime: 900
+				particles: 180
+				length: 400
+				baseLength: 50
+				cone: 360
+				interp: pow3Out
+				sizeFrom: 48
+				sizeTo: 12
+				colorFrom: ffaadd
+				colorTo: 222222ff
+				}
+				{
+				type: ParticleEffect
+				lifetime: 600
+				particles: 90
+				length: 320
+				baseLength: 0
+				cone: 360
+				interp: pow5Out
+				sizeFrom: 56
+				sizeTo: 0
+				colorFrom: ffffff
+				colorTo: ff220000
+				layer: 110
+				}
+				{
+				type: RadialEffect
+				amount: 8
+				rotation: 45
+				length: 0
+				lifetime: 850
+				effect: {
+					type: WaveEffect
+					startDelay: 150
+					lifetime: 400
+					sizeFrom: 0
+					sizeTo: 280
+					interp: pow3Out
+					colorFrom: ffaa33
+					colorTo: 44444400
+					strokeFrom: 16
+					strokeTo: 0
+				}
+				}
+				{
+				type: RadialEffect
+				amount: 24
+				rotation: 0
+				length: 180
+				lifetime: 900
+				effect: {
+					type: ParticleEffect
+					startDelay: 300
+					lifetime: 500
+					particles: 8
+					length: 150
+					cone: 45
+					interp: pow2Out
+					sizeFrom: 24
+					sizeTo: 0
+					colorFrom: ff3300
+					colorTo: 111111ff
+				}
+				}
+				{
+				type: ParticleEffect
+				lifetime: 720
+				particles: 60
+				length: 250
+				baseLength: 100
+				cone: 360
+				interp: linear
+				sizeFrom: 16
+				sizeTo: 24
+				colorFrom: 555555
+				colorTo: 11111100
+				layer: 95
+				}
+				{
+				type: WaveEffect
+				startDelay: 450
+				lifetime: 450
+				sizeFrom: 100
+				sizeTo: 600
+				interp: pow5Out
+				colorFrom: ffddaa
+				colorTo: aa220000
+				strokeFrom: 20
+				strokeTo: 0
+				}
+
+			]
+		}
+		hitSound: droneBoom
+		hitSoundVolume: 8
+		killShooter: true
+		status: blowedup
+		statusDuration: 75
+		fragBullet: fireball
+		fragBullets: 128
+
+		puddleLiquid: os
+		puddleAmount: 1850
+		puddleRange: 50
+		puddles: 60
+		despawnHit: true
+		
+		incendAmount: 600
+		incendSpread: 60
+		incendChance: 1
+	}
+}
+]
+
+
+immunities: [blowedup]

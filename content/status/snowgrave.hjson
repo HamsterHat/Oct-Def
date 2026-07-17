@@ -1,0 +1,8 @@
+name: "[sky]Снежная Могила"
+damage: 0
+effect: freezing
+permanent: true
+disarm: true
+speedMultiplier: 0
+reloadMultiplier: 0
+

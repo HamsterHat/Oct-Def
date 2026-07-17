@@ -1,0 +1,20 @@
+type: Router
+name: Разделитель
+size: 1
+health: 100
+requirements: [
+  coper/5
+]
+speed: 0.9
+rotate: false
+group: transportation
+hasItems: true
+itemCapacity: 10
+unloadable: false 
+research: {
+	parent: konveer
+	requirements: [
+  		coper/10
+	]
+}
+ 

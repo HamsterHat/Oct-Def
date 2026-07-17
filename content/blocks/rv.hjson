@@ -1,0 +1,23 @@
+type: MendProjector
+name: Ремонтирующая вышка
+size: 3
+reload: 30
+range: 125
+health: 900
+category: effect
+healPercent: 1.3
+phaseBoost: 1
+phaseRangeBoost: 1
+requirements: [
+    coper/300
+    svinec/505
+    titan/35
+]
+research: {
+    parent: base-land
+    requirements: [
+        coper/600
+        svinec/1000
+        titan/70
+    ]
+}

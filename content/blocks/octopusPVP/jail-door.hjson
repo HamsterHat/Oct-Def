@@ -1,0 +1,11 @@
+type: Door
+name: Тюремная дверь
+health: 405
+requirements: [
+	titan/40
+	stal/50
+]
+createRubble: false
+destroySound: stal-box-destroy
+category: defense
+buildVisibility: sandboxOnly

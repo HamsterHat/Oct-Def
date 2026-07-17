@@ -1,0 +1,46 @@
+name: Т-1
+type: tank
+hitSize: 8
+omniMovement: false
+alwaysUnlocked: false
+health: 100
+armor: 0
+speed: 0.9
+rotateSpeed: 1.6
+outlines: false
+range: 150
+ammoType: {
+	type: ItemAmmoType
+	item: coper
+	range: 80
+	ammoPerItem: 3
+}
+ammoCapacity: 200
+weapons: [
+ {
+ name: bp
+ x: 0
+ y: 0
+    rotateSpeed: 3
+    // shootY: 21
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    ignoreRotation: true
+    reload: 15
+    recoil: 0.5
+    shootSound: shoot
+ bullet: {
+    type: BasicBulletType
+    width: 5
+    height: 5
+    status: none
+    hitSize: 1
+    shootEffect: shootSmall
+    damage: 35
+    speed: 5
+    lifetime: 30
+    }
+   }
+]
+immunities: [blowedup]

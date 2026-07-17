@@ -1,0 +1,10 @@
+type: Wall
+name: Кирпичная стена
+health: 120
+requirements: [
+    clay/30
+]
+destroySound: wall-break
+category: defense
+buildVisibility: sandboxOnly
+createRubble: false

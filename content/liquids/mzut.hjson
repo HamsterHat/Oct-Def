@@ -1,0 +1,9 @@
+name: Мазут
+color: 000000
+lightColor: a0522d
+flammability: 0.9
+temperature: 0
+heatCapacity: 0
+viscosity: 0.7
+explosiveness: 0.5
+effect: none

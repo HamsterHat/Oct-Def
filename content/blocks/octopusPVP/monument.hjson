@@ -1,0 +1,12 @@
+type: MessageBlock
+name: Памятник
+size: 1
+health: 495
+requirements: []
+destroySound: wall-break
+category: logic
+buildVisibility: sandboxOnly
+instantDeconstruct: true
+createRubble: false
+maxNewlines: 600
+maxTextLength: 740

@@ -1,0 +1,16 @@
+name: Ускорение атомов
+effect: {
+        type: ParticleEffect
+        particles: 67
+        lifetime: 60
+        region: mod-triangle
+        length: 1
+        sizeFrom: 4
+        sizeTo: 7
+        colorFrom: 0000ff
+        colorTo: 00ff00
+        spin: 5
+}
+speedMultiplier: 2.55
+reloadMultiplier: 3.80
+opposites: [atom-colapse]

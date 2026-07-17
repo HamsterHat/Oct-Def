@@ -1,0 +1,59 @@
+type: mech
+name: "[lime]Пунь со [#0084ff]аннигиляторной пушкой"
+alwaysUnlocked: true
+armor: 8
+outlines: false
+health: 120
+range: 8
+canDrown: false
+
+rotateMoveFirst: false
+rotateSpeed: 1.2
+hitSize: 8
+stepShake: 0
+weapons: [
+{
+reload: 1200
+x: 7
+y: 24
+inaccuracy: 0
+aiControllable: true
+mirror: false
+rotate: false
+shootStatus: slow
+shootStatusDuration: 450
+shootSound: megaStrongLaser
+useAmmo: false
+continuous: true
+bullet: {
+
+	type: ContinuousLaserBulletType
+        length: 1600
+        hitEffect: none
+        damage: 83.25
+        laserAbsorb: false
+        makeFire: true
+        status: disarmed
+        statusDuration: 120
+        pierce: true
+        pierceBuilding: true
+        pierceArmor: true
+        width: 45
+        lifetime: 300
+        ammoMultiplier: 1
+        colors: ["bf00ff44", "0000ff55", "00b3ff66", "00ff0077", "ffff00aa","ffffffff" ]
+        fadeTime: 120	
+	strokeFrom: 1.35	
+	strokeTo: 0.60	
+	backLength: 24
+        knockback: 0.9
+        impact: true
+
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 0.9
+drawCell: false

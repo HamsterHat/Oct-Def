@@ -1,0 +1,66 @@
+type: missile
+controller: missileAI
+name: nuke-post-effect
+speed: 0
+hitSize: 0
+hidden: true
+health: 0
+outlines: false
+rotateSpeed: 0
+lifetime: 54000
+range: 0
+flying: false
+template: MissileUnitType
+drawCell: false
+engineSize: 0
+engineOffset: 0
+missileAccelTime: 0
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+targetAir: true
+targetGround: true
+speed: 0
+flying: false
+hovering: true
+hittable: false
+targetable: false
+groundLayer: -11
+internal: true
+weapons: [
+  {
+    alwaysShooting: true
+    reload: 60
+    shootY: 0
+    mirror: false
+    x: 0
+    shootSound: none
+    bullet: {
+      type: EmpBulletType
+      damage: 0
+      lifetime: 0
+      collidesTiles: false
+      radius: 80
+      hittable: false
+      absorbable: false
+      reflectable: false 
+      status: radiated
+      statusDuration: 240
+      despawnHit: true
+      hitColor: 000000
+      shootEffect: none
+      smokeEffect: none
+      hitEffect: none
+      despawnEffect: none
+      hitPowerEffect: none
+      applyEffect: none
+      chainEffect: none
+    }
+  }
+]
+deathSound: none
+deathExplosionEffect: none
+

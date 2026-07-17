@@ -1,0 +1,11 @@
+type: Junction
+name: Перекрёсток
+requirements: [
+	coper/3
+]
+research: {
+	parent: rd
+	requirements: [
+  		coper/6
+	]
+}

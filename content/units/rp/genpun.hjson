@@ -1,0 +1,71 @@
+type: mech
+name: "[gold]Пунь-Гений"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 90
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 15
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 18.3
+		width: 1
+		height: 1
+		speed: 0
+		splashDamage: 8.34
+		splashDamageRadius: 8
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 9.89
+		impact: true
+		hitSound: pun-hit
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.11
+drawCell: false
+
+
+abilities: [
+{
+type: StatusFieldAbility
+effect: knowing-III
+duration: 3600
+reload: 1200
+range: 160	
+applyEffect: none
+activeEffect: none
+}
+{
+type: StatusFieldAbility
+effect: genius
+duration: 3600
+reload: 2400
+range: 52	
+applyEffect: none
+activeEffect: none
+}
+]
+
+

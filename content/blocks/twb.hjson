@@ -1,0 +1,58 @@
+name: Большая топиевая стена
+description: Взрывается при разрушении - сжигает всё вокруг
+type: Wall
+health: 500
+destroyBullet: {
+	type: BasicBulletType
+	lifetime: 1
+	speed: 0.00001
+	height: 1
+	width: 1
+	damage: 1000
+	splashDamage: 1000
+	splashDamageRadius: 80
+	status: melting
+	statusDuration: 600
+	makeFire: true
+	hitEffect: {
+            type: multiEffect
+            effects: [impactReactorExplosion,
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 70
+          sizeFrom: 3000
+          sizeTo: 0
+          startDelay: 0
+          layer: 135
+          clip: 8192
+        },
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 17.5
+          sizeFrom: 8192
+          sizeTo: 8192
+          startDelay: 0
+          layer: 135
+          colorTo: ffffff00
+          clip: 8192
+        }
+            ]
+	}
+	fragBullets: 50
+        fragBullet: fireball
+}
+size: 2
+requirements: [
+  topi/10
+]
+category: defense
+research: {
+	parent: tw
+	requirements: [
+  		topi/20	
+]
+}

@@ -1,0 +1,32 @@
+name: "[#ffae00]Небесная Кара"
+speedMultiplier: 0.75
+healthMultiplier: 0.9
+damageMultiplier: 0.85
+buildSpeedMultiplier: 0.6
+damage: 3
+effect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: ParticleEffect
+					colorFrom: ffffffff
+					colorTo: d8a20e00
+					particles: 1
+					region: mod-rombe
+					sizeFrom: 0
+					sizeTo: 8
+					lifetime: 30
+				}
+				{
+					type: ParticleEffect
+					colorFrom: ffffffff
+					colorTo: ffa92800
+					particles: 9
+					region: mod-rombe
+					sizeFrom: 3
+					sizeTo: 0
+					lifetime: 90
+					length: 8
+				}
+			]
+		}

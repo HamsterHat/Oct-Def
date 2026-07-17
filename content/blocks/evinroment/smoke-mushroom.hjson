@@ -1,0 +1,5 @@
+type: Prop
+name: "smoke-mushroom"
+variants: 1
+solid: false
+breakSound: plantBreak

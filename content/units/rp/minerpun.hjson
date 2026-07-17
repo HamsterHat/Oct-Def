@@ -1,0 +1,60 @@
+type: mech
+name: "[lime]Пуня[]-[#444444]Шахтёр"
+alwaysUnlocked: true
+armor: 4
+outlines: false
+health: 100
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+buildSpeed: 0
+controller: MinerAI
+mineSpeed: 0.4
+mineTier: 2
+mineFloor: true
+mineWalls: true
+mineRange: 14
+drawMineBeam: false
+mineSound: slash
+weapons: [
+{
+reload: 15
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: slash
+bullet: {
+		type: BulletType
+		damage: 54.9
+		speed: 0
+		splashDamage: 30.25
+		splashDamageRadius: 9
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 11.7
+		impact: true
+		hitSound: pun-hit
+		buildingDamageMultiplier: 2.75
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.9
+drawCell: false
+
+
+
+

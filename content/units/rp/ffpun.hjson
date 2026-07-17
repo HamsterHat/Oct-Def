@@ -1,0 +1,44 @@
+type: mech
+name: "[red]Пожарный [lime]Пунь"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 120
+range: 300
+canDrown: false
+rotateMoveFirst: false
+rotateSpeed: 4
+hitSize: 8
+stepShake: 0
+drawCell: false
+weapons: [
+{
+reload: 5
+x: 6
+y: 4
+aiControllable: true
+inaccuracy: 0
+useAmmo: false
+mirror: false
+rotate: false
+shootSound: none
+bullet: {
+	type: LiquidBulletType
+	knockback: 5.3
+	damage: 3.5
+	speed: 4
+	lifetime: 75
+	status: wetted
+	statusDuration: 685
+	liquid: voda
+	reflectable: false
+	collideTerrain: true
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+
+immunities: [burning, melting, gorenie, melt]
+

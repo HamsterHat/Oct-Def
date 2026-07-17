@@ -1,0 +1,9 @@
+name: Уголь
+description: "Огнеопасный ресурс. Используется для выработки электричества"
+cost: 1
+color: 000000
+explosiveness: 0.34
+flammability: 1.7
+research: {
+	parent: pesok
+}

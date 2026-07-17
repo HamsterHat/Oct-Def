@@ -1,0 +1,83 @@
+type: mech
+name: "[lime]Пуня[]-[orange]Лучник"
+alwaysUnlocked: true
+armor: 3
+outlines: false
+health: 95
+range: 160
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+
+ammoType: {
+	type: ItemAmmoType
+	item: ugol
+	range: 4
+	ammoPerItem: 4
+}
+ammoCapacity: 40
+
+weapons: [
+{
+reload: 120
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: bowshot
+bullet: {
+		type: BulletType
+		damage: 35
+		width: 0
+		height: 0
+		speed: 4
+		absorbable: true
+		lifetime: 40
+		pierce: false
+		shootEffect: none
+		smokeEffect: none
+		knockback: 1.1
+		impact: true
+		hitSound: arrowhit
+		status: gorenie
+		statusDuration: 90
+		makeFire: true
+		puddleLiquid: os
+		puddleAmount: 30
+		puddleRange: 2
+		puddles: 1
+		incendAmount: 1
+		incendSpread: 1
+		incendChance: 1
+		despawnHit: true
+		scaleLife: true
+		buildingDamageMultiplier: 0.05
+		parts: [
+			{
+				type: RegionPart
+				name: mod-arrow
+				outline: false
+				layer: 120
+			}
+		]
+}
+}
+
+]
+
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2
+drawCell: false
+
+
+
+
+
+
+

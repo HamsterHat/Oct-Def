@@ -1,0 +1,252 @@
+type: Wall
+size: 1
+breakable: true
+destructible: true
+targetable: false
+underBullets: true
+drawTeamOverlay: false
+allowDerelictRepair: false
+instantDeconstruct: false
+health: 200
+armor: -15
+buildTime: 180
+itemDrop: topi
+buildVisibility: editorOnly
+drawCracks: false
+createRubble: false
+requirements: [
+  topi/30
+  stone/90
+]
+breakSound: rockBreak
+breakEffect: [
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 6
+    length: 30
+    lifetime: 20
+    interp: pow3Out
+    spin: 15
+    randRotation: true
+    sizeFrom: 6
+    sizeTo: 6
+    layer: 85
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-rombe
+    particles: 4
+    length: 40
+    lifetime: 25
+    interp: pow2Out
+    spin: 10
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 90
+    colorFrom: d32c88
+    colorTo: d32c8800
+  }
+]
+destroyEffect: [
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 4
+    length: 40
+    lifetime: 1400
+    interp: pow2Out
+    sizeInterp: linear
+    sizeFrom: 6
+    sizeTo: 6
+    spin: 0
+    randRotation: true
+    layer: 25
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-boulder
+    particles: 10
+    length: 65
+    lifetime: 180
+    spin: 5
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 25
+    colorFrom: b0b5b5
+    colorTo: b0b5b500
+  }
+  {
+    type: ParticleEffect
+    region: mod-rombe
+    particles: 18
+    length: 90
+    lifetime: 220
+    interp: circleOut
+    spin: 4
+    randRotation: true
+    sizeFrom: 2
+    sizeTo: 2
+    layer: 110
+    colorFrom: d32c88
+    colorTo: d32c8800
+  }
+]
+
+
+
+
+
+destroyBullet: {
+          type: BulletType
+          damage: 0
+          speed: 0
+          splashDamage: 340
+          splashDamageRadius: 35
+          absorbable: false
+          lifetime: 0
+          pierce: false
+          shootEffect: none
+          smokeEffect: none
+          despawnEffect: none
+          hitSound: thermoBoom
+          buildingDamageMultiplier: 4.25
+          hitEffect: {
+            type: MultiEffect
+            effects: [
+              titanSmoke,
+              {
+                type: ParticleEffect
+                particles: 1
+                region: circle-shadow
+                sizeFrom: 64
+                sizeTo: 0
+                colorFrom: ffffffff
+                colorTo: ffffffff
+                interp: circleOut
+                lifetime: 24
+                layer: 119
+              },
+              {
+                type: ParticleEffect
+                particles: 9
+                sizeFrom: 16
+                sizeTo: 0
+                colorFrom: d32c88
+                colorTo: 636363
+                interp: circleOut
+                lifetime: 280
+                length: 50
+                layer: 118.1
+              },
+              {
+                type: ParticleEffect
+                particles: 9
+                sizeFrom: 5
+                sizeTo: 0
+                colorFrom: 582612
+                colorTo: 582612
+                interp: circleOut
+                lifetime: 110
+                length: 80
+                layer: 81
+              },
+              {
+                type: ParticleEffect
+                particles: 9
+                sizeFrom: 8
+                sizeTo: 0
+                colorFrom: 582612
+                colorTo: 582612
+                interp: circleOut
+                lifetime: 110
+                length: 80
+                layer: 81
+              },
+              {
+                type: ParticleEffect
+                particles: 9
+                colorFrom: fffc61
+                colorTo: 5f3737
+                interp: circleOut
+                lifetime: 190
+                line: true
+                length: 90
+                layer: 117
+              },
+              {
+                type: WaveEffect
+                lifetime: 40
+                sizeFrom: 0
+                sizeTo: 100
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 18
+                strokeTo: 0
+                colorFrom: 757575c7
+                colorTo: 75757556
+                layer: 5
+                clip: 90
+              }
+            ]
+          }
+          hitColor: d32c8893
+          despawnHit: true
+          status: gorenie
+          statusDuration: 999
+          fragBullets: 50
+          fragBullet:  {
+              type: BasicBulletType
+              speed: 2
+              lifetime: 10
+              damage: 4
+              width: 2
+              height: 2
+              sprite: mod-rombe
+              spin: 4
+              shrinkX: 0.1
+              shrinkY: 0.1
+              frontColor: 221f1e
+              backColor: 221f1e
+              despawnEffect: none
+              hitEffect: none
+              despawnHit: true
+              createChance: 0.1
+              fragBullets: 2
+              fragBullet: fireball
+          }
+          puddleLiquid: os
+          puddleAmount: 1980
+          puddleRange: 30
+          puddles: 8
+          despawnHit: true
+          
+          incendAmount: 45
+          incendSpread: 32
+          incendChance: 1
+          spawnBullets: [
+            {
+              type: BulletType
+              damage: 0
+              speed: 0
+              splashDamage: 120
+              splashDamageRadius: 20
+              status: melt
+              statusDuration: 480
+              absorbable: true
+              lifetime: 0
+              pierce: false
+              hitEffect: none
+              shootEffect: none
+              smokeEffect: none
+              despawnEffect: none
+            }
+          ]
+}
+

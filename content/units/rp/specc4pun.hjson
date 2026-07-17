@@ -1,0 +1,41 @@
+type: mech
+name: "[lime]Пунь[]-[#444444]Спецназовец[] с [yellow]C4"
+alwaysUnlocked: true
+armor: 15
+outlines: false
+health: 155
+ammoType: {
+	type: ItemAmmoType
+	item: bomb
+	range: 4
+	ammoPerItem: 1
+}
+ammoCapacity: 3
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+drawCell: false
+weapons: [
+{
+reload: 120
+x: 4
+y: 4
+inaccuracy: 0
+mirror: false
+aiControllable: false
+rotate: false
+shootSound: none
+bullet: {
+		type: BasicBulletType
+		lifetime: 0
+		spawnUnit: c4bomb
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.26

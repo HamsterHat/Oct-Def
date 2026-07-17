@@ -1,0 +1,55 @@
+type: ShockMine
+name: Морская мина
+underBullets: true
+requirements: [
+	stal/15
+	dinamit/30
+]
+hasShadow: false
+category: effect
+health: 275
+placeableLiquid: true
+tileDamage: 275
+createRubble: false
+buildVisibility: sandboxOnly
+damage: 0
+length: 0
+tendrils: 0
+shots: 1
+cooldown: 40
+bullet: {
+	width: 1
+	height: 1
+	speed: 0
+	lifetime: 1
+	damage: 0
+	splashDamage: 275
+	splashDamageRadius: 32
+	collidesAir: false
+	absorbable: false
+	hittable: false
+	hitEffect: massiveExplosion
+	hitSound: largeExplosion
+	hitSoundVolume: 5
+	despawnHit: true
+	status: blowedup
+	statusDuration: 60
+}
+destroyBullet: {
+	width: 1
+	height: 1
+	speed: 0
+	lifetime: 1
+	damage: 0
+	splashDamage: 275
+	splashDamageRadius: 32
+	collidesAir: false
+	absorbable: false
+	hittable: false
+	hitEffect: massiveExplosion
+	hitSound: largeExplosion
+	hitSoundVolume: 5
+	despawnHit: true
+	status: blowedup
+	statusDuration: 60
+}

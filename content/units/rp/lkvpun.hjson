@@ -1,0 +1,59 @@
+type: mech
+name: "[lime]Пуня[]-[scarlet]Ликвидатор"
+alwaysUnlocked: true
+armor: 20
+outlines: false
+health: 130
+range: 8
+canDrown: false
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+	range: 4
+	ammoPerItem: 5
+}
+ammoCapacity: 18
+rotateMoveFirst: false
+rotateSpeed: 4
+hitSize: 8
+stepShake: 0
+drawCell: false
+weapons: [
+{
+reload: 360
+x: 4
+y: 4
+aiControllable: true
+inaccuracy: 0
+ammoType: {
+	type: ItemAmmoType
+	item: ammo
+}
+maxAmmo: 18
+mirror: false
+rotate: false
+shootSound: pistol
+bullet: {
+		type: BasicBulletType
+		damage: 160
+		width: 2
+		height: 2
+		speed: 4
+		absorbable: true
+		lifetime: 84
+		pierce: false
+		buildingDamageMultiplier: 0.1
+		collideTerrain: true
+		collidesTeam: true
+		status: stun
+		statusDuration: 270
+		scaleLife: true
+		despawnHit: true
+		despawnUnit: damage160
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.9

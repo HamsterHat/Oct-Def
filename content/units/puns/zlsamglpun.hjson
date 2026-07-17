@@ -1,0 +1,398 @@
+type: flying
+name: "[crimson]Злой Самый Главный Пунь"
+alwaysUnlocked: true
+armor: 0
+buildSpeed: 12.75
+outlines: false
+health: 74991
+range: 80000
+rotateMoveFirst: false
+rotateSpeed: 6
+loopSound: pun-angry-idle
+flying: true
+loopSoundVolume: 1.5
+engineOffset: 0
+deathExplosionEffect: none
+engineSize: 0
+hitSize: 8
+createWreck: false
+weapons: [
+{
+reload: 60
+x: 2
+y: 4
+mirror: true
+rotate: false
+shootSound: laserbig
+continuous: true
+alternate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+	type: ContinuousLaserBulletType
+        length: 80000
+        hitEffect: hitMeltdown
+        hitColor: meltdownHit
+        damage: 615.416666667
+        laserAbsorb: false
+        makeFire: true
+        status: none
+        pierce: true
+        pierceBuilding: true
+        width: 0.5
+        lifetime: 600
+        ammoMultiplier: 1
+        colors: ["00ff00","ffffff"]
+}
+}
+{
+reload: 1800
+x: 0
+y: 0
+mirror: false
+rotate: false
+shootSound: railgun
+alternate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	width: 64
+	height: 64
+	splashDamage: 35800
+	splashDamageRadius: 35
+	sprite: large-bomb
+	frontColor: ffffff
+	backColor: 00ff00
+	lifetime: 600
+	makeFire: true
+	speed: 1.6
+	pierce: true
+	pierceBuilding: true
+	spin: 3
+	hitEffect: massiveExplosion
+	despawnEffect: none
+	despawnHit: false
+	reflectable: false
+	shrinkY: 0.01
+	shrinkX: 0.01
+}
+}
+{
+x: 0
+y: 0
+reload: 0
+shootCone: 360
+controllable: false
+aiControllable: false
+shootOnDeath: true
+useAmmo: false
+bullet: {
+	type: BasicBulletType
+	lifetime: 0
+	speed: 0
+	instantDisappear: true
+	killShooter: true
+	collides: false
+	splashDamage: 1000000000
+	splashDamageRadius: 800
+	hitEffect: {
+            type: multiEffect
+            effects: [
+              {
+                type: ParticleEffect
+                line: true
+                particles: 15
+                lifetime: 55
+                offset: 50
+                length: 540
+                cone: 360
+                baseLength: 250
+                interp: circleOut
+                sizeInterp: pow5Out
+                strokeFrom: 1.6
+                strokeTo: 0
+                lenFrom: 24
+                lenTo: 24
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+              {
+                type: ParticleEffect
+                line: true
+                particles: 25
+                lifetime: 65
+                offset: 50
+                length: 500
+                baseLength: 250
+                cone: 360
+                interp: circleOut
+                sizeInterp: pow5Out
+                strokeFrom: 1.6
+                strokeTo: 0
+                lenFrom: 17
+                lenTo: 17
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 43
+                sizeTo: 1
+                length: 280
+                lifetime: 285
+                lightOpacity: 0
+                interp: circleOut
+                sizeInterp: pow5In
+                colorFrom: cococoaa
+                colorTo: 000000aa
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 43
+                sizeTo: 1
+                length: 290
+                lifetime: 275
+                lightOpacity: 0
+                interp: circleOut
+                sizeInterp: pow5In
+                colorFrom: cococoaa
+                colorTo: 000000aa
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 59
+                sizeTo: 1
+                length: 290
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: cococoFF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 30
+                sizeFrom: 59
+                sizeTo: 1
+                length: 270
+                lifetime: 265
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: cococoFF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 35
+                offset: 50
+                sizeFrom: 27
+                sizeTo: 1
+                length: 300
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: cococoFF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: ParticleEffect
+                particles: 45
+                offset: 50
+                sizeFrom: 19
+                sizeTo: 1
+                length: 320
+                lifetime: 275
+                interp: circleOut
+                sizeInterp: pow5In
+                lightColor: ffffffFF
+                colorFrom: cococoFF
+                colorTo: 000000FF
+                cone: 360
+              }
+              {
+                type: WaveEffect
+                lifetime: 245
+                sizeFrom: 0
+                sizeTo: 350
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 19
+                strokeTo: 0
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+              {
+                type: WaveEffect
+                lifetime: 55
+                sizeFrom: 0
+                sizeTo: 450
+                lightColor: 66B1FFFFF
+                interp: circleOut
+                strokeFrom: 25
+                strokeTo: 0
+                colorFrom: cococoFF
+                colorTo: 000000aa
+              }
+              {
+                type: WaveEffect
+                lifetime: 45
+                sizeFrom: 0
+                sizeTo: 550
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 19
+                strokeTo: 0
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+              {
+                type: WaveEffect
+                lifetime: 45
+                sizeFrom: 0
+                sizeTo: 650
+                lightColor: 66B1FFFF
+                interp: circleOut
+                strokeFrom: 11
+                strokeTo: 0
+                colorFrom: cococoFF
+                colorTo: 000000FF
+              }
+			  {
+          particles: 45
+          length: 1600
+          lifetime: 100
+          interp: pow3Out
+          sizeInterp: pow2In
+          sizeFrom: 110
+          sizeTo: 0
+          startDelay: 0
+          clip: 8192
+        }
+        {
+          particles: 40
+          line: true
+          length: 2000
+          lifetime: 100
+          interp: pow3Out
+          sizeInterp: pow2In
+          lenFrom: 150
+          lenTo: 0
+          strokeFrom: 35
+          strokeTo: 20
+          cap: false
+          startDelay: 0
+          clip: 8192
+        }
+        {
+          type: WaveEffect
+          lifetime: 60
+          interp: pow3Out
+          sizeFrom: 0
+          sizeTo: 2400
+          strokeFrom: 36
+          startDelay: 0
+          clip: 8192
+        }
+        {
+          type: WaveEffect
+          lifetime: 60
+          interp: pow3Out
+          sizeFrom: 0
+          sizeTo: 2000
+          strokeFrom: 30
+          startDelay: 30
+          clip: 8192
+        }
+        {
+          type: WaveEffect
+          lifetime: 60
+          interp: pow3Out
+          sizeFrom: 0
+          sizeTo: 1600
+          strokeFrom: 26
+          startDelay: 35
+          clip: 8192
+        }
+        {
+          type: WaveEffect
+          lifetime: 60
+          interp: pow3Out
+          sizeFrom: 0
+          sizeTo: 1200
+          strokeFrom: 22
+          startDelay: 65
+          clip: 8192
+        }
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 140
+          sizeFrom: 3000
+          sizeTo: 0
+          startDelay: 0
+          layer: 135
+          clip: 8192
+        }
+        {
+          particles: 1
+          length: 0
+          region: circle-shadow
+          lifetime: 35
+          sizeFrom: 8192
+          sizeTo: 8192
+          startDelay: 0
+          layer: 135
+          colorTo: ffffff00
+          clip: 8192
+        }
+            ]
+	}
+	despawnHit: true
+	shootEffect: none
+	despawnSound: wader-boom
+	despawnShake: 55
+}
+}
+]
+isEnemy: true
+accel: 0.2
+abilities: [
+{
+type: StatusFieldAbility
+effect: boss
+duration: 600
+reload: 60
+range: 1
+applyEffect: none
+activeEffect: none
+}
+{
+type: EnergyFieldAbility
+damage: 12700
+reload: 5
+range: 40
+healEffect: none
+status: emi
+statusDuration: 600
+maxTargets: 1000
+healPercent: 100
+color: 00ff00ff
+useAmmo: false
+}
+]
+drag: 0.1
+speed: 3.5
+immunities: [gorenie, burning, melting, melt, wetted, charged, radiated, nuked, blowedup, emi, disarmed, unmoving, unmoving, burning, wet, slow, sapped, shocked, freezing, corroded, tarred, muddy, spore-slowed, blasted, disarmed, electrified, melting, slow]

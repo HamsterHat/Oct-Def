@@ -1,0 +1,8 @@
+name: Пуниум
+description: Базовый ресурс, используется практически везде
+cost: 0.1
+color: 5bb92e
+hardness: 1
+research: {
+	parent: base-land
+}

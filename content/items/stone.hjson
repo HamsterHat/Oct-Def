@@ -1,0 +1,7 @@
+name: Камень
+cost: 1
+color: 4a484e
+hardness: 1
+research: {
+	parent: coper
+}

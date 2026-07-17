@@ -1,0 +1,7 @@
+name: Знание III
+effect: none
+healthMultiplier: 1.3
+damageMultiplier: 1.3
+speedMultiplier: 1.05
+permanent: true
+
