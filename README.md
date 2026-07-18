@@ -7,7 +7,7 @@
 
 <!-- Логотип мода по центру под названием -->
 <p align="center">
-  <img src="sprites-override/ui/logo.png" width="250" alt="Octopus Defence Logo">
+  <img src="sprites-override/ui/logo.png" width="900" alt="Octopus Defence Logo">
 </p>
 
 ---
