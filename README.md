@@ -1,5 +1,5 @@
 ## 🐙 OCTOPUS DEFENCE
-> **Версия / Version:** `Alpha 0.7.9` | **Игра / Game:** `Mindustry V7 (136+)`
+> **Версия / Version:** `Alpha 0.7.9.3`
 
 
 # ПУНЯ ПУНЯ ПУНЯ
