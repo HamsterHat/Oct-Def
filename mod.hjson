@@ -7,3 +7,4 @@ version: "Alpha 0.7.9.3"
 minGameVersion: "136"
 dependencies: []
 hidden: false
+repo: "HamsterHat/Oct-Def"
