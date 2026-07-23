@@ -1,0 +1,32 @@
+type: "ConsumeGenerator"
+name: "Парогенератор"
+health: 320
+size: 2
+hasItems: true
+outputsPower: true
+breakable: true
+powerProduction: 4.5
+consumes: {
+  items: [
+	ugol/1
+  ]
+		liquids: [
+			voda/0.03333333333333333
+		]
+		
+}
+requirements: [
+	stal/25
+	coper/10
+	titan/5
+]
+category: "power" 
+
+buildVisibility: sandboxOnly
+itemDuration: 240
+outputLiquid: stream/0.0666666666666
+explodeOnFull: true
+hasLiquids: true
+liquidCapacity: 30
+
+ 

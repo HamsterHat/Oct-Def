@@ -1,0 +1,54 @@
+type: mech
+name: "[lime]Пуня[] с [#997700]Дубинкой"
+alwaysUnlocked: true
+armor: 3
+outlines: false
+health: 100
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 90
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: throw
+shootStatus: slow
+shootStatusDuration: 30
+bullet: {
+		type: BulletType
+		damage: 0
+		speed: 0
+		splashDamage: 30
+		splashDamageRadius: 18
+		buildingDamageMultiplier: 1.25
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 9.99
+		impact: true
+		hitSound: hammerhit
+		despawnHit: true
+		recoil: -1.25
+		status: stun
+		statusDuration: 240
+		hitShake: 8
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.08
+drawCell: false

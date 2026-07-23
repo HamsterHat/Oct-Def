@@ -3,8 +3,7 @@ displayName: "OCTOPUS DEFENCE: The Roleplay Update"
 subtitle: "Ещё 10+ блоков, 45+ юнитов и Пуней"
 "author": "[red]a[blue]l[white]ex"
 description: "Мод добавляет планету [green]Пунь[]."
-version: "Alpha 0.7.9.3"
-minGameVersion: "136"
+version: "Alpha 0.7.9.4"
+minGameVersion: "157"
 dependencies: []
 hidden: false
-repo: "HamsterHat/Oct-Def"

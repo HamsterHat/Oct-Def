@@ -1,0 +1,66 @@
+type: missile
+controller: missileAI
+name: Икра
+speed: 0
+hitSize: 4
+hidden: false
+health: 8
+outlines: false
+rotateSpeed: 0
+lifetime: 7200
+range: 8
+flying: false
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: ffb75e
+engineSize: 0
+engineOffset: 0
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+createWreck: false
+createScorch: false
+targetAir: false
+targetGround: false
+canDrown: false
+loopSound: none
+weapons: [
+	{
+	shootCone: 360
+          mirror: false
+          reload: 0
+          shootOnDeath: true
+          x: 0
+          shake: 0
+          y: 0
+		  aiControllable: false
+	bullet: {
+		type: BulletType
+		lifetime: 1
+		hittable: false
+		instantDisappear: true
+		damage: 0
+		collides: false
+		reflectable: false
+		splashDamage: 0
+		splashDamageRadius: 0
+		speed: 0
+		hitEffect: none
+		hitSound: none
+		hitSoundVolume: 8
+		killShooter: true
+		despawnHit: true
+	}
+	}
+]
+
+abilities: [
+{
+type: UnitSpawnAbility
+unit: spawn-fish
+spawnTime: 7200
+}
+]

@@ -1,0 +1,18 @@
+type: CoreBlock
+localizedName: ЯДРО
+category: effect
+health: 999
+size: 2
+solid: false
+
+itemCapacity: 9999
+unitCapModifier: 99
+unitType: "player"
+incinerateNonBuildable: true
+isFirstTier: true
+squareSprite: false
+
+requirements: [
+    coper/9
+]
+BuildVisibility: sandboxOnly

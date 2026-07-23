@@ -1,6 +1,4 @@
 type: StorageBlock
-name: Хранилище
-description: Хранит предметы
 itemCapacity: 1000
 category: effect
 coreMerge: true

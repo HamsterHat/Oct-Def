@@ -1,0 +1,108 @@
+type: flying
+name: "[#6aac00]Комар"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 0.5
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 4
+hitSize: 1
+canDrown: false
+stepShake: 0
+flying: true
+engineOffset: 0
+engineSize: 0
+loopSound: none
+
+
+fallEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 4
+      lifetime: 40
+      length: 16
+      baseLength: 5
+      sizeFrom: 4.5
+      sizeTo: 0
+      colorFrom: ff0000
+      colorTo: 530505
+      layer: 118
+    }
+  ]
+}
+fallEngineEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 7
+      lifetime: 25
+      length: 22
+      sizeFrom: 2.8
+      sizeTo: 0
+      colorFrom: 16c000
+	  colorTo: 105342
+      layer: 118
+	  region: mod-rombe
+	  spin: 3
+    }
+  ]
+}
+
+weapons: [
+{
+reload: 1
+x: 0
+y: 2
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		splashDamage: 0.01
+		splashDamageRadius: 2
+    lifesteal: 1
+    status: mlr
+    statusDuration: 3600
+}
+}
+{
+reload: 36000
+x: 0
+y: 0
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+aiControllable: false
+controllable: false
+alwaysShooting: true
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		spawnUnit: kmar-egg
+}
+}
+]
+isEnemy: true
+accel: 0.02
+drag: 0.01
+speed: 3
+drawCell: false

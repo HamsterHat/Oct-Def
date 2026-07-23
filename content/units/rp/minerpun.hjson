@@ -19,6 +19,7 @@ mineWalls: true
 mineRange: 14
 drawMineBeam: false
 mineSound: slash
+mineItems: [mod-coper, mod-svinec, mod-stone, mod-topi, mod-ugol]
 weapons: [
 {
 reload: 15

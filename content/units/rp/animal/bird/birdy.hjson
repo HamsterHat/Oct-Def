@@ -1,0 +1,105 @@
+type: flying
+name: "[#0a4226]Крякушка"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 15
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 4
+hitSize: 4
+canDrown: false
+stepShake: 0
+flying: true
+engineOffset: 0
+engineSize: 0
+loopSound: none
+
+
+fallEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 4
+      lifetime: 40
+      length: 16
+      baseLength: 5
+      sizeFrom: 4.5
+      sizeTo: 0
+      colorFrom: ff0000
+      colorTo: 530505
+      layer: 118
+    }
+  ]
+}
+fallEngineEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 7
+      lifetime: 25
+      length: 22
+      sizeFrom: 2.8
+      sizeTo: 0
+      colorFrom: 42882b
+	  colorTo: 105342
+      layer: 118
+	  region: mod-rombe
+	  spin: 3
+    }
+  ]
+}
+
+weapons: [
+{
+reload: 20
+x: 0
+y: 8
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		splashDamage: 3
+		splashDamageRadius: 6
+}
+}
+{
+reload: 72000
+x: 0
+y: 0
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+aiControllable: false
+controllable: false
+alwaysShooting: true
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		spawnUnit: bird-egg
+}
+}
+]
+isEnemy: true
+accel: 0.02
+drag: 0.01
+speed: 2.3
+drawCell: false

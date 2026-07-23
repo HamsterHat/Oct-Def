@@ -1,0 +1,90 @@
+name: Бетономешалка
+type: GenericCrafter
+outputItem: beton/1
+size: 2
+health: 420
+itemCapacity: 30
+hasPower: true
+craftTime: 60
+
+ambientSound: loopDifferential
+ambientSoundVolume: 1.25
+
+updateEffectSpread: 0.4
+updateEffectChance: 0.1
+
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 5
+      lifetime: 90
+      length: 40
+      baseRotation: 45
+      cone: 11
+      colorFrom: b8b8b852
+      colorTo: ffffff00
+      sizeFrom: 4.5
+      sizeTo: 1
+      interp: pow2Out
+      sizeInterp: linear
+    }
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 6
+      lifetime: 60
+      length: 65
+      baseRotation: 45
+      cone: 19
+      colorFrom: b8b8b852
+      colorTo: ffffff00
+      sizeFrom: 3
+      sizeTo: 0.5
+      interp: pow2Out
+      sizeInterp: linear
+    }
+  ]
+}
+
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    formsmoke,
+    {
+      type: ParticleEffect
+      line: false
+      particles: 15
+      lifetime: 100
+      length: 30
+      colorFrom: 6b6b6b
+      colorTo: 2e2e2e
+      sizeFrom: 3
+      sizeTo: 0
+      interp: pow3Out
+      sizeInterp: linear
+      region: mod-rombe
+    }
+  ]
+}
+
+consumes: {
+   power: 1.25
+    items:[
+    clay/3
+    pesok/4
+    stone/2
+]
+}
+category: crafting	
+requirements: [
+	coper/120
+	stal/15
+	svinec/80
+]
+
+buildVisibility: sandboxOnly

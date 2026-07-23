@@ -4,8 +4,6 @@ breakable: true
 rebuildable: false
 
 type: CoreBlock
-localizedName: База "Цель"
-description: База. Хранит 4000 предметов, легко бронирована
 category: effect
 health: 5500
 size: 4

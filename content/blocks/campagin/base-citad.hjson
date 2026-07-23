@@ -4,8 +4,6 @@ breakable: true
 rebuildable: false
 
 type: CoreBlock
-localizedName: База "Цитадель"
-description: База. Хранит 30 тысяч предметов,  отлично бронирована
 category: effect
 health: 38900
 size: 6

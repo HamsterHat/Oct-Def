@@ -37,7 +37,7 @@ bullet: {
 		type: BasicBulletType
 		scaleLife: true
 		damage: 0
-		splashDamage: 135
+		splashDamage: 9
 		splashDamageRadius: 45.6
 		width: 8
 		height: 8
@@ -114,7 +114,7 @@ bullet: {
 			pierce: true
 			pierceBuilding: true
 			pierceCap: 3
-			damage: 15
+			damage: 9
 			width: 4
 			height: 5
 			spin: 4
@@ -297,7 +297,7 @@ bullet: {
 				type: BasicBulletType
 				scaleLife: true
 				damage: 0
-				splashDamage: 999
+				splashDamage: 9
 				splashDamageRadius: 85.5
 				width: 18
 				height: 18
@@ -537,7 +537,7 @@ bullet: {
 					pierce: true
 					pierceBuilding: true
 					pierceCap: 3
-					damage: 15
+					damage: 9
 					width: 4
 					height: 5
 					spin: 4
@@ -577,7 +577,7 @@ activeEffect: none
 }
 {
 type: EnergyFieldAbility
-damage: 135
+damage: 9
 reload: 60
 range: 32
 healEffect: none

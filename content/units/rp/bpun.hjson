@@ -11,6 +11,7 @@ hitSize: 8
 canDrown: false
 stepShake: 0
 buildSpeed: 1
+buildRange: 16
 controller: BuilderAI
 weapons: [
 {

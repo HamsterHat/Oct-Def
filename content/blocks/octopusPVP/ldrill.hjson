@@ -1,0 +1,25 @@
+name: Лазерный Бур
+type: BeamDrill
+health: 130
+size: 1
+tier: 1
+drillTime: 500
+warmupSpeed: 0.001
+
+requirements: [
+	coper/15
+	stal/10
+	svinec/15
+]
+
+
+
+range: 3
+laserWidth: 0.2	
+sparkColor: 40ff80	
+glowColor: 19e42a	
+glowIntensity: 0.4
+
+heatColor: ffce48e5	
+
+buildVisibility: sandboxOnly

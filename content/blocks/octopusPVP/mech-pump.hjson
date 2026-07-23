@@ -1,0 +1,16 @@
+type: pump
+name: Механический Насос
+hasLiquids: true
+liquidCapacity: 100
+size: 1
+squareSprite: false
+pumpAmount: 0.2
+category: liquid
+
+
+requirements: [
+	wood/20
+	stal/5
+]
+
+buildVisibility: sandboxOnly

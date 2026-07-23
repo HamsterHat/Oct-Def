@@ -1,0 +1,66 @@
+type: mech
+name: "[lime]Фрог"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 40
+range: 48
+rotateMoveFirst: false
+rotateSpeed: 2
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+{
+reload: 30
+x: -1
+y: 3
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: SapBulletType
+		damage: 9
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: -2
+		status: slow
+		statusDuration: 99
+		length: 48
+		sapStrength: 0
+		color: e23754
+		width: 0.3
+}
+}
+{
+reload: 72000
+x: 0
+y: 0
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+aiControllable: false
+controllable: false
+alwaysShooting: true
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		spawnUnit: frog-egg
+}
+}
+]
+isEnemy: true
+accel: 1
+drag: 0.2
+speed: 0.7
+drawCell: false

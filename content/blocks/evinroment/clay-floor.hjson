@@ -1,0 +1,9 @@
+type: "Floor"
+name: "Глина"
+variants: 1
+isLiquid: false
+itemDrop: clay
+speedMultiplier: 0.6
+status: slow
+walkSound: walkSand
+ 

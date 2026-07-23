@@ -1,0 +1,54 @@
+type: missile
+controller: missileAI
+name: лалалалалалала
+speed: 0
+hitSize: 1
+hidden: false
+health: 999999999
+loopSound: none
+loopSoundVolume: 1
+outlines: false
+rotateSpeed: 0
+lifetime: 3
+deathExplosionEffect: none
+range: 0
+flying: true
+outlines: false
+template: MissileUnitType
+drawCell: false
+trailColor: ffb75e
+engineSize: 0
+engineOffset: 0
+missileAccelTime: 0
+lowAltitude: true
+allowedInPayloads: false
+useUnitCap: false
+playerControllable: false
+physics: false
+createWreck: false
+createScorch: false
+targetAir: true
+targetGround: true
+targetable: false
+hittable: false
+deathShake: 0
+
+immunities: [die]
+  
+abilities: [
+{
+type: StatusFieldAbility
+effect: die
+duration: 9999999999999999999999
+reload: 0
+range: 4
+applyEffect: none
+activeEffect: none
+}
+{
+type: SpawnDeathAbility
+unit: mandarinka
+amount: 3
+spread: 3
+}
+]

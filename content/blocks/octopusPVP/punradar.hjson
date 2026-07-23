@@ -1,0 +1,52 @@
+type: PowerTurret
+name: Радар
+size: 2
+outlineIcon: false
+health: 490
+shootY: 0
+rotateSpeed: 0
+targetAir: true
+targetGround: true
+maxAmmo: 1
+range: 640
+reload: 90
+shootCone: 360
+soundPitchMin: 1
+soundPitchMax: 1
+shootSound: radar_alarm
+shootSoundVolume: 7
+recoil: 0
+consumes: {
+  power: 1.25
+}
+shootEffect: {
+                type: WaveEffect
+                lifetime: 320
+                colorFrom: 227517
+                colorTo: 227517
+                sizeFrom: 0
+                sizeTo: 640
+                strokeFrom: 4
+                strokeTo: 1
+                clip: 3000
+              }
+shootType: {
+  type: BulletType
+  lifetime: 1
+  speed: 0
+  damage: 0
+  status: slow
+  statusDuration: 240
+  hitEffect: none
+  despawnHit: true
+  splashDamage: 0
+  splashDamageRadius: 640
+}
+requirements: [
+  coper/300
+  stal/130
+  cremn/45
+  svinec/230
+]
+category: effect
+buildVisibility: sandboxOnly

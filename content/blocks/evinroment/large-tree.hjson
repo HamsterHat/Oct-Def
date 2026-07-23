@@ -11,7 +11,6 @@ buildVisibility: editorOnly
 solid: true
 destructible: true
 health: 5000
-buildTime: 1800
 instantDeconstruct: false
 clipSize: 200
 breakSound: plantBreak

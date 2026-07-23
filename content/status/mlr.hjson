@@ -1,0 +1,10 @@
+name: "[#9cb410]Малярия"
+damage: 0.016666666666666666
+intervalDamageTime: 600.0
+intervalDamage: 25
+damageMultiplier: 0.15
+healthMultiplier: 0.8
+reloadMultiplier: 0.2
+speedMultiplier: 0.15
+effect: none
+

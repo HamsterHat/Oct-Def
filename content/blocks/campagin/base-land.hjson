@@ -4,8 +4,6 @@ breakable: true
 rebuildable: false
 
 type: CoreBlock
-localizedName: База "Посадка"
-description: База. Хранит 2000 предметов, не бронирована
 category: effect
 health: 1500
 size: 3

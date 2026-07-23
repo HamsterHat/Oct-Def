@@ -1,0 +1,62 @@
+type: mech
+name: "[lime]Пуня[] с [#6b3516]Палкой[]-[#444444]Копалкой"
+alwaysUnlocked: true
+armor: 4
+outlines: false
+health: 100
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+buildSpeed: 0
+controller: MinerAI
+mineSpeed: 0.2
+mineTier: 1
+mineFloor: true
+mineWalls: true
+mineRange: 14
+drawMineBeam: false
+mineSound: slash
+mineItems: [mod-coper, mod-svinec, mod-stone, mod-topi, mod-ugol]
+weapons: [
+{
+reload: 15
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: slash
+bullet: {
+		type: BulletType
+		damage: 21.9
+		speed: 0
+		splashDamage: 34.25
+		splashDamageRadius: 16
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 11.7
+		impact: true
+		hitSound: pun-hit
+		buildingDamageMultiplier: 2.75
+		recoil: -1.25
+}
+}
+]
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 2.0
+drawCell: false
+
+
+
+

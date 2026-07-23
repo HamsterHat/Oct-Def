@@ -1,0 +1,8 @@
+name: "[acid]Отравление Кислотой Муравья"
+damage: 0
+intervalDamageTime: 60.0
+intervalDamage: 0.02
+damageMultiplier: 0.95
+healthMultiplier: 0.95
+effect: none
+

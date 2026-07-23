@@ -1,0 +1,80 @@
+type: legs
+name: "[#381818]Муравей"
+alwaysUnlocked: true
+armor: 0
+outlines: false
+health: 1
+range: 3
+rotateMoveFirst: false
+rotateSpeed: 2
+hitSize: 2
+canDrown: false
+stepShake: 0
+
+
+
+legCount: 6
+legGroupSize: 3
+legLength: 5.25
+legSpeed: 1
+legLengthScl: 1
+legMaxLength: 1.3
+legSplashDamage: 0.01
+legSplashRange: 4
+legContinuousMove: true
+
+
+weapons: [
+{
+reload: 15
+x: 0
+y: 2
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		splashDamage: 0.25
+		splashDamageRadius: 4
+		status: ant-poison
+		statusDuration: 999
+}
+}
+
+{
+reload: 72000
+x: 0
+y: 0
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+aiControllable: false
+controllable: false
+alwaysShooting: true
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		spawnUnit: ant-egg
+}
+}
+]
+isEnemy: true
+accel: 1
+drag: 0.2
+speed: 1.4
+drawCell: false

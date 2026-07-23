@@ -3244,7 +3244,7 @@ Events.run(Trigger.draw, () => {
     Groups.unit.each(unit => {
         if(unit.hasEffect(snowgraveMarker)){
             // Используем явное указание слоя (Layer.units или число 110)
-            Draw.z(121.1); 
+            Draw.z(118); 
             let img = Core.atlas.find("mod-crystal-sprite");
             if(img.found()){
                 Draw.rect(img, unit.x, unit.y, unit.hitSize * 2.5, unit.hitSize * 2.5);
@@ -3285,7 +3285,7 @@ Events.run(Trigger.draw, () => {
     if(!iceShockMarker) return;
     Groups.unit.each(unit => {
         if(unit.hasEffect(iceShockMarker)){
-            Draw.z(120.1);
+            Draw.z(117.9);
 
             // 1. ОСНОВНОЙ ТОЛСТЫЙ СЛОЙ ЛЬДА
             // Рисуем голубой цвет с высокой непрозрачностью (0.8)

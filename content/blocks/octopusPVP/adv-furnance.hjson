@@ -1,0 +1,122 @@
+name: Индустриальная Печь
+type: GenericCrafter
+outputItem: stal/4
+size: 3
+health: 900
+itemCapacity: 90	
+hasPower: true
+craftTime: 30
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawGlowRegion
+		alpha: 0.8
+		color: ffcf76
+		},
+		{
+		type: DrawArcSmelt
+		}
+	]
+}
+
+ambientSound: loopFire
+ambientSoundVolume: 1.25
+
+updateEffectSpread: 0.4
+updateEffectChance: 0.2
+
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 3
+      lifetime: 90
+      length: 40
+      baseRotation: 45
+      cone: 8
+      colorFrom: 3d242452
+      colorTo: 201d1d00
+      sizeFrom: 4.5
+      sizeTo: 1
+      interp: pow2Out
+      sizeInterp: linear
+    }
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 4
+      lifetime: 60
+      length: 65
+      baseRotation: 45
+      cone: 15
+      colorFrom: 2c171752
+      colorTo: 5a5a5a00
+      sizeFrom: 3
+      sizeTo: 0.5
+      interp: pow2Out
+      sizeInterp: linear
+    }
+  ]
+}
+
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 15
+      lifetime: 100
+      length: 60
+      baseRotation: 45
+      cone: 15
+      colorFrom: 3a1c1ca6
+      colorTo: 44444400
+      sizeFrom: 5
+      sizeTo: 1.5
+      interp: pow3Out
+      sizeInterp: linear
+    }
+    {
+      type: ParticleEffect
+      layer: 88
+      line: false
+      particles: 10
+      lifetime: 70
+      length: 80
+      baseRotation: 45
+      cone: 25
+      colorFrom: 3a1c1c8ca6
+      colorTo: 55555500
+      sizeFrom: 3.5
+      sizeTo: 0.5
+      interp: pow2Out
+      sizeInterp: linear
+    }
+  ]
+}
+
+consumes: {
+   power: 2
+    items:[
+    raw-iron/1
+]
+}
+category: crafting	
+requirements: [
+	coper/300
+	stal/30
+	svinec/200
+	stone/30
+]
+
+buildVisibility: sandboxOnly

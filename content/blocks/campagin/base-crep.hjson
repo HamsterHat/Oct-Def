@@ -4,8 +4,6 @@ breakable: true
 rebuildable: false
 
 type: CoreBlock
-localizedName: База "Крепость"
-description: База. Хранит 15 тысяч предметов, бронирована
 category: effect
 health: 18300
 size: 5

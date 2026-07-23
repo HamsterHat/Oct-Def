@@ -1,0 +1,64 @@
+name: "[orange]Мандаринка"
+type: naval
+alwaysUnlocked: false
+armor: 0
+outlines: false
+faceTarget: true
+health: 5
+range: 8
+rotateMoveFirst: false
+hitSize: 4
+rotateSpeed: 4
+speed: 2
+drawCell: false
+
+weapons: [
+{
+reload: 20
+x: 0
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		splashDamage: 5
+		splashDamageRadius: 7
+}
+}
+
+{
+reload: 72000
+x: 0
+y: 0
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+aiControllable: false
+controllable: false
+alwaysShooting: true
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		spawnUnit: fish-egg
+}
+}
+]
+accel: 0.2
+drag: 0.1
+immunities: [wetted, wet]

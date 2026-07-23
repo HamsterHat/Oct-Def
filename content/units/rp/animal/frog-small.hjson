@@ -1,0 +1,34 @@
+type: mech
+name: Головастик
+
+
+hitSize: 2
+
+
+speed: 1.2
+rotateSpeed: 3
+accel: 1
+drag: 0.01
+
+
+health: 5
+itemCapacity: 5
+
+outlines: false
+drawCell: false
+
+
+groundLayer: 0
+
+canDrown: false
+
+
+
+abilities: [
+{
+type: UnitSpawnAbility
+unit: spawn-frog
+spawnTime: 7200
+}
+]
+

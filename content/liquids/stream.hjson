@@ -1,0 +1,13 @@
+name: "Пар"
+color: "c1f8ff"
+lightColor: "ffffff"
+
+viscosity: 0
+flammability: 0
+explosiveness: 0
+temperature: 1
+heatCapacity: 0
+
+gas: true
+
+effect: none

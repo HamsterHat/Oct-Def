@@ -1,0 +1,66 @@
+type: mech
+name: "[#555050]Ёжик"
+alwaysUnlocked: true
+armor: 5
+outlines: false
+health: 50
+range: 8
+rotateMoveFirst: false
+rotateSpeed: 2
+hitSize: 8
+canDrown: false
+stepShake: 0
+weapons: [
+
+{
+reload: 35
+x: 0
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+bullet: {
+		type: BulletType
+		damage: 0
+		hitEffect: none
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		despawnHit: true
+		lifetime: 0
+		splashDamage: 11
+		splashDamageRadius: 9
+		status: slow
+		statusDuration: 99
+}
+}
+
+]
+isEnemy: true
+accel: 1
+drag: 0.3
+speed: 0.5
+drawCell: false
+
+abilities: [
+{
+type: EnergyFieldAbility
+damage: 3
+reload: 30
+range: 8
+healEffect: none
+status: slow
+statusDuration: 999
+maxTargets: 999
+healPercent: 0
+color: 2e2828
+useAmmo: false
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0
+sectors: 0
+}
+]
