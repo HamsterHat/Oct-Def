@@ -19,18 +19,6 @@
 </p>
 
 
-### 💻 Rhino vs 3000 строк / Rhino vs 3000 Lines
-
-**RU:**
-* **Победа над Rhino:** Мой `main.js` весит **3000+ строк**. После 15 часов непрерывной войны с багами Rhino — я его всё-таки победил. Оно работает.
-* **Extended UI пал перед Пунями:** Оригинальный Extended UI намертво крашил игру при запуске с моим модом. Весь этот ад на 15 часов логов случился всего из-за одной кривой строчки. Я её нашел и исправил. Скоро выгружу эту версию на GitHub, так что выбирать между модами не придется.
-
----
-
-**EN:**
-* **Rhino Defeated:** My `main.js` is over **3000+ lines long**. Spent 15 hours straight fighting Rhino engine bugs — and I actually won. It works.
-* **Extended UI Overhauled:** The original Extended UI instantly crashed the game on launch with this mod. This whole 15-hour log-hunting nightmare happened because of just one single broken line. I found it, fixed it, and completely rewrote Extended UI for myself. I'll upload it to GitHub soon, so you don't have to choose between a good UI and Punies anymore.
-
 
 ## 🇷🇺 RUS: Описание мода
 
