@@ -1,0 +1,11 @@
+type: Wall
+name: Стена из камня
+health: 80
+requirements: [
+    wood/4
+]
+destroySound: box-destroy
+category: defense
+buildVisibility: sandboxOnly
+createRubble: false
+rotate: true
