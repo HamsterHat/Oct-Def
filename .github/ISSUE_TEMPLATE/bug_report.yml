@@ -1,0 +1,89 @@
+name: Buggy thing
+description: Report an issue with OctopusDefence.
+labels: ["bug"]
+
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Select the platform where the issue happens.
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+        - Android
+        - iOS
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Mindustry Version
+      description: The build number from the main menu.
+      placeholder: v146
+    validations:
+      required: true
+
+  - type: input
+    id: modversion
+    attributes:
+      label: OctopusDefence Version
+      description: The mod version from the in-game mods menu.
+      placeholder: OctDefAlpha 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Bug Description
+      description: Provide a detailed explanation of the buggy thing.
+      placeholder: Describe what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Explain exactly what steps are required to make the bug happen.
+      placeholder: |
+        1. Go to...
+        2. Build...
+        3. See the error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: save-file
+    attributes:
+      label: Save File
+      description: Provide the .msav file (for custom maps) or exported game data zip (for campaign).
+      placeholder: Drag and drop your file here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Crash Logs
+      description: Attach logs from Settings -> Game Data -> Export Crash Logs if the game crashed.
+      placeholder: Paste log contents or attach the text file.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Validation
+      description: Check the boxes to confirm the conditions below.
+      options:
+        - label: I have updated the mod to the latest release version.
+          required: true
+        - label: I have checked that this issue has not been reported yet.
+          required: true
+        - label: I am sure this bug is caused by OctopusDefence and not other mods.
+          required: true
