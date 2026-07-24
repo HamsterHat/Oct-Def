@@ -1,0 +1,13 @@
+name: Questions & Help
+description: Ask a question about OctopusDefence gameplay or settings.
+title: "[Q&A]: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question-text
+    attributes:
+      label: What are you stuck on?
+      description: Explain what you need help with.
+      placeholder: e.g., How do I efficiently transport custom fluids?
+    validations:
+      required: true

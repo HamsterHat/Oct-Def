@@ -1,0 +1,21 @@
+name: Lore & Theories
+description: Post your crazy theories about Planet Pun and OctopusDefence lore.
+title: "[Lore]: "
+labels: ["lore"]
+body:
+  - type: textarea
+    id: theory
+    attributes:
+      label: Your Theory
+      description: What do you think is actually happening on Planet Pun?
+      placeholder: Write your deep lore analysis here...
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: In-game Evidence
+      description: Mention specific blocks, units, or soundtrack names that support your theory.
+      placeholder: e.g., PGV-1 helicopter description, custom fluid puddles...
+    validations:
+      required: false
