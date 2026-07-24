@@ -1,0 +1,47 @@
+name: Share a Schematic
+description: Share your custom factory or defense layouts for OctopusDefence.
+title: "[Schematic]: "
+labels: ["schematic"]
+
+body:
+  - type: input
+    id: schematic-name
+    attributes:
+      label: Schematic Name
+      description: What is the name of your layout?
+      placeholder: e.g., Ultimate Pyromix Factory
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What is the primary purpose of this schematic?
+      multiple: false
+      options:
+        - Defense / Turrets
+        - Resource Production
+        - Unit Factories
+        - Logic / Processors
+        - Power Generation
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Explain how this layout works and what resources it requires.
+      placeholder: Provide details about input items, liquids, or logic settings.
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Mindustry Schematic Code
+      description: Paste the base64 string of your schematic here.
+      placeholder: Paste the game export string here.
+    validations:
+      required: true
