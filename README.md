@@ -14,8 +14,8 @@
 
 ## 📸 Скриншоты / Screenshots
 <p align="center">
-  <img src="assets/screen1.jpg" width="48%" alt="Планета Пунь Геймплей">
-  <img src="assets/screen2.jpg" width="48%" alt="Аннигиляторная пушка в действии">
+  <img src=".github/screen1.jpg" width="48%" alt="Планета Пунь Геймплей">
+  <img src=".github/screen2.jpg" width="48%" alt="Аннигиляторная пушка в действии">
 </p>
 
 
