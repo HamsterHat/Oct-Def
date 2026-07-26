@@ -87,3 +87,5 @@ body:
           required: true
         - label: I am sure this bug is caused by OctopusDefence and not other mods.
           required: true
+        - label: I am sure this bug is NOT caused by Crash Trigger block.
+          required: true
