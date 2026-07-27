@@ -89,7 +89,7 @@ This mod wouldn't have been possible without the amazing ideas, concepts, and cr
 *   **[Catana791](https://github.com)** — for the massive content base and awesome gameplay ideas inspired by his mods.
 *   **[EyeOfDarkness](https://github.com)** — for nukes, lasers, and flashy VFX concepts. Keeping things quiet is boring, everything needs to blow up beautifully!
 *   **[MEEPofFaith](https://github.com)** — for inspiring me with his chaotic tech and the brilliant idea to add total nuclear annihilation.
-*   **My Bro** — for turning rough drafts for *Boss 1*, *Land*, *Launch*, and *Menu* into absolute musical bangers.
+*   **My Bro** — for turning rough drafts for *Boss 1*, *Land*, *Launch*, and *Menu* into soundtracks.
 
 
 
