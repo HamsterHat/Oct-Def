@@ -99,9 +99,3 @@ This mod wouldn't have been possible without the amazing ideas, concepts, and cr
 1. Скопируй ссылку на этот репозиторий GitHub / Copy this GitHub repository link.
 2. Mindustry -> **Моды (Mods)** -> **Импорт мода (Import Mod)** -> **GitHub**.
 3. Вставляй ссылку и молись, чтобы игра не крашнулась / Paste the link and pray the game doesn't crash from all this content.
-
-
----
-
-## Special thanks
-
