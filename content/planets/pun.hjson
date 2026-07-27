@@ -18,7 +18,7 @@ allowWaveSimulation: true
 
 accessible: true
 alwaysUnlocked: true
-defaultCore: "base-land"
+defaultCore: "mod-base-land"
 sectorSeed: 7452
 startSector: 1
 sectorSize: 1

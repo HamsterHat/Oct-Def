@@ -22,7 +22,22 @@ requirements: [
 ]
 category: "power" 
 
-buildVisibility: sandboxOnly
+research: {
+	parent: base-land
+	requirements: [
+  		stal/50
+		coper/20
+		titan/10
+	]
+	objectives: [
+			{
+				type: SectorComplete
+				preset: vilage
+			}
+			mech-pump
+		]
+}
+
 itemDuration: 240
 outputLiquid: stream/0.0666666666666
 explodeOnFull: true

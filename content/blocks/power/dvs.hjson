@@ -20,12 +20,18 @@ requirements: [
 ]
 category: "power" 
 research: {
-	parent: base-land
+	parent: streamgen
 	requirements: [
   		stal/70
   		coper/160
   		titan/20
 	]
+	objectives: [
+			{
+				type: OnSector
+				preset: bunker
+			}
+		]
 }
 
  

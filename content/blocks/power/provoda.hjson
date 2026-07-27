@@ -10,7 +10,7 @@ requirements: [
     coper/3
 ]
 research: {
-    parent: dvs
+    parent: streamgen
     requirements: [
         coper/6
     ]

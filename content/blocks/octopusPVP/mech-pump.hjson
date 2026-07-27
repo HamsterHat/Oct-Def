@@ -4,13 +4,21 @@ hasLiquids: true
 liquidCapacity: 100
 size: 1
 squareSprite: false
-pumpAmount: 0.2
+pumpAmount: 0.18
 category: liquid
 
 
 requirements: [
-	wood/20
+	coper/10
 	stal/5
+	titan/5
 ]
 
-buildVisibility: sandboxOnly
+research: {
+	parent: condens
+	requirements: [
+  		coper/20
+		stal/10
+		titan/10
+	]
+}

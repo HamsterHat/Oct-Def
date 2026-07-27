@@ -18,8 +18,22 @@ range: 3
 laserWidth: 0.2	
 sparkColor: 40ff80	
 glowColor: 19e42a	
-glowIntensity: 0.4
+glowIntensity: 0.2
 
-heatColor: ffce48e5	
+heatColor: ffce48e5
+category: production
 
-buildVisibility: sandboxOnly
+research: {
+	parent: coper-drill
+	requirements: [
+  		coper/30
+		stal/20
+		svinec/30
+	]
+	objectives: [
+			{
+				type: SectorComplete
+				preset: vilage
+			}
+		]
+}
