@@ -1,0 +1,94 @@
+type: PowerTurret
+name: Ракетная шахта
+size: 3
+outlineIcon: false
+health: 3185
+armor: 32
+rotateSpeed: 0
+rotate: false
+targetAir: false
+targetGround: false
+maxAmmo: 1
+range: 4000
+reload: 7200
+shootCone: 360
+shootSound: missileLaunch
+recoil: 0
+buildVisibility: sandboxOnly
+category: turret
+consumes: {
+  power: 6.333333333333333
+}
+shoot: {
+  type: ShootPattern
+  shots: 1
+}
+
+linearWarmup: true
+minWarmup: 1
+shootWarmupSpeed: 0.016666666
+shootY: 0
+hasShadow: false
+shootType: {
+  type: BulletType
+    damage: 0
+    lifetime: 0
+    hitEffect: none
+    despawnHit: true
+    despawnUnit: payloadm
+    collides: false
+    hittable: false
+    absorbable: false
+    ignoreSpawnAngle: true  
+}
+
+
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-missile"
+      color: "ffffffff"
+      colorTo: "ffffff00"
+      outline: false
+      progress: reload
+    }
+    {
+      type: RegionPart
+      suffix: "-hatch-left"
+      moveX: -6
+      x: -2
+      y: 0
+      outline: false
+      progress: warmup
+    }
+    {
+      type: RegionPart
+      suffix: "-hatch-right"
+      moveX: 6
+      x: 2
+      y: 0
+      outline: false
+      progress: warmup
+    }
+    {
+      type: RegionPart
+      suffix: "-top"
+      x: 0
+      y: 0
+      outline: false
+    }
+  ]
+}
+
+
+requirements: [
+	coper/800
+  svinec/970
+	titan/1850
+	stal/1150
+	energosteklo/315
+  cremn/180
+  beton/2000
+]

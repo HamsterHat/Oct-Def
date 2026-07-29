@@ -1,0 +1,69 @@
+type: missile
+controller: MinerAI
+defaultController: MinerAI
+playerControllable: false
+health: 1
+hitSize: 1
+drag: 10000
+physics: false
+drawBody: false
+drawCell: false
+outlines: false
+hoverable: false
+groundLayer: 0
+deathShake: 0
+lifetime: 1
+speed: 0
+hittable: false
+targetable: false
+hidden: true
+
+abilities: [
+  {
+    type: RegenAbility
+    percentAmount: 1
+  }
+  {
+type: EnergyFieldAbility
+damage: 9
+reload: 0
+range: 160
+healEffect: none
+hitEffect: none	
+damageEffect: none
+status: emi
+shootSound: shockBullet
+statusDuration: 600
+maxTargets: 999999999
+healPercent: 0
+sameTypeHealMult: 9999999
+displayHeal: true	
+color: #38ecce
+useAmmo: false
+}
+{
+type: StatusFieldAbility
+effect: emi
+duration: 600
+reload: 0
+range: 160
+applyEffect: none
+activeEffect: none	
+color: 00000000
+}
+]
+
+deathSound: none
+createScorch: false
+
+deathExplosionEffect: {
+  type: WaveEffect
+  lifetime: 60
+  sizeFrom: 0
+  sizeTo: 160
+  sides: 360
+  colorFrom: fff6a1
+  colorTo: eeff00
+  strokeFrom: 6
+  strokeTo: 0
+}

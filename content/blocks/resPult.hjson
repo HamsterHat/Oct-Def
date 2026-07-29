@@ -6,12 +6,13 @@ outlineIcon: false
 health: 2500
 range: 680
 rotateSpeed: 5
-minDistribute: 10
+minDistribute: 50
 knockback: 15
 reload: 300
 bulletSpeed: 4
 bulletLifetime: 170
 shootSound: shootBig
+itemCapacity: 50
 consumes: {
    power: 3
 }

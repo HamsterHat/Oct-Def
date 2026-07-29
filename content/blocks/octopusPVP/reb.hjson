@@ -1,0 +1,78 @@
+type: PowerTurret
+name: "РЭБ 'Гробовая тишина'"
+size: 3
+outlineIcon: false
+health: 900
+shootY: 0
+rotateSpeed: 0
+targetAir: true
+targetGround: true
+maxAmmo: 1
+range: 160
+reload: 15
+shootCone: 360
+shootSound: spark
+recoil: 0
+consumes: {
+  power: 16.416666666666668
+}
+shootType: {
+  type: EmpBulletType
+  lifetime: 0
+  speed: 0
+  width: 0
+  height: 0
+  damage: 9
+  despawnUnit: emp-hell-good-luck-you-dumb-enemies
+  splashDamage: 9
+  splashDamageRadius: 160
+  radius: 160
+  status: emi
+  statusDuration: 600
+  timeIncrease: 0.2
+  timeDuration: 600
+  powerDamageScl: 3.5
+  powerSclDecrease: 0.2
+  unitDamageScl: 3.5
+  suppressionRange: 160
+  suppressionDuration: 600
+  suppressionEffectChance: 999999
+
+  lightningColor: 38ecce
+          lightning: 20
+          lightningLength: 20
+          lightningLengthRand: 10
+          lightningDamage: 12
+          lightningType: {
+            type: BulletType
+            damage: 0
+            speed: 0
+            splashDamage: 9
+            splashDamageRadius: 4
+            absorbable: false
+            lifetime: 0
+            pierce: false
+            hitEffect: none
+            shootEffect: none
+            smokeEffect: none
+            despawnEffect: none
+            hitSound: shockBullet
+            despawnHit: true
+            status: charged
+            statusDuration: 60
+            suppressionRange: 8
+            suppressionDuration: 240
+            suppressionEffectChance: 75
+          }
+
+}
+requirements: [
+  coper/1000
+  svinec/650
+  cremn/450
+  titan/500
+  energosteklo/120
+]
+
+category: effect
+buildVisibility: sandboxOnly

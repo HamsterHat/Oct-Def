@@ -1,11 +1,11 @@
 type: "Floor"
-name: "Вода"
+name: "Болотная вода"
 variants: 1
 isLiquid: true
 liquidDrop: voda
 status: wetted
 cacheLayer: water
-statusDuration: 300
-speedMultiplier: 0.8
-drownTime: 0
+statusDuration: 600
+speedMultiplier: 0.4
+drownTime: 360
 walkSound: splash

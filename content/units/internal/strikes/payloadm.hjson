@@ -48,12 +48,12 @@ weapons: [
             parts: [
                 {
                     type: RegionPart
-                    name: mod-fallMissile
+                    name: mod-strike-missile
                     outline: false
                     moves: [
                         {
-                            gx: 35
-                            gy: 35
+                            gx: 15
+                            gy: 15
                             progress: {
                                 type: life
                                 ops: [
@@ -105,12 +105,12 @@ weapons: [
                 }
                 {
                     type: RegionPart
-                    name: mod-fallMissile
+                    name: mod-strike-missile
                     outline: false
                     moves: [
                         {
-                            gx: 35
-                            gy: 35
+                            gx: 15
+                            gy: 15
                             progress: {
                                 type: life
                                 ops: [
@@ -157,54 +157,65 @@ weapons: [
                     layer: 129
                 }
             ]
-            lifetime: 45
-            speed: 2.5
-            drag: -0.045
+            lifetime: 100
+            speed: 1.25
+            drag: -0.02
             absorbable: false
             hittable: false
             collides: false
+            width: 1
+            height: 1
+trailEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      line: false
+      particles: 1
+      lifetime: 15
+      length: 3
+      cone: 5
+      colorFrom: "ffdd55"
+      colorTo: "ff5500"
+      sizeFrom: 4
+      sizeTo: 0
+      interp: fade
+    }
+    {
+      type: ParticleEffect
+      line: false
+      particles: 2
+      lifetime: 45
+      length: 8
+      cone: 12
+      colorFrom: "ff5500aa"
+      colorTo: "44444400"
+      sizeFrom: 5
+      sizeTo: 2
+      interp: pow2Out
+      sizeInterp: linear
+    }
+    {
+      type: ParticleEffect
+      line: false
+      particles: 2
+      lifetime: 90
+      length: 5
+      cone: 15
+      colorFrom: "6666668c"
+      colorTo: "33333300"
+      sizeFrom: 3
+      sizeTo: 7
+      interp: pow2Out
+      sizeInterp: linear
+    }
+  ]
+}
+
+            trailChance: 1
+            trailInterval: 8
             
-            despawnEffect: [
-                {
-                        type: ParticleEffect
-                        region: particle
-                        lifetime: 120
-                        sizeFrom: 24
-                        sizeTo: 0
-                        length: 65
-                        colorFrom: a4328025
-                        colorTo: 7f7f7f1b
-                        interp: pow5Out
-                        sizeInterp: pow5In
-                        layer: 170
-                }
-                {
-                        type: ParticleEffect
-                        region: particle
-                        lifetime: 96
-                        sizeFrom: 17
-                        sizeTo: 0
-                        length: 65
-                        colorFrom: a4328013
-                        colorTo: 7f7f7f3b
-                        interp: pow5Out
-                        sizeInterp: pow5In
-                        layer: 170
-                }
-                {
-                        type: ParticleEffect
-                        region: particle
-                        lifetime: 75
-                        sizeFrom: 35
-                        sizeTo: 0
-                        length: 65
-                        colorFrom: a432800a
-                        colorTo: bfbfbf37
-                        interp: pow5Out
-                        sizeInterp: pow5In
-                        layer: 170
-                }
-            ]
+            despawnEffect: none
         }
     }
 ]
