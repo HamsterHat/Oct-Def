@@ -9,7 +9,7 @@ squareShape: false
 hitSize: 16
 health: 250
 speed: 1.9
-range: 250
+range: 8
 circleTarget: true
 rotateSpeed: 1
 ammoType: {
