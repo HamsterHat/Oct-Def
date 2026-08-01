@@ -1,0 +1,321 @@
+type: mech
+name: "[lime]Пунь[]-[orange]Сеня"
+alwaysUnlocked: true
+armor: 15
+outlines: false
+health: 375
+range: 160
+rotateMoveFirst: false
+rotateSpeed: 3
+hitSize: 8
+canDrown: false
+stepShake: 0
+
+
+
+weapons: [
+{
+reload: 99
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: throw
+bullet: {
+		type: BulletType
+		damage: 9
+		splashDamage: 99
+		splashDamageRadius: 18
+		width: 1
+		height: 1
+		speed: 0
+		absorbable: true
+		lifetime: 0
+		pierce: false
+		hitEffect: {
+		type: MultiEffect
+		effects: [
+			{
+			type: ParticleEffect
+			colorFrom: ffffffff
+			colorTo: d8a20e00
+			particles: 1
+			region: mod-rombe
+			sizeFrom: 0
+			sizeTo: 8
+			lifetime: 30
+			}
+			{
+			type: ParticleEffect
+			colorFrom: ffffffff
+			colorTo: ffa92800
+			particles: 9
+			region: mod-rombe
+			sizeFrom: 3
+			sizeTo: 0
+			lifetime: 90
+			length: 8
+			}
+
+			{
+			type: ParticleEffect
+			line: false
+			particles: 5
+			lifetime: 60
+			length: 12
+			cone: 360
+			colorFrom: 515151ff
+			colorTo: "27272700"
+			sizeFrom: 3
+			sizeTo: 0
+			}
+			{
+			type: ParticleEffect
+			line: true
+			particles: 8
+			lifetime: 25
+			length: 24
+			cone: 360
+			strokeFrom: 1.5
+			strokeTo: 0
+			colorFrom: ffa928ff
+			colorTo: ff450000
+			sizeFrom: 4
+			sizeTo: 1
+			}
+		]
+		}
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 4.7
+		impact: true
+		hitSound: slash
+		status: gorenie
+		statusDuration: 99
+		recoil: -1
+		spawnBullets: [
+			{
+				type: BulletType
+				lifetime: 1
+				hittable: false
+				instantDisappear: true
+				damage: 0
+				collides: false
+				reflectable: false
+				splashDamage: 0
+				splashDamageRadius: 18
+				speed: 0
+				hitSound: none
+				status: slow
+				statusDuration: 198
+				hitEffect: none
+				shootEffect: none
+				despawnEffect: none
+				smokeEffect: none
+			}
+		]
+}
+}
+
+{
+reload: 3600
+x: 4
+y: 4
+mirror: false
+rotate: false
+inaccuracy: 0
+useAmmo: false
+shootSound: shootSmite
+shootStatus: slow
+shootStatusDuration: 600
+bullet: {
+		type: BasicBulletType
+		damage: 9
+		speed: 5
+		absorbable: false
+		lifetime: 64
+		pierce: false
+		hitEffect: {
+			type: MultiEffect
+			effects: [
+				{
+				type: ParticleEffect
+				colorFrom: ffffffff
+				colorTo: d8a20e00
+				particles: 2
+				region: mod-rombe
+				sizeFrom: 0
+				sizeTo: 14
+				lifetime: 35
+				}
+				{
+				type: ParticleEffect
+				colorFrom: ffffffff
+				colorTo: ffa92800
+				particles: 14
+				region: mod-rombe
+				sizeFrom: 5
+				sizeTo: 0
+				lifetime: 100
+				length: 20
+				}
+				{
+				type: WaveEffect
+				lifetime: 60
+				sizeFrom: 0
+				sizeTo: 80
+				strokeFrom: 8
+				strokeTo: 0
+				colorFrom: ffa928ff
+				colorTo: ff450000
+				layer: 5
+				}
+				{
+				type: WaveEffect
+				lifetime: 30
+				sizeFrom: 0
+				sizeTo: 60
+				strokeFrom: 3
+				strokeTo: 0
+				colorFrom: ffffffff
+				colorTo: ffa92800
+				}
+				{
+				type: ParticleEffect
+				line: false
+				particles: 18
+				lifetime: 90
+				length: 40
+				cone: 360
+				colorFrom: 454545ff
+				colorTo: 1a1a1a00
+				sizeFrom: 8
+				sizeTo: 0
+				}
+				{
+				type: ParticleEffect
+				line: true
+				particles: 25
+				lifetime: 45
+				length: 65
+				cone: 360
+				strokeFrom: 3
+				strokeTo: 0
+				colorFrom: ffffffff
+				colorTo: ff220000
+				}
+				{
+				type: ParticleEffect
+				particles: 1
+				lifetime: 16
+				length: 0
+				cone: 0
+				colorFrom: ffffffff
+				colorTo: ffffffff
+				sizeFrom: 64
+				sizeTo: 0
+				region: circle-shadow
+				}
+			]
+			}
+		shootEffect: none
+		smokeEffect: none
+		despawnEffect: none
+		knockback: 99.9
+		width: 0
+		height: 0
+		impact: true
+		hitSound: coolboom
+		status: none
+		statusDuration: 0
+		recoil: -3
+		status: stun
+		statusDuration: 590
+		splashDamage: 875
+		splashDamageRadius: 99
+		scaleLife: true
+		fragBullets: 1
+		fragBullet: {
+			type: BulletType
+			lifetime: 0
+			spawnBullets: [
+				{
+					type: BulletType
+					lifetime: 1
+					hittable: false
+					instantDisappear: true
+					damage: 0
+					collides: false
+					reflectable: false
+					splashDamage: 0
+					splashDamageRadius: 99
+					speed: 0
+					hitSound: none
+					status: gorenie
+					statusDuration: 99
+					hitEffect: none
+					shootEffect: none
+					despawnEffect: none
+					smokeEffect: none
+				}
+				{
+					type: BulletType
+					lifetime: 1
+					hittable: false
+					instantDisappear: true
+					damage: 0
+					collides: false
+					reflectable: false
+					splashDamage: 0
+					splashDamageRadius: 99
+					speed: 0
+					hitSound: none
+					status: slow
+					statusDuration: 999
+					hitEffect: none
+					shootEffect: none
+					despawnEffect: none
+					smokeEffect: none
+				}
+			]
+			fragBullets: 9
+			fragBullet: fireball
+		}
+		parts: [
+			{
+				type: RegionPart
+				name: mod-arspunsword
+				outline: false
+				layer: 120
+			}
+		]
+}
+}
+]
+
+isEnemy: true
+accel: 0.2
+drag: 0.1
+speed: 1.9
+drawCell: false
+
+
+abilities: [
+  {
+    type: RegenAbility
+    amount: 0.05
+  }
+]
+
+
+immunities: [burning, melting, mod-melt, mod-gorenie]
+
+
+
+
+
+
+

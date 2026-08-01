@@ -1,0 +1,25 @@
+name: "[purple]Споровая Слабость"
+damage: 0
+intervalDamageTime: 60.0
+intervalDamage: 1
+damageMultiplier: 0.8
+healthMultiplier: 0.8
+speedMultiplier: 0.8
+reloadMultiplier: 0.8
+effect: {
+  type: ParticleEffect
+  particles: 3
+  lifetime: 45
+  length: 14
+  cone: 360
+  baseRotation: 0
+  interp: pow2Out
+  sizeFrom: 3
+  sizeTo: 0
+  colorFrom: b075ffff
+  colorTo: 5a2d8700
+}
+buildSpeedMultiplier: 0.8
+dragMultiplier: 0.8
+intervalDamagePierce: true
+outline: false

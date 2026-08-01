@@ -96,6 +96,16 @@ plans: [
       svinec/40
     ]
     time: 5400
+  },
+  {
+    unit: ppl-1
+    requirements: [
+      stal/300
+      titan/800
+      cremn/300
+      energosteklo/60
+    ]
+    time: 16200
   }
 ]
 

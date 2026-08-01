@@ -9,7 +9,7 @@ buildVisibility: editorOnly
 solid: true
 destructible: true
 health: 2400
-buildTime: 900
+buildTime: 300
 instantDeconstruct: false
 clipSize: 110
 breakSound: plantBreak

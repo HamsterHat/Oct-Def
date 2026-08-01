@@ -5,5 +5,5 @@ subtitle: "Ещё 10+ блоков, 45+ юнитов и Пуней"
 description: "Мод добавляет планету [green]Пунь[]."
 version: "Alpha 0.7.9.4"
 minGameVersion: "157"
-dependencies: []
+dependencies: [octlib]
 hidden: false

@@ -1,0 +1,9 @@
+name: "[orange]Тепло"
+damageMultiplier: 1.05
+healthMultiplier: 1.05
+speedMultiplier: 1.1
+reloadMultiplier: 1.05
+effect: none
+buildSpeedMultiplier: 1.05
+intervalDamagePierce: true
+outline: false

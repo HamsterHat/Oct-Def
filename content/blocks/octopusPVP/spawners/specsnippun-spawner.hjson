@@ -1,0 +1,38 @@
+createRubble: false
+type: PowerTurret
+size: 2
+outlineIcon: false
+health: 1
+armor: 0
+targetAir: true
+targetGround: true
+maxAmmo: 1
+range: 0
+reload: 0
+shootCone: 360
+shootSound: none
+recoil: 0
+buildVisibility: sandboxOnly
+category: units
+consumes: {}
+alwaysShooting: true
+rotate: false
+requirements: [
+  coper/130,
+  titan/80,
+  stal/80
+]
+shoot: {
+  type: ShootBarrel
+  shots: 1
+  barrels: [
+    0, 0, 0
+  ]
+}
+hasShadow: false
+shootType: {
+  type: BulletType
+  lifetime: 0
+  spawnUnit: specsnippun
+  killShooter: true
+}

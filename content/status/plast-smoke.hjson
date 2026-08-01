@@ -1,0 +1,20 @@
+name: "[green]Едкий Пластановый Дым"
+damage: 0
+intervalDamageTime: 20
+intervalDamage: 2
+damageMultiplier: 0.7
+speedMultiplier: 0.5
+reloadMultiplier: 0.6
+effect: {
+  type: ParticleEffect
+  particles: 4
+  lifetime: 60
+  length: 16
+  cone: 360
+  interp: pow2Out
+  sizeFrom: 4
+  sizeTo: 8
+  colorFrom: cbd97fff
+  colorTo: 52662100
+}
+effectChance: 0.4

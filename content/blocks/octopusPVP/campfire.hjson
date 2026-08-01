@@ -1,0 +1,700 @@
+type: ItemTurret
+name: Костёр
+size: 2
+outlineIcon: false
+health: 24
+rotateSpeed: 0
+rotate: false
+quickRotate: false
+targetAir: false
+targetGround: false
+alwaysShooting: true
+maxAmmo: 360
+reload: 25
+range: 55
+shootCone: 360
+shootSound: none
+shootX: 0
+shootY: 0
+ammoTypes: {
+  coal: {
+        type: BulletType
+        hitSize: 0
+        lifetime: 28
+        hitEffect: none
+        shootEffect: none
+        smokeEffect: none
+        despawnHit: true
+        ammoMultiplier: 8
+        collides: false
+        status: warm
+        statusDuration: 999
+        hitSound: none
+        hittable: false
+        speed: 0
+        damage: 0
+        splashDamage: 0
+        splashDamageRadius: 30
+        reflectable: false
+        absorbable: false
+        trailChance: 1
+        trailInterval: 6
+        trailMinVelocity: 0
+        trailEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 35
+              length: 18
+              cone: 15
+              baseRotation: 35
+              interp: pow2Out
+              colorFrom: ffa928ff
+              colorTo: ff450000
+              sizeFrom: 3.5
+              sizeTo: 0
+            }
+            {
+              type: ParticleEffect
+              particles: 1
+              lifetime: 50
+              length: 26
+              cone: 10
+              baseRotation: 35
+              interp: pow3Out
+              colorFrom: 515151ff
+              colorTo: 27272700
+              sizeFrom: 2.5
+              sizeTo: 4.5
+            }
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 20
+              length: 22
+              cone: 25
+              baseRotation: 35
+              line: true
+              lenFrom: 4
+              lenTo: 0
+              strokeFrom: 1.5
+              strokeTo: 0
+              colorFrom: ffffff
+              colorTo: ffa92800
+            }
+          ]
+        }
+        trailSpread: 0
+        lightRadius: 60
+        lightOpacity: 0.4
+        lightColor: e9b321
+        despawnUnit: fire-coal
+  }
+  plastanium: {
+        type: BulletType
+        hitSize: 0
+        lifetime: 28
+        hitEffect: none
+        shootEffect: none
+        smokeEffect: none
+        despawnHit: true
+        ammoMultiplier: 4
+        collides: false
+        status: warm
+        statusDuration: 999
+        hitSound: none
+        hittable: false
+        speed: 0
+        damage: 0
+        splashDamage: 0
+        splashDamageRadius: 22
+        reflectable: false
+        absorbable: false
+        trailChance: 1
+        trailInterval: 6
+        trailMinVelocity: 0
+        trailEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 40
+              length: 22
+              cone: 12
+              baseRotation: 35
+              interp: pow2Out
+              colorFrom: dbe6a2ff
+              colorTo: 7c8f4300
+              sizeFrom: 4
+              sizeTo: 1
+            }
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 65
+              length: 32
+              cone: 8
+              baseRotation: 35
+              interp: pow3Out
+              colorFrom: 526621ff
+              colorTo: 22300900
+              sizeFrom: 3
+              sizeTo: 7
+            }
+          ]
+        }
+        trailSpread: 0
+        lightRadius: 60
+        lightOpacity: 0.4
+        lightColor: cbd97f
+        despawnUnit: fire-plast
+  }
+  spore-pod: {
+    type: BulletType
+    hitSize: 0
+    lifetime: 28
+    hitEffect: none
+    shootEffect: none
+    smokeEffect: none
+    despawnHit: true
+    ammoMultiplier: 12
+    collides: false
+    status: mod-warm
+    statusDuration: 999
+    hitSound: none
+    hittable: false
+    speed: 0
+    damage: 0
+    splashDamage: 0
+    splashDamageRadius: 38
+    reflectable: false
+    absorbable: false
+    trailChance: 1
+    trailInterval: 6
+    trailMinVelocity: 0
+    trailSpread: 0
+    lightRadius: 60
+    lightOpacity: 0.4
+    lightColor: b075ff
+    despawnUnit: fire-spore
+    trailEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: ParticleEffect
+          particles: 3
+          lifetime: 40
+          length: 22
+          cone: 12
+          baseRotation: 35
+          interp: pow2Out
+          colorFrom: b075ffff
+          colorTo: 5a2d8700
+          sizeFrom: 4
+          sizeTo: 1
+        }
+        {
+          type: ParticleEffect
+          particles: 2
+          lifetime: 65
+          length: 32
+          cone: 8
+          baseRotation: 35
+          interp: pow3Out
+          colorFrom: 7035abff
+          colorTo: 2d0c4d00
+          sizeFrom: 3
+          sizeTo: 7
+        }
+      ]
+    }
+  }
+  blast-compound: {
+    type: BulletType
+    hitSize: 0
+    lifetime: 1
+    hitEffect: none
+    shootEffect: none
+    smokeEffect: none
+    despawnHit: true
+    ammoMultiplier: 1
+    killShooter: true
+    collides: false
+    status: blasted
+    statusDuration: 300
+    hitSound: none
+    hittable: false
+    speed: 0
+    damage: 0
+    splashDamage: 280
+    splashDamageRadius: 60
+    reflectable: false
+    absorbable: false
+    trailChance: 1
+    trailInterval: 1
+    trailMinVelocity: 0
+    trailSpread: 0
+    lightRadius: 300
+    lightOpacity: 0.9
+    lightColor: ff5533
+    despawnUnit: blast-expl
+    trailEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: ParticleEffect
+          particles: 5
+          lifetime: 15
+          length: 45
+          cone: 360
+          interp: pow3Out
+          colorFrom: ffff55ff
+          colorTo: ff331100
+          sizeFrom: 6
+          sizeTo: 0
+        }
+      ]
+    }
+  }
+  pyratite: {
+        type: BulletType
+        hitSize: 0
+        lifetime: 28
+        hitEffect: none
+        shootEffect: none
+        smokeEffect: none
+        despawnHit: true
+        ammoMultiplier: 10
+        collides: false
+        status: warm
+        statusDuration: 999
+        hitSound: none
+        hittable: false
+        speed: 0
+        damage: 0
+        splashDamage: 0
+        splashDamageRadius: 36
+        reflectable: false
+        absorbable: false
+        trailChance: 1
+        trailInterval: 6
+        trailMinVelocity: 0
+        trailEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: ParticleEffect
+              particles: 5
+              lifetime: 25
+              length: 28
+              cone: 18
+              baseRotation: 35
+              interp: pow2Out
+              colorFrom: ffed55ff
+              colorTo: ff6b1100
+              sizeFrom: 5
+              sizeTo: 0
+            }
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 45
+              length: 36
+              cone: 12
+              baseRotation: 35
+              interp: pow3Out
+              colorFrom: 444444ff
+              colorTo: 1e1e1e00
+              sizeFrom: 3
+              sizeTo: 6
+            }
+            {
+              type: ParticleEffect
+              particles: 6
+              lifetime: 15
+              length: 34
+              cone: 30
+              baseRotation: 35
+              line: true
+              lenFrom: 6
+              lenTo: 0
+              strokeFrom: 2
+              strokeTo: 0
+              colorFrom: ffffffff
+              colorTo: ffa92800
+            }
+          ]
+        }
+        trailSpread: 0
+        lightRadius: 60
+        lightOpacity: 0.4
+        lightColor: e9b321
+        despawnUnit: fire-pyro
+        fragBullets: 3
+        fragBullet: fireball
+  }
+  dinamit: {
+    type: BulletType
+    hitSize: 0
+    lifetime: 1
+    hitEffect: none
+    shootEffect: none
+    smokeEffect: none
+    despawnHit: true
+    ammoMultiplier: 1
+    collides: false
+    status: blowedup
+    killShooter: true
+    statusDuration: 999
+    hitSound: none
+    hittable: false
+    speed: 0
+    damage: 0
+    splashDamage: 280
+    splashDamageRadius: 60
+    reflectable: false
+    absorbable: false
+    trailChance: 1
+    trailInterval: 1
+    trailMinVelocity: 0
+    trailSpread: 0
+    lightRadius: 300
+    lightOpacity: 0.9
+    lightColor: ff5533
+    despawnUnit: blast-expl
+    hitSound: coolboom
+    trailEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: ParticleEffect
+          particles: 5
+          lifetime: 15
+          length: 45
+          cone: 360
+          interp: pow3Out
+          colorFrom: ffff55ff
+          colorTo: ff331100
+          sizeFrom: 6
+          sizeTo: 0
+        }
+      ]
+    }
+  }
+  pirosmes: {
+        type: BulletType
+        hitSize: 0
+        lifetime: 28
+        hitEffect: none
+        shootEffect: none
+        smokeEffect: none
+        despawnHit: true
+        ammoMultiplier: 8
+        collides: false
+        status: warm
+        statusDuration: 999
+        hitSound: none
+        hittable: false
+        speed: 0
+        damage: 0
+        splashDamage: 0
+        splashDamageRadius: 30
+        reflectable: false
+        absorbable: false
+        trailChance: 1
+        trailInterval: 6
+        trailMinVelocity: 0
+        trailEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 35
+              length: 18
+              cone: 15
+              baseRotation: 35
+              interp: pow2Out
+              colorFrom: ffa928ff
+              colorTo: ff450000
+              sizeFrom: 3.5
+              sizeTo: 0
+            }
+            {
+              type: ParticleEffect
+              particles: 1
+              lifetime: 50
+              length: 26
+              cone: 10
+              baseRotation: 35
+              interp: pow3Out
+              colorFrom: 515151ff
+              colorTo: 27272700
+              sizeFrom: 2.5
+              sizeTo: 4.5
+            }
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 20
+              length: 22
+              cone: 25
+              baseRotation: 35
+              line: true
+              lenFrom: 4
+              lenTo: 0
+              strokeFrom: 1.5
+              strokeTo: 0
+              colorFrom: ffffff
+              colorTo: ffa92800
+            }
+          ]
+        }
+        trailSpread: 0
+        lightRadius: 60
+        lightOpacity: 0.4
+        lightColor: e9b321
+        despawnUnit: fire-mix
+        fragBullets: 3
+        fragBullet: fireball
+  }
+  topi: {
+        type: BulletType
+        hitSize: 0
+        lifetime: 28
+        hitEffect: none
+        shootEffect: none
+        smokeEffect: none
+        despawnHit: true
+        ammoMultiplier: 16
+        collides: false
+        status: warm
+        statusDuration: 999
+        hitSound: none
+        hittable: false
+        speed: 0
+        damage: 0
+        splashDamage: 0
+        splashDamageRadius: 60
+        reflectable: false
+        absorbable: false
+        trailChance: 1
+        trailInterval: 6
+        trailMinVelocity: 0
+        trailEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 35
+              length: 18
+              cone: 15
+              baseRotation: 35
+              interp: pow2Out
+              colorFrom: ffa928ff
+              colorTo: ff450000
+              sizeFrom: 3.5
+              sizeTo: 0
+            }
+            {
+              type: ParticleEffect
+              particles: 1
+              lifetime: 50
+              length: 26
+              cone: 10
+              baseRotation: 35
+              interp: pow3Out
+              colorFrom: 515151ff
+              colorTo: 27272700
+              sizeFrom: 2.5
+              sizeTo: 4.5
+            }
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 20
+              length: 22
+              cone: 25
+              baseRotation: 35
+              line: true
+              lenFrom: 4
+              lenTo: 0
+              strokeFrom: 1.5
+              strokeTo: 0
+              colorFrom: ffffff
+              colorTo: ffa92800
+            }
+          ]
+        }
+        trailSpread: 0
+        lightRadius: 180
+        lightOpacity: 0.4
+        lightColor: aa5082
+        despawnUnit: fire-tpi
+        fragBullets: 6
+        fragBullet: fireball
+  }
+  ugol: {
+    type: BulletType
+    hitSize: 0
+    lifetime: 28
+    hitEffect: none
+    shootEffect: none
+    smokeEffect: none
+    despawnHit: true
+    ammoMultiplier: 9
+    collides: false
+    status: mod-warm
+    statusDuration: 999
+    hitSound: none
+    hittable: false
+    speed: 0
+    damage: 0
+    splashDamage: 0
+    splashDamageRadius: 34
+    reflectable: false
+    absorbable: false
+    trailChance: 1
+    trailInterval: 6
+    trailMinVelocity: 0
+    trailSpread: 0
+    lightRadius: 60
+    lightOpacity: 0.4
+    lightColor: ffe675
+    despawnUnit: fire-ugol
+    trailEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 35
+              length: 18
+              cone: 15
+              baseRotation: 35
+              interp: pow2Out
+              colorFrom: ffa928ff
+              colorTo: ff450000
+              sizeFrom: 3.5
+              sizeTo: 0
+            }
+            {
+              type: ParticleEffect
+              particles: 1
+              lifetime: 50
+              length: 26
+              cone: 10
+              baseRotation: 35
+              interp: pow3Out
+              colorFrom: 515151ff
+              colorTo: 27272700
+              sizeFrom: 2.5
+              sizeTo: 4.5
+            }
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 20
+              length: 22
+              cone: 25
+              baseRotation: 35
+              line: true
+              lenFrom: 4
+              lenTo: 0
+              strokeFrom: 1.5
+              strokeTo: 0
+              colorFrom: ffffff
+              colorTo: ffa92800
+            }
+          ]
+        }
+  }
+  wood: {
+    type: BulletType
+    hitSize: 0
+    lifetime: 28
+    hitEffect: none
+    shootEffect: none
+    smokeEffect: none
+    despawnHit: true
+    ammoMultiplier: 6
+    collides: false
+    status: mod-warm
+    statusDuration: 999
+    hitSound: none
+    hittable: false
+    speed: 0
+    damage: 0
+    splashDamage: 0
+    splashDamageRadius: 20
+    reflectable: false
+    absorbable: false
+    trailChance: 1
+    trailInterval: 6
+    trailMinVelocity: 0
+    trailSpread: 0
+    lightRadius: 60
+    lightOpacity: 0.4
+    lightColor: ffd375
+    despawnUnit: fire-wood
+    trailEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: ParticleEffect
+              particles: 2
+              lifetime: 35
+              length: 18
+              cone: 15
+              baseRotation: 35
+              interp: pow2Out
+              colorFrom: ffa928ff
+              colorTo: ff450000
+              sizeFrom: 3.5
+              sizeTo: 0
+            }
+            {
+              type: ParticleEffect
+              particles: 1
+              lifetime: 50
+              length: 26
+              cone: 10
+              baseRotation: 35
+              interp: pow3Out
+              colorFrom: 515151ff
+              colorTo: 27272700
+              sizeFrom: 2.5
+              sizeTo: 4.5
+            }
+            {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 20
+              length: 22
+              cone: 25
+              baseRotation: 35
+              line: true
+              lenFrom: 4
+              lenTo: 0
+              strokeFrom: 1.5
+              strokeTo: 0
+              colorFrom: ffffff
+              colorTo: ffa92800
+            }
+          ]
+        }
+  }
+}
+requirements: [
+  wood/16
+  stone/6
+]
+solid: false
+category: effect
+buildVisibility: sandboxOnly
+
+

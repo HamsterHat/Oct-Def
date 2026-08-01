@@ -26,8 +26,8 @@ playerControllable: false
 physics: false
 createWreck: false
 createScorch: false
-targetAir: true
-targetGround: false
+targetAir: false
+targetGround: true
 weapons: [
 	{
 	shootCone: 360

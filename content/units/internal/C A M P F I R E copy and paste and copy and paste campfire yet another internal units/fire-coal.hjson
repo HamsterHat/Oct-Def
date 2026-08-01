@@ -1,0 +1,99 @@
+type: missile
+controller: MinerAI
+defaultController: MinerAI
+playerControllable: false
+health: 1
+hitSize: 1
+drag: 10000
+physics: false
+drawBody: false
+drawCell: false
+outlines: false
+hoverable: false
+groundLayer: 0
+deathShake: 0
+lifetime: 1
+speed: 0
+hittable: false
+targetable: false
+hidden: true
+
+abilities: [
+  {
+    type: RegenAbility
+    percentAmount: 9999999999
+  }
+  {
+type: EnergyFieldAbility
+damage: 0
+reload: 0
+range: 12
+healEffect: none
+hitEffect: none	
+damageEffect: none
+status: burning
+shootSound: none
+statusDuration: 30
+maxTargets: 999999999
+healPercent: 0
+sameTypeHealMult: 9999999
+displayHeal: true	
+color: #00000000
+useAmmo: false
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0
+sectors: 0
+}
+  {
+type: EnergyFieldAbility
+damage: 0
+reload: 0
+range: 30
+healEffect: none
+hitEffect: none	
+damageEffect: none
+status: warm
+shootSound: none
+statusDuration: 999
+maxTargets: 999999999
+healPercent: 0
+sameTypeHealMult: 9999999
+displayHeal: true	
+color: #00000000
+useAmmo: false
+blinkScl: 0
+blinkSize: 0
+effectRadius: 0
+sectorRad: 0
+rotateSpeed: 0
+sectors: 0
+}
+{
+type: StatusFieldAbility
+effect: warm
+duration: 999
+reload: 0
+range: 30
+applyEffect: none
+activeEffect: none	
+color: 00000000
+}
+{
+type: StatusFieldAbility
+effect: burning
+duration: 30
+reload: 0
+range: 12
+applyEffect: none
+activeEffect: none	
+color: 00000000
+}
+]
+
+deathSound: none
+createScorch: false
+
+deathExplosionEffect: none

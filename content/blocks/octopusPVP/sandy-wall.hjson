@@ -1,0 +1,11 @@
+type: Wall
+name: Песчанный Барьер
+health: 30
+requirements: [
+    stone/18
+]
+destroySound: wall-break
+category: defense
+buildVisibility: sandboxOnly
+createRubble: false
+rotate: true

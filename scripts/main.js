@@ -3456,7 +3456,7 @@ Events.on(UnitDestroyEvent, e => {
     // e.unit — это объект погибшего юнита
     
     // Проверяем префикс вашего мода
-    if(e.unit.type.name.startsWith("mod-")){
+    if(e.unit.type.name.startsWith("mod-") && e.unit.type.hidden != true && e.unit.type.internal != true){
         // Вызываем эффект. 
         // Мы передаем размер (288) в параметр rotation эффекта
         myBoom.fx.at(e.unit.x, e.unit.y, e.unit.hitSize * 8);
