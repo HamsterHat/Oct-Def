@@ -18,6 +18,10 @@
   <img src=".github/screen2.png" width="48%" alt="Аннигиляторная пушка в действии">
 </p>
 
+<p align="center">
+  <a href="https://github.com/HamsterHat/Oct-Def/stargazers"><img src="https://img.shields.io/github/stars/HamsterHat/Oct-Def?colorA=469e59&colorB=b0f5b9&style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4KPHBhdGggZD0iTTIzNS4yNCw4NC4zOGwtMjguMDYsMjMuNjgsOC41NiwzNS4zOWExMy4zNCwxMy4zNCwwLDAsMS01LjA5LDEzLjkxLDEzLjU0LDEzLjU0LDAsMCwxLTE1LC42OUwxNjQsMTM5bC0zMS42NSwxOS4wNmExMy41MSwxMy41MSwwLDAsMS0xNS0uNjksMTMuMzIaIDEzLjMyLDAsMCwxLTUuMS0xMy45MWw4LjU2LTM1LjM5TDkyLjc2LDg0LjM4YTEzLjM5LDEzLjM5LDAsMCwxLDcuNjYtMjMuNThsMzYuOTQtMi45MiwxNC4yMS0zMy42NmExMy41MSwxMy41MSwwLDAsMSwyNC44NiwwbDE0LjIxLDMzLjY2LDM2Ljk0LDIuOTJhMTMuMzksMTMuMzksMCwwLDEsNy42Ni2My41OFpNODguMTEsMTExLjg5YTgsOCwwLDAsMC0xMS4zMiwwTDE4LjM0LDE3MC4zNGE4LDgsMCwwLDAsMTEuMzIsMTEuMzJsNTguNDUtNTguNDVback4LDAsMCwwLDAtMTEuMzIsMTExLjg5Wm0tLjUsNjEuMTlMMzQuMzQsMjI2LjM0YTgsOCwwLDAsMCwxMS4zMiwxMS4zMmw1My4yNi01My4yN2E4LDgsMCwwLDAtMTEuMzEtMTEuMzFabTczLTEtNTQuMjksNTQuMjhhOCw4LDAsMCwwLDExLjMyLDExLjMybDU0LjI4LTU0LjI4YTgsOCwwLDAsMC0xMS4zMS0xMS4zMloiIiBzdHlsZT0iZmlsbDogI2JjZmE0NDsiLz4KPC9zdmc+" alt="Stars"></a>
+</p>
+
 
 
 ## 🇷🇺 RUS: Описание мода
@@ -99,3 +103,5 @@ This mod wouldn't have been possible without the amazing ideas, concepts, and cr
 1. Скопируй ссылку на этот репозиторий GitHub / Copy this GitHub repository link.
 2. Mindustry -> **Моды (Mods)** -> **Импорт мода (Import Mod)** -> **GitHub**.
 3. Вставляй ссылку и молись, чтобы игра не крашнулась / Paste the link and pray the game doesn't crash from all this content.
+
+
