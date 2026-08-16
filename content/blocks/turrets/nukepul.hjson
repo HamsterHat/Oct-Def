@@ -10,6 +10,8 @@ targetGround: true
 range: 160
 reload: 5
 shootCone: 1
+
+
 shoot: {
     type: ShootAlternate
     barrels: 6

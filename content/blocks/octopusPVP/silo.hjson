@@ -4,8 +4,8 @@ size: 3
 outlineIcon: false
 health: 3185
 armor: 32
-rotateSpeed: 0
-rotate: false
+rotate: true
+rotateSpeed: 99999999
 targetAir: false
 targetGround: false
 maxAmmo: 1
@@ -30,21 +30,65 @@ shootWarmupSpeed: 0.016666666
 shootY: 0
 hasShadow: false
 shootType: {
-  type: BulletType
+  type: PointBulletType
     damage: 0
-    lifetime: 0
     hitEffect: none
     despawnHit: true
-    despawnUnit: payloadm
     collides: false
     hittable: false
     absorbable: false
-    ignoreSpawnAngle: true  
+    trailEffect: none
+    spawnBullets: [
+      {
+         type: BulletType
+          damage: 0
+          lifetime: 0
+          hitEffect: none
+          despawnHit: true
+          despawnUnit: payloadm
+          collides: false
+          hittable: false
+          absorbable: false
+          ignoreSpawnAngle: true  
+      }
+    ]
+    fragBullets: 1
+    fragBullet: {
+        type: BasicBulletType
+				shootEffect: none
+				damage: 0
+				lifetime: 940
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: none
+				collides: false
+				hitSound: none
+				hittable: false
+				reflectable: false
+				absorbable: false
+				width: 0
+				height: 0
+				splashDamage: 0
+				splashDamageRadius: 0
+				knockback: 0
+				shrinkX: 0
+				shrinkY: 0
+				lightRadius: 0
+				lightOpacity: 0
+				lightColor: ffffff
+				hitShake: 0
+				despawnShake: 0
+				speed: 0
+				buildingDamageMultiplier: 0
+				despawnHit: true
+        despawnUnit: payloadm-strike
+        ignoreSpawnAngle: true
+    }
 }
 
 
 drawer: {
-  type: DrawTurret
+  type: DrawNormalTurret
   parts: [
     {
       type: RegionPart

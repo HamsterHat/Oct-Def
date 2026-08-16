@@ -18,6 +18,7 @@ mineFloor: true
 mineWalls: true
 mineRange: 14
 drawMineBeam: false
+coreUnitDock: true
 
 weapons: [
 {

@@ -1,13 +1,14 @@
 type: MendProjector
 name: Ремонтирующая вышка
 size: 3
-reload: 30
+reload: 60
 range: 125
 health: 900
 category: effect
-healPercent: 1.3
+healPercent: 1.5
 phaseBoost: 1
 phaseRangeBoost: 1
+baseColor: 248b3e
 requirements: [
     coper/300
     svinec/505

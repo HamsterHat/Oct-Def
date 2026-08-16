@@ -4,13 +4,13 @@ description: "Быстро стреляет обычными пулями"
 size: 2
 outlineIcon: false
 health: 400
-rotateSpeed: 2.9
+rotateSpeed: 2.8
 targetAir: true
 targetGround: true
 range: 200
 shootCone: 1
 shootSound: shoot
-reload: 25
+reload: 40
 inaccuracy: 1
 
 ammoTypes: {
@@ -31,8 +31,9 @@ ammoTypes: {
         reflectable: false
         speed: 4
 		knockback: 1.2
-        damage: 20
+        damage: 22
         frontColor: 09752d
+        reloadMultiplier: 0.7
         backColor: 0a3818
         fragBullets: 1
         fragBullet: {
@@ -100,7 +101,7 @@ ammoTypes: {
         status: none
         hittable: false
         speed: 4
-        damage: 15.5
+        damage: 18
 		knockback: 1.2
         frontColor: 0aad0a
         backColor: 14661aff
@@ -121,7 +122,8 @@ ammoTypes: {
         status: none
         hittable: false
         speed: 4
-        damage: 40
+        damage: 34
+        reloadMultiplier: 0.8
 		    knockback: 1.3
         frontColor: 665c5c
         backColor: 241f1f
@@ -130,7 +132,7 @@ ammoTypes: {
         type: BasicBulletType
         ammoMultiplier: 1
         hitSize: 10
-        lifetime: 50
+        lifetime: 75
         width: 3
         height: 8
         reflectable: false
@@ -144,23 +146,27 @@ ammoTypes: {
         speed: 4
 		    knockback: 1.5
         damage: 47.5
+        pierce: true
+        pierceBuilding: true
+        pierceCap: 2
         frontColor: "0e4274"
         backColor: 120329
+        reloadMultiplier: 0.35
  }
  
 
   }
 
 requirements: [
-  coper/30
-  svinec/15
+  coper/35
+  svinec/20
 ]
 category: turret
 research: {
 	parent: turret
 	requirements: [
-  		coper/60
-  		svinec/30
+  		coper/70
+  		svinec/40
 	]
 }
 

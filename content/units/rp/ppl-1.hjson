@@ -17,6 +17,7 @@ ammoType: {
 	ammoPerItem: 1
 }
 ammoCapacity: 16
+canDrown: false
 weapons: [
 {
 reload: 380

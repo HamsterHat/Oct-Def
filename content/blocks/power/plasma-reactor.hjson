@@ -1,0 +1,47 @@
+type: "ImpactReactor"
+name: "Плазменный Реактор"
+description: Превращает электриум и топий в плазму, вырабатывая коллосальное количество энергии. Требует энергию для запуска.
+health: 1750
+size: 4
+hasItems: true
+outputsPower: true
+breakable: true
+powerProduction: 1166.6666666666667
+consumes: {
+  items: [
+	topi/1
+	energosteklo/1
+  ]
+  liquids: {
+		liquids: [
+			voda/0.5
+		]
+	}
+  power: 233.33333333333334
+}
+
+explosionRadius: 99	
+explosionDamage: 5790
+explodeSound: nukeBoom
+
+warmupSpeed: 0.002	
+itemDuration: 99
+
+category: power
+research:{
+parent: yr
+	requirements:[
+		stal/5000
+		titan/2400
+		energosteklo/1400
+		coper/6000
+		svinec/1600
+	]
+}
+requirements: [
+	stal/2500
+	titan/1200
+	energosteklo/700
+	coper/3000
+	svinec/800
+]

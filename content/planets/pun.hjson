@@ -28,15 +28,13 @@ allowLaunchToNumbered: true
 radius: 1
 allowLaunchSchematics: false
 allowLaunchLoadout: false
-
-//Отрисовка облаков
 cloudMesh: {
   type: HexSkyMesh
   planet: Pun
   seed: 2
   speed: 3
   radius: 0.05
-  divisions: 5
+  divisions: 6
   color: b9edf0
   octaves: 2
   persistence: 1
@@ -50,7 +48,7 @@ mesh: {
     seed: 562697
     color1: 2f88a8
     color2: 37b726
-    divisions: 5
+    divisions: 6
     radius: 0.9
     octaves: 7
     persistence: 1

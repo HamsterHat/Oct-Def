@@ -10,7 +10,15 @@ rotateSpeed: 3
 hitSize: 8
 canDrown: false
 stepShake: 0
-
+coreUnitDock: true
+buildSpeed: 1.75
+buildRange: 24
+mineSpeed: 8
+mineTier: 3
+mineFloor: true
+mineWalls: true
+mineRange: 18
+drawMineBeam: false
 
 
 weapons: [

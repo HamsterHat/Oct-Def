@@ -7,8 +7,8 @@ health: 100
 rotateSpeed: 4
 targetAir: true
 targetGround: true
-maxAmmo: 30
-reload: 30
+maxAmmo: 45
+reload: 15
 range: 125
 reload: 30
 shootCone: 5
@@ -33,7 +33,7 @@ ammoTypes: {
         hitSoundVolume: 0.1
         hittable: false
         speed: 4
-        damage: 6
+        damage: 12
 		knockback: 0.3
     frontColor: 0aad0a
         backColor: 14661aff
@@ -54,10 +54,10 @@ ammoTypes: {
         statusDuration: 600
         status: none
         hittable: false
-        reloadMultiplier: 0.6
+        reloadMultiplier: 0.4
         speed: 4
         buildingDamageMultiplier: 0.3
-        damage: 9
+        damage: 18
 		    knockback: 0.4
         frontColor: 09752d
         backColor: 0a3818
@@ -129,8 +129,8 @@ ammoTypes: {
         hitSoundVolume: 0.1
         hittable: false
         speed: 4
-        damage: 11
-        reloadMultiplier: 0.4
+        damage: 22
+        reloadMultiplier: 0.6
 		knockback: 0.7
     frontColor: 665c5c
         backColor: 241f1f
