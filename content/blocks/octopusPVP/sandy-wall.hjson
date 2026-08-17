@@ -2,7 +2,7 @@ type: Wall
 name: Песчанный Барьер
 health: 30
 requirements: [
-    stone/18
+    pesok/18
 ]
 destroySound: wall-break
 category: defense

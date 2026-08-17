@@ -44,3 +44,10 @@ weapons: [
    }
 ]
 immunities: [blowedup]
+research: {
+	parent: tfact
+	requirements: [
+		stal/45
+      coper/30
+	]
+}

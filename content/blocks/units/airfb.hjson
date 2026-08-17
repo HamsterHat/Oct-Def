@@ -48,7 +48,7 @@ requirements: [
   svinec/95
 ]
 research: {
-	parent: base-land
+	parent: tankfabric
 	requirements: [
 		titan/200
 		coper/200

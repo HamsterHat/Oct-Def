@@ -10,7 +10,6 @@ targetGround: true
 maxAmmo: 45
 reload: 15
 range: 125
-reload: 30
 shootCone: 5
 shootSound: shoot
 inaccuracy: 5

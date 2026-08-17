@@ -1,0 +1,48 @@
+name: "Завод Танков"
+alwaysUnlocked: false
+type: UnitFactory
+health: 900
+size: 3
+configurable: true
+plans: [
+  {
+    unit: mod-betta
+    requirements: [
+      stal/15
+      coper/10
+    ]
+    time: 900
+  },
+  {
+    unit: groza
+    requirements: [
+      stal/45
+      coper/50
+      titan/45
+    ]
+    time: 1200
+  },
+    {
+    unit: prv
+    requirements: [
+      stal/85
+      coper/90
+      titan/75
+    ]
+    time: 3450
+  }
+]
+category: units
+requirements: [
+  titan/90
+  coper/100
+  svinec/100
+]
+research: {
+	parent: tankfabric
+	requirements: [
+		titan/180
+		coper/200
+		svinec/200
+	]
+}

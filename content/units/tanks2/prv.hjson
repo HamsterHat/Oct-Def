@@ -51,3 +51,11 @@ weapons: [
    }
 ]
 immunities: [blowedup]
+research: {
+	parent: groza
+	requirements: [
+		stal/255
+      coper/270
+      titan/225
+	]
+}

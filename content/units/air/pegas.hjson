@@ -166,7 +166,7 @@ ammoCapacity: 120
 weapons: [
 	{
 	name: pegml
-	reload: 240
+	reload: 320
 	x: 0
 	y: 0
 	mirror: false
@@ -211,7 +211,7 @@ weapons: [
 	}
 {
 name: peggun
-	reload: 10
+	reload: 25
 	x: 16
 	y: 0
 	controllable: false
@@ -229,7 +229,7 @@ name: peggun
 		}
 }
 {
-reload: 120
+reload: 240
 x: 8
 y: 0
 mirror: true
@@ -245,7 +245,7 @@ spawnUnit: sokolMissile
 }
 }
 {
-reload: 120
+reload: 240
 x: 16
 y: 0
 mirror: true
@@ -261,7 +261,7 @@ spawnUnit: sokolMissile
 }
 }
 {
-reload: 120
+reload: 240
 x: 24
 y: 0
 mirror: true

@@ -10,7 +10,33 @@ radius: 80
 sides: 360
 shieldHealth: 1280
 cooldownNormal: 0.3
-cooldownLiquid: 0.15
+cooldownLiquid: 0.08
+
+shieldBreakEffect: [
+    {
+      type: ParticleEffect
+      particles: 1
+      lifetime: 15
+      length: 0
+      colorFrom: f0ff1b88
+      colorTo: f0ff1b00
+      sizeFrom: 80
+	  sizeTo: 80
+      layer: 125
+    }
+    {
+      type: WaveEffect
+      lifetime: 20
+      sizeTo: 80
+	  sizeFrom: 80
+	  strokeFrom: 8
+	  strokeTo: 8
+      colorFrom: f0ff1b88
+      colorTo: f0ff1b00
+      layer: 125
+    }
+]
+
 consumes: {
 	power: 50
 }

@@ -44,3 +44,11 @@ weapons: [
    }
 ]
 immunities: [blowedup]
+research: {
+	parent: mod-betta
+	requirements: [
+		stal/135
+      coper/150
+      titan/135
+	]
+}

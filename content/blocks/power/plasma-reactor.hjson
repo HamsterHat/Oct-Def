@@ -24,7 +24,7 @@ explosionRadius: 99
 explosionDamage: 5790
 explodeSound: nukeBoom
 
-warmupSpeed: 0.002	
+warmupSpeed: 0.0006	
 itemDuration: 99
 
 category: power
