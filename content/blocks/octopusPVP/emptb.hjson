@@ -1,4 +1,5 @@
-type: Wall
+type: LiquidRouter
+liquidCapacity: 90
 name: Бочка
 health: 45
 requirements: [

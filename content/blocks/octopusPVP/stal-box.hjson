@@ -1,4 +1,6 @@
-type: Wall
+type: StorageBlock
+coreMerge: false
+itemCapacity: 80
 name: Железный ящик
 health: 85
 requirements: [

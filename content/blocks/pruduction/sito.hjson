@@ -1,0 +1,42 @@
+name: Дистилятор
+description: Очищает воду от примесей
+type: genericCrafter
+outputLiquid: disvod/0.4
+size: 2
+health: 400
+liquidCapacity: 80
+hasPower: false
+hasLiquids: true
+craftTime: 1
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		}
+	]
+}
+
+consumes: {
+	power: 5.666666666666667
+	liquids: {
+		liquids: [
+			voda/0.4
+		]
+	}
+}
+
+category: crafting
+requirements: [
+	coper/80
+	stal/100
+	svinec/35
+]
+research: {
+	parent: crp
+	requirements: [
+  		coper/160
+  		stal/200
+  		svinec/70
+	]
+}
