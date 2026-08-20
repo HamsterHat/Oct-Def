@@ -1,0 +1,64 @@
+name: Balancing & Feedback
+description: Provide balance suggestions or feedback on existing features
+title: "[Balance]: "
+labels: ["balancing/feedback"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Target Category
+      description: What specific part of OctopusDefence needs rebalancing?
+      multiple: false
+      options:
+        - Turret / Weapon
+        - Unit / Octopus Entity
+        - Block / Wall / Conveyor
+        - Economy / Item Cost
+        - Other Mechanic
+    validations:
+      required: true
+
+  - type: input
+    id: target-name
+    attributes:
+      label: Affected Element Name
+      description: Enter the exact name of the turret, unit, or feature you want to change.
+      placeholder: e.g., Punium Wall, Pneumogun
+    validations:
+      required: true
+
+  - type: dropdown
+    id: game-mode
+    attributes:
+      label: Game Context
+      description: Where does this balance issue stand out the most?
+      multiple: true
+      options:
+        - Campaign / Singleplayer
+        - Custom Maps / Sandbox
+        - Multiplayer (PvP)
+        - Multiplayer (Co-op / Attack)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State & Problem
+      description: Describe what you would like changed, and why. What makes it currently underpowered, overpowered, or annoying?
+      placeholder: Explain the current balance problem here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-changes
+    attributes:
+      label: Proposed Changes & Stats
+      description: Describe the changes you want to propose. Include exact numbers, stat tweaks, or possible alternatives.
+      placeholder: |
+        e.g.,
+        - Reduce damage from 50 to 35
+        - Increase reload time by 20%
+        - Alternative: Increase punium cost instead of nerfing damage
+    validations:
+      required: true

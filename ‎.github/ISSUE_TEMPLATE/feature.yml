@@ -1,0 +1,57 @@
+name: Feature Request
+description: Suggest new content or mechanics for OctopusDefence
+title: "[Suggestion]: "
+labels: ["feature request"]
+body:
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: What kind of content are you proposing?
+      description: Select the category that best fits your suggestion.
+      multiple: false
+      options:
+        - New Turret / Weapon
+        - New Unit / Octopus Entity
+        - New Block / Wall / Factory
+        - New Item / Liquid
+        - Gameplay Mechanic Change
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Content or Mechanics Description
+      description: Describe the content or mechanics you are proposing in detail.
+      placeholder: Explain what your proposed block, unit, or mechanic does.
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Gameplay Niche & Improvement
+      description: Describe how you think this content will improve the mod. Mention how it adds more gameplay options or how it fills a new niche.
+      placeholder: Why should this be added to OctopusDefence? What unique role does it play?
+    validations:
+      required: true
+
+  - type: textarea
+    id: visual-ideas
+    attributes:
+      label: Visuals & Concepts (Optional)
+      description: If you have ideas for how this should look, or references to other mechanics, share them here.
+      placeholder: Describe the appearance, animations, or concept art if available.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Before Submitting
+      description: Check the boxes below to confirm that you have acknowledged them.
+      options:
+        - label: I am familiar with the content already in the mod and have made sure my suggestion doesn't exist yet.
+          required: true
+        - label: I understand that developers can change or reject this idea based on mod balance and technical limitations.
+          required: true
