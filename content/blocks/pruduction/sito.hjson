@@ -5,7 +5,6 @@ outputLiquid: disvod/0.4
 size: 2
 health: 400
 liquidCapacity: 80
-hasPower: false
 hasLiquids: true
 craftTime: 1
 drawer: {

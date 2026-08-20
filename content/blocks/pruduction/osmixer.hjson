@@ -1,0 +1,56 @@
+name: Мешалка Огнесмеси
+description: Смешивает Топий и Керосин для получения Огнесмеси.
+type: genericCrafter
+outputLiquid: os/0.4
+size: 3
+health: 900
+liquidCapacity: 140
+hasLiquids: true
+craftTime: 60
+baseExplosiveness: 3
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		},
+		{
+		type: DrawLiquidRegion
+		drawLiquid: os
+		suffix: "-os"
+		},
+		{
+		type: DrawLiquidRegion
+		drawLiquid: krs
+		suffix: "-krs"
+		}
+	]
+}
+consumes: {
+	power: 22.5
+	liquids: {
+		liquids: [
+			krs/0.45
+		]
+	}
+	items: [
+		topi/3
+	]
+}
+
+category: crafting
+requirements: [
+	coper/635
+	svinec/170
+	stal/75
+	titan/550
+]
+research: {
+	parent: meshalka-piro
+	requirements: [
+		coper/1270
+		svinec/340
+		stal/150
+		titan/1100
+	]
+}

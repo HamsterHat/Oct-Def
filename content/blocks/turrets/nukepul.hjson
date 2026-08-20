@@ -56,72 +56,7 @@ uran: {
         frontColor: 31f500
 	}
 
-    energosteklo: {
-        type: BasicBulletType
-        lifetime: 38
-        pierce: true
-        width: 2
-        height: 6
-        despawnHit: true
-        ammoMultiplier: 5
-        trailChance: 1
-    		trailEffect: {
-                	type: ParticleEffect
-               		particles: 10
-               		lifetime: 5
-              		length: 15
-              		sizeFrom: 4
-              		sizeTo: 1
-              		colorFrom: 36add6
-              		colorTo: abe2f5
-              		strokeFrom: 3
-              		strokeTo: 1.5
-              		interp: pow3Out
-              		spin: 5
-              		sizeInterp: pow2In
-              		region: mod-triangle
-              		offsetX: 3
-    		}
-        	hitEffect: [
-        		{
-          		type: WaveEffect
-          		lifetime: 30
-          		sizeFrom: 1
-          		sizeTo: 70
-          		strokeFrom: 5
-          		strokeTo: 0
-          		colorFrom: c0ecff
-          		colorTo: c0ecff
-        		}
-          	      	{
-          		type: ParticleEffect
-          		lifetime: 40
-          		sizeFrom: 1
-          		sizeTo: 10
-          		strokeFrom: 100
-         		strokeTo: 0
-          		colorFrom: c0ecff
-          		colorTo: c0ecff
-          		spin: 5
-          		region: mod-triangle
-        		}
-        	]
-        shootEffect: shootBig2
-        smokeEffect: shootBigSmoke2
-        hitSound: rkst
-        collidesAir: true
-        pierceBuilding: true
-        hitSoundVolume: 0.3
-        reflectable: false
-        statusDuration: 280
-        status: atom-colapse
-        speed: 5
-        damage: 190
-        makeFire: true
-		knockback: 0.4
-        frontColor: 0087f5
-        reloadMultiplier: 0.6
-	}
+    
 }
 requirements: [
 	coper/570

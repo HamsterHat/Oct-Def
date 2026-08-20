@@ -1,0 +1,68 @@
+type: Fracker
+name: Нефтяная Вышка
+description: Медленно выкачивает Нефть из подземных резервуаров.
+hasLiquids: true
+liquidCapacity: 240
+baseExplosiveness: 3.6
+size: 4
+pumpAmount: 0.13333333333333333
+warmupSpeed: 0.00001
+category: production
+
+result: neft
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    formsmoke, pulverize,
+    {
+      type: ParticleEffect
+      line: false
+      particles: 15
+      lifetime: 100
+      length: 30
+      colorFrom: 484d30
+      colorTo: "242320"
+      sizeFrom: 3
+      sizeTo: 0
+      interp: pow3Out
+      sizeInterp: linear
+      region: mod-rombe
+    }
+  ]
+}
+updateEffectChance: 0.03
+baseEfficiency: 1
+itemUseTime: 45
+
+consumes: {
+	power: 8.333333333333334
+	liquids: {
+		liquids: [
+			voda/0.6
+		]
+	}
+	items: [
+		pesok/1
+	]
+}
+
+
+requirements: [
+	coper/550
+	svinec/230
+	stal/580
+	titan/345
+]
+
+research: {
+	parent: nasos
+	requirements: [
+		coper/1100
+		svinec/460
+		stal/1160
+		titan/690
+	]
+}
+
+
+
