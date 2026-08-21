@@ -1,0 +1,10 @@
+name: Радиоактивная Вода
+detais: хоть и радиоактивная, но не t2o. и вообще - хватит пихать пенопласт и нейтронные трубки куда не попадя.
+color: 2262b6
+lightColor: 274b33
+flammability: 0
+temperature: 0.3
+heatCapacity: 0.6
+viscosity: 0.3
+explosiveness: 0
+effect: radiated

@@ -1,0 +1,44 @@
+name: Очиститель
+description: Очищает Радиоактивную Воду от урана.
+type: GenericCrafter
+outputLiquid: voda/0.16666666666666666
+outputItem: uran/4
+size: 4
+health: 1600
+liquidCapacity: 160
+hasLiquids: true
+craftTime: 60
+baseExplosiveness: 0.3
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+		type: DrawDefault
+		}
+	]
+}
+consumes: {
+	power: 38.333333333333336
+	liquids: {
+		liquids: [
+			radvoda/0.25
+		]
+	}
+}
+
+category: crafting
+requirements: [
+	coper/1300
+	svinec/1120
+	titan/790
+	stal/560
+]
+research: {
+	parent: sito
+	requirements: [
+		coper/2600
+		svinec/2220
+		titan/1580
+		stal/1120
+	]
+}

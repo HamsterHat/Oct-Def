@@ -46,7 +46,7 @@ requirements: [
 	titan/550
 ]
 research: {
-	parent: meshalka-piro
+	parent: oilsplitter
 	requirements: [
 		coper/1270
 		svinec/340

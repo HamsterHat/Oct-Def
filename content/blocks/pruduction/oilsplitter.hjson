@@ -48,7 +48,7 @@ requirements: [
 	stal/1150
 ]
 research: {
-	parent: oiltower
+	parent: meshalka-piro
 	requirements: [
   		coper/2400
 		svinec/1500
