@@ -1,0 +1,21 @@
+name: Submit Fanart / Sprites
+description: Share your drawings, custom sprite re-skins, or pixel art for OctopusDefence.
+title: "[Art]: "
+labels: ["assets"]
+body:
+  - type: textarea
+    id: art-description
+    attributes:
+      label: About your Artwork
+      description: What block or unit inspired this art? Did you make it for a custom re-skin?
+      placeholder: Describe your creation here.
+    validations:
+      required: true
+  - type: textarea
+    id: image-links
+    attributes:
+      label: Image Attachments
+      description: Drag and drop your PNG or JPG files directly into this box to display them.
+      placeholder: Drop your images here.
+    validations:
+      required: true

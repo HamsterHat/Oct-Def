@@ -1,0 +1,20 @@
+name: Share a Map
+description: Show off and share your custom maps made for Planet Pun.
+title: "[Map]: "
+labels: ["maps"]
+body:
+  - type: input
+    id: map-name
+    attributes:
+      label: Map Name
+      placeholder: e.g., Puny Valley
+    validations:
+      required: true
+  - type: textarea
+    id: map-desc
+    attributes:
+      label: Map Description & Rules
+      description: Tell other players what to expect (e.g., number of enemy spawns, resource availability).
+      placeholder: Describe your map here.
+    validations:
+      required: true

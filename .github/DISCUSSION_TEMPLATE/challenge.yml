@@ -1,0 +1,20 @@
+name: Propose a Challenge
+description: Create a custom gameplay challenge for other players to try.
+title: "[Challenge]: "
+labels: ["gameplay"]
+body:
+  - type: input
+    id: challenge-title
+    attributes:
+      label: Challenge Name
+      placeholder: e.g., The No-Turret Puny Run
+    validations:
+      required: true
+  - type: textarea
+    id: challenge-rules
+    attributes:
+      label: Rules and Constraints
+      description: List exactly what the player is allowed and not allowed to do.
+      placeholder: "e.g., 1. Only use tank units. 2. Do not build walls."
+    validations:
+      required: true
