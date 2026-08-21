@@ -2,7 +2,7 @@ type: Fracker
 name: Нефтяная Вышка
 description: Медленно выкачивает Нефть из подземных резервуаров.
 hasLiquids: true
-liquidCapacity: 240
+liquidCapacity: 1650
 baseExplosiveness: 3.6
 size: 4
 pumpAmount: 0.13333333333333333

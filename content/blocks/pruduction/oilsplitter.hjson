@@ -1,0 +1,58 @@
+name: Делитель
+description: Делит Нефть на Пропан, Керосин, Масло и Мазут.
+type: GenericCrafter
+outputLiquids: [
+	ppan/0.016666666666666666
+	krs/0.05
+	maslo/0.058333333333333334
+	mzut/0.08333333333333333
+]
+liquidOutputDirections: [0, 1, 2, 3]
+baseExplosiveness: 2.1
+size: 4
+health: 1690
+liquidCapacity: 120
+hasLiquids: true
+craftTime: 1
+rotate: true
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+			type: DrawDefault
+		},
+		{
+			type: DrawBlock
+		},
+		{
+			type: DrawLiquidOutputs
+		}
+	]
+}
+dumpExtraLiquid: false
+ignoreLiquidFullness: false
+consumes: {
+	power: 8.333333333333334
+	liquids: {
+		liquids: [
+			neft/0.16666666666666666
+		]
+	}
+}
+
+category: crafting
+requirements: [
+	coper/1200
+	svinec/750
+	titan/1050
+	stal/1150
+]
+research: {
+	parent: oiltower
+	requirements: [
+  		coper/2400
+		svinec/1500
+		titan/2100
+		stal/2300
+	]
+}
