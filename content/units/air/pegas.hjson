@@ -11,12 +11,6 @@ health: 12000
 speed: 0.9
 range: 250
 rotateSpeed: 0.9
-ammoType: {
-	type: ItemAmmoType
-	item: dinamit
-	range: 80
-	ammoPerItem: 4
-}
 
 fallEffect: {
     type: MultiEffect,
@@ -162,7 +156,7 @@ deathEffect: {
     ]
 }
  
-ammoCapacity: 120
+
 weapons: [
 	{
 	name: pegml

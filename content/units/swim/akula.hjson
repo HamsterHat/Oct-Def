@@ -10,13 +10,7 @@ rotateMoveFirst: false
 hitSize: 24
 rotateSpeed: 0.15
 speed: 0.4
-ammoType: {
-	type: ItemAmmoType
-	item: titan
-	range: 40
-	ammoPerItem: 1
-}
-ammoCapacity: 120
+
 weapons: [
 	{
 	name: akulp1
@@ -32,7 +26,7 @@ weapons: [
 			type: LaserBoltBulletType
 			width: 2
 			height: 16
-			damage: 300
+			damage: 180
 			lifetime: 80
 			speed: 4
 			frontColor: 00ff00
@@ -58,15 +52,15 @@ weapons: [
 	shootSound: veryBigCannon
 		bullet: {
 			type: BasicBulletType
-			damage: 120
+			damage: 230
 			width: 4
 			height: 16
 			speed: 4
-			frontColor: cococo
-			backColor: cococo
+			frontColor: c0c0c0
+			backColor: c0c0c0
 			lifetime: 80
 			makeFire: true
-			splashDamage: 600
+			splashDamage: 340
 			splashDamageRadius: 32
 			shootEffect: shootBig
 			hitEffect: {
@@ -81,5 +75,4 @@ weapons: [
 ]
 accel: 0.2
 drag: 0.1
-immunities: [wetted, wet]
-immunities: [blowedup]
+immunities: [wetted, wet, blowedup]

@@ -1,6 +1,6 @@
 name: Ураган
 type: tank
-hitSize: 32
+hitSize: 28
 omniMovement: false
 alwaysUnlocked: false
 outlines: false
@@ -8,14 +8,8 @@ health: 15000
 armor: 1
 speed: 0.4
 rotateSpeed: 0.8
-range: 160
-ammoType: {
-	type: ItemAmmoType
-	item: pirosmes
-	range: 80
-	ammoPerItem: 1
-}
-ammoCapacity: 80
+range: 280
+
 weapons: [
  {
  name: uragan-missile-launcher
@@ -54,7 +48,7 @@ weapons: [
     splashDamageRadius: 18
     splashDamage: 55
     speed: 5
-    lifetime: 32
+    lifetime: 64
     }
    }
 ]

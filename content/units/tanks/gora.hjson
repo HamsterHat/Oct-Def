@@ -1,21 +1,14 @@
 name: Буря
 type: tank
-hitSize: 3
+hitSize: 5
 omniMovement: false
 alwaysUnlocked: false
-health: 100
+health: 260
 armor: 0
-speed: 0.6
+speed: 0.8
 outlines: false
-rotateSpeed: 1.6
+rotateSpeed: 3.3
 range: 200
-ammoType: {
-	type: ItemAmmoType
-	item: coper
-	range: 80
-	ammoPerItem: 3
-}
-ammoCapacity: 200
 weapons: [
  {
  name: puskaG
@@ -25,7 +18,6 @@ weapons: [
     mirror: false
     rotate: true
     layerOffset: 2
-    ignoreRotation: true
     reload: 60
     recoil: 0.9
     shootSound: shoot

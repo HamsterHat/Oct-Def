@@ -3,19 +3,13 @@ type: tank
 hitSize: 8
 omniMovement: false
 alwaysUnlocked: false
-health: 100
+health: 140
 armor: 0
-speed: 0.9
-rotateSpeed: 1.6
+speed: 1.2
+rotateSpeed: 3.6
 outlines: false
 range: 150
-ammoType: {
-	type: ItemAmmoType
-	item: coper
-	range: 80
-	ammoPerItem: 3
-}
-ammoCapacity: 200
+
 weapons: [
  {
  name: bp
@@ -26,7 +20,6 @@ weapons: [
     mirror: false
     rotate: true
     layerOffset: 2
-    ignoreRotation: true
     reload: 15
     recoil: 0.5
     shootSound: shoot
@@ -37,7 +30,7 @@ weapons: [
     status: none
     hitSize: 1
     shootEffect: shootSmall
-    damage: 35
+    damage: 14
     speed: 5
     lifetime: 30
     }

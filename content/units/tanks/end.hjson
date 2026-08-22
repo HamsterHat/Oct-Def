@@ -1,6 +1,6 @@
 name: Торнадо
 type: tank
-hitSize: 35
+hitSize: 28
 omniMovement: false
 alwaysUnlocked: false
 outlines: false
@@ -8,25 +8,18 @@ health: 3500
 armor: 1
 speed: 0.5
 rotateSpeed: 1.2
-range: 100
-ammoType: {
-	type: ItemAmmoType
-	item: pirosmes
-	range: 80
-	ammoPerItem: 2
-}
-ammoCapacity: 100
+range: 290
+
 weapons: [
  {
  name: endp
  x: 0
  y: 0
-    rotateSpeed: 0.7
+    rotateSpeed: 1.2
     shootY: 20
     mirror: false
     rotate: true
     layerOffset: 2
-    ignoreRotation: true
     reload: 90
     recoil: 1.6
     shootSound: shootBig

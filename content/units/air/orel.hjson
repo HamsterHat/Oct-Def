@@ -12,12 +12,6 @@ speed: 1.9
 range: 8
 circleTarget: true
 rotateSpeed: 1
-ammoType: {
-	type: ItemAmmoType
-	item: pirosmes
-	range: 80
-	ammoPerItem: 2
-}
 
 fallEffect: {
   type: MultiEffect
@@ -93,15 +87,15 @@ deathEffect: {
     }
   ]
 }
-ammoCapacity: 70
+
+
 weapons: [
 	{
 	name: op
 	reload: 15
 	x: 12
 	y: -4
-	controllable: false
-	autoTarget: true
+	aiCcontrollable: false
 	mirror: true
 	rotate: true
 	rotateSpeed: 5
@@ -110,14 +104,14 @@ weapons: [
 			damage: 30
 			speed: 4
 			lifetime: 62.5
-			collidesGround: false
+			collidesGround: true
 			collidesAir: true
 		}
 	}
 	{
 	    x: 3
         shootY: 0
-        reload: 10
+        reload: 45
         shootCone: 180
         ejectEffect: none
         inaccuracy: 15
@@ -139,7 +133,7 @@ weapons: [
                     damage: 55
                     splashDamage: 160
                     splashDamageRadius: 32
-                    fragBullets: 50
+                    fragBullets: 16
                     fragBullet: fireball
                 }
 	}

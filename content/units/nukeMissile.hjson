@@ -330,10 +330,10 @@ weapons: [
 		lifetime: 1
 		hittable: false
 		instantDisappear: true
-		damage: 0
+		damage: 120
 		collides: false
 		reflectable: false
-		splashDamage: 0
+		splashDamage: 140
 		splashDamageRadius: 400
 		speed: 0
 		makeFire: true
@@ -374,24 +374,24 @@ weapons: [
 			pierceBuilding: true
 			splashDamagePierce: false
 			pierceDamageFactor: 1
-			fragBullets: 1440
+			fragBullets: 380
 			fragOffsetMin: 0
 			fragOffsetMax: 0
 			fragVelocityMin: 1
 			fragVelocityMax: 1
 			fragBullet: {
 				type: BulletType
-				lifetime: 5.333333333
+				lifetime: 6.333333333
 				speed: 30
-				drag: 0.011
+				drag: 0.3
 				damage: 450
 				buildingDamageMultiplier: 1
 				splashDamage: 250
-				splashDamageRadius: 67
+				splashDamageRadius: 45
 				splashDamagePierce: true
 				pierce: true
 				pierceBuilding: true
-				pierceDamageFactor: 0.2
+				pierceDamageFactor: 1
 				absorbable: false
 				hittable: false
 				reflectable: false

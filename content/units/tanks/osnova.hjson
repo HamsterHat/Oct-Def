@@ -2,20 +2,14 @@ name: Вихрь
 type: tank
 hitSize: 4
 omniMovement: false
-health: 50
+health: 110
 alwaysUnlocked: false
 armor: 0
-speed: 0.3
-rotateSpeed: 1.8
+speed: 1.2
+rotateSpeed: 3.4
 range: 150
 outlines: false
-ammoType: {
-	type: ItemAmmoType
-	item: coper
-	range: 80
-	ammoPerItem: 3
-}
-ammoCapacity: 200
+
 weapons: [
  {
  name: ps
@@ -25,7 +19,6 @@ weapons: [
     mirror: false
     rotate: true
     layerOffset: 2
-    ignoreRotation: true
     reload: 15
     recoil: 0.5
     shootSound: shoot

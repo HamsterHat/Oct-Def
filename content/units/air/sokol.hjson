@@ -7,17 +7,12 @@ armor: 0
 faceTarget: true
 squareShape: false
 hitSize: 16
-health: 5000
+health: 2600
 speed: 1.2
 range: 250
 rotateSpeed: 1
-ammoType: {
-	type: ItemAmmoType
-	item: dinamit
-	range: 80
-	ammoPerItem: 4
-}
-ammoCapacity: 80
+
+
 
 fallEffect: {
     type: MultiEffect,
@@ -130,7 +125,7 @@ statusDuration: 186
 }
 }
 {
-reload: 120
+reload: 480
 x: 8
 y: 0
 mirror: true
@@ -146,7 +141,7 @@ spawnUnit: sokolMissile
 }
 }
 {
-reload: 120
+reload: 480
 x: 16
 y: 0
 mirror: true

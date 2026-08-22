@@ -6,7 +6,7 @@ outlines: false
 faceTarget: true
 #squareShape: true
 health: 200
-range: 40
+range: 140
 rotateMoveFirst: false
 hitSize: 16
 rotateSpeed: 1
@@ -27,9 +27,9 @@ weapons: [
 	rotate: true
 	rotateSpeed: 5
 		bullet: {
-			damage: 100
+			damage: 12
 			speed: 4
-			lifetime: 100
+			lifetime: 50
 		}
 	}
 	{
@@ -41,9 +41,9 @@ weapons: [
 	rotate: true
 	rotateSpeed: 5
 		bullet: {
-			damage: 100
+			damage: 12
 			speed: 4
-			lifetime: 100
+			lifetime: 50
 		}
 	}
 ]
@@ -56,5 +56,4 @@ hittable: true
 targetable: true
 coreUnitDock: true
 outlineColor: 000000
-immunities: [wetted, wet]
-immunities: [blowedup]
+immunities: [wetted, wet, blowedup]

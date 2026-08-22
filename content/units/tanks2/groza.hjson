@@ -8,14 +8,8 @@ armor: 0
 speed: 0.5
 rotateSpeed: 1.1
 outlines: false
-range: 250
-ammoType: {
-	type: ItemAmmoType
-	item: titan
-	range: 80
-	ammoPerItem: 2
-}
-ammoCapacity: 120
+range: 230
+
 weapons: [
  {
  name: grp
@@ -26,7 +20,6 @@ weapons: [
     mirror: false
     rotate: true
     layerOffset: 2
-    ignoreRotation: true
     reload: 30
     recoil: 3
     shootSound: shootBig
@@ -37,7 +30,7 @@ weapons: [
     status: none
     hitSize: 1
     shootEffect: shootBig
-    damage: 100
+    damage: 38
     speed: 5
     lifetime: 50
     }

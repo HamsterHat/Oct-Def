@@ -6,19 +6,12 @@ armor: 0
 faceTarget: true
 outlines: false
 health: 90
-range: 80
+range: 140
 hitSize: 8
 engineOffset: 8
 engineSize: 2
 rotateMoveFirst: false
-rotateSpeed: 1
-ammoType: {
-	type: ItemAmmoType
-	item: coper
-	range: 80
-	ammoPerItem: 3
-}
-ammoCapacity: 200
+
 
 fallEffect: {
   type: MultiEffect
@@ -98,7 +91,7 @@ rotateSpeed: 5
 shootY: 12
 		bullet: {
 			type: BasicBulletType
-			damage: 30
+			damage: 8
 			speed: 4
 			lifetime: 42
 		}
