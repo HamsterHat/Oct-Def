@@ -43,12 +43,12 @@
 
 *   **[Anuken](https://github.com/Anuken)** — за создание *Mindustry*, основы для всех механик и пожирателя моего свободного времени.
 *   **BYRIL LLC** — за их крутой блокнотный стиль графики.
-*   **[LixieWulf](https://github.com)** — за идеи с окружением и игровыми механиками, которые заставили меня сказать: «Вау, мне это тоже надо».
-*   **[Sh1penfire](https://github.com)** — за крутые мысли по реализации некоторых механик.
-*   **[ItsKirby69](https://github.com)** — за вдохновение в оформлении игрового мира.
-*   **[FlinTyX](https://github.com)** — за идею добавить животных, потому что с ними игра выглядит гораздо живее.
+*   **[LixieWulf](https://github.com/LixieWulf)** — за идеи с окружением и игровыми механиками, которые заставили меня сказать: «Вау, мне это тоже надо».
+*   **[Sh1penfire](https://github.com/Sh1penfire)** — за крутые мысли по реализации некоторых механик.
+*   **[ItsKirby69](https://github.com/ItsKirby69)** — за вдохновение в оформлении игрового мира.
+*   **[FlinTyX](https://github.com/FlinTyX)** — за идею добавить животных, потому что с ними игра выглядит гораздо живее.
 *   **[Catana791](https://github.com/Catana791)** — за контентную базу и крутые геймплейные наработки, подсмотренные в его модах.
-*   **[EyeOfDarkness](https://github.com)** — за концепты ядерного оружия, лазеров и визуальных эффектов (VFX). Делать тихо — скучно, всё должно бабахать красиво!
+*   **[EyeOfDarkness](https://github.com/EyeOfDarkness)** — за концепты ядерного оружия, лазеров и визуальных эффектов (VFX). Делать тихо — скучно, всё должно бабахать красиво!
 *   **[MEEPofFaith](https://github.com/MEEPofFaith)** — за вдохновение его техническим хаосом и идею добавить тотальный ядерный апокалипсис.
 *   **Мой брат** — за то, что превратил наброски для треков *Boss 1*, *Land*, *Launch* и главного меню в отличные саундтреки.
 
@@ -82,15 +82,15 @@ Vanilla Mindustry tracks are completely gone. I replaced EVERY single track with
 
 This mod wouldn't have been possible without the amazing ideas, concepts, and creativity of these awesome folks. Shoutout to everyone I proudly took inspiration from:
 
-*   **[Anuken](https://github.com)** — for creating *Mindustry*, providing the foundation for all mechanics, and consuming all of my free time.
+*   **[Anuken](https://github.com/Anuken)** — for creating *Mindustry*, providing the foundation for all mechanics, and consuming all of my free time.
 *   **BYRIL LLC** — for their legendary notebook/doodle art style. Their games inspired me to sit down and completely hand-draw this entire mod. My fingers are bruised, but the style was totally worth it!
-*   **[LixieWulf](https://github.com)** — for environment concepts and mechanics that made me go, "Wow, I need that too."
-*   **[Sh1penfire](https://github.com)** — for great insights on how to implement some of the gameplay mechanics.
-*   **[ItsKirby69](https://github.com)** — for showing me what a great environment looks like.
-*   **[FlinTyX](https://github.com)** — for the idea of adding animals, because a game world feels way more alive with them running around.
-*   **[Catana791](https://github.com)** — for the massive content base and awesome gameplay ideas inspired by his mods.
-*   **[EyeOfDarkness](https://github.com)** — for nukes, lasers, and flashy VFX concepts. Keeping things quiet is boring, everything needs to blow up beautifully!
-*   **[MEEPofFaith](https://github.com)** — for inspiring me with his chaotic tech and the brilliant idea to add total nuclear annihilation.
+*   **[LixieWulf](https://github.com/LixieWulf)** — for environment concepts and mechanics that made me go, "Wow, I need that too."
+*   **[Sh1penfire](https://github.com/Sh1penfire)** — for great insights on how to implement some of the gameplay mechanics.
+*   **[ItsKirby69](https://github.com/ItsKirby69)** — for showing me what a great environment looks like.
+*   **[FlinTyX](https://github.com/FlinTyX)** — for the idea of adding animals, because a game world feels way more alive with them running around.
+*   **[Catana791](https://github.com/Catana791)** — for the massive content base and awesome gameplay ideas inspired by his mods.
+*   **[EyeOfDarkness](https://github.com/EyeOfDarkness)** — for nukes, lasers, and flashy VFX concepts. Keeping things quiet is boring, everything needs to blow up beautifully!
+*   **[MEEPofFaith](https://github.com/MEEPofFaith)** — for inspiring me with his chaotic tech and the brilliant idea to add total nuclear annihilation.
 *   **My Bro** — for turning rough drafts for *Boss 1*, *Land*, *Launch*, and *Menu* into soundtracks.
 
 

@@ -3029,7 +3029,7 @@ Events.run(Trigger.update, () => {
 });*/
 
 
-const SAVE_KEY = "puny_tutorial_finished";
+const SAVE_KEY = "message";
 
 // --- 1. ВЫБОР ПРИ ЗАПУСКЕ ---
 Events.on(ClientLoadEvent, () => {
@@ -3037,15 +3037,14 @@ Events.on(ClientLoadEvent, () => {
     
     if(!Core.settings.getBool(SAVE_KEY, false)){
         Time.run(60, () => {
-            const dialog = new BaseDialog("PUN MOD");
-            dialog.cont.add("Пройти обучение?").row();
+            const dialog = new BaseDialog("[red]WARNING![]");
+            dialog.cont.add("[lime]Octopus Defence[] is still in development and may contain bugs.\nAbsolutely all content is not final and is subject to change.\nJust a heads-up: if you have a weak device, Punies will gladly steal all your RAM\n(especially if you have less than 4-6 GB).").row();
             
-            dialog.cont.button("ДА", () => {
+            dialog.cont.button("I understand the risks", () => {
                 dialog.hide();
-                launchTutorial();
             }).size(200, 60);
             
-            dialog.cont.button("НЕТ", () => {
+            dialog.cont.button("Don't show this again", () => {
                 dialog.hide();
                 Core.settings.put(SAVE_KEY, true);
                 Core.settings.manualSave();
@@ -3069,7 +3068,7 @@ function launchTutorial(){
 }
 
 // --- 2. ЛОГИКА ЗАВЕРШЕНИЯ (Смерть врага) ---
-Events.on(UnitDestroyEvent, e => {
+/*Events.on(UnitDestroyEvent, e => {
     // Проверяем: мы в туториале? (карта sector-zero)
     if(Vars.state.isPlaying() && Vars.state.rules.title === "sector-zero"){
         
@@ -3089,7 +3088,7 @@ Events.on(UnitDestroyEvent, e => {
             }, 2);
         }
     }
-});
+});*/
 
 
 
