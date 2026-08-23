@@ -76,3 +76,13 @@ weapons: [
 accel: 0.2
 drag: 0.1
 immunities: [wetted, wet, blowedup]
+
+research: {
+	parent: skatUnit
+	requirements: [
+		stal/690
+		coper/600
+		titan/660
+		svinec/420
+	]
+}

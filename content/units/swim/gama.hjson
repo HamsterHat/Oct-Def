@@ -40,7 +40,13 @@ drag: 0.1
 rotateSpeed: 10
 hittable: true
 targetable: true
-coreUnitDock: true
 outlineColor: 000000
 immunities: [wetted, wet, blowedup]
 
+research: {
+	parent: nvfact
+	requirements: [
+		stal/60
+		titan/45
+	]
+}

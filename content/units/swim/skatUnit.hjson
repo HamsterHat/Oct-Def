@@ -52,3 +52,13 @@ weapons: [
 accel: 0.2
 drag: 0.1
 immunities: [wetted, wet, blowedup]
+
+research: {
+	parent: sigma
+	requirements: [
+		stal/420
+		coper/555
+		titan/330
+		svinec/180
+	]
+}

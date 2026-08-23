@@ -1,0 +1,61 @@
+name: "Завод Кораблей"
+alwaysUnlocked: false
+type: UnitFactory
+health: 900
+size: 3
+configurable: true
+plans: [
+  {
+    unit: gama
+    requirements: [
+      stal/20
+      titan/15
+    ]
+    time: 800
+  },
+  {
+    unit: sigma
+    requirements: [
+      stal/50
+      coper/30
+      titan/40
+    ]
+    time: 1100
+  },
+    {
+    unit: skatUnit
+    requirements: [
+      stal/140
+      coper/185
+      titan/110
+      svinec/60
+    ]
+    time: 3350
+  },
+  {
+    unit: akula
+    requirements: [
+      stal/230
+      coper/200
+      titan/220
+      svinec/140
+    ]
+    time: 5900
+  }
+]
+category: units
+requirements: [
+  stal/120
+  coper/130
+  titan/95
+  svinec/100
+]
+research: {
+	parent: tankfabric
+	requirements: [
+    stal/240
+    coper/260
+    titan/190
+    svinec/200
+	]
+}

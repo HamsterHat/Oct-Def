@@ -54,6 +54,14 @@ drag: 0.1
 rotateSpeed: 5
 hittable: true
 targetable: true
-coreUnitDock: true
 outlineColor: 000000
 immunities: [wetted, wet, blowedup]
+
+research: {
+	parent: gama
+	requirements: [
+		stal/150
+		coper/90
+		titan/120
+	]
+}
