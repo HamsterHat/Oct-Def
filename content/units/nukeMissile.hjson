@@ -383,12 +383,12 @@ weapons: [
 				type: BulletType
 				lifetime: 6.333333333
 				speed: 30
-				drag: 0.01
-				damage: 450
+				drag: 0.08
+				damage: 230
 				buildingDamageMultiplier: 1
-				splashDamage: 250
-				splashDamageRadius: 45
-				splashDamagePierce: true
+				splashDamage: 190
+				splashDamageRadius: 30
+				splashDamagePierce: false
 				pierce: true
 				pierceBuilding: true
 				pierceDamageFactor: 1
