@@ -35,7 +35,31 @@ ammoTypes: {
         damage: 10
         splashDamage: 10
         splashDamageRadius: 4
-		knockback: 0.3
+		knockback: 0.8
+
+  }
+  ugol: {
+        type: BasicBulletType
+        lifetime: 15
+        pierce: true
+        width: 1
+        height: 1
+        despawnHit: false
+        despawnEffect: none
+        hitEffect: hitFlameSmall
+        shootEffect: shootSmallFlame
+        ammoMultiplier: 35
+        reflectable: false
+        smokeEffect: shootSmallSmoke
+        collidesAir: false
+        statusDuration: 120
+        status: gorenie
+        hittable: false
+        speed: 4
+        damage: 6
+        splashDamage: 6
+        splashDamageRadius: 3
+		knockback: 0.5
 
   }
     }

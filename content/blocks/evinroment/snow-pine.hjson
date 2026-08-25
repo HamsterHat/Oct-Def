@@ -1,7 +1,7 @@
 type: TreeBlock
-size: 3
+size: 1
 variants: 1
-shadowOffset: -16
+shadowOffset: -12
 update: true
 customShadow: true
 drawTeamOverlay: false
@@ -10,30 +10,30 @@ alwaysReplace: false
 buildVisibility: editorOnly
 solid: true
 destructible: true
-health: 5000
+health: 2100
 instantDeconstruct: false
-clipSize: 200
+clipSize: 150
 breakSound: plantBreak
 destroySound: plantBreak
 drawCracks: false
 createRubble: false
 itemDrop: wood
 requirements: [
-  wood/190
+  wood/70
 ]
 
 breakEffect: [
   {
     type: ParticleEffect
     region: mod-branch
-    particles: 8
-    length: 45
-    lifetime: 25
+    particles: 6
+    length: 35
+    lifetime: 20
     interp: pow3Out
-    spin: 10
+    spin: 11
     randRotation: true
-    sizeFrom: 8
-    sizeTo: 8
+    sizeFrom: 4
+    sizeTo: 4
     layer: 85
     colorFrom: cca070
     colorTo: cca07000
@@ -41,11 +41,11 @@ breakEffect: [
   {
     type: ParticleEffect
     region: mod-fern-leaf
-    particles: 14
-    length: 60
-    lifetime: 35
+    particles: 10
+    length: 45
+    lifetime: 30
     interp: pow2Out
-    spin: 6
+    spin: 7
     randRotation: true
     sizeFrom: 2
     sizeTo: 2
@@ -59,12 +59,12 @@ destroyEffect: [
     type: ParticleEffect
     region: mod-log
     particles: 1
-    length: 55
-    lifetime: 1400
+    length: 40
+    lifetime: 1000
     interp: pow2Out
     sizeInterp: linear
-    sizeFrom: 8
-    sizeTo: 8
+    sizeFrom: 4
+    sizeTo: 4
     spin: 0
     randRotation: true
     layer: 25
@@ -74,13 +74,13 @@ destroyEffect: [
   {
     type: ParticleEffect
     region: mod-branch
-    particles: 8
-    length: 80
-    lifetime: 200
-    spin: 3
+    particles: 5
+    length: 55
+    lifetime: 180
+    spin: 4
     randRotation: true
-    sizeFrom: 8
-    sizeTo: 8
+    sizeFrom: 4
+    sizeTo: 4
     layer: 25
     colorFrom: cca070
     colorTo: cca07000
@@ -88,11 +88,11 @@ destroyEffect: [
   {
     type: ParticleEffect
     region: mod-fern-leaf
-    particles: 28
-    length: 120
-    lifetime: 260
+    particles: 16
+    length: 85
+    lifetime: 200
     interp: circleOut
-    spin: 2.5
+    spin: 3
     randRotation: true
     sizeFrom: 2
     sizeTo: 2

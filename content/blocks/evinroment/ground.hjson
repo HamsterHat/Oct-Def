@@ -1,0 +1,7 @@
+type: "Floor"
+name: "Земля"
+variants: 1
+isLiquid: false
+speedMultiplier: 0.9
+walkSound: walkSand
+ 

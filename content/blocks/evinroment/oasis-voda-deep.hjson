@@ -1,0 +1,11 @@
+type: "Floor"
+name: "Глубокая Оазисная Вода"
+variants: 1
+isLiquid: true
+liquidDrop: voda
+status: wetted
+cacheLayer: water
+statusDuration: 300
+speedMultiplier: 0.8
+drownTime: 900
+walkSound: splash

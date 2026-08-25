@@ -17,7 +17,7 @@ breakSound: plantBreak
 destroySound: plantBreak
 drawCracks: false
 createRubble: false
-
+itemDrop: wood
 requirements: [
   wood/60
 ]
