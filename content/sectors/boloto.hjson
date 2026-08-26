@@ -1,6 +1,6 @@
 localizedName: Болото
 description: Здесь немного врагов, изучите Туньпуний и способы его применения.
-captureWave:11
+captureWave: 11
 difficulty: 2
 alwaysUnlocked: false
 addStartingItems: true

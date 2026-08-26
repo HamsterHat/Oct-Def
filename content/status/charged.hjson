@@ -24,3 +24,5 @@ effect: {
         }
     ]
 }
+transitionDamage: 80
+affinities: [wetted]

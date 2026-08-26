@@ -1,6 +1,6 @@
 localizedName: Глушь
 description: "Враги не отдадут этот сектор даром, используйте электричество чтобы отбить атаку врага."
-captureWave:16
+captureWave: 16
 difficulty: 3
 alwaysUnlocked: false
 addStartingItems: true
@@ -16,6 +16,6 @@ research: {
 				type: SectorComplete
 				preset: boloto
 			}
-			grad
+			grad, streamgen, mech-pump
 		]
 }

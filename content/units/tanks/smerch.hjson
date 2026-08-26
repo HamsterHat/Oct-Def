@@ -1,0 +1,139 @@
+name: Смерч
+type: tank
+hitSize: 32
+omniMovement: false
+alwaysUnlocked: false
+outlines: false
+health: 22000
+armor: 22
+speed: 0.4
+rotateSpeed: 1.4
+range: 320
+
+weapons: [
+ {
+ name: crit-gun
+ x: 0
+ y: 0
+    rotateSpeed: 1.2
+    shootY: 16
+    mirror: false
+    rotate: true
+    layerOffset: 2
+    reload: 130
+    recoil: 2.3
+    shootSound: sniperGun
+ bullet: {
+    type: BasicBulletType
+    width: 6
+    height: 18
+    status: slow
+    shootEffect: shootBig
+    damage: 140
+    hitEffect: massiveExplosion
+    splashDamageRadius: 12
+    splashDamage: 50
+    makeFire: true
+    speed: 5
+    lifetime: 68
+    fragBullets: 1
+    fragBullet: {
+          type: BulletType
+          damage: 0
+          speed: 0
+          splashDamage: 99
+          splashDamageRadius: 16
+          pierceArmor: true
+          absorbable: false
+          lifetime: 0
+          pierce: false
+          hitEffect: {
+            type: MultiEffect
+            effects: [
+               {
+                  type: ParticleEffect
+                  colorFrom: ffffffff
+                  colorTo: ffca3aff
+                  particles: 16
+                  region: mod-flash
+                  sizeFrom: 8
+                  sizeTo: 0
+                  lifetime: 45
+                  length: 16
+                  interp: swingOut
+                  cone: 190
+                  baseLength: 4
+               }
+                {
+                  type: ParticleEffect
+                  colorFrom: ffffffff
+                  colorTo: ffca3aff
+                  particles: 4
+                  strokeFrom: 4
+                  strokeTo: 0
+                  lenFrom: 8
+                  lenTo: 0
+                  line: true
+                  lifetime: 38
+                  length: 16
+                  cone: 30
+                  baseLength: 4
+               }
+            ]
+          }
+          shootEffect: none
+          smokeEffect: none
+          despawnEffect: none
+          hitSound: 396Shoot
+          despawnHit: true
+          status: gorenie
+          statusDuration: 999
+          createChance: 0.1
+          suppressionRange: 32
+          suppressionDuration: 999
+          suppressionEffectChance: 3141592653589793
+          fragBullet: fireball
+          fragBullets: 3
+          lightningColor: f5e23a
+          lightning: 3
+          lightningLength: 2
+          lightningLengthRand: 3
+          lightningDamage: 2
+          buildingDamageMultiplier: 2.75
+          lightningType: {
+            type: BulletType
+            damage: 0
+            speed: 0
+            splashDamage: 2
+            splashDamageRadius: 4
+            absorbable: false
+            lifetime: 0
+            pierce: false
+            hitEffect: none
+            shootEffect: none
+            smokeEffect: none
+            despawnEffect: none
+            hitSound: none
+            despawnHit: true
+            status: gorenie
+            statusDuration: 60
+            buildingDamageMultiplier: 4.75
+          }
+        }
+    pierce: true
+    pierceBuilding: true
+    pierceCap: 2
+
+    }
+   }
+]
+research: {
+	parent: uragan
+	requirements: [
+      stal/2700
+      coper/3900
+      titan/3000
+      svinec/3600
+	]
+}
+immunities: [blowedup]

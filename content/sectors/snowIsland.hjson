@@ -16,5 +16,7 @@ research: {
 				type: SectorComplete
 				preset: glush
 			}
+			resPult
 		]
+
 }

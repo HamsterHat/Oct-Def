@@ -19,5 +19,5 @@ effect: {
         ]
 }
 healthMultiplier: 0.9 
-transitionDamage: 125
+transitionDamage: 240
 affinities: [charged]

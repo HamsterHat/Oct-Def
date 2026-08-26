@@ -28,7 +28,7 @@ plans: [
       titan/50
     ]
     time: 2300
-  }
+  },
   {
     unit: uragan
     requirements: [
@@ -38,6 +38,16 @@ plans: [
       svinec/400
     ]
     time: 3100
+  },
+  {
+    unit: smerch
+    requirements: [
+      stal/900
+      coper/1300
+      titan/1000
+      svinec/1200
+    ]
+    time: 5890
   }
 ]
 category: units

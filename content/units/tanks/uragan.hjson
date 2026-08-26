@@ -36,7 +36,7 @@ weapons: [
     height: 10
     hitSize: 5
     shootEffect: shootBig
-    damage: 35
+    damage: 30
     hitSound: largeExplosion
     reflectable: false
     hitEffect: massiveExplosion
@@ -46,9 +46,11 @@ weapons: [
     scaleLife: true
     collidesAir: true
     splashDamageRadius: 18
-    splashDamage: 55
+    splashDamage: 90
     speed: 5
     lifetime: 64
+    fragBullets: 3
+    fragBullet: fireball
     }
    }
 ]

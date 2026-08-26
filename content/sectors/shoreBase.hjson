@@ -23,6 +23,5 @@ research: {
 				type: SectorComplete
 				preset: snowIsland
 			}
-			airfb
 		]
 }
