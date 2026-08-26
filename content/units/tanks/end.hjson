@@ -20,7 +20,7 @@ weapons: [
     mirror: false
     rotate: true
     layerOffset: 2
-    reload: 90
+    reload: 80
     recoil: 1.6
     shootSound: shootBig
  bullet: {

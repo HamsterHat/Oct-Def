@@ -21,7 +21,7 @@ weapons: [
     rotate: true
     layerOffset: 2
     ignoreRotation: false
-    reload: 10
+    reload: 8
     recoil: 2
     shoot: {
   type: ShootAlternate
@@ -36,7 +36,7 @@ weapons: [
     height: 10
     hitSize: 5
     shootEffect: shootBig
-    damage: 30
+    damage: 35
     hitSound: largeExplosion
     reflectable: false
     hitEffect: massiveExplosion
@@ -46,7 +46,7 @@ weapons: [
     scaleLife: true
     collidesAir: true
     splashDamageRadius: 18
-    splashDamage: 90
+    splashDamage: 110
     speed: 5
     lifetime: 64
     fragBullets: 3
