@@ -3,11 +3,11 @@ type: flying
 flying: true
 alwaysUnlocked: false
 outlines: false
-armor: 0
+armor: 4
 faceTarget: true
 squareShape: false
 hitSize: 16
-health: 2600
+health: 900
 speed: 1.2
 range: 250
 rotateSpeed: 1

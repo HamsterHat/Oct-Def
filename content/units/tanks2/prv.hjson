@@ -2,7 +2,7 @@ name: Т-3
 type: tank
 hitSize: 24
 omniMovement: false
-health: 3800
+health: 1100
 armor: 8
 speed: 0.7
 rotateSpeed: 1.7

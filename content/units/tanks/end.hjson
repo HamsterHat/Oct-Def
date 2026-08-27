@@ -4,8 +4,8 @@ hitSize: 28
 omniMovement: false
 alwaysUnlocked: false
 outlines: false
-health: 3500
-armor: 1
+health: 780
+armor: 6
 speed: 0.5
 rotateSpeed: 1.2
 range: 290

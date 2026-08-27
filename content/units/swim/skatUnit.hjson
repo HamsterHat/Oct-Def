@@ -1,11 +1,11 @@
 name: Скат
 type: naval
 alwaysUnlocked: false
-armor: 0
+armor: 8
 outlines: false
 faceTarget: true
 #squareShape: true
-health: 3100
+health: 940
 range: 140
 rotateMoveFirst: false
 hitSize: 24

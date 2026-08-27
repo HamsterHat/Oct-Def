@@ -4,8 +4,8 @@ hitSize: 32
 omniMovement: false
 alwaysUnlocked: false
 outlines: false
-health: 22000
-armor: 22
+health: 23000
+armor: 28
 speed: 0.4
 rotateSpeed: 1.4
 range: 320
@@ -20,7 +20,7 @@ weapons: [
     mirror: false
     rotate: true
     layerOffset: 2
-    reload: 110
+    reload: 100
     recoil: 2.3
     shootSound: sniperGun
  bullet: {
@@ -29,10 +29,10 @@ weapons: [
     height: 18
     status: slow
     shootEffect: shootBig
-    damage: 220
+    damage: 360
     hitEffect: massiveExplosion
     splashDamageRadius: 12
-    splashDamage: 80
+    splashDamage: 110
     makeFire: true
     speed: 5
     lifetime: 68
@@ -41,7 +41,7 @@ weapons: [
           type: BulletType
           damage: 0
           speed: 0
-          splashDamage: 380
+          splashDamage: 680
           splashDamageRadius: 16
           pierceArmor: true
           absorbable: false
@@ -104,7 +104,7 @@ weapons: [
             type: BulletType
             damage: 0
             speed: 0
-            splashDamage: 32
+            splashDamage: 126
             splashDamageRadius: 4
             absorbable: false
             lifetime: 0
@@ -122,7 +122,7 @@ weapons: [
         }
     pierce: true
     pierceBuilding: true
-    pierceCap: 2
+    pierceCap: 5
 
     }
    }

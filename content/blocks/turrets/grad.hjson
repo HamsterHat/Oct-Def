@@ -41,7 +41,7 @@ ammoTypes: {
 		reflectable: false
 		speed: 4
 		sprite: mod-rkt
-		damage: 10
+		damage: 8
 		splashDamage: 3
 		splashDamageRadius: 16
 		knockback: 1.6
@@ -66,11 +66,11 @@ ammoTypes: {
 		status: gorenie
 		hittable: false
 		speed: 4
-		damage: 8
+		damage: 5
 		reflectable: false
 		trailColor: ff8c00
 		makeFire: true
-		splashDamage: 9
+		splashDamage: 8
 		splashDamageRadius: 16
 		frontColor: f5a700
 	}
@@ -94,9 +94,9 @@ ammoTypes: {
 		status: blowedup
 		hittable: false
 		speed: 4
-		damage: 9
+		damage: 3
 		trailColor: ff8c00
-		splashDamage: 14
+		splashDamage: 18
 		splashDamageRadius: 16
 		frontColor: a11515
 	}
@@ -119,9 +119,9 @@ ammoTypes: {
 		status: charged
 		hittable: false
 		speed: 4
-		damage: 15
+		damage: 6
 		trailColor: ff8c00
-		splashDamage: 12
+		splashDamage: 19
 		splashDamageRadius: 16
 		lightningDamage: 5
 		lightning: 4
