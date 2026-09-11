@@ -4,6 +4,6 @@ subtitle: "Ещё 10+ блоков, 45+ юнитов и Пуней"
 "author": "[[]red]a[[]blue]l[[]white]ex[[]]"
 description: "[[]accent]=== RU ===[[]]\n\nДовольно необычный, немного подозрительный, сфокусированный на лор и хардкорный мод.\n\n[[]red]⚠️ ВНИМАНИЕ! Мод может лагать на слабых устройствах! ⚠️[[]]\n\nВы - автоматический ИИ, созданный учеными с планеты Объект-674524. Вы отправленны на планету Пунь по полученному оттуда сигналу SOS. Спасите планету, и узнайте что же там произошло.\n\n[[]accent]=== EN ===[[]]\n\nA unique, kinda sus, lore focused and hard Mindustry mod.\n\n[[]red]⚠️ WARNING! The mod may lag on weak devices! ⚠️[[]]\n\nYou are an automated AI created by scientists from planet Object-674524. You have been sent to planet Pun following an SOS signal received from there. Save the planet and find out what happened there."
 version: "Alpha 0.7.9.6"
-minGameVersion: "157"
+minGameVersion: "160.1"
 dependencies: [octlib]
 hidden: false
