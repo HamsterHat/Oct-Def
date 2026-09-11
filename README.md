@@ -1,7 +1,3 @@
-## 🐙 OCTOPUS DEFENCE
-> **Версия / Version:** `Alpha 0.7.9.3`
-
-
 # ПУНЯ ПУНЯ ПУНЯ
 
 <p align="center">
