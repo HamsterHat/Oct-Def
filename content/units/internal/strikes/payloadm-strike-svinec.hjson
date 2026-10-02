@@ -1,0 +1,497 @@
+type: missile
+lifetime: 1
+speed: 0
+
+flying: false
+drawBody: false
+isEnemy: false
+useUnitCap: false
+createWreck: false
+createScorch: false
+allowedInPayloads: false
+physics: false
+bounded: false
+playerControllable: false
+canDrown: false
+
+hoverable: false
+hovering: true
+
+targetable: false
+
+drawMinimap: false
+
+fogRadius: 0
+lightRadius: 0
+lightOpacity: 0
+
+drawCell: false
+drawBody: false
+aimDst: 0
+
+deathExplosionEffect: [
+    {
+        type: WaveEffect
+        lifetime: 64
+        strokeFrom: 0
+        strokeTo: 1
+        sizeFrom: 30
+        sizeTo: 30
+        interp: slope
+        colorFrom: 0c582c
+        layer: 170
+    }
+    {
+    type: RadialEffect
+    rotationOffset: 45
+        effect: {
+            lifetime: 80
+            particles: 1
+            cone: 0
+            line: true
+            strokeFrom: 2
+            strokeTo: 0
+            lenFrom: 3
+            lenTo: 12
+            length: 0.1
+            baseLength: 30
+            randLength: false
+            colorFrom: 11914b
+            sizeInterp: pow5In
+            layer: 170
+        }
+    }
+]
+
+weapons: [
+    {
+        name: mod-thingg
+        rotate: true
+        mirror: false
+        rotateSpeed: 0
+        baseRotation: 225
+        shootCone: 360
+        shootOnDeath: true
+        aiControllable: false
+        x: -180
+        y: 180
+        shootY: 0
+        inaccuracy: 0
+        bullet: {
+            parts: [
+                {
+                    type: RegionPart
+                    name: mod-strike-missile-smol
+                    outline: false
+                    moves: [
+                        {
+                            gx: 15
+                            gy: 15
+                            progress: {
+                                type: life
+                                ops: [
+                                    {
+                                        op: curve
+                                        interp: pow5Out
+                                    }
+                                    {
+                                        op: curve
+                                        interp: reverse
+                                    }
+                                ]
+                            }
+                        }
+                        {
+                            rot: 240
+                            progress: life
+                        }
+                    ]
+                    progress: {
+                        type: life
+                        ops: [
+                            {
+                                op: compress
+                                start: 0
+                                end: 0.75
+                            }
+                            {
+                                op: curve
+                                interp: slope
+                            }
+                            {
+                                op: curve
+                                interp: pow2In
+                            }
+                        ]
+                    }
+                    color: ffffff00
+                    colorTo: ffffff
+                    layer: 170
+                }
+                {
+                    type: RegionPart
+                    name: mod-strike-missile-smol
+                    outline: false
+                    moves: [
+                        {
+                            gx: 15
+                            gy: 15
+                            progress: {
+                                type: life
+                                ops: [
+                                    {
+                                        op: curve
+                                        interp: pow5Out
+                                    }
+                                    {
+                                        op: curve
+                                        interp: reverse
+                                    }
+                                ]
+                            }
+                        }
+                        {
+                            rot: 240
+                            progress: life
+                        }
+                    ]
+                    progress: {
+                        type: life
+                        ops: [
+                            {
+                                op: compress
+                                start: 0
+                                end: 0.35
+                            }
+                            {
+                                op: curve
+                                interp: pow2In
+                            }
+                        ]
+                    }
+                    color: ffffff00
+                    colorTo: ffffff
+                    layer: 129
+                }
+            ]
+            lifetime: 64
+            speed: 4
+            
+            hitEffect: none
+            despawnEffect: none
+            shootEffect: none
+            trailEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      line: false
+      particles: 1
+      lifetime: 15
+      length: 3
+      cone: 5
+      colorFrom: "ffdd55"
+      colorTo: "ff5500"
+      sizeFrom: 2
+      sizeTo: 0
+      interp: fade
+    }
+    {
+      type: ParticleEffect
+      line: false
+      particles: 2
+      lifetime: 45
+      length: 8
+      cone: 12
+      colorFrom: "ff5500aa"
+      colorTo: "44444400"
+      sizeFrom: 3
+      sizeTo: 1
+      interp: pow2Out
+      sizeInterp: linear
+    }
+    {
+      type: ParticleEffect
+      line: false
+      particles: 2
+      lifetime: 90
+      length: 5
+      cone: 15
+      colorFrom: "6666668c"
+      colorTo: "33333300"
+      sizeFrom: 1
+      sizeTo: 5
+      interp: pow2Out
+      sizeInterp: linear
+    }
+  ]
+}
+            trailChance: 1
+            trailInterval: 4
+            
+            absorbable: false
+            hittable: false
+            collides: false
+            
+            fragBullets: 1
+            //go boom boom
+            fragBullet: {
+                
+
+
+
+
+
+                type: BasicBulletType
+				shootEffect: none
+				damage: 99
+				lifetime: 0
+				smokeEffect: none
+				despawnEffect: none
+				hitEffect: {
+					type: MultiEffect
+					effects: [
+						{
+							type: ParticleEffect
+							particles: 1
+							region: circle-shadow
+							sizeFrom: 64
+							sizeTo: 0
+							colorFrom: ffffffff
+							colorTo: ffffffff
+							interp: circleOut
+							lifetime: 24
+							layer: 119
+						}
+						{
+							type: ParticleEffect
+							particles: 18
+							sizeFrom: 12
+							sizeTo: 0
+							colorFrom: 0b201a
+							colorTo: 38684ad7
+							interp: circleOut
+							lifetime: 540
+							length: 85
+							layer: 118
+						}
+						{
+							type: ParticleEffect
+							particles: 18
+							sizeFrom: 8
+							sizeTo: 0
+							colorFrom: 273a2c
+							colorTo: 0e3b2d
+							interp: circleOut
+							lifetime: 590
+							length: 90
+							layer: 118.1
+						}
+						{
+							type: ParticleEffect
+							particles: 32
+							sizeFrom: 3
+							sizeTo: 0
+							colorFrom: 582612
+							colorTo: 582612
+							interp: circleOut
+							lifetime: 110
+							length: 160
+							layer: 81
+						}
+						{
+							type: ParticleEffect
+							particles: 32
+							sizeFrom: 4
+							sizeTo: 0
+							colorFrom: 582612
+							colorTo: 582612
+							interp: circleOut
+							lifetime: 110
+							length: 190
+							layer: 81
+						}
+						{
+							type: ParticleEffect
+							particles: 9
+							colorFrom: 61ff96
+							colorTo: 375f39
+							interp: circleOut
+							lifetime: 210
+							line: true
+							length: 180
+							layer: 117
+						}
+						{
+							type: WaveEffect
+							lifetime: 60
+							sizeFrom: 0
+							sizeTo: 80
+							lightColor: 66ffcc
+							interp: circleOut
+							strokeFrom: 20
+							strokeTo: 0
+							colorFrom: 246d34c7
+							colorTo: 12363b56
+							layer: 5
+							clip: 900
+						}
+					]
+				}
+				collides: false
+				hitSound: coolboom
+				hitSoundVolume: 8
+				hittable: false
+				reflectable: false
+				absorbable: false
+				width: 0
+				height: 0
+				splashDamage: 129
+				splashDamageRadius: 39.9
+				status: blowedup
+				statusDuration: 80
+				knockback: 0
+				shrinkX: 0
+				shrinkY: 0
+				lightRadius: 0
+				lightOpacity: 0
+				lightColor: ffffff
+				hitShake: 0
+				despawnShake: 0
+				speed: 0
+				buildingDamageMultiplier: 2.75
+				fragBullets: 3
+				fragBullet: fireball
+
+                suppressionRange: 49.9
+                suppressionDuration: 999
+                suppressionEffectChance: 0
+                lightningColor: 38ecce
+                lightning: 6
+                lightningLength: 5
+                lightningLengthRand: 4
+                lightningDamage: 18
+                lightningType: {
+                    type: BulletType
+                    damage: 9
+                    speed: 0
+                    splashDamage: 69
+                    splashDamageRadius: 4
+                    absorbable: false
+                    lifetime: 0
+                    pierce: false
+                    hitEffect: none
+                    shootEffect: none
+                    smokeEffect: none
+                    despawnEffect: none
+                    hitSound: shockBullet
+                    despawnHit: true
+                    status: charged
+                    statusDuration: 60
+                    suppressionRange: 8
+                    suppressionDuration: 240
+                    suppressionEffectChance: 0
+                    lightningColor: 38eca7
+                    lightning: 3
+                    lightningLength: 3
+                    lightningLengthRand: 5
+                    lightningDamage: 18
+                    lightningType: {
+                        type: BulletType
+                        damage: 4
+                        speed: 0
+                        splashDamage: 29
+                        splashDamageRadius: 4
+                        absorbable: false
+                        lifetime: 0
+                        pierce: false
+                        hitEffect: none
+                        shootEffect: none
+                        smokeEffect: none
+                        despawnEffect: none
+                        hitSound: shockBullet
+                        despawnHit: true
+                        status: charged
+                        statusDuration: 60
+                        suppressionRange: 8
+                        suppressionDuration: 120
+                        suppressionEffectChance: 0
+                    }
+                }
+
+
+
+                fragBullets: 32
+                fragVelocityMin: 0.1
+                fragVelocityMax: 2
+                fragLifeMin: 0.4
+                fragLifeMax: 3
+                fragBullet: {
+                    type: BasicBulletType
+                    speed: 4.6
+                    lifetime: 99
+                    drag: 0.09
+                    pierce: true
+                    pierceBuilding: true
+                    pierceCap: 3
+                    damage: 9
+                    splashDamage: 9
+                    splashDamageRadius: 19
+                    width: 2
+                    height: 2
+                    sprite: mod-triangle
+                    spin: 3
+                    shrinkX: 0.1
+                    shrinkY: 0.1
+                    frontColor: 14634f
+                    backColor: 14634f
+                    despawnEffect: none
+                    hitEffect: none
+                    despawnHit: true
+                    hitColor: 14634f
+                    createChance: 0.8
+
+
+
+      
+                    suppressionRange: 32
+                    suppressionDuration: 99
+                    suppressionEffectChance: 0
+                    lightningColor: 38ec89
+                    lightning: 3
+                    lightningLength: 2
+                    lightningLengthRand: 5
+                    lightningDamage: 18
+                    lightningType: {
+                        type: BulletType
+                        damage: 9
+                        speed: 0
+                        splashDamage: 9
+                        splashDamageRadius: 4
+                        absorbable: false
+                        lifetime: 0
+                        pierce: false
+                        hitEffect: none
+                        shootEffect: none
+                        smokeEffect: none
+                        despawnEffect: none
+                        hitSound: shockBullet
+                        despawnHit: true
+                        status: charged
+                        statusDuration: 99
+                        suppressionRange: 32
+                        suppressionDuration: 99
+                        suppressionEffectChance: 0
+                    }
+
+                }
+                
+
+
+
+
+
+            }
+        }
+    }
+]

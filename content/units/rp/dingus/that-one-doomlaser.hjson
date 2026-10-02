@@ -174,7 +174,7 @@ weapons: [
         length: 0
         lifetime: 45
         particles: 1
-        region: allure-shootspike
+        region: mod-shootspike
         sizeInterp: slope
         sizeFrom: 0
         sizeTo: 180

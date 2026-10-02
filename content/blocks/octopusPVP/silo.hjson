@@ -1,4 +1,4 @@
-type: PowerTurret
+type: ItemTurret
 name: Ракетная шахта
 size: 3
 outlineIcon: false
@@ -8,7 +8,8 @@ rotate: true
 rotateSpeed: 99999999
 targetAir: false
 targetGround: false
-maxAmmo: 1
+maxAmmo:  50
+ammoPerShot: 25
 range: 4000
 reload: 7200
 shootCone: 360
@@ -29,61 +30,1338 @@ minWarmup: 1
 shootWarmupSpeed: 0.016666666
 shootY: 0
 hasShadow: false
-shootType: {
-  type: PointBulletType
-    damage: 0
-    hitEffect: none
-    despawnHit: true
-    collides: false
-    hittable: false
-    absorbable: false
-    trailEffect: none
-    spawnBullets: [
-      {
-         type: BulletType
+
+ammoTypes: {
+
+
+      dinamit: {
+        type: PointBulletType
           damage: 0
-          lifetime: 0
           hitEffect: none
           despawnHit: true
-          despawnUnit: payloadm
           collides: false
           hittable: false
           absorbable: false
-          ignoreSpawnAngle: true  
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 115
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: d4361900
+                                colorTo: d43619
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 45
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: d43619
+                                colorTo: d4361900
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 940
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              despawnUnit: payloadm-strike
+              ignoreSpawnAngle: true
+          }
       }
-    ]
-    fragBullets: 1
-    fragBullet: {
-        type: BasicBulletType
-				shootEffect: none
-				damage: 0
-				lifetime: 940
-				smokeEffect: none
-				despawnEffect: none
-				hitEffect: none
-				collides: false
-				hitSound: none
-				hittable: false
-				reflectable: false
-				absorbable: false
-				width: 0
-				height: 0
-				splashDamage: 0
-				splashDamageRadius: 0
-				knockback: 0
-				shrinkX: 0
-				shrinkY: 0
-				lightRadius: 0
-				lightOpacity: 0
-				lightColor: ffffff
-				hitShake: 0
-				despawnShake: 0
-				speed: 0
-				buildingDamageMultiplier: 0
-				despawnHit: true
-        despawnUnit: payloadm-strike
-        ignoreSpawnAngle: true
-    }
+
+
+
+
+          pirosmes: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 115
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: e9850300
+                                colorTo: e98503
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 45
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: e98503
+                                colorTo: e9850300
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 940
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              despawnUnit: payloadm-strike-pyro
+              ignoreSpawnAngle: true
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+      ugol: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 115
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: e9b30300
+                                colorTo: e9b303
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 45
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: e9b303
+                                colorTo: e9b30300
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 590
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              ignoreSpawnAngle: true
+              fragBullets: 8
+                fragVelocityMin: 0.1
+                fragVelocityMax: 4.75
+                fragLifeMin: 0.1
+                fragLifeMax: 4.75
+              fragBullet: {
+                    type: BasicBulletType
+                    shootEffect: none
+                    damage: 0
+                    lifetime: 20
+                    drag: 0.09
+                    smokeEffect: none
+                    despawnEffect: none
+                    hitEffect: none
+                    collides: false
+                    hitSound: none
+                    hittable: false
+                    reflectable: false
+                    absorbable: false
+                    pierce: true
+                    pierceBuilding: true
+                    width: 0
+                    height: 0
+                    splashDamage: 0
+                    splashDamageRadius: 0
+                    knockback: 0
+                    shrinkX: 0
+                    shrinkY: 0
+                    lightRadius: 0
+                    lightOpacity: 0
+                    lightColor: ffffff
+                    hitShake: 0
+                    despawnShake: 0
+                    speed: 3
+                    buildingDamageMultiplier: 0
+                    despawnHit: true
+                    fragBullets: 1
+                    fragBullet: {
+                        type: BasicBulletType
+                        shootEffect: none
+                        damage: 0
+                        lifetime: 0
+                        smokeEffect: none
+                        despawnEffect: none
+                        hitEffect: none
+                        collides: false
+                        hitSound: none
+                        hittable: false
+                        reflectable: false
+                        absorbable: false
+                        width: 0
+                        height: 0
+                        splashDamage: 0
+                        splashDamageRadius: 0
+                        knockback: 0
+                        shrinkX: 0
+                        shrinkY: 0
+                        lightRadius: 0
+                        lightOpacity: 0
+                        lightColor: ffffff
+                        hitShake: 0
+                        despawnShake: 0
+                        speed: 0
+                        buildingDamageMultiplier: 0
+                        despawnHit: true
+                        despawnUnit: payloadm-strike-ugol
+                        ignoreSpawnAngle: true
+                    }
+              }
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      titan: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 115
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: e95f0300
+                                colorTo: e95f03
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 45
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: e95f03
+                                colorTo: e95f0300
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 520
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              ignoreSpawnAngle: true
+              fragBullets: 8
+                fragVelocityMin: 0.1
+                fragVelocityMax: 4.75
+                fragLifeMin: 0.1
+                fragLifeMax: 4.75
+              fragBullet: {
+                    type: BasicBulletType
+                    shootEffect: none
+                    damage: 0
+                    lifetime: 20
+                    drag: 0.09
+                    smokeEffect: none
+                    despawnEffect: none
+                    hitEffect: none
+                    collides: false
+                    hitSound: none
+                    hittable: false
+                    reflectable: false
+                    absorbable: false
+                    pierce: true
+                    pierceBuilding: true
+                    width: 0
+                    height: 0
+                    splashDamage: 0
+                    splashDamageRadius: 0
+                    knockback: 0
+                    shrinkX: 0
+                    shrinkY: 0
+                    lightRadius: 0
+                    lightOpacity: 0
+                    lightColor: ffffff
+                    hitShake: 0
+                    despawnShake: 0
+                    speed: 3
+                    buildingDamageMultiplier: 0
+                    despawnHit: true
+                    fragBullets: 1
+                    fragBullet: {
+                        type: BasicBulletType
+                        shootEffect: none
+                        damage: 0
+                        lifetime: 0
+                        smokeEffect: none
+                        despawnEffect: none
+                        hitEffect: none
+                        collides: false
+                        hitSound: none
+                        hittable: false
+                        reflectable: false
+                        absorbable: false
+                        width: 0
+                        height: 0
+                        splashDamage: 0
+                        splashDamageRadius: 0
+                        knockback: 0
+                        shrinkX: 0
+                        shrinkY: 0
+                        lightRadius: 0
+                        lightOpacity: 0
+                        lightColor: ffffff
+                        hitShake: 0
+                        despawnShake: 0
+                        speed: 0
+                        buildingDamageMultiplier: 0
+                        despawnHit: true
+                        despawnUnit: payloadm-strike-titan
+                        ignoreSpawnAngle: true
+                    }
+              }
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      svinec: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 115
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: 0c582c00
+                                colorTo: 0c582c
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 45
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: 0c582c
+                                colorTo: 0c582c00
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 560
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              ignoreSpawnAngle: true
+              fragBullets: 8
+                fragVelocityMin: 0.1
+                fragVelocityMax: 4.75
+                fragLifeMin: 0.1
+                fragLifeMax: 4.75
+              fragBullet: {
+                    type: BasicBulletType
+                    shootEffect: none
+                    damage: 0
+                    lifetime: 20
+                    drag: 0.09
+                    smokeEffect: none
+                    despawnEffect: none
+                    hitEffect: none
+                    collides: false
+                    hitSound: none
+                    hittable: false
+                    reflectable: false
+                    absorbable: false
+                    pierce: true
+                    pierceBuilding: true
+                    width: 0
+                    height: 0
+                    splashDamage: 0
+                    splashDamageRadius: 0
+                    knockback: 0
+                    shrinkX: 0
+                    shrinkY: 0
+                    lightRadius: 0
+                    lightOpacity: 0
+                    lightColor: ffffff
+                    hitShake: 0
+                    despawnShake: 0
+                    speed: 3
+                    buildingDamageMultiplier: 0
+                    despawnHit: true
+                    fragBullets: 1
+                    fragBullet: {
+                        type: BasicBulletType
+                        shootEffect: none
+                        damage: 0
+                        lifetime: 0
+                        smokeEffect: none
+                        despawnEffect: none
+                        hitEffect: none
+                        collides: false
+                        hitSound: none
+                        hittable: false
+                        reflectable: false
+                        absorbable: false
+                        width: 0
+                        height: 0
+                        splashDamage: 0
+                        splashDamageRadius: 0
+                        knockback: 0
+                        shrinkX: 0
+                        shrinkY: 0
+                        lightRadius: 0
+                        lightOpacity: 0
+                        lightColor: ffffff
+                        hitShake: 0
+                        despawnShake: 0
+                        speed: 0
+                        buildingDamageMultiplier: 0
+                        despawnHit: true
+                        despawnUnit: payloadm-strike-svinec
+                        ignoreSpawnAngle: true
+                    }
+              }
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    energosteklo: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm-heavy
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 190
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: ceb90000
+                                colorTo: ceb900
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 80
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: ceb900
+                                colorTo: ceb90000
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 1100
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              despawnUnit: payloadm-strike-steklo
+              ignoreSpawnAngle: true
+          }
+      }
+
+
+
+
+
+
+
+    topi: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm-heavy
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 380
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: e9037600
+                                colorTo: e90376
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 30
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: e90376
+                                colorTo: e9037600
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 1200
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              despawnUnit: payloadm-strike-topi
+              ignoreSpawnAngle: true
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      uran: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm-heavy
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 1200
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: ff260000
+                                colorTo: ff2600
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 35
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: ff2600
+                                colorTo: ff260000
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 1300
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              despawnUnit: payloadm-nuke
+              ignoreSpawnAngle: true
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+      coper: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 115
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: 5dce0000
+                                colorTo: 5dce00
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 35
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: 5dce00
+                                colorTo: 5dce0000
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 680
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              despawnUnit: payloadm-strike-coper
+              ignoreSpawnAngle: true
+          }
+      }
+
+
+
+
+
+
+
+      stal: {
+        type: PointBulletType
+          damage: 0
+          hitEffect: none
+          despawnHit: true
+          collides: false
+          hittable: false
+          absorbable: false
+          trailEffect: none
+          spawnBullets: [
+            {
+              type: BulletType
+                damage: 0
+                lifetime: 0
+                hitEffect: none
+                despawnHit: true
+                despawnUnit: payloadm
+                collides: false
+                hittable: false
+                absorbable: false
+                ignoreSpawnAngle: true  
+            }
+          ]
+          fragBullets: 1
+
+          hitEffect: {
+                type: RadialEffect
+                rotationOffset: 45
+                followParent: false
+                effect: {
+                    type: SeqEffect
+                    followParent: false
+                    layer: 170
+                    effects: [
+                            {
+                                lifetime: 115
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 0
+                                strokeTo: 4
+                                lenFrom: 8
+                                lenTo: 8
+                                length: 0.1
+                                colorFrom: 4e4e4e00
+                                colorTo: 4e4e4e
+                                sizeInterp: pow5Out
+                                interp: pow5Out
+                            }
+                            {
+                                lifetime: 35
+                                particles: 1
+                                cone: 0
+                                line: true
+                                strokeFrom: 4
+                                strokeTo: 0
+                                lenFrom: 8
+                                lenTo: 24
+                                length: 0.1
+                                colorFrom: 4e4e4e
+                                colorTo: 4e4e4e00
+                                sizeInterp: pow5In
+                            }
+                    ]
+                }
+            }
+
+          fragBullet: {
+              type: BasicBulletType
+              shootEffect: none
+              damage: 0
+              lifetime: 700
+              smokeEffect: none
+              despawnEffect: none
+              hitEffect: none
+              collides: false
+              hitSound: none
+              hittable: false
+              reflectable: false
+              absorbable: false
+              width: 0
+              height: 0
+              splashDamage: 0
+              splashDamageRadius: 0
+              knockback: 0
+              shrinkX: 0
+              shrinkY: 0
+              lightRadius: 0
+              lightOpacity: 0
+              lightColor: ffffff
+              hitShake: 0
+              despawnShake: 0
+              speed: 0
+              buildingDamageMultiplier: 0
+              despawnHit: true
+              despawnUnit: payloadm-strike-stal
+              ignoreSpawnAngle: true
+          }
+      }
+
+
 }
 
 

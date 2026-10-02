@@ -33,10 +33,10 @@ breakEffect: [
     spin: 10
     randRotation: true
     sizeFrom: 8
-    sizeTo: 8
+    sizeTo: 0
     layer: 85
     colorFrom: cca070
-    colorTo: cca07000
+    colorTo: cca070
   }
   {
     type: ParticleEffect
@@ -48,10 +48,10 @@ breakEffect: [
     spin: 6
     randRotation: true
     sizeFrom: 2
-    sizeTo: 2
+    sizeTo: 0
     layer: 110
     colorFrom: "528043"
-    colorTo: "52804300"
+    colorTo: "528043"
   }
 ]
 destroyEffect: [
@@ -59,7 +59,7 @@ destroyEffect: [
     type: ParticleEffect
     region: mod-log
     particles: 1
-    length: 55
+    length: 14
     lifetime: 1400
     interp: pow2Out
     sizeInterp: linear
@@ -69,7 +69,9 @@ destroyEffect: [
     randRotation: true
     layer: 25
     colorFrom: 8c6239
-    colorTo: 8c623900
+    colorTo: 8c6239
+    interp: pow10Out
+    sizeInterp: pow10In
   }
   {
     type: ParticleEffect
@@ -80,10 +82,10 @@ destroyEffect: [
     spin: 3
     randRotation: true
     sizeFrom: 8
-    sizeTo: 8
+    sizeTo: 0
     layer: 25
     colorFrom: cca070
-    colorTo: cca07000
+    colorTo: cca070
   }
   {
     type: ParticleEffect
@@ -95,9 +97,9 @@ destroyEffect: [
     spin: 2.5
     randRotation: true
     sizeFrom: 2
-    sizeTo: 2
+    sizeTo: 0
     layer: 110
     colorFrom: "528043"
-    colorTo: "52804300"
+    colorTo: "528043"
   }
 ]

@@ -4483,3 +4483,73 @@ Events.run(Trigger.draw, () => {
     Draw.reset();
 });
 
+const jumpPower = 0.08;
+const gravity = 0.004;
+
+const jumpingPunya = extend(UnitType, "jumping-punya", {
+    health: 220,
+    armor: 1,
+    speed: 1.8,
+    drag: 0.12,
+    hitSize: 8,
+    rotateSpeed: 10,
+    itemCapacity: 10,
+    outlineColor: Color.valueOf("2c2d38"),
+    
+    flying: false,
+    canBoost: true, // canBoost строго на месте
+    boostMultiplier: 1.0,
+    riseSpeed: 0,
+    descentSpeed: 0,
+
+    constructor: () => extend(MechUnit, {
+        velZ: 0,
+
+        // Переопределяем метод canPass, который ты нашел в консоли!
+        canPass(tileX, tileY) {
+            // В воздухе - стены проходимы, перелетаем их
+            if (this.elevation > 0.01) {
+                return true;
+            }
+            // На земле - если тайл твердый (стена), жестко возвращаем false,
+            // заставляя пуню физически врезаться в блоки даже при зажатом Шифте!
+            let tile = Vars.world.tile(tileX, tileY);
+            if (tile != null && tile.solid()) {
+                return false;
+            }
+            return this.super$canPass(tileX, tileY);
+        },
+
+        update() {
+            this.super$update();
+
+            this.elevation += this.velZ;
+
+            if (this.elevation > 0) {
+                this.velZ -= gravity * Time.delta;
+
+                // ЗАЩИТА ОТ ТОЛСТЫХ СТЕН (Без onSolid):
+                // Проверяем тайл прямо под центром пуни только в момент падения
+                if (this.velZ < 0 && this.elevation <= 0.03) {
+                    let currentTile = Vars.world.tileWorld(this.x, this.y);
+                    if (currentTile != null && currentTile.solid()) {
+                        this.elevation = 0.03; // Удерживаем в воздухе, пока не перелетит стену
+                        this.velZ = 0;
+                    }
+                }
+            } else {
+                this.elevation = 0;
+                if (this.velZ < -gravity) {
+                    this.damage(Math.abs(this.velZ) * 15);
+                }
+                this.velZ = 0;
+
+                // Ванильный метод буста по шифту без костылей
+                if (this.isBoosting() && this.velZ === 0) {
+                    this.velZ = jumpPower;
+                    this.elevation = 0.02; // Даем импульс высоты, чтобы canPass переключился в true
+                }
+            }
+        }
+    })
+});

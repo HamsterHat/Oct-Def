@@ -58,6 +58,7 @@ weapons: [
 		backLength: 4
 		frontLength: 48
 		divisions: 80
+		buildingDamageMultiplier: 999
 		chargeEffect: [
 			{
 				type: MultiEffect
