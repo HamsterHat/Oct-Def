@@ -1,0 +1,42 @@
+type: "PercentEffect"
+name: "Нейтронный Распад"
+description: "Вызывает дестабилизацию атомной структуры обшивки. Плавно сжигает фиксированный процент здоровья каждую секунду, полностью игнорируя силовые щиты и броню боссов."
+
+
+percentDamage: 0.0008333
+
+percentPierce: true 
+
+
+damage: 0.0
+
+effect: {
+  type: "MultiEffect"
+  effects: [
+    {
+      type: "WaveEffect"
+      colorFrom: "38dfa8"
+      colorTo: "38dfa800"
+      sizeFrom: 24
+      sizeTo: 4
+      strokeFrom: 2.0
+      strokeTo: 0.0
+      lifetime: 35
+    }
+    {
+      type: "ParticleEffect"
+      colorFrom: "ffffff"
+      colorTo: "38dfa800"
+      particles: 3
+      length: 12
+      lifetime: 20
+      sizeFrom: 2.5
+      sizeTo: 0.0
+      line: true 
+      strokeFrom: 1.0
+    }
+  ]
+}
+
+
+color: "38dfa8"

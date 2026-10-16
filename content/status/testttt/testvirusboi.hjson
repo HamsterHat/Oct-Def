@@ -1,0 +1,59 @@
+type: "SpreadEffect"
+name: "Протокол Вектор"
+description: "Высокозаразный энергетический вирус. Каждые 60 тиков испускает импульс, заражающий всех ближайших врагов в радиусе. Повторное заражение целей вызывает внутренний коллапс обшивки и наносит тяжелый пробивающий урон."
+
+
+spreadRadius: 40.0
+
+spreadInterval: 60.0
+
+spreadSingle: false
+
+
+spreadEnemies: true
+spreadAllies: true
+
+
+damage: 0.45
+
+
+spreadEffect: {
+  type: "MultiEffect"
+  effects: [
+    {
+      type: "WaveEffect"
+      colorFrom: "d157ff"
+      colorTo: "d157ff00" 
+      sizeFrom: 0
+      sizeTo: 40 
+      strokeFrom: 2.5
+      strokeTo: 0.0
+      lifetime: 18 
+    }
+    {
+      type: "ParticleEffect"
+      colorFrom: "ffffff"
+      colorTo: "d157ff00"
+      particles: 6
+      length: 30
+      lifetime: 20
+      sizeFrom: 3.0
+      sizeTo: 0.0
+      line: true 
+      strokeFrom: 1.0
+    }
+  ]
+}
+
+effect: {
+  type: "ParticleEffect"
+  colorFrom: "d157ff"
+  particles: 1
+  length: 8
+  lifetime: 15
+  sizeFrom: 1.5
+  sizeTo: 0.0
+}
+
+
+color: "d157ff"

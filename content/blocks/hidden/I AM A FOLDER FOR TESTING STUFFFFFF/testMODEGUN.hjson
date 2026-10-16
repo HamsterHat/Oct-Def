@@ -1,0 +1,98 @@
+type: "ModeTurret"
+name: "Тактический Комплекс «Калибратор-8»"
+description: "Тяжелое орудие поддержки. Использует глубокую калибровку внутренних систем для полной перестройки баллистического профиля."
+size: 3
+health: 2200
+range: 240
+category: "turret"
+
+shoot: {
+  type: "ShootAlternate"
+  spread: 8
+  shots: 2
+}
+
+turretModes: [
+  {
+    name: "burst"
+    barColor: "ffca57"
+
+    accuracyMultiplier: 1.5
+    reloadMultiplier: 1.8
+    rotateSpeedMultiplier: 0.7
+    rangeChange: 40
+    targetIntervalMultiplier: 0.5
+    ammoUseMultiplier: 1.0
+    ammoUseChange: 1
+    
+    modePattern: {
+      type: "ShootBurst"
+      shots: 3
+      shotDelay: 4
+    }
+    
+
+    modeAmmoTypes: {
+      thorium: {
+        type: "BasicBulletType"
+        damage: 45
+        speed: 8
+        lifetime: 35
+        bulletWidth: 9
+        bulletHeight: 14
+        hitColor: "ffca57"
+        shootEffect: "shootBig"
+      }
+    }
+  }
+  {
+    name: "shredder"
+    path: "octlib"
+    barColor: "ff455b"
+    
+    accuracyMultiplier: 0.5
+    reloadMultiplier: 3.0
+    rotateSpeedMultiplier: 1.5
+    rangeChange: -60 
+    ammoUseMultiplier: 2.0
+    
+
+    modePattern: {
+      type: "ShootSpread"
+      shots: 5
+      spread: 15
+    }
+    
+    modeSound: "shotgun"
+
+    modeAmmoTypes: {
+      thorium: {
+        type: "BulletType"
+        damage: 20
+        speed: 5
+        lifetime: 20
+        bulletWidth: 6
+        bulletHeight: 6
+        collidesTiles: true
+        drag: 0.02
+        hitEffect: "hitBulletSmall"
+        despawnEffect: "none"
+      }
+    }
+  }
+]
+
+ammoTypes: {
+  thorium: {
+    type: "BasicBulletType"
+    damage: 60
+    speed: 6
+    lifetime: 40
+  }
+}
+
+requirements: [
+  copper/400
+  thorium/150
+  silicon/100
+]
